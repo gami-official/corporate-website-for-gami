@@ -157,29 +157,27 @@ export default function LogisticsPage() {
       <Header />
       <main>
         {/* Hero */}
-        <section className="relative h-[260px] w-full overflow-hidden bg-[#2a2a2a]">
-          <div className="absolute inset-0">
-            <Image
-              src={IMAGES.heroLogistics}
-              alt="物流倉庫"
-              fill
-              className="object-cover scale-95"
-              style={{ filter: 'brightness(0.55)' }}
-              priority
-              unoptimized
-            />
-          </div>
-          <div className="relative z-10 h-full px-14 py-11 text-white">
-            <p className="mb-2.5 text-[13px] font-normal uppercase tracking-[0.35em] text-[#e0e0e0]">
-              L O G I S T I C S
-            </p>
-            <h1 className="mb-4.5 text-[38px] font-bold leading-tight text-white" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.4)' }}>
-              物流運送事業
-            </h1>
-            <p className="text-[14.5px] leading-[2] text-[#f0f0f0]">
-              物流業務を軸に、コンサルティング、EC支援、利用運送・軽貨物運送、<br />
-              オリジナル梱包資材の企画・製作まで。ワンストップの物流ソリューション。
-            </p>
+        <section className="relative flex min-h-[60vh] items-end">
+          <Image
+            src={IMAGES.heroLogistics}
+            alt="物流倉庫"
+            fill
+            className="object-cover scale-95"
+            priority
+            unoptimized
+          />
+          <div className="relative z-10 mx-auto w-full max-w-6xl px-4 pb-12 pt-20 sm:px-6 sm:pb-16 sm:pt-24 lg:pt-32">
+            <div className="max-w-2xl [text-shadow:0_1px_2px_rgba(0,0,0,0.5),0_2px_8px_rgba(0,0,0,0.4)]">
+              <p className="font-mono text-lg font-medium uppercase tracking-[0.3em] text-white sm:text-xl md:text-2xl">
+                Logistics
+              </p>
+              <h1 className="mt-3 font-serif text-xl font-bold tracking-wider text-white sm:mt-4 sm:text-2xl md:text-3xl lg:text-4xl">
+                <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">物流</span>運送事業
+              </h1>
+              <p className="mt-3 max-w-xl text-pretty text-xs leading-relaxed tracking-wide text-white sm:mt-4 sm:text-sm md:text-base">
+                物流業務を軸に、コンサルティング、EC支援、利用運送・軽貨物運送、オリジナル梱包資材の企画・製作まで。ワンストップの物流ソリューション。
+              </p>
+            </div>
           </div>
         </section>
 
@@ -326,45 +324,10 @@ export default function LogisticsPage() {
         </section>
 
         {/* CTA */}
-        <section className="bg-[#2d3e5e] px-6 py-14 text-center text-white">
-          <h2 className="mb-4.5 text-[26px] font-medium tracking-[0.08em]">
-            お見積り・ご相談
-          </h2>
-          <p className="mx-auto mb-8 max-w-2xl text-[14.5px] leading-[1.9] text-[#d0d9e8]">
-            <strong className="font-bold text-white" style={{ borderBottom: '1px solid rgba(255,255,255,0.6)', paddingBottom: '1px' }}>
-              物流運送事業・ヘッドスパ事業・遺品整理・生前整理事業
-            </strong>。どの事業についても、<br />
-            まずはお気軽にお問い合わせください。無料でお見積りいたします。
-          </p>
-          <div className="flex flex-wrap justify-center gap-3.5">
-            <Link
-              href="/company#contact"
-              className="inline-flex items-center gap-2 rounded-[50px] border-[1.5px] border-white/65 bg-transparent px-7 py-3.5 text-sm font-normal text-white transition-all hover:bg-white/15 hover:border-white"
-            >
-              お見積り・ご相談
-            </Link>
-            <a
-              href="tel:0661159935"
-              className="inline-flex items-center gap-2 rounded-[50px] border-[1.5px] border-white/65 bg-transparent px-7 py-3.5 text-sm font-normal text-white transition-all hover:bg-white/15 hover:border-white"
-            >
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.61 19a19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 3.09 4.18 2 2 0 0 1 5.07 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L9.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 23 17z"/>
-              </svg>
-              06-6115-9935
-            </a>
-            <a
-              href="https://lin.ee/3QGIdCY"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-[50px] border-[1.5px] border-white/65 bg-transparent px-7 py-3.5 text-sm font-normal text-white transition-all hover:bg-white/15 hover:border-white"
-            >
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-              </svg>
-              LINE相談
-            </a>
-          </div>
-        </section>
+        <EstimateCta
+          title="物流サービス お見積り・ご相談"
+          description="物流業務、利用運送、EC支援など、まずはお気軽にお問い合わせください。無料でお見積りいたします。"
+        />
       </main>
       <Footer />
     </>

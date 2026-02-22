@@ -5,8 +5,8 @@ import { BusinessCard } from "@/components/business-card"
 import { CredentialsSection } from "@/components/credentials-section"
 import { SectionHeading } from "@/components/section-heading"
 import { ScrollAnimate } from "@/components/scroll-animate"
-import { EstimateCta } from "@/components/estimate-cta"
 import { IMAGES } from "@/lib/images"
+import Link from "next/link"
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://gamigami.net'
 
@@ -254,10 +254,45 @@ export default function Page() {
         <CredentialsSection />
 
         {/* CTA */}
-        <EstimateCta
-          title="お見積り・ご相談"
-          description="物流・ヘッドスパ・遺品整理。どの事業についても、まずはお気軽にお問い合わせください。無料でお見積りいたします。"
-        />
+        <section className="bg-[#2d3e5e] px-6 py-14 text-center text-white">
+          <h2 className="mb-4.5 text-[26px] font-medium tracking-[0.08em]">
+            お見積り・ご相談
+          </h2>
+          <p className="mx-auto mb-8 max-w-2xl text-[14.5px] leading-[1.9] text-[#d0d9e8]">
+            <strong className="font-bold text-white" style={{ borderBottom: '1px solid rgba(255,255,255,0.6)', paddingBottom: '1px' }}>
+              物流運送事業・ヘッドスパ事業・遺品整理・生前整理事業
+            </strong>。どの事業についても、<br />
+            まずはお気軽にお問い合わせください。無料でお見積りいたします。
+          </p>
+          <div className="flex flex-wrap justify-center gap-3.5">
+            <Link
+              href="/company#contact"
+              className="inline-flex items-center gap-2 rounded-[50px] border-[1.5px] border-white/65 bg-transparent px-7 py-3.5 text-sm font-normal text-white transition-all hover:bg-white/15 hover:border-white"
+            >
+              お見積り・ご相談
+            </Link>
+            <a
+              href="tel:0661159935"
+              className="inline-flex items-center gap-2 rounded-[50px] border-[1.5px] border-white/65 bg-transparent px-7 py-3.5 text-sm font-normal text-white transition-all hover:bg-white/15 hover:border-white"
+            >
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.61 19a19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 3.09 4.18 2 2 0 0 1 5.07 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L9.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 23 17z"/>
+              </svg>
+              06-6115-9935
+            </a>
+            <a
+              href="https://lin.ee/3QGIdCY"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-[50px] border-[1.5px] border-white/65 bg-transparent px-7 py-3.5 text-sm font-normal text-white transition-all hover:bg-white/15 hover:border-white"
+            >
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+              </svg>
+              LINE相談
+            </a>
+          </div>
+        </section>
       </main>
       <Footer />
     </>
