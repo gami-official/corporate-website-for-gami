@@ -50,7 +50,7 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/seihin" className="text-sm text-muted-foreground transition-colors hover:text-primary">
-                  遺品整理・生前整理事業
+                  整理買取事業
                 </Link>
               </li>
               <li>

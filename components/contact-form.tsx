@@ -7,7 +7,7 @@ const CONTACT_EMAIL = "f_fuchigami@gamigami.email"
 const inquiryTypes = [
   "物流に関するお問い合わせ",
   "ヘッドスパ事業に関するお問い合わせ",
-  "遺品整理・生前整理に関するお問い合わせ",
+  "整理買取事業に関するお問い合わせ",
   "梱包資材に関するお問い合わせ",
   "その他",
 ]

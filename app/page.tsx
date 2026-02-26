@@ -144,20 +144,20 @@ const localBusinessSchema = {
       },
       {
         "@type": "OfferCatalog",
-        name: "遺品整理・生前整理事業",
+        name: "整理買取事業",
         itemListElement: [
           {
             "@type": "Offer",
             itemOffered: {
               "@type": "Service",
-              name: "遺品整理",
+              name: "整理",
             },
           },
           {
             "@type": "Offer",
             itemOffered: {
               "@type": "Service",
-              name: "生前整理",
+              name: "買取",
             },
           },
         ],
@@ -198,11 +198,11 @@ const businesses = [
     accentColor: "spa" as const,
   },
   {
-    title: "遺品整理・生前整理事業",
-    subtitle: "遺品整理",
+    title: "整理買取事業",
+    subtitle: "整理・買取",
     description: "",
     descriptionItems: [
-      "遺品整理 / 生前整理",
+      "整理・買取",
       "片付け・仕分け・整理 全般",
       "貴金属・時計等 買取対応",
       "資格保有の安心対応",
@@ -239,7 +239,7 @@ export default function Page() {
               <SectionHeading
                 sub="事業紹介"
                 title="事業領域"
-                catchCopy="物流運送事業・ヘッドスパ事業・遺品整理・生前整理事業。"
+                catchCopy="物流運送事業・ヘッドスパ事業・整理買取事業。"
                 className="mb-16"
               />
             </ScrollAnimate>

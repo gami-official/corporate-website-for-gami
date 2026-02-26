@@ -9,7 +9,7 @@ const navLinks = [
   { href: "/", label: "ホーム" },
   { href: "/logistics", label: "物流運送事業" },
   { href: "/school", label: "ヘッドスパ事業" },
-  { href: "/seihin", label: "遺品整理・生前整理事業" },
+  { href: "/seihin", label: "整理買取事業" },
   { href: "/company", label: "会社概要" },
   { href: "/company#contact", label: "お問い合わせ" },
 ]

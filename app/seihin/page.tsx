@@ -20,7 +20,7 @@ import Link from "next/link"
 import { IMAGES } from "@/lib/images"
 
 export const metadata: Metadata = {
-  title: "遺品整理・生前整理事業",
+  title: "整理買取事業",
   description: "大切な方の想い出に寄り添い、真心を込めて整理いたします。遺品整理士・生前整理アドバイザーが在籍。古物商免許を活かした貴金属・時計の買取も対応可能です。",
   keywords: [
     "遺品整理",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     "貴金属買取",
   ],
   openGraph: {
-    title: "遺品整理・生前整理事業 | 株式会社GAMI | 遺品整理士在籍・買取対応",
+    title: "整理買取事業 | 株式会社GAMI | 遺品整理士在籍・買取対応",
     description: "大切な方の想い出に寄り添い、真心を込めて整理いたします。遺品整理士・生前整理アドバイザーが在籍。古物商免許を活かした貴金属・時計の買取も対応可能です。",
     url: '/seihin',
     type: "website",
@@ -67,8 +67,8 @@ function renderDescription(
 const values = [
   {
     icon: Heart,
-    title: "遺品整理・生前整理事業",
-    description: "ご遺族やご本人の気持ちを最優先に。一つひとつの品物に込められた想い出を大切にしながら、遺品整理・生前整理を丁寧に行います。",
+    title: "整理買取事業",
+    description: "ご遺族やご本人の気持ちを最優先に。一つひとつの品物に込められた想い出を大切にしながら、整理・買取を丁寧に行います。",
   },
   {
     icon: HandHeart,
@@ -107,7 +107,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://gamigami.net'
 const seihinServiceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  serviceType: "遺品整理・生前整理",
+  serviceType: "整理買取事業",
   provider: {
     "@type": "Organization",
     name: "株式会社GAMI",
@@ -125,7 +125,7 @@ const seihinServiceSchema = {
       name: "関西・中国・四国・九州エリア",
     },
   },
-  description: "大切な方の想い出に、心を込めて寄り添います。遺品整理・生前整理、片付け・仕分け・整理全般、貴金属・時計等の買取対応。",
+  description: "大切な方の想い出に、心を込めて寄り添います。整理・買取、片付け・仕分け・整理全般、貴金属・時計等の買取対応。",
 }
 
 const breadcrumbSchema = {
@@ -141,7 +141,7 @@ const breadcrumbSchema = {
     {
       "@type": "ListItem",
       position: 2,
-      name: "遺品整理・生前整理事業",
+      name: "整理買取事業",
       item: `${siteUrl}/seihin`,
     },
   ],
@@ -164,7 +164,7 @@ export default function SeihinPage() {
         <section className="relative flex min-h-[60vh] items-end">
           <Image
             src={IMAGES.heroSeihin}
-            alt="遺品整理"
+            alt="整理買取"
             fill
             className="object-cover"
             priority
@@ -173,10 +173,10 @@ export default function SeihinPage() {
           <div className="relative z-10 mx-auto w-full max-w-6xl px-4 pb-12 pt-20 sm:px-6 sm:pb-16 sm:pt-24 lg:pt-32">
             <div className="max-w-2xl [text-shadow:0_1px_2px_rgba(0,0,0,0.5),0_2px_8px_rgba(0,0,0,0.4)]">
               <p className="font-mono text-lg font-medium uppercase tracking-[0.3em] text-white sm:text-xl md:text-2xl">
-                Estate Organization
+                整理・買取
               </p>
               <h1 className="mt-3 font-serif text-xl font-bold tracking-wider text-white sm:mt-4 sm:text-2xl md:text-3xl lg:text-4xl">
-                遺品整理・生前整理事業
+                整理買取事業
               </h1>
               <p className="mt-3 max-w-xl text-pretty text-xs leading-relaxed tracking-wide text-white sm:mt-4 sm:text-sm md:text-base">
                 大切な方の想い出に、心を込めて寄り添います。整理・片付けから供養の手配まで、安心してお任せください。
@@ -191,7 +191,7 @@ export default function SeihinPage() {
             <ScrollAnimate>
               <SectionHeading
                 sub="サービス内容"
-                title="遺品整理・生前整理事業"
+                title="整理買取事業"
                 catchCopy="大切な方の想い出に、心を込めて寄り添います。整理・片付けから供養の手配まで、安心してお任せください。"
                 className="mb-16"
               />
@@ -340,10 +340,10 @@ export default function SeihinPage() {
         {/* CTA */}
         <section className="bg-[#2d3e5e] px-6 py-14 text-center text-white">
           <h2 className="mb-4.5 text-[26px] font-medium tracking-[0.08em]">
-            遺品整理・生前整理事業 お見積り・ご相談
+            整理買取事業 お見積り・ご相談
           </h2>
           <p className="mx-auto mb-8 max-w-2xl text-[14.5px] leading-[1.9] text-[#d0d9e8]">
-            遺品整理・生前整理事業のご依頼、まずはお気軽にお問い合わせください。無料でお見積り・ご相談いたします。
+            整理買取事業のご依頼、まずはお気軽にお問い合わせください。無料でお見積り・ご相談いたします。
           </p>
           <div className="flex flex-wrap justify-center gap-3.5">
             <Link

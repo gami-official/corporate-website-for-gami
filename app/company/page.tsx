@@ -7,7 +7,7 @@ import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "会社概要",
-  description: "株式会社GAMIの会社概要・お問い合わせ。物流運送事業、ヘッドスパ事業、遺品整理・生前整理事業を展開。",
+  description: "株式会社GAMIの会社概要・お問い合わせ。物流運送事業、ヘッドスパ事業、整理買取事業を展開。",
   keywords: [
     "株式会社GAMI",
     "会社概要",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "会社概要 | 株式会社GAMI",
-    description: "株式会社GAMIの会社概要・お問い合わせ。物流運送事業、ヘッドスパ事業、遺品整理・生前整理事業を展開。",
+    description: "株式会社GAMIの会社概要・お問い合わせ。物流運送事業、ヘッドスパ事業、整理買取事業を展開。",
     url: '/company',
     type: "website",
   },
@@ -32,7 +32,7 @@ const companyInfo = [
   { label: "設立", value: "2025年6月17日" },
   {
     label: "事業内容",
-    value: "物流運送事業、ヘッドスパ事業、遺品整理・生前整理事業",
+    value: "物流運送事業、ヘッドスパ事業、整理買取事業",
   },
   { label: "メールアドレス", value: "f_fuchigami@gamigami.email" },
   { label: "TEL", value: "06-6115-9935" },
@@ -153,11 +153,11 @@ export default function CompanyPage() {
             <SectionHeading
               sub="ミッション"
               title="繋ぐ。癒す。想う。"
-              catchCopy={"物流運送事業・ヘッドスパ事業・遺品整理・生前整理事業。\n３つの事業で、暮らしと事業に安心と価値を届けます。"}
+              catchCopy={"物流運送事業・ヘッドスパ事業・整理買取事業。\n３つの事業で、暮らしと事業に安心と価値を届けます。"}
               className="mb-10"
             />
             <p className="text-sm leading-loose tracking-readable text-muted-foreground">
-              物流運送事業・ヘッドスパ事業・遺品整理・生前整理事業の３つの事業を通じて、人と人、モノと想いを繋ぎます。
+              物流運送事業・ヘッドスパ事業・整理買取事業の３つの事業を通じて、人と人、モノと想いを繋ぎます。
               <br className="sm:hidden" />
               お客様の暮らしと事業に寄り添い、安心と価値を届けることが私たちの使命です。
             </p>

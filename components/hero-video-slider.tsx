@@ -47,7 +47,7 @@ const slides: Slide[] = [
   {
     copy: "想う。",
     sub: "大切な方の想い出に、心を込めて寄り添います。整理・片付けから供養の手配まで、安心してお任せください。",
-    cta: "遺品整理・生前整理事業を見る",
+    cta: "整理買取事業を見る",
     ctaHref: "/seihin",
     posterSrc: IMAGES.heroSeihin,
     videoSrc: undefined,
