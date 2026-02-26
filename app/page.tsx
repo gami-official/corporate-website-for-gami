@@ -256,7 +256,7 @@ export default function Page() {
         {/* CTA */}
         <section className="bg-[#2d3e5e] px-6 py-14 text-center text-white">
           <h2 className="mb-4.5 text-[26px] font-medium tracking-[0.08em]">
-            運送物流事業 お見積り・ご相談
+            お見積り・ご相談
           </h2>
           <p className="mx-auto mb-8 max-w-2xl text-[14.5px] leading-[1.9] text-[#d0d9e8]">
             物流業務、利用運送、EC支援など、まずはお気軽にお問い合わせください。無料でお見積りいたします。

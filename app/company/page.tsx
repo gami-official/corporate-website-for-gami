@@ -153,11 +153,11 @@ export default function CompanyPage() {
             <SectionHeading
               sub="ミッション"
               title="繋ぐ。癒す。想う。"
-              catchCopy={"物流運送事業・ヘッドスパ事業・遺品整理・生前整理事業。\n4つの事業で、暮らしと事業に安心と価値を届けます。"}
+              catchCopy={"物流運送事業・ヘッドスパ事業・遺品整理・生前整理事業。\n３つの事業で、暮らしと事業に安心と価値を届けます。"}
               className="mb-10"
             />
             <p className="text-sm leading-loose tracking-readable text-muted-foreground">
-              物流運送事業・ヘッドスパ事業・遺品整理・生前整理事業の4つの事業を通じて、人と人、モノと想いを繋ぎます。
+              物流運送事業・ヘッドスパ事業・遺品整理・生前整理事業の３つの事業を通じて、人と人、モノと想いを繋ぎます。
               <br className="sm:hidden" />
               お客様の暮らしと事業に寄り添い、安心と価値を届けることが私たちの使命です。
             </p>

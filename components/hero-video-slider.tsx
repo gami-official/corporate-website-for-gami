@@ -125,7 +125,7 @@ export function HeroVideoSlider() {
           {/* Video or poster fallback */}
           {slide.videoSrc ? (
             <video
-              className="absolute inset-0 h-full w-full object-cover scale-90"
+              className="absolute inset-0 h-full w-full object-cover scale-75 sm:scale-85 md:scale-90"
               src={slide.videoSrc}
               poster={slide.posterSrc}
               autoPlay
