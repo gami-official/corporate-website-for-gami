@@ -219,13 +219,10 @@ export default function SchoolPage() {
         {/* CTA */}
         <section className="bg-[#2d3e5e] px-6 py-14 text-center text-white">
           <h2 className="mb-4.5 text-[26px] font-medium tracking-[0.08em]">
-            お見積り・ご相談
+            ヘッドスパ事業 お見積り・ご相談
           </h2>
           <p className="mx-auto mb-8 max-w-2xl text-[14.5px] leading-[1.9] text-[#d0d9e8]">
-            <strong className="font-bold text-white" style={{ borderBottom: '1px solid rgba(255,255,255,0.6)', paddingBottom: '1px' }}>
-              物流運送事業・ヘッドスパ事業・遺品整理・生前整理事業
-            </strong>。どの事業についても、<br />
-            まずはお気軽にお問い合わせください。無料でお見積りいたします。
+            店舗運営・スクール・開業支援・出張サービスなど、まずはお気軽にお問い合わせください。無料でご相談いたします。
           </p>
           <div className="flex flex-wrap justify-center gap-3.5">
             <Link
