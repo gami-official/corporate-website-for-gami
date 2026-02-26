@@ -43,7 +43,13 @@ export function BusinessCard({
               src={imageSrc || "/placeholder.svg"}
               alt={title}
               fill
-              className={`object-cover transition-transform duration-700 group-hover:scale-105 ${imageSrc === '/images/card-school.png' ? 'scale-90 object-[50%_30%]' : ''}`}
+              className={`transition-transform duration-700 group-hover:scale-105 ${
+                imageSrc === '/images/hero-logistics.png'
+                  ? 'object-contain object-center'
+                  : imageSrc === '/images/card-school.png'
+                    ? 'object-cover scale-90 object-[50%_30%]'
+                    : 'object-cover'
+              }`}
               unoptimized={imageSrc?.startsWith('/images/')}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-foreground/10 to-transparent" />

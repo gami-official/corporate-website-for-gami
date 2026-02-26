@@ -173,7 +173,7 @@ export function HeroVideoSlider() {
               src={slide.posterSrc || IMAGES.placeholder}
               alt=""
               fill
-              className={`object-cover ${slide.posterSrc === IMAGES.heroSpa ? 'scale-90 object-[50%_30%]' : ''}`}
+              className={slide.posterSrc === IMAGES.heroSpa ? 'object-contain object-center' : 'object-cover'}
               priority={i === 0}
               unoptimized={slide.posterSrc?.startsWith('/images/')}
             />

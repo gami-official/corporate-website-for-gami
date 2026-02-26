@@ -187,7 +187,7 @@ export default function LogisticsPage() {
             <ScrollAnimate>
               <SectionHeading
                 sub="サービス内容"
-                title="物流サービス"
+                title="運送物流事業"
                 catchCopy="ワンストップの物流ソリューション。物流業務を軸に、コンサルティング、利用運送・軽貨物運送、EC支援、オリジナル梱包資材の企画・製作まで。"
                 className="mb-16"
               />
@@ -325,7 +325,7 @@ export default function LogisticsPage() {
 
         {/* CTA */}
         <EstimateCta
-          title="物流サービス お見積り・ご相談"
+          title="運送物流事業 お見積り・ご相談"
           description="物流業務、利用運送、EC支援など、まずはお気軽にお問い合わせください。無料でお見積りいたします。"
         />
       </main>
