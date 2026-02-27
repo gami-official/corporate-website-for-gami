@@ -401,12 +401,12 @@ export default function SeihinPage() {
             <div className="grid gap-8 sm:grid-cols-3">
               {[
                 {
-                  image: "/images/card-seihin.png",
+                  image: "/images/seihin-furniture-01.png",
                   item: "古い家具・食器類",
                   voice: "思い出の食器棚とテーブルを査定していただきました。想定より高く買い取っていただき、感謝しています。",
                 },
                 {
-                  image: "/images/hero-seihin.png",
+                  image: "/images/seihin-furniture-02.png",
                   item: "ブランド時計",
                   voice: "父の形見の時計を適正価格で引き取っていただき、安心しました。丁寧な対応ありがとうございました。",
                 },
