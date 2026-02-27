@@ -35,7 +35,7 @@ export function Header() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden items-center gap-6 lg:flex" aria-label="メインナビゲーション">
+        <nav className="hidden items-center gap-4 lg:flex" aria-label="メインナビゲーション">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -45,6 +45,12 @@ export function Header() {
               {link.label}
             </Link>
           ))}
+          <Link
+            href="/company#contact"
+            className="shrink-0 rounded-full bg-amber-500 px-4 py-2 text-xs font-bold tracking-wide text-white shadow-md transition-all hover:bg-amber-600 hover:shadow-lg active:scale-95"
+          >
+            【24時間受付】無料査定はこちら
+          </Link>
         </nav>
 
         {/* Mobile hamburger */}
@@ -65,6 +71,13 @@ export function Header() {
           className="border-t border-border/50 glass-strong px-4 py-6 sm:px-6 lg:hidden"
           aria-label="モバイルナビゲーション"
         >
+          <Link
+            href="/company#contact"
+            className="mb-4 flex justify-center rounded-full bg-amber-500 px-4 py-3 text-center text-sm font-bold tracking-wide text-white shadow-md"
+            onClick={() => setIsOpen(false)}
+          >
+            【24時間受付】無料査定はこちら
+          </Link>
           <ul className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <li key={link.href}>

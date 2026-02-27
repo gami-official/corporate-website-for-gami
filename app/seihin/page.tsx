@@ -13,6 +13,9 @@ import {
   BadgeCheck,
   Lock,
   Zap,
+  CircleDollarSign,
+  Clock,
+  UserCheck,
 } from "lucide-react"
 import type { Metadata } from "next"
 import Image from "next/image"
@@ -63,6 +66,24 @@ function renderDescription(
     </>
   );
 }
+
+const whyChooseUs = [
+  {
+    icon: CircleDollarSign,
+    title: "高価買取の理由",
+    description: "独自の販売ルートにより、他社で断られた品物も査定。適正価格でお引き取りします。",
+  },
+  {
+    icon: Clock,
+    title: "スピード対応",
+    description: "最短即日訪問、その場で現金支払い。急ぎのご依頼にも可能な限り対応します。",
+  },
+  {
+    icon: UserCheck,
+    title: "プロの遺品整理士在籍",
+    description: "丁寧な仕分けと供養の心で対応。残すもの・供養するもの・お譲りするものを大切に整理します。",
+  },
+]
 
 const values = [
   {
@@ -185,6 +206,37 @@ export default function SeihinPage() {
           </div>
         </section>
 
+        {/* 選ばれる3つの理由 */}
+        <section className="border-t border-border bg-secondary/30 py-16 px-4 sm:px-6 sm:py-24 lg:py-28">
+          <div className="mx-auto max-w-6xl">
+            <ScrollAnimate>
+              <SectionHeading
+                sub="安心と信頼"
+                title="当社の整理買取が選ばれる3つの理由"
+                catchCopy=""
+                className="mb-12"
+              />
+            </ScrollAnimate>
+            <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
+              {whyChooseUs.map((item) => (
+                <ScrollAnimate key={item.title} className="h-full">
+                  <div className="tech-card flex h-full flex-col rounded-2xl border-2 border-amber-500/20 bg-white p-6 shadow-lg transition-all hover:border-amber-500/40 hover:shadow-xl sm:p-8">
+                    <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-amber-500/15">
+                      <item.icon className="h-7 w-7 text-amber-600" />
+                    </div>
+                    <h3 className="mt-4 font-semibold tracking-wider text-foreground">
+                      {item.title}
+                    </h3>
+                    <p className="mt-2 flex-grow text-sm leading-relaxed tracking-wide text-muted-foreground">
+                      {item.description}
+                    </p>
+                  </div>
+                </ScrollAnimate>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Values */}
         <section className="section-gradient py-16 px-4 sm:px-6 sm:py-24 lg:py-32">
           <div className="mx-auto max-w-6xl">
@@ -203,13 +255,28 @@ export default function SeihinPage() {
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-navy/10">
                       <v.icon className="h-5 w-5 text-navy" />
                     </div>
-                    <div className="flex flex-col">
+                    <div className="flex flex-1 flex-col">
                       <h3 className="font-medium tracking-wider text-foreground">
                         {v.title}
                       </h3>
                       <p className="mt-1 flex-grow text-sm leading-relaxed tracking-wide text-muted-foreground">
                         {renderDescription(v.description, "noBreakPhrases" in v ? v.noBreakPhrases : undefined)}
                       </p>
+                      <div className="mt-4 flex flex-wrap gap-2">
+                        <a
+                          href="tel:0661159935"
+                          className="inline-flex items-center gap-2 rounded-full bg-amber-500 px-4 py-2.5 text-sm font-bold text-white shadow-md transition-all hover:bg-amber-600 hover:shadow-lg active:scale-95"
+                        >
+                          <Phone className="h-4 w-4" />
+                          まずは無料査定・ご相談
+                        </a>
+                        <Link
+                          href="/company#contact"
+                          className="inline-flex items-center gap-2 rounded-full border-2 border-amber-500 bg-transparent px-4 py-2.5 text-sm font-bold text-amber-600 transition-colors hover:bg-amber-500/10"
+                        >
+                          フォームで問い合わせ
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </ScrollAnimate>
@@ -318,6 +385,67 @@ export default function SeihinPage() {
               <p className="text-muted-foreground">※赤色のエリアが対応可能地域です。</p>
             </div>
           </ScrollAnimate>
+        </section>
+
+        {/* 最近の買取実績 */}
+        <section className="section-gradient py-16 px-4 sm:px-6 sm:py-24 lg:py-28">
+          <div className="mx-auto max-w-6xl">
+            <ScrollAnimate>
+              <SectionHeading
+                sub="実績"
+                title="最近の買取実績"
+                catchCopy="「自分の持っているものも売れるかも」まずはお気軽にご相談ください。"
+                className="mb-12"
+              />
+            </ScrollAnimate>
+            <div className="grid gap-8 sm:grid-cols-3">
+              {[
+                {
+                  image: "/images/card-seihin.png",
+                  item: "古い家具・食器類",
+                  price: "高価買取",
+                  voice: "思い出の食器棚とテーブルを査定していただきました。想定より高く買い取っていただき、感謝しています。",
+                },
+                {
+                  image: "/images/hero-seihin.png",
+                  item: "ブランド時計",
+                  price: "¥85,000",
+                  voice: "父の形見の時計を適正価格で引き取っていただき、安心しました。丁寧な対応ありがとうございました。",
+                },
+                {
+                  image: "/images/card-seihin.png",
+                  item: "趣味のコレクション",
+                  price: "高価買取",
+                  voice: "切手やコインなど、長年集めたコレクションをまとめて査定。専門的な知識で適正な価格を提示いただきました。",
+                },
+              ].map((record) => (
+                <ScrollAnimate key={record.item} className="h-full">
+                  <div className="tech-card flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-lg">
+                    <div className="relative aspect-[4/3] w-full bg-muted">
+                      <Image
+                        src={record.image}
+                        alt={record.item}
+                        fill
+                        className="object-cover"
+                        unoptimized
+                      />
+                      <span className="absolute right-2 top-2 rounded-full bg-amber-500 px-3 py-1 text-xs font-bold text-white shadow">
+                        {record.price}
+                      </span>
+                    </div>
+                    <div className="flex flex-1 flex-col p-4 sm:p-5">
+                      <h3 className="font-semibold tracking-wider text-foreground">
+                        {record.item}
+                      </h3>
+                      <p className="mt-2 flex-grow text-sm leading-relaxed text-muted-foreground">
+                        「{record.voice}」
+                      </p>
+                    </div>
+                  </div>
+                </ScrollAnimate>
+              ))}
+            </div>
+          </div>
         </section>
 
         {/* Credentials inline - 古物商許可を枠で囲む */}
