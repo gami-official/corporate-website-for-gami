@@ -21,6 +21,7 @@ import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import { IMAGES } from "@/lib/images"
+import { SeihinRecordCard } from "@/components/seihin-record-card"
 
 export const metadata: Metadata = {
   title: "整理買取事業",
@@ -417,25 +418,11 @@ export default function SeihinPage() {
                 },
               ].map((record) => (
                 <ScrollAnimate key={record.item} className="h-full">
-                  <div className="tech-card flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-lg">
-                    <div className="relative aspect-[4/3] w-full bg-muted">
-                      <Image
-                        src={record.image}
-                        alt={record.item}
-                        fill
-                        className="object-cover"
-                        unoptimized
-                      />
-                    </div>
-                    <div className="flex flex-1 flex-col p-4 sm:p-5">
-                      <h3 className="font-semibold tracking-wider text-foreground">
-                        {record.item}
-                      </h3>
-                      <p className="mt-2 flex-grow text-sm leading-relaxed text-muted-foreground">
-                        「{record.voice}」
-                      </p>
-                    </div>
-                  </div>
+                  <SeihinRecordCard
+                    image={record.image}
+                    item={record.item}
+                    voice={record.voice}
+                  />
                 </ScrollAnimate>
               ))}
             </div>
