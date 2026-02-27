@@ -412,7 +412,7 @@ export default function SeihinPage() {
                   voice: "父の形見の時計を適正価格で引き取っていただき、安心しました。丁寧な対応ありがとうございました。",
                 },
                 {
-                  image: "/images/card-seihin.png",
+                  image: "/images/seihin-furniture-03.png.png",
                   item: "趣味のコレクション",
                   voice: "切手やコインなど、長年集めたコレクションをまとめて査定。専門的な知識で適正な価格を提示いただきました。",
                 },
