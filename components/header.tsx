@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-
+import { usePathname } from "next/navigation"
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
 
@@ -15,8 +15,10 @@ const navLinks = [
 ]
 
 export function Header() {
+  const pathname = usePathname()
   const [isOpen, setIsOpen] = useState(false)
   const [logoError, setLogoError] = useState(false)
+  const ctaLabel = pathname === "/seihin" ? "【24時間受付】無料査定はこちら" : "ご相談はこちらから"
 
   return (
     <header className="sticky top-0 left-0 right-0 z-50 glass-strong shadow-glass">
@@ -49,7 +51,7 @@ export function Header() {
             href="/company#contact"
             className="shrink-0 rounded-full bg-amber-500 px-4 py-2 text-xs font-bold tracking-wide text-white shadow-md transition-all hover:bg-amber-600 hover:shadow-lg active:scale-95"
           >
-            【24時間受付】無料査定はこちら
+            {ctaLabel}
           </Link>
         </nav>
 
@@ -76,7 +78,7 @@ export function Header() {
             className="mb-4 flex justify-center rounded-full bg-amber-500 px-4 py-3 text-center text-sm font-bold tracking-wide text-white shadow-md"
             onClick={() => setIsOpen(false)}
           >
-            【24時間受付】無料査定はこちら
+            {ctaLabel}
           </Link>
           <ul className="flex flex-col gap-4">
             {navLinks.map((link) => (
