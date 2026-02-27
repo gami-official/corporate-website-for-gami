@@ -403,19 +403,16 @@ export default function SeihinPage() {
                 {
                   image: "/images/card-seihin.png",
                   item: "古い家具・食器類",
-                  price: "高価買取",
                   voice: "思い出の食器棚とテーブルを査定していただきました。想定より高く買い取っていただき、感謝しています。",
                 },
                 {
                   image: "/images/hero-seihin.png",
                   item: "ブランド時計",
-                  price: "¥85,000",
                   voice: "父の形見の時計を適正価格で引き取っていただき、安心しました。丁寧な対応ありがとうございました。",
                 },
                 {
                   image: "/images/card-seihin.png",
                   item: "趣味のコレクション",
-                  price: "高価買取",
                   voice: "切手やコインなど、長年集めたコレクションをまとめて査定。専門的な知識で適正な価格を提示いただきました。",
                 },
               ].map((record) => (
@@ -429,9 +426,6 @@ export default function SeihinPage() {
                         className="object-cover"
                         unoptimized
                       />
-                      <span className="absolute right-2 top-2 rounded-full bg-amber-500 px-3 py-1 text-xs font-bold text-white shadow">
-                        {record.price}
-                      </span>
                     </div>
                     <div className="flex flex-1 flex-col p-4 sm:p-5">
                       <h3 className="font-semibold tracking-wider text-foreground">
