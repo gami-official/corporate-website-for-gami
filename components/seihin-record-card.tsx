@@ -21,7 +21,7 @@ export function SeihinRecordCard({ image, item, voice }: SeihinRecordCardProps) 
           src={src}
           alt={item}
           fill
-          className="object-cover"
+          className="object-contain object-center"
           unoptimized
           onError={() => setSrc(FALLBACK_IMAGE)}
         />

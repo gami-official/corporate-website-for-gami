@@ -125,7 +125,7 @@ export function HeroVideoSlider() {
           {/* Video or poster fallback */}
           {slide.videoSrc ? (
             <video
-              className="absolute inset-0 h-full w-full object-cover scale-75 sm:scale-85 md:scale-90"
+              className="absolute inset-0 h-full w-full object-contain object-center"
               src={slide.videoSrc}
               poster={slide.posterSrc}
               autoPlay
@@ -162,7 +162,7 @@ export function HeroVideoSlider() {
                   video.style.display = 'none'
                   const img = document.createElement('img')
                   img.src = slide.posterSrc || IMAGES.placeholder
-                  img.className = 'absolute inset-0 h-full w-full object-cover'
+                  img.className = 'absolute inset-0 h-full w-full object-contain object-center'
                   img.alt = ''
                   parent.appendChild(img)
                 }
@@ -173,7 +173,7 @@ export function HeroVideoSlider() {
               src={slide.posterSrc || IMAGES.placeholder}
               alt=""
               fill
-              className={slide.posterSrc === IMAGES.heroSpa ? 'object-cover object-center scale-[0.92]' : 'object-cover'}
+              className="object-contain object-center"
               priority={i === 0}
               unoptimized={slide.posterSrc?.startsWith('/images/')}
             />
