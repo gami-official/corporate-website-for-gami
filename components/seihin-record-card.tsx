@@ -17,7 +17,7 @@ export function SeihinRecordCard({ image, item, voice }: SeihinRecordCardProps) 
   return (
     <div className="tech-card flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-lg">
       <div className="relative aspect-[4/3] w-full max-w-full overflow-hidden bg-muted">
-        <div className="absolute inset-[6%]">
+        <div className="absolute inset-[3%]">
           <Image
             src={src}
             alt={item}

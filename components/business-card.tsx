@@ -39,7 +39,7 @@ export function BusinessCard({
         <article className="tech-card flex h-full flex-col overflow-hidden rounded-2xl">
           {/* Image */}
           <div className="relative aspect-[4/3] w-full max-w-full overflow-hidden">
-            <div className="absolute inset-[6%]">
+            <div className="absolute inset-[3%]">
               <Image
                 src={imageSrc || "/placeholder.svg"}
                 alt={title}

@@ -124,7 +124,7 @@ export function HeroVideoSlider() {
         >
           {/* Video or poster fallback */}
           {slide.videoSrc ? (
-            <div className="absolute inset-[6%] flex items-center justify-center overflow-hidden">
+            <div className="absolute inset-[3%] flex items-center justify-center overflow-hidden">
               <video
                 className="h-full w-full max-h-full max-w-full object-contain object-center"
               src={slide.videoSrc}
@@ -172,7 +172,7 @@ export function HeroVideoSlider() {
             />
             </div>
           ) : (
-            <div className="absolute inset-[6%] flex items-center justify-center overflow-hidden">
+            <div className="absolute inset-[3%] flex items-center justify-center overflow-hidden">
               <div className="relative h-full w-full">
                 <Image
                   src={slide.posterSrc || IMAGES.placeholder}
