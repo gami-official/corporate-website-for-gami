@@ -97,7 +97,7 @@ const localBusinessSchema = {
     itemListElement: [
       {
         "@type": "OfferCatalog",
-        name: "物流運送事業",
+        name: "運送物流事業",
         itemListElement: [
           {
             "@type": "Offer",
@@ -168,7 +168,7 @@ const localBusinessSchema = {
 
 const businesses = [
   {
-    title: "物流運送事業",
+    title: "運送物流事業",
     subtitle: "物流",
     description: "",
     descriptionItems: [
@@ -239,7 +239,7 @@ export default function Page() {
               <SectionHeading
                 sub="事業紹介"
                 title="事業領域"
-                catchCopy="物流運送事業・ヘッドスパ事業・整理買取事業。"
+                catchCopy="運送物流事業・ヘッドスパ事業・整理買取事業。"
                 className="mb-16"
               />
             </ScrollAnimate>

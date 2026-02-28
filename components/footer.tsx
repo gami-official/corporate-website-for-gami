@@ -40,7 +40,7 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/logistics" className="text-sm text-muted-foreground transition-colors hover:text-primary">
-                  物流運送事業
+                  運送物流事業
                 </Link>
               </li>
               <li>

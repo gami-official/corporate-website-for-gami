@@ -7,7 +7,7 @@ import { Menu, X } from "lucide-react"
 
 const navLinks = [
   { href: "/", label: "ホーム" },
-  { href: "/logistics", label: "物流運送事業" },
+  { href: "/logistics", label: "運送物流事業" },
   { href: "/school", label: "ヘッドスパ事業" },
   { href: "/seihin", label: "整理買取事業" },
   { href: "/company", label: "会社概要" },

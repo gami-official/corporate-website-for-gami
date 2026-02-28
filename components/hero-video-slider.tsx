@@ -29,7 +29,7 @@ const slides: Slide[] = [
   {
     copy: "繋ぐ。",
     sub: "確実な物流設計と輸送で、ビジネスを止めない。",
-    cta: "物流運送事業を見る",
+    cta: "運送物流事業を見る",
     ctaHref: "/logistics",
     posterSrc: IMAGES.heroLogistics,
     videoSrc: undefined,
@@ -124,8 +124,9 @@ export function HeroVideoSlider() {
         >
           {/* Video or poster fallback */}
           {slide.videoSrc ? (
-            <video
-              className="absolute inset-0 h-full w-full object-contain object-center"
+            <div className="absolute inset-[6%] flex items-center justify-center overflow-hidden">
+              <video
+                className="h-full w-full max-h-full max-w-full object-contain object-center"
               src={slide.videoSrc}
               poster={slide.posterSrc}
               autoPlay
@@ -162,21 +163,28 @@ export function HeroVideoSlider() {
                   video.style.display = 'none'
                   const img = document.createElement('img')
                   img.src = slide.posterSrc || IMAGES.placeholder
-                  img.className = 'absolute inset-0 h-full w-full object-contain object-center'
+                  img.className = 'h-full w-full max-h-full max-w-full object-contain object-center'
                   img.alt = ''
+                  img.style.cssText = 'max-width:100%;max-height:100%;height:auto'
                   parent.appendChild(img)
                 }
               }}
             />
+            </div>
           ) : (
-            <Image
-              src={slide.posterSrc || IMAGES.placeholder}
-              alt=""
-              fill
-              className="object-contain object-center"
-              priority={i === 0}
-              unoptimized={slide.posterSrc?.startsWith('/images/')}
-            />
+            <div className="absolute inset-[6%] flex items-center justify-center overflow-hidden">
+              <div className="relative h-full w-full">
+                <Image
+                  src={slide.posterSrc || IMAGES.placeholder}
+                  alt=""
+                  fill
+                  className="object-contain object-center"
+                  style={{ maxWidth: "100%", maxHeight: "100%" }}
+                  priority={i === 0}
+                  unoptimized={slide.posterSrc?.startsWith('/images/')}
+                />
+              </div>
+            </div>
           )}
 
           {/* Overlay - 白文字を読みやすく */}
