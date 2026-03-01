@@ -16,12 +16,15 @@ import {
   CircleDollarSign,
   Clock,
   UserCheck,
+  Gem,
+  Shield,
 } from "lucide-react"
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import { IMAGES } from "@/lib/images"
 import { SeihinRecordCard } from "@/components/seihin-record-card"
+import { FlowTabs } from "@/components/flow-tabs"
 
 export const metadata: Metadata = {
   title: "整理買取事業",
@@ -84,12 +87,22 @@ const whyChooseUs = [
     title: "プロの遺品整理士在籍",
     description: "丁寧な仕分けと供養の心で対応。残すもの・供養するもの・お譲りするものを大切に整理します。",
   },
+  {
+    icon: Gem,
+    title: "ブランド・貴金属・骨董も対応",
+    description: "時計・宝石・着物・美術品など幅広く買取。眠っている品物をまとめてご相談ください。",
+  },
+  {
+    icon: Shield,
+    title: "無料査定・追加費用なし",
+    description: "出張査定は完全無料。買取不成立でも費用は一切かかりません。安心してご利用いただけます。",
+  },
 ]
 
 const values = [
   {
     icon: Heart,
-    title: "整理買取事業",
+    title: "遺品整理・生前整理・買取事業",
     description: "ご遺族やご本人の気持ちを最優先に。一つひとつの品物に込められた想い出を大切にしながら、整理・買取を丁寧に行います。",
   },
   {
@@ -111,7 +124,7 @@ const values = [
   },
 ]
 
-const flow = [
+const flowOrganize = [
   { step: "01", title: "ご相談・お見積り", description: "お電話・LINE・フォームからご連絡ください。現地見積りは無料です。" },
   { step: "02", title: "作業日の調整", description: "ご都合に合わせて作業日を決定。急ぎのご依頼にも可能な限り対応します。" },
   {
@@ -122,6 +135,33 @@ const flow = [
     noBreakPhrases: ["残すもの・供養するもの・お譲りするもの"],
   },
   { step: "04", title: "完了・ご報告", description: "作業完了後、清掃まで行いご報告。必要に応じて供養の手配もいたします。" },
+]
+
+const flowBuy = [
+  {
+    step: "01",
+    title: "お問い合わせ・仮査定",
+    description:
+      "お電話・LINE・フォームから品物の情報をお送りください。写真でも仮査定できます。",
+  },
+  {
+    step: "02",
+    title: "出張査定（無料）",
+    description:
+      "ご都合の良い日時に訪問。その場で品物を確認し、買取金額をご提示します。",
+  },
+  {
+    step: "03",
+    title: "金額のご確認・ご承諾",
+    description:
+      "提示金額にご納得いただけましたら、その場で買取成立。無理な押し付けは一切しません。",
+  },
+  {
+    step: "04",
+    title: "即日現金でお支払い",
+    description:
+      "その場で現金をお渡しします。品物の量が多い場合も一括で対応いたします。※現金でのお支払いは30万円までとなります。30万円を超える場合は銀行振込にて対応いたします。",
+  },
 ]
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://gamigami.net'
@@ -213,12 +253,12 @@ export default function SeihinPage() {
             <ScrollAnimate>
               <SectionHeading
                 sub="安心と信頼"
-                title="当社の整理買取が選ばれる3つの理由"
+                title="当社の整理買取が選ばれる５つの理由"
                 catchCopy=""
                 className="mb-12"
               />
             </ScrollAnimate>
-            <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
+            <div className="grid gap-8 grid-cols-1 sm:grid-cols-2">
               {whyChooseUs.map((item) => (
                 <ScrollAnimate key={item.title} className="h-full">
                   <div className="tech-card flex h-full flex-col rounded-2xl border-2 border-amber-500/20 bg-white p-6 shadow-lg transition-all hover:border-amber-500/40 hover:shadow-xl sm:p-8">
@@ -333,23 +373,7 @@ export default function SeihinPage() {
                 className="mb-16"
               />
             </ScrollAnimate>
-            <div className="flex flex-col gap-8">
-              {flow.map((f) => (
-                <div key={f.step} className="flex flex-col gap-3 sm:flex-row sm:gap-6">
-                  <span className="shrink-0 font-serif text-3xl tracking-wider aurora-gradient-text">
-                    {f.step}
-                  </span>
-                  <div>
-                    <h3 className="font-medium tracking-wider text-foreground">
-                      {f.title}
-                    </h3>
-                    <p className="mt-1 text-sm leading-8 tracking-wide text-muted-foreground">
-                      {renderDescription(f.description, "noBreakPhrases" in f ? f.noBreakPhrases : undefined)}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
+            <FlowTabs flowOrganize={flowOrganize} flowBuy={flowBuy} />
             <p className="mt-8 text-sm text-navy">
               ※不用品回収や買取のみでの対応もいたします。
             </p>

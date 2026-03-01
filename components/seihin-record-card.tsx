@@ -16,18 +16,15 @@ export function SeihinRecordCard({ image, item, voice }: SeihinRecordCardProps) 
 
   return (
     <div className="tech-card flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-lg">
-      <div className="relative aspect-[4/3] w-full max-w-full overflow-hidden bg-muted">
-        <div className="absolute inset-[3%]">
-          <Image
-            src={src}
-            alt={item}
-            fill
-            className="object-contain object-center"
-            style={{ maxWidth: "100%", maxHeight: "100%" }}
-            unoptimized
-            onError={() => setSrc(FALLBACK_IMAGE)}
-          />
-        </div>
+      <div className="relative h-[280px] w-full overflow-hidden rounded-t-2xl bg-muted">
+        <Image
+          src={src}
+          alt={item}
+          fill
+          className="object-cover object-center"
+          unoptimized
+          onError={() => setSrc(FALLBACK_IMAGE)}
+        />
       </div>
       <div className="flex flex-1 flex-col p-4 sm:p-5">
         <h3 className="font-semibold tracking-wider text-foreground">{item}</h3>

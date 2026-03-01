@@ -45,7 +45,7 @@ export const metadata: Metadata = {
 const services = [
   {
     icon: Sparkles,
-    title: "ヘッドスパ専門店運営（2025現在 全国3店舗）",
+    title: "ヘッドスパ専門店運営（2026現在 全国4店舗）",
     description: "全国3拠点で直営店を展開。確かな技術力とホスピタリティでお客様の心と身体に安らぎをお届けします。",
   },
   {
@@ -87,7 +87,7 @@ const headSpaServiceSchema = {
     url: siteUrl,
   },
   description:
-    "ヘッドスパ専門店運営（2025現在 全国3店舗）、独立開業支援・フランチャイズ支援、ヘッドスパスクール、ストアコンサルティング、出張サービス。",
+    "ヘッドスパ専門店運営（2026現在 全国4店舗）、独立開業支援・フランチャイズ支援、ヘッドスパスクール、ストアコンサルティング、出張サービス。",
 }
 
 const breadcrumbSchema = {

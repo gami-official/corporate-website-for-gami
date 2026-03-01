@@ -187,7 +187,7 @@ const businesses = [
     subtitle: "ヘッドスパ",
     description: "",
     descriptionItems: [
-      "ヘッドスパ専門店運営（2025現在 全国3店舗）",
+      "ヘッドスパ専門店運営（2026現在 全国4店舗）",
       "独立開業支援 / フランチャイズ支援",
       "ヘッドスパスクール",
       "ストアコンサルティング",
@@ -259,7 +259,7 @@ export default function Page() {
             お見積り・ご相談
           </h2>
           <p className="mx-auto mb-8 max-w-2xl text-[14.5px] leading-[1.9] text-[#d0d9e8]">
-            物流業務、利用運送、EC支援など、まずはお気軽にお問い合わせください。無料でお見積りいたします。
+            物流運送事業、ヘッドスパ事業、整理買取事業、まずはお気軽にお問い合わせください。無料でお見積りいたします。
           </p>
           <div className="flex flex-wrap justify-center gap-3.5">
             <Link

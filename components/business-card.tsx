@@ -38,17 +38,14 @@ export function BusinessCard({
       <Link href={href} className="group block h-full">
         <article className="tech-card flex h-full flex-col overflow-hidden rounded-2xl">
           {/* Image */}
-          <div className="relative aspect-[4/3] w-full max-w-full overflow-hidden">
-            <div className="absolute inset-[3%]">
-              <Image
-                src={imageSrc || "/placeholder.svg"}
-                alt={title}
-                fill
-                className="object-contain object-center transition-transform duration-700 group-hover:scale-105"
-                style={{ maxWidth: "100%", maxHeight: "100%" }}
-                unoptimized={imageSrc?.startsWith('/images/')}
-              />
-            </div>
+          <div className="relative h-[280px] w-full overflow-hidden rounded-t-2xl">
+            <Image
+              src={imageSrc || "/placeholder.svg"}
+              alt={title}
+              fill
+              className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
+              unoptimized={imageSrc?.startsWith('/images/')}
+            />
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-foreground/10 to-transparent" />
           </div>
 
