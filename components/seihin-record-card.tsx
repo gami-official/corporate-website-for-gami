@@ -16,7 +16,7 @@ export function SeihinRecordCard({ image, item, voice }: SeihinRecordCardProps) 
 
   return (
     <div className="tech-card flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-lg">
-      <div className="relative h-[280px] w-full overflow-hidden rounded-t-2xl bg-muted">
+      <div className="card-image relative w-full bg-muted">
         <Image
           src={src}
           alt={item}

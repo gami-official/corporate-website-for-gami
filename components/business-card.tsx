@@ -38,7 +38,7 @@ export function BusinessCard({
       <Link href={href} className="group block h-full">
         <article className="tech-card flex h-full flex-col overflow-hidden rounded-2xl">
           {/* Image */}
-          <div className="relative h-[280px] w-full overflow-hidden rounded-t-2xl">
+          <div className="card-image relative w-full">
             <Image
               src={imageSrc || "/placeholder.svg"}
               alt={title}

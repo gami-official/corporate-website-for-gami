@@ -80,14 +80,48 @@
     max-width: 100vw;
   }
   
-  /* すべての要素が画面幅を超えないように */
-  img,
+  /* グローバルな画像スタイル - スマホでのサイズ調整 */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
   video,
   iframe,
   embed,
   object {
     max-width: 100%;
     height: auto;
+  }
+
+  /* カード内の画像（事業紹介など） */
+  .card-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 1rem 1rem 0 0; /* カード上部 rounded-t-2xl に合わせる */
+  }
+  .card-image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+  }
+
+  /* セクションの背景画像用 */
+  .bg-image-cover {
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* スマホ（max-width: 768px） */
+  @media (max-width: 768px) {
+    img {
+      width: 100%;
+      height: auto;
+    }
+    .card-image {
+      height: 180px;
+    }
   }
   
   /* セクションやコンテナが画面幅を超えないように */
