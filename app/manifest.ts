@@ -6,7 +6,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: '株式会社GAMI',
     short_name: 'GAMI',
-    description: '大阪を拠点に、運送物流事業・ドライヘッドスパ事業・整理買取事業を展開する株式会社GAMI。',
+    description: '大阪を拠点に、物流運送事業・ドライヘッドスパ事業・整理買取事業を展開する株式会社GAMI。',
     start_url: '/',
     display: 'standalone',
     background_color: '#ffffff',

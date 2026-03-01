@@ -29,7 +29,7 @@ const slides: Slide[] = [
   {
     copy: "繋ぐ。",
     sub: "確実な物流設計と輸送で、ビジネスを止めない。",
-    cta: "運送物流事業を見る",
+    cta: "物流運送事業を見る",
     ctaHref: "/logistics",
     posterSrc: IMAGES.heroLogistics,
     videoSrc: undefined,
