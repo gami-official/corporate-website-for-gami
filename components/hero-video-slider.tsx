@@ -172,13 +172,13 @@ export function HeroVideoSlider() {
             />
             </div>
           ) : (
-            <div className="absolute inset-[3%] flex items-center justify-center overflow-hidden">
+            <div className={`absolute flex items-center justify-center overflow-hidden ${slide.posterSrc === IMAGES.heroSpa ? 'inset-0' : 'inset-[3%]'}`}>
               <div className="relative h-full w-full">
                 <Image
                   src={slide.posterSrc || IMAGES.placeholder}
                   alt=""
                   fill
-                  className="object-contain object-center"
+                  className={slide.posterSrc === IMAGES.heroSpa ? 'object-cover object-center' : 'object-contain object-center'}
                   style={{ maxWidth: "100%", maxHeight: "100%" }}
                   priority={i === 0}
                   unoptimized={slide.posterSrc?.startsWith('/images/')}
