@@ -74,7 +74,7 @@ function renderDescription(
 const whyChooseUs = [
   {
     icon: UserCheck,
-    title: "プロの遺品整理士在籍",
+    title: "プロの遺品整理士・生前整理アドバイザー在籍",
     description: "丁寧な仕分けと供養の心で対応。残すもの・供養するもの・お譲りするものを大切に整理します。",
   },
   {
