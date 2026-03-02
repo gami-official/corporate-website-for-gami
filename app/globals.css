@@ -115,10 +115,7 @@
 
   /* スマホ（max-width: 768px） */
   @media (max-width: 768px) {
-    img {
-      width: 100%;
-      height: auto;
-    }
+    /* ロゴ・アイコン等の小さいimgは width: 100% を適用しない（max-width: 100% で十分） */
     .card-image {
       height: 180px;
     }
