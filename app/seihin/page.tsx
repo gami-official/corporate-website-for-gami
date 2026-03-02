@@ -73,9 +73,9 @@ function renderDescription(
 
 const whyChooseUs = [
   {
-    icon: CircleDollarSign,
-    title: "高価買取の理由",
-    description: "独自の販売ルートにより、他社で断られた品物も査定。適正価格でお引き取りします。",
+    icon: UserCheck,
+    title: "プロの遺品整理士在籍",
+    description: "丁寧な仕分けと供養の心で対応。残すもの・供養するもの・お譲りするものを大切に整理します。",
   },
   {
     icon: Clock,
@@ -83,9 +83,9 @@ const whyChooseUs = [
     description: "最短即日訪問、その場で現金支払い。急ぎのご依頼にも可能な限り対応します。",
   },
   {
-    icon: UserCheck,
-    title: "プロの遺品整理士在籍",
-    description: "丁寧な仕分けと供養の心で対応。残すもの・供養するもの・お譲りするものを大切に整理します。",
+    icon: CircleDollarSign,
+    title: "高価買取の理由",
+    description: "独自の販売ルートにより、他社で断られた品物も査定。適正価格でお引き取りします。",
   },
   {
     icon: Gem,
