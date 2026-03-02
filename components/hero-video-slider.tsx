@@ -101,7 +101,7 @@ export function HeroVideoSlider() {
 
   return (
     <section
-      className="relative h-[calc(100vh-57px)] min-h-[60vh] max-h-[80vh] w-full max-w-full overflow-hidden sm:max-h-none"
+      className="hero-full relative h-[calc(100vh-57px)] min-h-[60vh] max-h-[80vh] w-full max-w-full overflow-hidden sm:max-h-none"
       aria-label="ヒーロースライダー"
       onTouchStart={(e) => {
         touchStartX.current = e.touches[0].clientX
@@ -124,7 +124,7 @@ export function HeroVideoSlider() {
         >
           {/* Video or poster fallback */}
           {slide.videoSrc ? (
-            <div className="absolute inset-[3%] flex items-center justify-center overflow-hidden">
+            <div className="absolute inset-0 flex items-center justify-center overflow-hidden sm:inset-[3%]">
               <video
                 className="h-full w-full max-h-full max-w-full object-contain object-center"
               src={slide.videoSrc}
@@ -172,7 +172,7 @@ export function HeroVideoSlider() {
             />
             </div>
           ) : (
-            <div className={`absolute flex items-center justify-center overflow-hidden ${slide.posterSrc === IMAGES.heroSpa ? 'inset-0' : 'inset-[3%]'}`}>
+            <div className={`absolute flex items-center justify-center overflow-hidden ${slide.posterSrc === IMAGES.heroSpa ? 'inset-0' : 'inset-0 sm:inset-[3%]'}`}>
               <div className="relative h-full w-full">
                 <Image
                   src={slide.posterSrc || IMAGES.placeholder}
