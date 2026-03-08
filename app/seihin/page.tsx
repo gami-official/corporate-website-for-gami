@@ -240,6 +240,9 @@ export default function SeihinPage() {
               <h1 className="mt-3 font-serif text-xl font-bold tracking-wider text-white sm:mt-4 sm:text-2xl md:text-3xl lg:text-4xl">
                 整理買取事業
               </h1>
+              <p className="mt-2 inline-block rounded-full bg-white/20 px-3 py-1 text-xs font-medium tracking-wider text-white backdrop-blur-sm">
+                完全予約制
+              </p>
               <p className="mt-3 max-w-xl text-pretty text-xs leading-relaxed tracking-wide text-white sm:mt-4 sm:text-sm md:text-base">
                 大切な方の想い出に、心を込めて寄り添います。整理・片付けから供養の手配まで、安心してお任せください。
               </p>
@@ -410,6 +413,50 @@ export default function SeihinPage() {
               <p className="text-muted-foreground">※赤色のエリアが対応可能地域です。</p>
             </div>
           </ScrollAnimate>
+
+          {/* 福岡・大阪 拠点 */}
+          <div className="mx-auto mt-16 grid max-w-3xl gap-8 sm:grid-cols-2">
+            <ScrollAnimate>
+              <div className="tech-card rounded-2xl border border-amber-500/20 p-6 shadow-lg">
+                <h3 className="text-sm font-bold uppercase tracking-[0.2em] text-amber-600">福岡</h3>
+                <p className="mt-4 text-sm leading-relaxed text-foreground">
+                  〒819-0165<br />
+                  福岡県福岡市西区豊浜2-20-20-2
+                </p>
+                <a href="tel:092-284-9392" className="mt-3 block text-sm font-medium text-foreground transition-colors hover:text-amber-600">
+                  TEL: 092-284-9392
+                </a>
+                <a
+                  href="https://line.me/ti/p/seirikaitoriyu"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 block text-sm font-medium text-foreground transition-colors hover:text-amber-600"
+                >
+                  LINE ID: seirikaitoriyu
+                </a>
+              </div>
+            </ScrollAnimate>
+            <ScrollAnimate>
+              <div className="tech-card rounded-2xl border border-amber-500/20 p-6 shadow-lg">
+                <h3 className="text-sm font-bold uppercase tracking-[0.2em] text-amber-600">大阪</h3>
+                <p className="mt-4 text-sm leading-relaxed text-foreground">
+                  〒570-0003<br />
+                  大阪府守口市大日町1-8-18
+                </p>
+                <a href="tel:06-6115-9935" className="mt-3 block text-sm font-medium text-foreground transition-colors hover:text-amber-600">
+                  TEL: 06-6115-9935
+                </a>
+                <a
+                  href="https://lin.ee/3QGIdCY"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 block text-sm font-medium text-foreground transition-colors hover:text-amber-600"
+                >
+                  LINE相談
+                </a>
+              </div>
+            </ScrollAnimate>
+          </div>
         </section>
 
         {/* 最近の買取実績 */}
