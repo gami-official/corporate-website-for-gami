@@ -332,6 +332,39 @@ export default function LogisticsPage() {
             </div>
           </div>
         </section>
+        <section className="mx-auto max-w-7xl px-6 py-20 md:px-10 lg:px-12">
+            <div>
+    <p className="text-sm font-semibold tracking-widest text-orange-500">
+      ACHIEVEMENTS
+    </p>
+
+    <h2 className="mt-3 text-3xl font-bold text-zinc-900">
+      幅広い業種での対応実績
+    </h2>
+
+    <p className="mt-5 text-sm leading-7 text-zinc-700">
+      美容商材・アパレル・スパイス・ふるさと納税返礼品など、
+      多様な業種・商材の物流に対応してきました。
+      商材特性に合わせた保管・加工・配送体制をご提案します。
+    </p>
+
+    <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      {[
+        "美容商材（化粧品・ヘアケア）",
+        "アパレル・ファッション",
+        "スパイス・食品関連",
+        "ふるさと納税返礼品",
+      ].map((item) => (
+        <div
+          key={item}
+          className="rounded-2xl border px-4 py-4 text-sm text-zinc-700"
+        >
+          {item}
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
       </main>
 
       <Footer />
