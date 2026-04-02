@@ -102,13 +102,13 @@ export default function LogisticsPage() {
                     href="/contact"
                     className="rounded-2xl bg-orange-500 px-6 py-4 text-center text-base font-semibold text-white transition hover:bg-orange-400"
                   >
-                    物流の無料見積りはこちら
+                    最短当日対応｜無料見積りはこちら
                   </Link>
                   <Link
                     href="tel:0661159935"
                     className="rounded-2xl border border-white/20 px-6 py-4 text-center text-base font-semibold text-white transition hover:bg-white/10"
                   >
-                    電話で相談する
+                    まずは電話で相談する
                   </Link>
                 </div>
               </div>
@@ -154,7 +154,8 @@ export default function LogisticsPage() {
                 <p className="text-sm font-semibold tracking-[0.2em] text-orange-500">ACHIEVEMENTS</p>
                 <h2 className="mt-3 text-3xl font-bold text-zinc-900">取扱実績・対応分野</h2>
                 <p className="mt-5 text-sm leading-7 text-zinc-600">
-                  商材ごとの特性を理解し、保管・加工・出荷・配送まで最適な形で運用します。
+                  美容商材・アパレル・スパイス・ふるさと納税返礼品など、
+  商材ごとの特性に合わせて保管・加工・出荷・配送まで対応します。
                 </p>
                 <div className="mt-8 flex flex-wrap gap-3">
                   {achievements.map((item) => (
@@ -167,16 +168,17 @@ export default function LogisticsPage() {
 
               <div className="rounded-3xl border border-orange-200 bg-orange-50 p-8">
                 <p className="text-sm font-semibold tracking-[0.2em] text-orange-500">POINT</p>
-                <h2 className="mt-3 text-3xl font-bold text-zinc-900">利用運送をかなり強めています</h2>
-                <p className="mt-5 text-sm leading-7 text-zinc-700">
-                  軽貨物から大型車まで、案件に合わせて最適手配。全国対応で、急ぎ案件や波動のある案件にも柔軟に対応します。
-                </p>
-                <ul className="mt-6 space-y-3 text-sm text-zinc-700">
-                  <li>・全国各地へ対応可能</li>
-                  <li>・軽貨物〜大型車まで手配</li>
-                  <li>・定期案件・スポット案件どちらにも柔軟対応</li>
-                  <li>・現場状況に応じて最適な輸送体制を提案</li>
-                </ul>
+                <h2 className="mt-3 text-3xl font-bold text-zinc-900">全国対応の利用運送ネットワーク</h2>
+<p className="mt-5 text-sm leading-7 text-zinc-700">
+  軽貨物〜大型車まで、案件内容に応じて最適な車両を全国で手配可能です。
+  急な案件や波動のある案件にも柔軟に対応します。
+</p>
+<ul className="mt-6 space-y-3 text-sm text-zinc-700">
+  <li>・全国各地へ対応可能</li>
+  <li>・軽貨物〜大型車まで手配</li>
+  <li>・定期案件・スポット案件どちらにも柔軟対応</li>
+  <li>・急な依頼や繁忙期の波動にも対応</li>
+</ul>
               </div>
             </div>
           </div>
@@ -217,10 +219,11 @@ export default function LogisticsPage() {
             <div className="grid gap-8 lg:grid-cols-[1fr_1fr]">
               <div className="rounded-3xl border border-orange-200 bg-orange-50 p-8">
                 <p className="text-sm font-semibold tracking-[0.2em] text-orange-500">DANBOARD</p>
-                <h2 className="mt-3 text-3xl font-bold text-zinc-900">大阪限定・法人向け段ボール販売</h2>
-                <p className="mt-5 text-sm leading-7 text-zinc-700">
-                  段ボールを安く、ミリ単位で作成可能。梱包資材コストの見直しや物流改善の入口として、無料見積りにつなげやすいサービスです。
-                </p>
+                <h2 className="mt-3 text-3xl font-bold text-zinc-900">大阪限定｜法人向け段ボール無料見積り</h2>
+<p className="mt-5 text-sm leading-7 text-zinc-700">
+  段ボールを安く、ミリ単位で作成可能です。
+  梱包資材コストの見直しや物流改善の入口として、まずは無料見積りからご相談ください。
+</p>
                 <div className="mt-6 space-y-3">
                   {packingFeatures.map((item) => (
                     <div key={item} className="rounded-2xl bg-white px-4 py-4 text-sm text-zinc-700 shadow-sm">
@@ -232,7 +235,7 @@ export default function LogisticsPage() {
                   href="/contact"
                   className="mt-8 inline-flex rounded-2xl bg-orange-500 px-6 py-4 text-base font-semibold text-white transition hover:bg-orange-400"
                 >
-                  段ボールの無料見積りはこちら
+                  段ボール見積りを依頼する
                 </Link>
               </div>
 
@@ -256,10 +259,10 @@ export default function LogisticsPage() {
         <section className="mx-auto max-w-7xl px-6 py-20 md:px-10 lg:px-12">
           <div className="rounded-[2rem] bg-zinc-950 px-8 py-12 text-white md:px-12">
             <p className="text-sm font-semibold tracking-[0.2em] text-orange-300">CONTACT</p>
-            <h2 className="mt-3 text-3xl font-bold md:text-4xl">物流の外注先をお探しなら、まずはご相談ください</h2>
+            <h2 className="mt-3 text-3xl font-bold md:text-4xl">物流の外注先をお探しなら、まずは無料でご相談ください</h2>
             <p className="mt-5 max-w-3xl text-base leading-8 text-zinc-300">
               定期案件・スポット案件を問わず、利用運送、倉庫保管、流通加工、内職、段ボール提案まで一括で対応可能です。
-              物流業務をどこまで任せられるか知りたい、という段階からでもお気軽にご相談ください。
+「どこまで任せられるか相談したい」という段階からでも、お気軽にご連絡ください。
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
