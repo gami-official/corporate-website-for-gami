@@ -29,7 +29,7 @@ const slides: Slide[] = [
   {
     copy: "物流・整理・再生を一社で。",
     sub: "企業の物流課題から、個人の整理・買取まで。スピード・柔軟性・確実性で解決します。",
-    cta: "物流運送事業を見る",
+    cta: "今すぐ無料相談する",
     ctaHref: "/logistics",
     posterSrc: IMAGES.heroLogistics,
     videoSrc: undefined,
@@ -38,7 +38,7 @@ const slides: Slide[] = [
   {
     copy: "癒す。",
     sub: "癒しの極みをプロデュース。",
-    cta: "ヘッドスパ事業を見る",
+    cta: "ご予約はこちら",
     ctaHref: "/school",
     posterSrc: IMAGES.heroSpa,
     videoSrc: undefined,
@@ -47,7 +47,7 @@ const slides: Slide[] = [
   {
     copy: "想う。",
     sub: "大切な方の想い出に、心を込めて寄り添います。整理・片付けから供養の手配まで、安心してお任せください。",
-    cta: "整理買取事業を見る",
+    cta: "無料見積りはこちら",
     ctaHref: "/seihin",
     posterSrc: IMAGES.heroSeihin,
     videoSrc: undefined,
