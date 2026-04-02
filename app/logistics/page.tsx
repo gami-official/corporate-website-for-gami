@@ -40,7 +40,7 @@ const transportCases = [
 const packingFeatures = [
   "大阪限定・法人向け対応",
   "ミリ単位で段ボールを作成可能",
-  "低コスト提案で物流改善の入口に",
+  "コスト削減につながるご提案",
   "梱包資材全体の見直し相談にも対応",
 ]
 
@@ -224,6 +224,11 @@ export default function LogisticsPage() {
   段ボールを安く、ミリ単位で作成可能です。
   梱包資材コストの見直しや物流改善の入口として、まずは無料見積りからご相談ください。
 </p>
+
+                <p className="mt-4 text-sm font-medium text-zinc-800">
+  「サイズがまだ決まっていない」「まずは概算だけ知りたい」という段階でもご相談いただけます。
+</p>
+                
                 <div className="mt-6 space-y-3">
                   {packingFeatures.map((item) => (
                     <div key={item} className="rounded-2xl bg-white px-4 py-4 text-sm text-zinc-700 shadow-sm">
