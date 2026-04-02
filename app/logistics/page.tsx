@@ -224,7 +224,7 @@ export default function LogisticsPage() {
   段ボールを安く、ミリ単位で作成可能です。
   梱包資材コストの見直しや物流改善の入口として、まずは無料見積りからご相談ください。
 </p>
-
+                 
                 <p className="mt-4 text-sm font-medium text-zinc-800">
   「サイズがまだ決まっていない」「まずは概算だけ知りたい」という段階でもご相談いただけます。
 </p>
@@ -260,7 +260,49 @@ export default function LogisticsPage() {
             </div>
           </div>
         </section>
+<section className="mx-auto max-w-7xl px-6 py-20 md:px-10 lg:px-12">
+  <div className="rounded-3xl border bg-white p-10 shadow-sm">
+    <p className="text-sm font-semibold tracking-widest text-orange-500">
+      LIGHT WORK
+    </p>
 
+    <h2 className="mt-3 text-3xl font-bold text-zinc-900">
+      内職・軽作業もまとめて対応可能
+    </h2>
+
+    <p className="mt-5 text-sm leading-7 text-zinc-700">
+      セット組み・シール貼り・封入・検品・梱包など、
+      人手が必要な軽作業も倉庫内で一括対応可能です。
+      物流と組み合わせることで、作業〜発送までを効率化し、
+      コスト削減と業務負担軽減を実現します。
+    </p>
+
+    <div className="mt-8 grid gap-4 sm:grid-cols-2">
+      {[
+        "セット組み・アソート作業",
+        "シール貼り・ラベル対応",
+        "封入・梱包・検品作業",
+        "内職作業の一括委託対応",
+      ].map((item) => (
+        <div
+          key={item}
+          className="rounded-xl bg-zinc-50 px-4 py-3 text-sm text-zinc-700"
+        >
+          {item}
+        </div>
+      ))}
+    </div>
+
+    <div className="mt-10">
+      <a
+        href="/contact"
+        className="inline-block rounded-2xl bg-orange-500 px-6 py-4 text-base font-semibold text-white hover:opacity-90"
+      >
+        内職・軽作業の相談をする
+      </a>
+    </div>
+  </div>
+</section>
         <section className="mx-auto max-w-7xl px-6 py-20 md:px-10 lg:px-12">
           <div className="rounded-[2rem] bg-zinc-950 px-8 py-12 text-white md:px-12">
             <p className="text-sm font-semibold tracking-[0.2em] text-orange-300">CONTACT</p>
