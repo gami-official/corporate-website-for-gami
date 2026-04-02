@@ -1,335 +1,285 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { SectionHeading } from "@/components/section-heading"
-import { ScrollAnimate } from "@/components/scroll-animate"
-import { EstimateCta } from "@/components/estimate-cta"
-import {
-  Warehouse,
-  BarChart3,
-  Globe,
-  Truck,
-  Package,
-  Star,
-  FlaskConical,
-  Shirt,
-  Gift,
-  UtensilsCrossed,
-} from "lucide-react"
-import type { Metadata } from "next"
-import Image from "next/image"
 import Link from "next/link"
-import { IMAGES } from "@/lib/images"
 
-export const metadata: Metadata = {
-  title: "物流運送事業",
-  description:
-    "瓶・ガラス容器の運送から化粧品製造業許可を活かした配送まで。細やかな気配りと確実な物流で、お客様のビジネスを支えます。",
-  keywords: [
-    "物流運送",
-    "利用運送",
-    "軽貨物運送",
-    "物流業務",
-    "物流コンサルティング",
-    "EC支援",
-    "ビジネスマッチング",
-    "梱包資材",
-    "倉庫",
-    "物流代行",
-    "大阪",
-  ],
-  openGraph: {
-    title: "物流運送事業 | 株式会社GAMI | 化粧品製造業許可・軽貨物運送",
-    description:
-      "瓶・ガラス容器の運送から化粧品製造業許可を活かした配送まで。細やかな気配りと確実な物流で、お客様のビジネスを支えます。",
-    url: '/logistics',
-    type: "website",
-  },
-  alternates: {
-    canonical: '/logistics',
-  },
-}
-
-const services = [
+const coreServices = [
   {
-    icon: Warehouse,
-    title: "物流業務（入出庫、物流加工・保管等）",
-    description: "入庫・検品・保管・出庫から物流加工まで一元管理。正確な在庫データとスムーズなオペレーションでビジネスを支えます。",
+    title: "物流業務全体に対応",
+    body: "定期案件・スポット案件を問わず、保管・入出庫・検品・流通加工・配送まで一括で対応します。",
   },
   {
-    icon: BarChart3,
-    title: "物流コンサルティング",
-    description: "物流プロセスの現状分析から改善提案まで。コスト削減と効率化を実現するトータルコンサルティングをご提供します。",
+    title: "利用運送を強化",
+    body: "全国各地に軽貨物から大型車まで手配可能。案件内容や納期に応じて最適な輸送体制を組みます。",
   },
   {
-    icon: Truck,
-    title: "利用運送 / 軽貨物運送",
-    description: "利用運送をメインに、軽貨物運送にも柔軟に対応。急な配送ニーズやスポット便にも迅速にお応えします。",
+    title: "流通加工・内職対応",
+    body: "セット組み、シール貼り、封入、梱包など、現場の人手不足を補う作業にも柔軟に対応します。",
   },
   {
-    icon: Globe,
-    title: "EC支援 / ビジネスマッチング",
-    description: "ECサイト立ち上げから運用、ビジネスマッチングまで。物流と連携したトータルサポートでお客様のビジネスを加速させます。",
-  },
-  {
-    icon: Package,
-    title: "オリジナル梱包資材 企画・製作",
-    description: "お客様の商品に最適なオリジナル梱包資材を企画・製作いたします。高品質低価格をご提案いたします。",
+    title: "化粧品対応倉庫",
+    body: "化粧品製造業許可を取得した倉庫で、化粧品関連の保管・作業・提案まで視野に入れた対応が可能です。",
   },
 ]
 
-const trackRecords = [
-  {
-    icon: FlaskConical,
-    number: "01",
-    category: "美容・コスメ",
-    title: "化粧品・美容商材",
-    description: "「化粧品製造業許可」を活かした、製造・充填から発送までのワンストップ物流。",
-    badge: "最重点",
-  },
-  {
-    icon: Shirt,
-    number: "02",
-    category: "ライフスタイル・ギフト",
-    title: "アパレル",
-    description: "検品から丁寧な梱包まで、ブランド価値を守る高品質な物流管理。",
-  },
-  {
-    icon: Gift,
-    number: "03",
-    category: "ライフスタイル・ギフト",
-    title: "ふるさと納税関連",
-    description: "迅速かつ正確なオペレーションが求められる、自治体・事業者様の発送代行。",
-  },
-  {
-    icon: UtensilsCrossed,
-    number: "04",
-    category: "食品・グロッサリー",
-    title: "瓶・ガラス容器製品",
-    description: "徹底した衛生管理はもちろん、破損を防ぐ熟練の梱包技術と、重量物の取り扱いに特化したオペレーションで、高品質な状態のまま食卓へ繋ぎます。",
-  },
+const achievements = [
+  "美容商材",
+  "アパレル",
+  "スパイス",
+  "ふるさと納税返礼品",
 ]
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://gamigami.net'
+const transportCases = [
+  "定期案件の見直しや外注先の切り替え",
+  "急なスポット案件や繁忙期対応",
+  "軽貨物〜大型車の手配が必要な案件",
+  "保管と配送をまとめて任せたい案件",
+  "流通加工や内職作業を含む案件",
+  "化粧品関連の保管・作業が必要な案件",
+]
 
-const logisticsServiceSchema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  serviceType: "物流運送",
-  provider: {
-    "@type": "Organization",
-    name: "株式会社GAMI",
-    url: siteUrl,
+const packingFeatures = [
+  "大阪限定・法人向け対応",
+  "ミリ単位で段ボールを作成可能",
+  "低コスト提案で物流改善の入口に",
+  "梱包資材全体の見直し相談にも対応",
+]
+
+const processSteps = [
+  {
+    step: "01",
+    title: "お問い合わせ",
+    body: "物流内容、物量、納期、ご希望の運用をお聞かせください。ざっくりしたご相談段階でも問題ありません。",
   },
-  description:
-    "物流業務、物流コンサルティングを軸に、利用運送・軽貨物運送、EC支援・ビジネスマッチング、オリジナル梱包資材の企画・製作。",
-}
-
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    {
-      "@type": "ListItem",
-      position: 1,
-      name: "ホーム",
-      item: siteUrl,
-    },
-    {
-      "@type": "ListItem",
-      position: 2,
-      name: "物流運送事業",
-      item: `${siteUrl}/logistics`,
-    },
-  ],
-}
+  {
+    step: "02",
+    title: "ヒアリング・現状確認",
+    body: "現在の課題、配送条件、保管の有無、流通加工の必要性などを整理し、最適な形を検討します。",
+  },
+  {
+    step: "03",
+    title: "ご提案・お見積り",
+    body: "利用運送、倉庫保管、内職、段ボール提案まで含めて、必要な内容をまとめてご提案します。",
+  },
+  {
+    step: "04",
+    title: "手配・運用開始",
+    body: "案件に応じて、軽貨物から大型車まで手配し、保管・加工・配送をスムーズにスタートします。",
+  },
+]
 
 export default function LogisticsPage() {
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(logisticsServiceSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
+    <div className="min-h-screen bg-white text-zinc-900">
       <Header />
+
       <main>
-        {/* Hero */}
-        <section className="relative flex min-h-[60vh] items-end">
-          <Image
-            src={IMAGES.heroLogistics}
-            alt="物流倉庫"
-            fill
-            className="object-cover scale-95"
-            priority
-            unoptimized
-          />
-          <div className="relative z-10 mx-auto w-full max-w-6xl px-4 pb-12 pt-20 sm:px-6 sm:pb-16 sm:pt-24 lg:pt-32">
-            <div className="max-w-2xl [text-shadow:0_1px_2px_rgba(0,0,0,0.5),0_2px_8px_rgba(0,0,0,0.4)]">
-              <p className="font-mono text-lg font-medium uppercase tracking-[0.3em] text-white sm:text-xl md:text-2xl">
-                Logistics
-              </p>
-              <h1 className="mt-3 font-serif text-xl font-bold tracking-wider text-white sm:mt-4 sm:text-2xl md:text-3xl lg:text-4xl">
-                物流運送事業
-              </h1>
-              <p className="mt-3 max-w-xl text-pretty text-xs leading-relaxed tracking-wide text-white sm:mt-4 sm:text-sm md:text-base">
-                物流業務を軸に、コンサルティング、EC支援、利用運送・軽貨物運送、オリジナル梱包資材の企画・製作まで。ワンストップの物流ソリューション。
-              </p>
-            </div>
+        <section className="relative overflow-hidden border-b border-zinc-200 bg-zinc-950 text-white">
+          <div className="absolute inset-0 opacity-25">
+            <div className="absolute -left-16 top-0 h-72 w-72 rounded-full bg-orange-500 blur-3xl" />
+            <div className="absolute right-0 top-10 h-96 w-96 rounded-full bg-amber-400 blur-3xl" />
           </div>
-        </section>
 
-        {/* Core Services */}
-        <section className="section-gradient py-16 px-4 sm:px-6 sm:py-24 lg:py-32">
-          <div className="mx-auto max-w-6xl">
-            <ScrollAnimate>
-              <SectionHeading
-                sub="サービス内容"
-                title="物流運送事業"
-                catchCopy="ワンストップの物流ソリューション。物流業務を軸に、コンサルティング、利用運送・軽貨物運送、EC支援、オリジナル梱包資材の企画・製作まで。"
-                className="mb-16"
-              />
-            </ScrollAnimate>
-            <div className="grid gap-8 sm:grid-cols-2">
-              {services.map((s, index) => {
-                const isLastOdd = index === services.length - 1 && services.length % 2 === 1
-                return (
-                  <ScrollAnimate
-                    key={s.title}
-                    className={isLastOdd ? "sm:col-span-2 sm:flex sm:justify-center" : "h-full"}
-                  >
-                    <div className={`tech-card flex h-full flex-col gap-4 rounded-2xl p-4 sm:flex-row sm:p-6 ${isLastOdd ? "sm:max-w-md" : ""}`}>
-                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10">
-                        <s.icon className="h-5 w-5 text-primary" />
-                      </div>
-                      <div className="flex flex-col">
-                        <h3 className="font-medium tracking-wider text-foreground">
-                          {s.title}
-                        </h3>
-                        <p className="mt-1 flex-grow text-sm leading-relaxed tracking-wide text-muted-foreground">
-                          {s.description}
-                        </p>
-                      </div>
-                    </div>
-                  </ScrollAnimate>
-                )
-              })}
-            </div>
-            <div className="mt-12">
-              <EstimateCta variant="compact" />
-            </div>
-          </div>
-        </section>
-
-        {/* Cosmetics Highlight Section */}
-        <section className="py-16 px-4 sm:px-6 sm:py-24 lg:py-32">
-          <ScrollAnimate>
-            <div className="mx-auto max-w-4xl">
-              <div className="relative overflow-hidden rounded-3xl p-[2px]" style={{ background: "linear-gradient(135deg, hsl(220 50% 28%), hsl(38 45% 48%))" }}>
-                <div className="glass-strong rounded-[22px] px-5 py-10 text-center sm:px-8 sm:py-12 md:px-12">
-                  <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl aurora-gradient">
-                    <FlaskConical className="h-8 w-8 text-white" />
-                  </div>
-                  <h2 className="mt-6 font-serif text-xl tracking-wider text-foreground sm:text-2xl md:text-3xl text-balance">
-                    化粧品製造業許可 保有。製造から配送までワンストップ。
-                  </h2>
-                  <p className="mx-auto mt-6 max-w-2xl text-sm leading-relaxed tracking-wide text-muted-foreground">
-                    弊社は、保管・出荷・流通加工を含む物流業務に加え、【化粧品製造業許可】を保有し、化粧品の製造・充填・包装・セットアップ・保管までワンストップで対応可能な物流会社です。
-                  </p>
+          <div className="relative mx-auto max-w-7xl px-6 py-20 md:px-10 lg:px-12 lg:py-24">
+            <p className="inline-flex rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm tracking-wide text-zinc-100">
+              物流運送事業 / 定期・スポットどちらにも対応
+            </p>
+            <div className="mt-6 grid gap-10 lg:grid-cols-[1.2fr_0.8fr]">
+              <div>
+                <h1 className="max-w-5xl text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
+                  物流の仕事を、
+                  <br />
+                  定期でもスポットでも。
+                  <br />
+                  保管・加工・配送まで一括対応します。
+                </h1>
+                <p className="mt-6 max-w-3xl text-base leading-8 text-zinc-200 md:text-lg">
+                  株式会社GAMIは、物流業務全体を見てご提案する現場対応型の物流パートナーです。
+                  利用運送を強みとし、全国各地へ軽貨物〜大型車まで手配可能。さらに、倉庫保管、流通加工、内職、
+                  化粧品対応、段ボール提案までまとめてご相談いただけます。
+                </p>
+                <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                   <Link
-                    href="/company#contact"
-                    className="btn-glow mt-8 inline-block w-full aurora-gradient rounded-xl px-8 py-3 text-sm font-medium tracking-widest text-white transition-all active:scale-95 sm:w-auto sm:px-10 sm:hover:shadow-glass-hover touch-manipulation"
+                    href="/contact"
+                    className="rounded-2xl bg-orange-500 px-6 py-4 text-center text-base font-semibold text-white transition hover:bg-orange-400"
                   >
-                    化粧品物流のお見積り・ご相談
+                    物流の無料見積りはこちら
+                  </Link>
+                  <Link
+                    href="tel:0661159935"
+                    className="rounded-2xl border border-white/20 px-6 py-4 text-center text-base font-semibold text-white transition hover:bg-white/10"
+                  >
+                    電話で相談する
                   </Link>
                 </div>
               </div>
+
+              <div className="rounded-3xl border border-white/10 bg-white/10 p-6 backdrop-blur">
+                <p className="text-sm font-semibold tracking-wide text-orange-300">こんなご相談に対応</p>
+                <div className="mt-5 space-y-3">
+                  {transportCases.map((item) => (
+                    <div key={item} className="rounded-2xl bg-black/20 px-4 py-4 text-sm leading-7 text-zinc-100">
+                      {item}
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
-          </ScrollAnimate>
+          </div>
         </section>
 
-        {/* Highlight: Original Packaging — Monotone */}
-        <section className="border-y border-border bg-foreground py-24 px-4 sm:px-6 lg:py-32">
-          <div className="mx-auto max-w-4xl">
-            <div className="flex flex-col items-center text-center">
-              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-white/10">
-                <Package className="h-8 w-8 text-white" />
+        <section className="mx-auto max-w-7xl px-6 py-20 md:px-10 lg:px-12">
+          <div className="max-w-3xl">
+            <p className="text-sm font-semibold tracking-[0.2em] text-orange-500">SERVICE</p>
+            <h2 className="mt-3 text-3xl font-bold md:text-4xl">GAMIの物流サービス</h2>
+            <p className="mt-5 text-base leading-8 text-zinc-600">
+              配送だけではなく、物流全体の設計・運用まで見て対応できるのがGAMIの強みです。
+              定期案件、スポット案件、保管、流通加工、内職まで一貫してご相談いただけます。
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+            {coreServices.map((service) => (
+              <div key={service.title} className="rounded-3xl border border-zinc-200 bg-white p-7 shadow-sm">
+                <h3 className="text-xl font-bold text-zinc-900">{service.title}</h3>
+                <p className="mt-4 text-sm leading-7 text-zinc-600">{service.body}</p>
               </div>
-              <div className="mt-3 flex items-center gap-2">
-                <Star className="h-4 w-4 text-white/60" />
-                <span className="text-xs font-medium tracking-[0.2em] text-white/60">
-                  おすすめ
-                </span>
-                <Star className="h-4 w-4 text-white/60" />
+            ))}
+          </div>
+        </section>
+
+        <section className="bg-zinc-50 py-20">
+          <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-12">
+            <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
+              <div className="rounded-3xl bg-white p-8 shadow-sm">
+                <p className="text-sm font-semibold tracking-[0.2em] text-orange-500">ACHIEVEMENTS</p>
+                <h2 className="mt-3 text-3xl font-bold text-zinc-900">取扱実績・対応分野</h2>
+                <p className="mt-5 text-sm leading-7 text-zinc-600">
+                  商材ごとの特性を理解し、保管・加工・出荷・配送まで最適な形で運用します。
+                </p>
+                <div className="mt-8 flex flex-wrap gap-3">
+                  {achievements.map((item) => (
+                    <span key={item} className="rounded-full bg-zinc-950 px-4 py-2 text-sm text-white">
+                      {item}
+                    </span>
+                  ))}
+                </div>
               </div>
-              <h2 className="mt-4 font-serif text-2xl tracking-wider text-white sm:text-3xl md:text-4xl text-balance">
-                オリジナル梱包資材 企画・製作
-              </h2>
-              <p className="mt-4 max-w-2xl text-sm font-bold leading-relaxed tracking-wide text-red-400 sm:mt-6 sm:text-base">
-                ※大阪近郊エリア限定。高品質低価格をご提案いたします。今お使いのダンボールを一度お見積りください。
+
+              <div className="rounded-3xl border border-orange-200 bg-orange-50 p-8">
+                <p className="text-sm font-semibold tracking-[0.2em] text-orange-500">POINT</p>
+                <h2 className="mt-3 text-3xl font-bold text-zinc-900">利用運送をかなり強めています</h2>
+                <p className="mt-5 text-sm leading-7 text-zinc-700">
+                  軽貨物から大型車まで、案件に合わせて最適手配。全国対応で、急ぎ案件や波動のある案件にも柔軟に対応します。
+                </p>
+                <ul className="mt-6 space-y-3 text-sm text-zinc-700">
+                  <li>・全国各地へ対応可能</li>
+                  <li>・軽貨物〜大型車まで手配</li>
+                  <li>・定期案件・スポット案件どちらにも柔軟対応</li>
+                  <li>・現場状況に応じて最適な輸送体制を提案</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-7xl px-6 py-20 md:px-10 lg:px-12">
+          <div className="grid gap-8 lg:grid-cols-[1fr_1fr]">
+            <div className="rounded-3xl bg-zinc-950 p-8 text-white">
+              <p className="text-sm font-semibold tracking-[0.2em] text-orange-300">LIGHT WORK / INNER WORK</p>
+              <h2 className="mt-3 text-3xl font-bold">内職・流通加工の外注も対応</h2>
+              <p className="mt-5 text-sm leading-7 text-zinc-300">
+                セット組み、シール貼り、封入、梱包など、手作業が必要な工程にも対応。
+                小ロットから大量ロットまで、物流と合わせて効率的に運用できます。
               </p>
+              <ul className="mt-6 space-y-3 text-sm text-zinc-200">
+                <li>・検品</li>
+                <li>・セット組み</li>
+                <li>・シール貼り</li>
+                <li>・封入・梱包作業</li>
+              </ul>
+            </div>
+
+            <div className="rounded-3xl border border-zinc-200 bg-white p-8 shadow-sm">
+              <p className="text-sm font-semibold tracking-[0.2em] text-orange-500">COSMETICS WAREHOUSE</p>
+              <h2 className="mt-3 text-3xl font-bold text-zinc-900">化粧品対応ができる倉庫を活かす</h2>
+              <p className="mt-5 text-sm leading-7 text-zinc-600">
+                化粧品製造業許可を取得した倉庫で作業している強みを活かし、化粧品関連の保管・作業・物流提案まで対応します。
+              </p>
+              <p className="mt-4 text-sm leading-7 text-zinc-600">
+                他社と差別化しやすい領域として、今後さらに強く打ち出していけるポイントです。
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-zinc-50 py-20">
+          <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-12">
+            <div className="grid gap-8 lg:grid-cols-[1fr_1fr]">
+              <div className="rounded-3xl border border-orange-200 bg-orange-50 p-8">
+                <p className="text-sm font-semibold tracking-[0.2em] text-orange-500">DANBOARD</p>
+                <h2 className="mt-3 text-3xl font-bold text-zinc-900">大阪限定・法人向け段ボール販売</h2>
+                <p className="mt-5 text-sm leading-7 text-zinc-700">
+                  段ボールを安く、ミリ単位で作成可能。梱包資材コストの見直しや物流改善の入口として、無料見積りにつなげやすいサービスです。
+                </p>
+                <div className="mt-6 space-y-3">
+                  {packingFeatures.map((item) => (
+                    <div key={item} className="rounded-2xl bg-white px-4 py-4 text-sm text-zinc-700 shadow-sm">
+                      {item}
+                    </div>
+                  ))}
+                </div>
+                <Link
+                  href="/contact"
+                  className="mt-8 inline-flex rounded-2xl bg-orange-500 px-6 py-4 text-base font-semibold text-white transition hover:bg-orange-400"
+                >
+                  段ボールの無料見積りはこちら
+                </Link>
+              </div>
+
+              <div className="rounded-3xl bg-white p-8 shadow-sm">
+                <p className="text-sm font-semibold tracking-[0.2em] text-orange-500">FLOW</p>
+                <h2 className="mt-3 text-3xl font-bold text-zinc-900">ご相談から運用開始まで</h2>
+                <div className="mt-8 space-y-4">
+                  {processSteps.map((item) => (
+                    <div key={item.step} className="rounded-2xl border border-zinc-200 px-5 py-5">
+                      <p className="text-sm font-semibold text-orange-500">{item.step}</p>
+                      <h3 className="mt-2 text-lg font-bold text-zinc-900">{item.title}</h3>
+                      <p className="mt-2 text-sm leading-7 text-zinc-600">{item.body}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-7xl px-6 py-20 md:px-10 lg:px-12">
+          <div className="rounded-[2rem] bg-zinc-950 px-8 py-12 text-white md:px-12">
+            <p className="text-sm font-semibold tracking-[0.2em] text-orange-300">CONTACT</p>
+            <h2 className="mt-3 text-3xl font-bold md:text-4xl">物流の外注先をお探しなら、まずはご相談ください</h2>
+            <p className="mt-5 max-w-3xl text-base leading-8 text-zinc-300">
+              定期案件・スポット案件を問わず、利用運送、倉庫保管、流通加工、内職、段ボール提案まで一括で対応可能です。
+              物流業務をどこまで任せられるか知りたい、という段階からでもお気軽にご相談ください。
+            </p>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
-                href="/company#contact"
-                className="mt-6 inline-block w-full rounded-xl border-2 border-white/40 bg-transparent px-8 py-3 text-sm font-medium tracking-widest text-white backdrop-blur-sm transition-all active:scale-95 sm:mt-8 sm:w-auto sm:px-10 sm:hover:bg-white/20 sm:hover:scale-105 touch-manipulation"
+                href="/contact"
+                className="rounded-2xl bg-orange-500 px-6 py-4 text-center text-base font-semibold text-white transition hover:bg-orange-400"
               >
-                梱包資材のお見積り
+                無料見積りはこちら
+              </Link>
+              <Link
+                href="tel:0661159935"
+                className="rounded-2xl border border-white/20 px-6 py-4 text-center text-base font-semibold text-white transition hover:bg-white/10"
+              >
+                06-6115-9935
               </Link>
             </div>
           </div>
         </section>
-
-        {/* Track Record */}
-        <section className="section-gradient border-t border-border py-24 px-4 sm:px-6 lg:py-32">
-          <div className="mx-auto max-w-5xl">
-            <ScrollAnimate>
-              <SectionHeading sub="実績" title="主要取扱実績" className="mb-12" />
-            </ScrollAnimate>
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6">
-              {trackRecords.map((item) => (
-                <ScrollAnimate key={item.number} className="h-full min-h-0">
-                  <div className="tech-card flex h-full flex-col gap-3 rounded-2xl border-2 border-primary/10 p-4 transition-all hover:border-primary/20 hover:shadow-glass-hover sm:p-5 md:p-6">
-                    <div className="flex items-start justify-between gap-2 sm:gap-3">
-                      <div className="flex items-center gap-2 sm:gap-3">
-                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 sm:h-12 sm:w-12">
-                          <item.icon className="h-5 w-5 text-primary sm:h-6 sm:w-6" />
-                        </div>
-                        <span className="font-serif text-xl font-bold tracking-wider aurora-gradient-text sm:text-2xl">
-                          {item.number}
-                        </span>
-                      </div>
-                      <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
-                        <span className="rounded-full bg-primary/10 px-2 py-0.5 text-[9px] font-medium uppercase tracking-wider text-primary sm:px-2.5 sm:py-1 sm:text-[10px]">
-                          {item.category}
-                        </span>
-                        {item.badge && (
-                          <span className="rounded-full bg-accent/20 px-2 py-0.5 text-[9px] font-bold tracking-wider text-accent sm:px-2.5 sm:py-1 sm:text-[10px]">
-                            {item.badge}
-                          </span>
-                        )}
-                      </div>
-                    </div>
-                    <h3 className="text-sm font-bold tracking-wider text-foreground sm:text-base">
-                      {item.title}
-                    </h3>
-                    <p className="flex-grow text-xs leading-relaxed tracking-wide text-muted-foreground sm:text-sm">
-                      {item.description}
-                    </p>
-                  </div>
-                </ScrollAnimate>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA */}
-        <EstimateCta
-          title="物流運送事業 お見積り・ご相談"
-          description="物流業務、利用運送、EC支援など、まずはお気軽にお問い合わせください。無料でお見積りいたします。"
-        />
       </main>
+
       <Footer />
-    </>
+    </div>
   )
 }
