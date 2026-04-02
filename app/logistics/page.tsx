@@ -2,6 +2,12 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import Link from "next/link"
 
+export const metadata = {
+  title: "物流・保管・配送・流通加工なら株式会社GAMI｜全国対応",
+  description:
+    "物流業務全体を一括対応。利用運送・倉庫保管・流通加工・内職・化粧品対応まで、全国対応で企業の物流課題を解決します。",
+}
+
 const coreServices = [
   {
     title: "物流業務を丸ごと任せられる体制",
