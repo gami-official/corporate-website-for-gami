@@ -317,6 +317,23 @@ export default function LogisticsPage() {
     </div>
   </div>
 </section>
+        <section className="mx-auto max-w-7xl px-6 py-16">
+  <div className="rounded-2xl bg-orange-50 border border-orange-200 p-8 text-center">
+    <h2 className="text-2xl font-bold text-zinc-900">
+      内職・軽作業の外注も対応しています
+    </h2>
+    <p className="mt-4 text-sm text-zinc-700">
+      シール貼り・封入・セット組みなど、人手不足の解消やコスト削減に最適です。
+      物流と合わせてご依頼いただくことで、さらに効率的な運用が可能です。
+    </p>
+    <Link
+      href="/naishoku"
+      className="mt-6 inline-block rounded-xl bg-orange-500 px-6 py-3 text-sm font-semibold text-white"
+    >
+      内職サービスを見る
+    </Link>
+  </div>
+</section>
         <section className="mx-auto max-w-7xl px-6 py-20 md:px-10 lg:px-12">
           <div className="rounded-[2rem] bg-zinc-950 px-8 py-12 text-white md:px-12">
             <p className="text-sm font-semibold tracking-[0.2em] text-orange-300">CONTACT</p>
@@ -341,23 +358,7 @@ export default function LogisticsPage() {
             </div>
           </div>
         </section>
-        <section className="mx-auto max-w-7xl px-6 py-16">
-  <div className="rounded-2xl bg-orange-50 border border-orange-200 p-8 text-center">
-    <h2 className="text-2xl font-bold text-zinc-900">
-      内職・軽作業の外注も対応しています
-    </h2>
-    <p className="mt-4 text-sm text-zinc-700">
-      シール貼り・封入・セット組みなど、人手不足の解消やコスト削減に最適です。
-      物流と合わせてご依頼いただくことで、さらに効率的な運用が可能です。
-    </p>
-    <Link
-      href="/naishoku"
-      className="mt-6 inline-block rounded-xl bg-orange-500 px-6 py-3 text-sm font-semibold text-white"
-    >
-      内職サービスを見る
-    </Link>
-  </div>
-</section>
+        
         <section className="mx-auto max-w-7xl px-6 py-20 md:px-10 lg:px-12">
             <div>
     <p className="text-sm font-semibold tracking-widest text-orange-500">
