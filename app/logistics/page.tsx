@@ -458,7 +458,26 @@ export default function LogisticsPage() {
 
     </div>
   </div>
+<section className="mx-auto max-w-7xl px-6 py-20 md:px-10 lg:px-12">
+  <div className="rounded-2xl bg-zinc-900 px-8 py-10 text-white">
+    <h2 className="text-2xl font-bold">
+      内職・軽作業の外注もお任せください
+    </h2>
+    <p className="mt-4 text-sm text-zinc-300 leading-7">
+      シール貼り・封入・セット組みなどの内職作業も対応可能です。
+      人手不足の解消やコスト削減として、多くの企業様にご利用いただいています。
+    </p>
+
+    <a
+      href="/naishoku"
+      className="mt-6 inline-block rounded-xl bg-orange-500 px-6 py-3 text-sm font-semibold text-white"
+    >
+      内職サービスを見る
+    </a>
+  </div>
 </section>
+        
+        </section>
       </main>
 
       <Footer />
