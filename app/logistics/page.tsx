@@ -236,7 +236,7 @@ export default function LogisticsPage() {
                 <h2 className="mt-3 text-3xl font-bold text-zinc-900">大阪限定｜法人向け段ボール無料見積り</h2>
 <p className="mt-5 text-sm leading-7 text-zinc-700">
   段ボールを安く、ミリ単位で作成可能です。
-  梱包資材コストの見直しや物流改善の入口として、まずは無料見積りからご相談ください。
+  梱包資材コストの見直しや物流改善の入口として、まずは専用ページから無料見積りをご依頼ください。
 </p>
                  
                 <p className="mt-4 text-sm font-medium text-zinc-800">
@@ -250,12 +250,12 @@ export default function LogisticsPage() {
                     </div>
                   ))}
                 </div>
-                <Link
-                  href="/contact"
-                  className="mt-8 inline-flex rounded-2xl bg-orange-500 px-6 py-4 text-base font-semibold text-white transition hover:bg-orange-400"
-                >
-                  段ボール見積りを依頼する
-                </Link>
+               <Link
+  href="/danbo"
+  className="mt-8 inline-flex rounded-2xl bg-orange-500 px-6 py-4 text-base font-semibold text-white transition hover:bg-orange-400"
+>
+  段ボール見積りページへ
+</Link>
               </div>
 
               <div className="rounded-3xl bg-white p-8 shadow-sm">
@@ -470,19 +470,19 @@ export default function LogisticsPage() {
 <section className="mx-auto max-w-7xl px-6 py-20 md:px-10 lg:px-12">
   <div className="rounded-2xl bg-zinc-900 px-8 py-10 text-white">
     <h2 className="text-2xl font-bold">
-      内職・軽作業の外注もお任せください
-    </h2>
-    <p className="mt-4 text-sm text-zinc-300 leading-7">
-      シール貼り・封入・セット組みなどの内職作業も対応可能です。
-      人手不足の解消やコスト削減として、多くの企業様にご利用いただいています。
-    </p>
-
-    <a
-      href="/naishoku"
-      className="mt-6 inline-block rounded-xl bg-orange-500 px-6 py-3 text-sm font-semibold text-white"
-    >
-      内職サービスを見る
-    </a>
+  内職・軽作業の外注先をお探しならご相談ください
+</h2>
+<p className="mt-4 text-sm text-zinc-300 leading-7">
+  シール貼り・封入・セット組み・検品・梱包など、
+  人手が必要な軽作業も一括対応可能です。
+  物流と合わせて委託することで、作業から発送までまとめて任せられます。
+</p>
+<a
+  href="/naishoku"
+  className="mt-6 inline-block rounded-xl bg-orange-500 px-6 py-3 text-sm font-semibold text-white"
+>
+  内職・軽作業ページへ
+</a>
   </div>
 </section>
         
