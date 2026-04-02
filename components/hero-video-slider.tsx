@@ -28,7 +28,7 @@ const slides: Slide[] = [
   },
   {
     copy: "物流・整理・再生を一社で。",
-    sub: "確実な物流設計と輸送で、ビジネスを止めない。",
+    sub: "企業の物流課題から、個人の整理・買取まで。スピード・柔軟性・確実性で解決します。",
     cta: "物流運送事業を見る",
     ctaHref: "/logistics",
     posterSrc: IMAGES.heroLogistics,
