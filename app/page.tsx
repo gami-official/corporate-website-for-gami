@@ -367,52 +367,7 @@ export default function Page() {
     </div>
   </div>
 </section>
-        <section className="mx-auto max-w-7xl px-6 py-20 md:px-10 lg:px-12">
-  <p className="text-sm font-semibold tracking-widest text-orange-500">
-    MAIN SERVICE
-  </p>
 
-  <h2 className="mt-3 text-3xl font-bold text-zinc-900">
-    株式会社GAMIの主力サービス
-  </h2>
-
-  <p className="mt-5 max-w-3xl text-sm leading-7 text-zinc-700">
-    物流を主軸に、内職・軽作業、段ボール見積りまで一括で対応可能です。
-    課題に合わせて、必要なサービスページをご覧ください。
-  </p>
-
-  <div className="mt-10 grid gap-6 md:grid-cols-3">
-    <div className="rounded-3xl border bg-white p-7 shadow-sm">
-      <h3 className="text-xl font-bold text-zinc-900">物流運送事業</h3>
-      <p className="mt-4 text-sm leading-7 text-zinc-700">
-        定期・スポットを問わず、保管・加工・配送まで一括対応。
-      </p>
-      <Link href="/logistics" className="mt-6 inline-block text-orange-500">
-        物流ページを見る →
-      </Link>
-    </div>
-
-    <div className="rounded-3xl border bg-white p-7 shadow-sm">
-      <h3 className="text-xl font-bold text-zinc-900">内職・軽作業</h3>
-      <p className="mt-4 text-sm leading-7 text-zinc-700">
-        シール貼り・封入・検品など軽作業も一括対応。
-      </p>
-      <Link href="/naishoku" className="mt-6 inline-block text-orange-500">
-        内職ページを見る →
-      </Link>
-    </div>
-
-    <div className="rounded-3xl border bg-white p-7 shadow-sm">
-      <h3 className="text-xl font-bold text-zinc-900">段ボール見積り</h3>
-      <p className="mt-4 text-sm leading-7 text-zinc-700">
-        法人向け段ボールをミリ単位で作成可能。
-      </p>
-      <Link href="/danbo" className="mt-6 inline-block text-orange-500">
-        段ボールページを見る →
-      </Link>
-    </div>
-  </div>
-</section>
       </main>
 
       <Footer />
