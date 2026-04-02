@@ -307,6 +307,66 @@ export default function Page() {
             </div>
           </div>
         </section>
+        <section className="mx-auto max-w-7xl px-6 py-20 md:px-10 lg:px-12">
+  <div>
+    <p className="text-sm font-semibold tracking-widest text-orange-500">
+      MAIN SERVICE
+    </p>
+
+    <h2 className="mt-3 text-3xl font-bold text-zinc-900">
+      株式会社GAMIの主力サービス
+    </h2>
+
+    <p className="mt-5 max-w-3xl text-sm leading-7 text-zinc-700">
+      物流を主軸に、内職・軽作業、段ボール見積りまで一括で対応可能です。
+      課題に合わせて、必要なサービスページをご覧ください。
+    </p>
+
+    <div className="mt-10 grid gap-6 md:grid-cols-3">
+      <div className="rounded-3xl border bg-white p-7 shadow-sm">
+        <h3 className="text-xl font-bold text-zinc-900">物流運送事業</h3>
+        <p className="mt-4 text-sm leading-7 text-zinc-700">
+          定期・スポットを問わず、保管・加工・配送まで一括対応。
+          全国対応の利用運送ネットワークで最適な物流体制をご提案します。
+        </p>
+        <Link
+          href="/logistics"
+          className="mt-6 inline-block rounded-xl bg-orange-500 px-5 py-3 text-sm font-semibold text-white"
+        >
+          物流ページを見る
+        </Link>
+      </div>
+
+      <div className="rounded-3xl border bg-white p-7 shadow-sm">
+        <h3 className="text-xl font-bold text-zinc-900">内職・軽作業</h3>
+        <p className="mt-4 text-sm leading-7 text-zinc-700">
+          シール貼り・封入・セット組み・検品・梱包など、
+          人手が必要な軽作業も物流とまとめて委託できます。
+        </p>
+        <Link
+          href="/naishoku"
+          className="mt-6 inline-block rounded-xl bg-orange-500 px-5 py-3 text-sm font-semibold text-white"
+        >
+          内職ページを見る
+        </Link>
+      </div>
+
+      <div className="rounded-3xl border bg-white p-7 shadow-sm">
+        <h3 className="text-xl font-bold text-zinc-900">段ボール見積り</h3>
+        <p className="mt-4 text-sm leading-7 text-zinc-700">
+          大阪限定で法人向け段ボール見積りに対応。
+          ミリ単位での作成や梱包資材コストの見直しもご相談いただけます。
+        </p>
+        <Link
+          href="/danbo"
+          className="mt-6 inline-block rounded-xl bg-orange-500 px-5 py-3 text-sm font-semibold text-white"
+        >
+          段ボールページを見る
+        </Link>
+      </div>
+    </div>
+  </div>
+</section>
       </main>
 
       <Footer />
