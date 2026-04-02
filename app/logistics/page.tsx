@@ -365,6 +365,64 @@ export default function LogisticsPage() {
     </div>
   </div>
 </section>
+        <section className="bg-zinc-50 mx-auto max-w-7xl px-6 py-20 md:px-10 lg:px-12">
+  <div>
+    <p className="text-sm font-semibold tracking-widest text-orange-500">
+      STRENGTH
+    </p>
+
+    <h2 className="mt-3 text-3xl font-bold text-zinc-900">
+      株式会社GAMIが選ばれる理由
+    </h2>
+
+    <p className="mt-5 text-sm leading-7 text-zinc-700">
+      単なる運送ではなく、物流全体を最適化するパートナーとして、
+      現場に寄り添った提案とスピード対応で選ばれています。
+    </p>
+
+    <div className="mt-10 grid gap-6 sm:grid-cols-2">
+      <div className="rounded-2xl border p-6">
+        <h3 className="font-semibold text-zinc-900">
+          ワンストップ対応
+        </h3>
+        <p className="mt-2 text-sm text-zinc-700">
+          保管・流通加工・配送・資材提案まで一括対応。
+          複数業者に分ける手間とコストを削減できます。
+        </p>
+      </div>
+
+      <div className="rounded-2xl border p-6">
+        <h3 className="font-semibold text-zinc-900">
+          全国対応の利用運送
+        </h3>
+        <p className="mt-2 text-sm text-zinc-700">
+          軽貨物から大型車まで、全国に最適な車両を手配可能。
+          急な案件や波動にも柔軟に対応します。
+        </p>
+      </div>
+
+      <div className="rounded-2xl border p-6">
+        <h3 className="font-semibold text-zinc-900">
+          現場対応力
+        </h3>
+        <p className="mt-2 text-sm text-zinc-700">
+          定期・スポット問わず、現場起点で柔軟に対応。
+          スピードと実行力が強みです。
+        </p>
+      </div>
+
+      <div className="rounded-2xl border p-6">
+        <h3 className="font-semibold text-zinc-900">
+          化粧品対応倉庫
+        </h3>
+        <p className="mt-2 text-sm text-zinc-700">
+          化粧品製造業許可を取得した倉庫で対応。
+          品質管理が求められる商材も安心してお任せいただけます。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
       </main>
 
       <Footer />
