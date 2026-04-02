@@ -27,7 +27,7 @@ const slides: Slide[] = [
     accentHsl: "216 54% 23%",
   },
   {
-    copy: "繋ぐ。",
+    copy: "物流・整理・再生を一社で。",
     sub: "確実な物流設計と輸送で、ビジネスを止めない。",
     cta: "物流運送事業を見る",
     ctaHref: "/logistics",
