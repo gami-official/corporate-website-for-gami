@@ -145,9 +145,9 @@ export default function DanboardPage() {
 
               <Link
                 href="tel:0661159935"
-                className="rounded-2xl border border-white/20 px-8 py-4 text-base font-semibold text-white"
-              >
-                06-6115-9935
+  className="rounded-2xl border border-white/20 px-8 py-4 text-base font-semibold text-white"
+>
+  今すぐ電話で相談する
               </Link>
             </div>
           </div>
