@@ -74,7 +74,7 @@ export default function OsakaLP() {
   </p>
   
   <h2 className="text-2xl md:text-3xl font-bold mb-6">
-    すでに多数の企業様に選ばれています
+    すでに多くの企業様に選ばれています
   </h2>
 
   <p className="text-zinc-600 mb-10">
