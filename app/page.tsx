@@ -86,83 +86,58 @@ export default function Page() {
       <Header />
 
       <main>
-        <section className="relative overflow-hidden border-b border-zinc-200 bg-gradient-to-br from-zinc-950 via-zinc-900 to-zinc-800 text-white">
-          <div className="absolute inset-0 opacity-20">
-            <div className="absolute -left-20 top-10 h-72 w-72 rounded-full bg-orange-500 blur-3xl" />
-            <div className="absolute right-0 top-0 h-80 w-80 rounded-full bg-amber-400 blur-3xl" />
-          </div>
-          <div className="relative mx-auto grid max-w-7xl gap-10 px-6 py-20 md:px-10 lg:grid-cols-[1.2fr_0.8fr] lg:px-12 lg:py-28">
-            <div>
-              <p className="mb-4 inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm tracking-wide text-zinc-100">
-                物流運送事業を主軸に、保管・加工・配送を一括対応
-              </p>
-              <h1 className="max-w-4xl text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
-                物流・保管・配送・加工を一社で。
-                <br />
-                株式会社GAMIは、現場対応に強い物流パートナーです。
-              </h1>
-              <p className="mt-6 max-w-3xl text-base leading-8 text-zinc-200 md:text-lg">
-                物流業務は定期案件・スポット案件のどちらにも対応し、利用運送、倉庫保管、流通加工、内職、段ボール提案まで一括でご相談いただけます。美容商材・アパレル・スパイス・ふるさと納税返礼品など、多様な商材に対応してきた実績を活かし、物流課題をスピードと柔軟性で解決します。
-              </p>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <Link
-                  href="/contact"
-                  className="rounded-2xl bg-orange-500 px-6 py-4 text-center text-base font-semibold text-white transition hover:bg-orange-400"
-                >
-                  無料見積りはこちら
-                </Link>
-                <Link
-                  href="tel:0661159935"
-                  className="rounded-2xl border border-white/30 px-6 py-4 text-center text-base font-semibold text-white transition hover:bg-white/10"
-                >
-                  電話で相談する
-                </Link>
-
-              <Link
-    href="/osaka-lp"
-    className="rounded-2xl bg-orange-600 px-6 py-4 text-center text-white font-bold"
+       <section className="relative h-[90vh] w-full overflow-hidden">
+  <video
+    autoPlay
+    loop
+    muted
+    playsInline
+    className="absolute inset-0 h-full w-full object-cover"
   >
-    大阪の物流サービスを見る
-  </Link>
-              </div>
-              <div className="mt-10 grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
-                {logisticsFeatures.map((item) => (
-                  <div
-                    key={item}
-                    className="rounded-2xl border border-white/10 bg-white/5 px-4 py-4 text-sm text-zinc-100 backdrop-blur"
-                  >
-                    {item}
-                  </div>
-                ))}
-              </div>
-            </div>
+    <source src="/video/hero-logistics.mp4" type="video/mp4" />
+  </video>
 
-            <div className="rounded-3xl border border-white/10 bg-white/10 p-6 backdrop-blur">
-              <p className="text-sm font-semibold tracking-wide text-orange-300">主なご相談内容</p>
-              <div className="mt-5 space-y-4">
-                {[
-                  "定期配送・スポット配送の委託先を探している",
-                  "全国手配できる利用運送会社にまとめたい",
-                  "倉庫保管と流通加工を一括で任せたい",
-                  "化粧品関連の作業ができる倉庫を探している",
-                  "段ボールや梱包資材のコストを見直したい",
-                  "内職・軽作業の案件を依頼したい",
-                ].map((item) => (
-                  <div key={item} className="rounded-2xl bg-black/20 px-4 py-4 text-sm leading-7 text-zinc-100">
-                    {item}
-                  </div>
-                ))}
-              </div>
-              <div className="mt-6 rounded-2xl bg-white px-5 py-5 text-zinc-900">
-                <p className="text-sm font-semibold text-zinc-500">お問い合わせ</p>
-                <p className="mt-2 text-2xl font-bold">06-6115-9935</p>
-                <p className="mt-2 text-sm leading-6 text-zinc-600">
-                  法人物流、段ボール見積り、流通加工のご相談はお気軽にご連絡ください。
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+  <div className="absolute inset-0 bg-black/60" />
+
+  <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center text-white">
+    <p className="mb-4 rounded-full bg-white/20 px-4 py-1 text-sm">
+      物流運送事業を主軸に、保管・加工・配送を一括対応
+    </p>
+
+    <h1 className="text-3xl font-bold leading-tight md:text-5xl">
+      物流・保管・配送・加工を一社で。<br />
+      株式会社GAMIは、現場対応に強い物流パートナーです。
+    </h1>
+
+    <p className="mt-4 max-w-3xl text-sm text-gray-200 md:text-base">
+      物流業務は定期案件・スポット案件のどちらにも対応し、利用運送、倉庫保管、流通加工、
+      内職、段ボール提案まで一括でご相談いただけます。
+    </p>
+
+    <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+      <a
+        href="/contact"
+        className="rounded-2xl bg-orange-500 px-6 py-4 text-center font-semibold text-white"
+      >
+        無料見積りはこちら
+      </a>
+
+      <a
+        href="tel:0661159935"
+        className="rounded-2xl border border-white/30 px-6 py-4 text-center text-white"
+      >
+        電話で相談する
+      </a>
+
+      <a
+        href="/osaka-lp"
+        className="rounded-2xl bg-orange-600 px-6 py-4 text-center font-bold text-white"
+      >
+        大阪の物流サービスを見る
+      </a>
+    </div>
+  </div>
+</section>
         
         <section className="mx-auto max-w-7xl px-6 py-16">
   <div className="rounded-2xl bg-gradient-to-r from-orange-500 to-orange-600 p-8 text-white shadow-xl">
