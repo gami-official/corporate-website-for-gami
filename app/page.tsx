@@ -86,6 +86,10 @@ export default function Page() {
       <Header />
 
       <main>
+        <p style={{ background: "yellow", padding: "12px", fontWeight: "bold" }}>
+    TOP-TEST-123
+  </p>
+
         <section className="relative overflow-hidden border-b border-zinc-200 bg-gradient-to-br from-zinc-950 via-zinc-900 to-zinc-800 text-white">
           <div className="absolute inset-0 opacity-20">
             <div className="absolute -left-20 top-10 h-72 w-72 rounded-full bg-orange-500 blur-3xl" />
