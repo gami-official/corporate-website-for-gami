@@ -117,6 +117,13 @@ export default function Page() {
                 >
                   電話で相談する
                 </Link>
+
+              <Link
+    href="/osaka-lp"
+    className="rounded-2xl bg-orange-600 px-6 py-4 text-center text-white font-bold"
+  >
+    大阪の物流サービスを見る
+  </Link>
               </div>
               <div className="mt-10 grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
                 {logisticsFeatures.map((item) => (
