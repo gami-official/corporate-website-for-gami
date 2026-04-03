@@ -40,27 +40,7 @@ export default function OsakaLP() {
           </Link>
         </div>
       </section>
-   <section className="py-12 bg-white">
-  <div className="flex flex-col sm:flex-row gap-4 justify-center px-6">
-    <Link
-      href="/contact"
-      className="bg-orange-500 px-8 py-4 rounded-xl text-white font-bold text-center"
-    >
-      無料で相談する（最短即日対応）
-    </Link>
-
-    <Link
-      href="tel:0661159935"
-      className="border border-black px-8 py-4 rounded-xl text-center font-bold"
-    >
-      今すぐ電話する
-    </Link>
-  </div>
-
-  <p className="mt-4 text-sm text-center text-gray-500">
-    相談だけでもOK・最短即日対応
-  </p>
-</section>
+   
       {/* 悩み */}
       <section className="px-6 py-16 max-w-4xl mx-auto">
         <h2 className="text-2xl font-bold text-center">
