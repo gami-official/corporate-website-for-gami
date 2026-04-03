@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 import { Noto_Sans_JP, Noto_Serif_JP } from "next/font/google"
 
 import "./globals.css"
-import { FloatingCta } from "@/components/floating-cta"
+
 
 const notoSansJP = Noto_Sans_JP({
   subsets: ["latin"],
@@ -100,7 +100,7 @@ export default function RootLayout({
         className={`${notoSansJP.variable} ${notoSerifJP.variable} font-sans antialiased`}
       >
         {children}
-        <FloatingCta />
+       
       </body>
     </html>
   )
