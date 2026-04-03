@@ -141,9 +141,8 @@ export default function LogisticsPage() {
           </div>
         </section><section className="mx-auto max-w-7xl px-6 py-16">
   <div className="rounded-2xl bg-gradient-to-r from-orange-500 to-orange-600 p-8 text-white shadow-xl">
-    
     <h2 className="text-2xl md:text-3xl font-bold">
-      内職・軽作業の外注も一括対応できます
+      人手不足の軽作業・内職外注もまとめて対応します
     </h2>
 
     <p className="mt-4 text-sm md:text-base text-white/90 leading-7">
@@ -152,32 +151,31 @@ export default function LogisticsPage() {
     </p>
 
     <div className="mt-6 flex flex-col sm:flex-row gap-4">
-      
       <Link
         href="/naishoku"
         className="inline-flex items-center justify-center rounded-xl bg-white px-6 py-3 text-sm font-semibold text-orange-600 hover:bg-orange-100 transition"
       >
-        内職サービスを見る
+        内職・軽作業の詳細を見る
       </Link>
-<Link
-  href="/danbo"
-  className="inline-flex items-center justify-center rounded-xl border border-white/40 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10 transition"
->
-  段ボール見積りはこちら
-</Link>
+
+      <Link
+        href="/danbo"
+        className="inline-flex items-center justify-center rounded-xl bg-white px-6 py-3 text-sm font-semibold text-orange-600 hover:bg-orange-100 transition"
+      >
+        段ボール見積りを依頼する
+      </Link>
+
       <Link
         href="/contact"
         className="inline-flex items-center justify-center rounded-xl border border-white/40 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10 transition"
       >
-        無料で相談する
+        物流の無料相談はこちら
       </Link>
-
     </div>
 
     <p className="mt-4 text-xs text-white/70">
       ※「内職だけ相談したい」でもOKです。まずはお気軽にご相談ください。
     </p>
-
   </div>
 </section>
         <section className="mx-auto max-w-7xl px-6 py-20 md:px-10 lg:px-12">
