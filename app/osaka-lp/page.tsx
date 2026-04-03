@@ -109,7 +109,7 @@ export default function OsakaLP() {
     href="/contact"
     className="flex-1 bg-orange-500 text-white text-center py-3 rounded-lg font-bold"
   >
-    今すぐ無料相談する
+    今すぐ無料相談
   </Link>
 
   <Link
@@ -118,7 +118,14 @@ export default function OsakaLP() {
   >
     電話する
   </Link>
-</div>
+
+  <Link
+    href="#"
+    className="flex-1 bg-green-500 text-white text-center py-3 rounded-lg"
+  >
+    LINE
+  </Link>
+</div>ƒ
 
 
       {/* CTA */}
@@ -146,6 +153,11 @@ export default function OsakaLP() {
             06-6115-9935
           </Link>
         </div>
+
+<p className="mt-3 text-xs text-zinc-400">
+※相談のみOK・しつこい営業なし・最短当日対応
+</p>
+        
       </section>
 
     </div>
