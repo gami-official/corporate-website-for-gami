@@ -67,7 +67,36 @@ export default function OsakaLP() {
           業者を分ける必要がなくなります。
         </p>
       </section>
+<section className="px-6 py-16 bg-white text-center">
+  <h2 className="text-2xl md:text-3xl font-bold mb-6">
+    大阪エリアで多数の法人様と取引実績
+  </h2>
 
+  <p className="text-zinc-600 mb-10">
+    倉庫・配送・内職・段ボールまで一括対応。
+    業務効率化とコスト削減を実現しています。
+  </p>
+
+  <div className="grid gap-4 md:grid-cols-3 text-left max-w-5xl mx-auto">
+    <div className="border rounded-xl p-5">
+      <p className="text-sm text-zinc-500">物流会社様</p>
+      <p className="font-bold mt-2">配送＋内職を一括化</p>
+      <p className="text-sm text-zinc-500 mt-2">コスト約20%削減</p>
+    </div>
+
+    <div className="border rounded-xl p-5">
+      <p className="text-sm text-zinc-500">EC事業者様</p>
+      <p className="font-bold mt-2">梱包〜発送を外注</p>
+      <p className="text-sm text-zinc-500 mt-2">作業時間50%削減</p>
+    </div>
+
+    <div className="border rounded-xl p-5">
+      <p className="text-sm text-zinc-500">メーカー様</p>
+      <p className="font-bold mt-2">急な案件にも即対応</p>
+      <p className="text-sm text-zinc-500 mt-2">最短当日対応</p>
+    </div>
+  </div>
+</section>
       {/* 強み */}
       <section className="px-6 py-16 max-w-5xl mx-auto">
         <h2 className="text-2xl font-bold text-center">
