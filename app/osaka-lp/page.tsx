@@ -91,7 +91,7 @@ export default function OsakaLP() {
 
     <div className="border rounded-xl p-5">
       <p className="text-sm text-zinc-500">EC事業者様</p>
-      <p className="font-bold mt-2">梱包〜発送を外注</p>
+      <p className="font-bold mt-2">梱包〜発送を外注化</p>
       <p className="text-sm text-zinc-500 mt-2">作業時間50%削減</p>
     </div>
 
@@ -217,7 +217,7 @@ export default function OsakaLP() {
 </div>
 
 <p className="mt-4 text-xs text-zinc-400 text-center leading-relaxed">
-  相談だけでもOK。しつこい営業は一切ありません。最短当日対応可能です。
+  『相談だけでもOK・最短即日対応』
 </p>
         
 </section>
