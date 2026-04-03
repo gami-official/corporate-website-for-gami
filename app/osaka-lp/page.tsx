@@ -24,7 +24,7 @@ export default function OsakaLP() {
           大阪エリアで急な案件にも対応可能です。
         </p>
 
-        <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Link
             href="/contact"
             className="bg-orange-500 px-8 py-4 rounded-xl font-bold"
