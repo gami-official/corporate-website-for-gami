@@ -68,6 +68,11 @@ export default function OsakaLP() {
         </p>
       </section>
 <section className="px-6 py-16 bg-white text-center">
+
+  <p className="text-sm text-zinc-500 mb-4">
+    ※大阪エリアを中心に多数の企業様が導入
+  </p>
+  
   <h2 className="text-2xl md:text-3xl font-bold mb-6">
     すでに多数の企業様に選ばれています
   </h2>
