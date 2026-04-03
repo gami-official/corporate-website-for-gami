@@ -105,13 +105,13 @@ export default function Page() {
     </p>
 
     <h1 className="text-3xl font-bold leading-tight md:text-5xl">
-      物流・保管・配送・加工を一社で。<br />
-      株式会社GAMIは、現場対応に強い物流パートナーです。
+      物止めない物流を。<br />
+      現場で支えるパートナー。
     </h1>
 
     <p className="mt-4 max-w-3xl text-sm text-gray-200 md:text-base">
-      物流業務は定期案件・スポット案件のどちらにも対応し、利用運送、倉庫保管、流通加工、
-      内職、段ボール提案まで一括でご相談いただけます。
+      保管・配送・流通加工・内職まで一括対応。
+      スポットから定期まで柔軟に対応します。
     </p>
 
     <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -133,7 +133,7 @@ export default function Page() {
         href="/osaka-lp"
         className="rounded-2xl bg-orange-600 px-6 py-4 text-center font-bold text-white"
       >
-        大阪の物流サービスを見る
+        対応エリア・サービスを見る
       </a>
     </div>
   </div>
