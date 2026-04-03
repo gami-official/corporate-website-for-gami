@@ -169,31 +169,7 @@ export default function Page() {
       複数業者に分ける手間をなくし、コスト削減と業務効率化を実現します。
     </p>
 
-    <div className="mt-6 flex flex-col sm:flex-row gap-4">
-      
-      <Link
-        href="/logistics"
-        className="inline-flex justify-center rounded-xl bg-white text-orange-600 px-6 py-3 font-semibold"
-      >
-        物流サービスを見る
-      </Link>
-
-      <Link
-        href="/naishoku"
-        className="inline-flex justify-center rounded-xl border border-white px-6 py-3 font-semibold"
-      >
-        内職サービスを見る
-      </Link>
-
-      <Link
-        href="/danbo"
-        className="inline-flex justify-center rounded-xl border border-white px-6 py-3 font-semibold"
-      >
-        段ボール見積りはこちら
-      </Link>
-
-    </div>
-
+    
   </div>
 </section>
         
