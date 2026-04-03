@@ -19,8 +19,8 @@ export default function OsakaLP() {
         </h1>
 
         <p className="mt-6 text-zinc-300 max-w-2xl mx-auto">
-          保管・配送・内職・段ボールまでまとめて対応。
-          バラバラだった業務を一本化し、コスト削減と効率化を実現します。
+          保管・配送・内職・段ボールまで一括対応。
+複数業者に分かれていた業務をまとめ、コスト削減と業務効率化を実現します。
         </p>
 
         <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
