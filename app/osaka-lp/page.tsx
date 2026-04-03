@@ -29,7 +29,7 @@ export default function OsakaLP() {
             href="/contact"
             className="bg-orange-500 px-8 py-4 rounded-xl font-bold"
           >
-            無料で相談する（最短即日対応）
+            無料見積もりはこちら（最短即日対応）
           </Link>
 
           <Link
