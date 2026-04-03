@@ -119,12 +119,6 @@ export default function OsakaLP() {
     電話する
   </Link>
 
-  <Link
-    href="#"
-    className="flex-1 bg-green-500 text-white text-center py-3 rounded-lg"
-  >
-    LINE
-  </Link>
 </div>ƒ
 
 
