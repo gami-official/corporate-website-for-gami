@@ -332,7 +332,7 @@ export default function Page() {
                 href="tel:0661159935"
                 className="rounded-2xl border border-white/20 px-6 py-4 text-center text-base font-semibold text-white transition hover:bg-white/10"
               >
-                06-6115-9935
+                電話で相談する
               </Link>
             </div>
           </div>
