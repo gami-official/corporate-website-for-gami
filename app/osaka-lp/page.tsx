@@ -40,22 +40,7 @@ export default function OsakaLP() {
           </Link>
         </div>
       </section>
-
-      {/* 悩み */}
-      <section className="px-6 py-16 max-w-4xl mx-auto">
-        <h2 className="text-2xl font-bold text-center">
-          こんな課題ありませんか？
-        </h2>
-
-        <ul className="mt-8 space-y-4 text-zinc-700">
-          <li>・物流会社と内職業者がバラバラ</li>
-          <li>・大阪でまとめて任せられる会社がない</li>
-          <li>・段ボールや資材コストが高い</li>
-          <li>・急な案件に対応できない</li>
-        </ul>
-      </section>
-
-     <section className="py-12 bg-white">
+   <section className="py-12 bg-white">
   <div className="flex flex-col sm:flex-row gap-4 justify-center px-6">
     <Link
       href="/contact"
@@ -76,6 +61,19 @@ export default function OsakaLP() {
     相談だけでもOK・最短即日対応
   </p>
 </section>
+      {/* 悩み */}
+      <section className="px-6 py-16 max-w-4xl mx-auto">
+        <h2 className="text-2xl font-bold text-center">
+          こんな課題ありませんか？
+        </h2>
+
+        <ul className="mt-8 space-y-4 text-zinc-700">
+          <li>・物流会社と内職業者がバラバラ</li>
+          <li>・大阪でまとめて任せられる会社がない</li>
+          <li>・段ボールや資材コストが高い</li>
+          <li>・急な案件に対応できない</li>
+        </ul>
+      </section>
 
       {/* 解決 */}
       <section className="bg-orange-500 text-white px-6 py-16 text-center">
