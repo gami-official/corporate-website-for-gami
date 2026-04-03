@@ -119,7 +119,7 @@ export default function OsakaLP() {
     電話する
   </Link>
 
-</div>ƒ
+</div>
 
 
       {/* CTA */}
