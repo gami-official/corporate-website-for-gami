@@ -21,6 +21,7 @@ export default function OsakaLP() {
         <p className="mt-6 text-zinc-300 max-w-2xl mx-auto">
           保管・配送・内職・段ボールまで一括対応。
 複数業者に分かれていた業務をまとめ、コスト削減と業務効率化を実現します。
+          大阪エリアで急な案件にも対応可能です。
         </p>
 
         <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
