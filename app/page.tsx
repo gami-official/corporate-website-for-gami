@@ -156,22 +156,6 @@ export default function Page() {
             </div>
           </div>
         </section>
-
-        <section className="mx-auto max-w-7xl px-6 py-12">
-  <div className="rounded-2xl bg-gradient-to-r from-orange-500 to-orange-600 p-8 text-white shadow-xl">
-
-    <h2 className="text-2xl md:text-3xl font-bold">
-      物流・内職・段ボールまで一括対応できます
-    </h2>
-
-    <p className="mt-4 text-sm md:text-base text-white/90">
-      保管・配送・流通加工・内職・段ボールまでまとめてお任せください。
-      複数業者に分ける手間をなくし、コスト削減と業務効率化を実現します。
-    </p>
-
-    
-  </div>
-</section>
         
         <section className="mx-auto max-w-7xl px-6 py-16">
   <div className="rounded-2xl bg-gradient-to-r from-orange-500 to-orange-600 p-8 text-white shadow-xl">
