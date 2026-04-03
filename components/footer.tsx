@@ -75,10 +75,10 @@ export function Footer() {
               お気軽にご連絡ください。
             </p>
             <a
-              href="mailto:f_fuchigami@gamigami.email"
+              href="mailto:k_fuchigami@gamigami.email"
               className="mt-3 block text-sm text-muted-foreground transition-colors hover:text-primary"
             >
-              f_fuchigami@gamigami.email
+              k_fuchigami@gamigami.email
             </a>
             <div className="mt-2 text-sm text-muted-foreground">
               <p>TEL: <a href="tel:06-6115-9935" className="transition-colors hover:text-primary">06-6115-9935</a></p>
