@@ -309,7 +309,7 @@ export default function Page() {
 
                 <div className="mt-8 space-y-6">
                   <div className="rounded-2xl border border-zinc-200 p-5">
-                    <h3 className="text-xl font-bold text-zinc-900">ヘッドスパ事業（20%）</h3>
+                    <h3 className="text-xl font-bold text-zinc-900">ヘッドスパ事業</h3>
                     <p className="mt-3 text-sm leading-7 text-zinc-600">
                       スクール・フランチャイズ展開を強化しつつ、ヘッドスパ専門店ゆう本店への導線を整えます。
                     </p>
@@ -319,7 +319,7 @@ export default function Page() {
                   </div>
 
                   <div className="rounded-2xl border border-zinc-200 p-5">
-                    <h3 className="text-xl font-bold text-zinc-900">遺品整理・生前整理事業（10%）</h3>
+                    <h3 className="text-xl font-bold text-zinc-900">遺品整理・生前整理事業</h3>
                     <p className="mt-3 text-sm leading-7 text-zinc-600">
                       大阪は訪問買取に特化、福岡は店舗型で完全予約制。整理だけでなく、買取へつながる導線を重視します。
                     </p>
