@@ -3,7 +3,7 @@ import { Footer } from "@/components/footer"
 import Link from "next/link"
 
 export const metadata = {
-  title: "福岡・大阪の物流会社｜保管・配送・内職・段ボールまで対応｜株式会社GAMI",
+  title: "大阪・福岡の物流会社｜保管・配送・内職・段ボール一括対応｜株式会社GAMI",
   description:
     "福岡・大阪で物流会社をお探しなら株式会社GAMI。保管・配送・流通加工・内職・段ボールまで一括対応。コスト削減と業務効率化を実現します。",
   keywords: [
