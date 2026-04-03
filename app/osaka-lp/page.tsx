@@ -220,7 +220,7 @@ export default function OsakaLP() {
   相談だけでもOK。しつこい営業は一切ありません。最短当日対応可能です。
 </p>
         
-      </section>
+</section>
 
     </div>
   )
