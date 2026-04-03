@@ -123,7 +123,7 @@ export default function OsakaLP() {
 
 
       {/* CTA */}
-      <section className="bg-black text-white px-6 py-20 pb-44 text-center">
+      <section className="bg-black text-white px-6 py-20 pb-56 text-center">
         <h2 className="text-2xl md:text-3xl font-bold">
           今すぐご相談ください
         </h2>
