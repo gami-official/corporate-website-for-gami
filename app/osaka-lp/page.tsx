@@ -75,7 +75,6 @@ export default function OsakaLP() {
   相談だけでもOK・最短即日対応
 </p>
 
-
       {/* 解決 */}
       <section className="bg-orange-500 text-white px-6 py-16 text-center">
         <h2 className="text-2xl md:text-3xl font-bold">
