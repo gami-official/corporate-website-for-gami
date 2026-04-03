@@ -55,6 +55,27 @@ export default function OsakaLP() {
         </ul>
       </section>
 
+      <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+  <Link
+    href="/contact"
+    className="bg-orange-500 px-8 py-4 rounded-xl text-white font-bold text-center"
+  >
+    今すぐ相談して課題を解決する
+  </Link>
+
+  <Link
+    href="tel:0661159935"
+    className="border border-white px-8 py-4 rounded-xl text-center"
+  >
+    今すぐ電話で相談する
+  </Link>
+</div>
+
+<p className="mt-4 text-sm text-center text-gray-400">
+  相談だけでもOK・最短即日対応
+</p>
+
+
       {/* 解決 */}
       <section className="bg-orange-500 text-white px-6 py-16 text-center">
         <h2 className="text-2xl md:text-3xl font-bold">
