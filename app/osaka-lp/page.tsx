@@ -104,6 +104,23 @@ export default function OsakaLP() {
         </div>
       </section>
 
+      <div className="fixed bottom-0 left-0 w-full bg-black p-4 flex gap-2 z-50">
+  <Link
+    href="/contact"
+    className="flex-1 bg-orange-500 text-white text-center py-3 rounded-lg font-bold"
+  >
+    今すぐ無料相談する
+  </Link>
+
+  <Link
+    href="tel:0661159935"
+    className="flex-1 border border-white text-white text-center py-3 rounded-lg"
+  >
+    電話する
+  </Link>
+</div>
+
+
       {/* CTA */}
       <section className="bg-black text-white px-6 py-20 text-center">
         <h2 className="text-2xl md:text-3xl font-bold">
