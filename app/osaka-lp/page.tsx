@@ -154,8 +154,8 @@ export default function OsakaLP() {
           </Link>
         </div>
 
-<p className="mt-3 text-xs text-zinc-400">
-※相談のみOK・しつこい営業なし・最短当日対応
+<p className="mt-4 text-xs text-zinc-400 text-center opacity-80">
+  ※相談のみOK・しつこい営業なし・最短当日対応
 </p>
         
       </section>
