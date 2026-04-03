@@ -392,6 +392,44 @@ export default function Page() {
   </div>
 </section>
 
+        <section className="bg-gray-100 py-16 px-6 text-center">
+  <h2 className="text-2xl font-bold mb-6">
+    無料見積もり・ご相談はこちら
+  </h2>
+
+  <form className="max-w-xl mx-auto space-y-4">
+    <input
+      type="text"
+      placeholder="会社名"
+      className="w-full p-3 border rounded"
+    />
+    <input
+      type="text"
+      placeholder="お名前"
+      className="w-full p-3 border rounded"
+    />
+    <input
+      type="email"
+      placeholder="メールアドレス"
+      className="w-full p-3 border rounded"
+    />
+    <textarea
+      placeholder="ご相談内容"
+      className="w-full p-3 border rounded h-32"
+    />
+    <button
+      type="submit"
+      className="bg-orange-500 text-white px-6 py-3 rounded font-bold"
+    >
+      無料で相談する
+    </button>
+  </form>
+
+  <p className="text-sm text-gray-500 mt-4">
+    ※相談だけでもOK・しつこい営業は一切ありません
+  </p>
+</section>
+
       </main>
 
       <Footer />
