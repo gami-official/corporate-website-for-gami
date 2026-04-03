@@ -69,7 +69,7 @@ export default function OsakaLP() {
       </section>
 <section className="px-6 py-16 bg-white text-center">
   <h2 className="text-2xl md:text-3xl font-bold mb-6">
-    大阪エリアで多数の法人様と取引実績
+    すでに多数の企業様に選ばれています
   </h2>
 
   <p className="text-zinc-600 mb-10">
@@ -81,7 +81,7 @@ export default function OsakaLP() {
     <div className="border rounded-xl p-5">
       <p className="text-sm text-zinc-500">物流会社様</p>
       <p className="font-bold mt-2">配送＋内職を一括化</p>
-      <p className="text-sm text-zinc-500 mt-2">コスト約20%削減</p>
+      <p className="text-sm text-zinc-500 mt-2">導入後3ヶ月でコスト約20%削減</p>
     </div>
 
     <div className="border rounded-xl p-5">
