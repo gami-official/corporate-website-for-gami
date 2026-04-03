@@ -155,7 +155,47 @@ export default function Page() {
               </div>
             </div>
           </div>
-        </section>
+        </section><section className="mx-auto max-w-7xl px-6 py-16">
+  <div className="rounded-2xl bg-gradient-to-r from-orange-500 to-orange-600 p-8 text-white shadow-xl">
+
+    <h2 className="text-2xl md:text-3xl font-bold">
+      物流・内職・段ボールまで一括対応できます
+    </h2>
+
+    <p className="mt-4 text-sm md:text-base text-white/90 leading-7">
+      保管・配送・流通加工・内職・段ボールまでまとめてお任せください。
+      複数業者に分ける手間をなくし、コスト削減と業務効率化を実現します。
+    </p>
+
+    <div className="mt-6 flex flex-col sm:flex-row gap-4">
+      <Link
+        href="/logistics"
+        className="inline-flex items-center justify-center rounded-xl bg-white px-6 py-3 text-sm font-semibold text-orange-600 hover:bg-orange-100 transition"
+      >
+        物流サービスを見る
+      </Link>
+
+      <Link
+        href="/danbo"
+        className="inline-flex items-center justify-center rounded-xl bg-white px-6 py-3 text-sm font-semibold text-orange-600 hover:bg-orange-100 transition"
+      >
+        段ボール見積りを依頼する
+      </Link>
+
+      <Link
+        href="/contact"
+        className="inline-flex items-center justify-center rounded-xl border border-white/40 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10 transition"
+      >
+        無料で相談する
+      </Link>
+    </div>
+
+    <p className="mt-4 text-xs text-white/70">
+      ※「まずは相談だけ」でもOKです。お気軽にお問い合わせください。
+    </p>
+
+  </div>
+</section>
 
         <section className="mx-auto max-w-7xl px-6 py-20 md:px-10 lg:px-12">
           <div className="max-w-3xl">
