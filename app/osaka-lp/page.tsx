@@ -143,7 +143,7 @@ export default function OsakaLP() {
             href="/contact"
             className="bg-orange-500 px-8 py-4 rounded-xl font-bold"
           >
-            無料相談はこちら
+            今すぐ無料相談する
           </Link>
 
           <Link
@@ -155,7 +155,7 @@ export default function OsakaLP() {
         </div>
 
 <p className="mt-4 text-xs text-zinc-400 text-center opacity-80">
-  ※相談のみOK・しつこい営業なし・最短当日対応
+  ※相談だけでもOK・しつこい営業は一切ありません・最短当日対応可能
 </p>
         
       </section>
