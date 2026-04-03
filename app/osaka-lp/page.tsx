@@ -200,20 +200,21 @@ export default function OsakaLP() {
            相談だけでもOK・最短即日対応
         </p>
 
-        <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            href="/contact"
-            className="bg-orange-500 px-8 py-4 rounded-xl font-bold"
-          >
-            今すぐ相談して課題を解決する
-          </Link>
+       <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+  <Link
+    href="/contact"
+    className="bg-orange-500 px-8 py-4 rounded-xl font-bold"
+  >
+    今すぐ相談して課題を解決する
+  </Link>
 
-         <Link
-  href="tel:0661159935"
-  className="border border-white px-8 py-4 rounded-xl"
->
-  今すぐ電話で相談する
-</Link>
+  <Link
+    href="tel:0661159935"
+    className="border border-white px-8 py-4 rounded-xl"
+  >
+    今すぐ電話で相談する
+  </Link>
+</div>
 
 <p className="mt-4 text-xs text-zinc-400 text-center leading-relaxed">
   相談だけでもOK。しつこい営業は一切ありません。最短当日対応可能です。
