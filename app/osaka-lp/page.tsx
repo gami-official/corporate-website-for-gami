@@ -29,14 +29,14 @@ export default function OsakaLP() {
             href="/contact"
             className="bg-orange-500 px-8 py-4 rounded-xl font-bold"
           >
-            今すぐ無料で相談する
+            無料で相談する（最短即日対応）
           </Link>
 
           <Link
             href="tel:0661159935"
             className="border border-white px-8 py-4 rounded-xl"
           >
-            今すぐ電話で相談する
+            今すぐ電話する
           </Link>
         </div>
       </section>
@@ -46,14 +46,14 @@ export default function OsakaLP() {
       href="/contact"
       className="bg-orange-500 px-8 py-4 rounded-xl text-white font-bold text-center"
     >
-      今すぐ相談して課題を解決する
+      無料で相談する（最短即日対応）
     </Link>
 
     <Link
       href="tel:0661159935"
       className="border border-black px-8 py-4 rounded-xl text-center font-bold"
     >
-      今すぐ電話で相談する
+      今すぐ電話する
     </Link>
   </div>
 
@@ -164,14 +164,14 @@ export default function OsakaLP() {
     href="/contact"
     className="flex-1 bg-orange-500 text-white text-center py-3 rounded-lg font-bold"
   >
-    今すぐ無料で相談する
+    無料で相談する（最短即日対応）
   </Link>
 
   <Link
     href="tel:0661159935"
     className="flex-1 border border-white text-white text-center py-3 rounded-lg"
   >
-    今すぐ電話で相談する
+    今すぐ電話する
   </Link>
 
 </div>
@@ -225,14 +225,14 @@ export default function OsakaLP() {
     href="/contact"
     className="bg-orange-500 px-8 py-4 rounded-xl font-bold"
   >
-    今すぐ相談して課題を解決する
+    無料で相談する（最短即日対応）
   </Link>
 
   <Link
     href="tel:0661159935"
     className="border border-white px-8 py-4 rounded-xl"
   >
-    今すぐ電話で相談する
+    今すぐ電話する
   </Link>
 </div>
 
