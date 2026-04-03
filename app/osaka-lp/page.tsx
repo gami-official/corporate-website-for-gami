@@ -15,7 +15,7 @@ export default function OsakaLP() {
         <h1 className="text-3xl md:text-5xl font-bold leading-tight">
           大阪の物流業務を、
           <br />
-          一括で任せませんか？
+          最短即日対応で一括対応します
         </h1>
 
         <p className="mt-6 text-zinc-300 max-w-2xl mx-auto">
@@ -109,7 +109,7 @@ export default function OsakaLP() {
     href="/contact"
     className="flex-1 bg-orange-500 text-white text-center py-3 rounded-lg font-bold"
   >
-    今すぐ無料相談
+    今すぐ無料相談する
   </Link>
 
   <Link
@@ -129,7 +129,7 @@ export default function OsakaLP() {
         </h2>
 
         <p className="mt-4 text-zinc-400">
-          相談だけでもOKです
+           相談だけでもOK・最短即日対応
         </p>
 
         <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
