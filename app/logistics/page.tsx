@@ -3,9 +3,9 @@ import { Footer } from "@/components/footer"
 import Link from "next/link"
 
 export const metadata = {
-  title: "福岡・大阪の物流・倉庫・配送なら株式会社GAMI｜内職・段ボール対応",
+  title: "福岡・大阪の物流会社｜保管・配送・内職・段ボールまで対応｜株式会社GAMI",
   description:
-    "福岡・大阪で物流・倉庫・配送・流通加工なら株式会社GAMI。内職・軽作業・段ボール見積りまで一括対応。全国対応でコスト削減と業務効率化を実現します。",
+    "福岡・大阪で物流会社をお探しなら株式会社GAMI。保管・配送・流通加工・内職・段ボールまで一括対応。コスト削減と業務効率化を実現します。",
   keywords: [
     "福岡 物流",
     "大阪 物流",
@@ -13,8 +13,8 @@ export const metadata = {
     "物流会社 大阪",
     "内職 外注 福岡",
     "内職 外注 大阪",
-    "シール貼り 委託",
-    "封入作業 外注",
+    "段ボール 見積り 大阪",
+    "物流 外注",
   ],
 }
 const coreServices = [
