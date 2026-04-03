@@ -26,6 +26,7 @@ export default function ContactPage() {
   action="https://formspree.io/f/mzdkjgwj"
   method="POST"
   acceptCharset="UTF-8"
+  encType="application/x-www-form-urlencoded"
   className="space-y-4"
 >
   <div>
