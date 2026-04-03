@@ -286,7 +286,8 @@ export default function Page() {
                   <div className="rounded-2xl border border-zinc-200 p-5">
                     <h3 className="text-xl font-bold text-zinc-900">ヘッドスパ事業</h3>
                     <p className="mt-3 text-sm leading-7 text-zinc-600">
-                      スクール・フランチャイズ展開を強化しつつ、ヘッドスパ専門店ゆう本店への導線を整えます。
+                      ヘッドスパスクール・フランチャイズを全国に展開中。<br/>
+                      まずはヘッドスパ専門店ゆう本店の世界観をご確認くださいませ。
                     </p>
                     <Link href="https://www.yuheadspa.net" className="mt-4 inline-block text-sm font-semibold text-orange-500">
                       ヘッドスパ専門店ゆう本店を見る →
@@ -296,7 +297,8 @@ export default function Page() {
                   <div className="rounded-2xl border border-zinc-200 p-5">
                     <h3 className="text-xl font-bold text-zinc-900">遺品整理・生前整理事業</h3>
                     <p className="mt-3 text-sm leading-7 text-zinc-600">
-                      大阪は訪問買取に特化、福岡は店舗型で完全予約制。整理だけでなく、買取へつながる導線を重視します。
+                      大阪は訪問買取に特化。福岡は店舗型で完全予約制。<br/>
+                      整理だけでなく、買取も強化しております。
                     </p>
                     <Link href="/seihin" className="mt-4 inline-block text-sm font-semibold text-orange-500">
                       整理・買取サービスを見る →
