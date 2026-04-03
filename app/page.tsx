@@ -1,7 +1,11 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import Link from "next/link"
-
+export const metadata = {
+  title: "株式会社GAMI｜物流・保管・内職・発送代行を一括対応",
+  description:
+    "株式会社GAMIは物流業務（保管・配送・内職・梱包・発送代行）を一括対応。コスト削減と業務効率化を実現します。大阪・福岡を中心に全国対応。ヘッドスパ事業・生前整理・遺品整理も展開。",
+}
 const logisticsFeatures = [
   "物流業務は定期・スポットのどちらにも柔軟対応",
   "軽貨物〜大型車まで全国手配可能",
