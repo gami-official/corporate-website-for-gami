@@ -28,14 +28,14 @@ export default function OsakaLP() {
             href="/contact"
             className="bg-orange-500 px-8 py-4 rounded-xl font-bold"
           >
-            無料で相談する
+            今すぐ無料で相談する
           </Link>
 
           <Link
             href="tel:0661159935"
             className="border border-white px-8 py-4 rounded-xl"
           >
-            電話で相談
+            今すぐ電話する
           </Link>
         </div>
       </section>
