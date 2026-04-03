@@ -155,7 +155,9 @@ export default function OsakaLP() {
         </div>
 
 <p className="mt-4 text-xs text-zinc-400 text-center opacity-80">
-  ※相談だけでもOK・しつこい営業は一切ありません・最短当日対応可能
+  相談だけでもOKです<br />
+  しつこい営業は一切ありません<br />
+  最短当日対応可能
 </p>
         
       </section>
