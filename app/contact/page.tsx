@@ -22,7 +22,11 @@ export default function ContactPage() {
           相談だけでも問題ありません。お気軽にご連絡ください。
         </p>
 
-        <form className="space-y-4">
+       <form
+  action="https://formspree.io/f/mzdkjgwj"
+  method="POST"
+  className="space-y-4"
+>
           <div>
             <label className="block text-sm font-medium mb-2">会社名</label>
             <input
