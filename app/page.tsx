@@ -133,7 +133,7 @@ export default function Page() {
         href="/osaka-lp"
         className="rounded-2xl bg-orange-600 px-6 py-4 text-center font-bold text-white"
       >
-        対応エリア・サービスを見る
+        物流サービスを見る
       </a>
     </div>
   </div>
