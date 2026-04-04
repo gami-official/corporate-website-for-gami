@@ -106,12 +106,12 @@ export default function Page() {
   <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center text-white">
 
     <h1 className="text-3xl font-bold leading-tight md:text-5xl">
-      物を止めない物流を。<br />
-      現場で支えるパートナー。
+      物を止めない物流を<br />
+      現場で支えるパートナー
     </h1>
 
     <p className="mt-4 max-w-3xl text-sm text-gray-200 md:text-base">
-      保管・配送・流通加工・内職まで一括対応。
+      保管・配送・流通加工・内職まで一括対応。<br />
       スポットから定期まで柔軟に対応します。
     </p>
 
@@ -144,11 +144,11 @@ export default function Page() {
   <div className="rounded-2xl bg-gradient-to-r from-orange-500 to-orange-600 p-8 text-white shadow-xl">
 
     <h2 className="text-2xl md:text-3xl font-bold">
-      物流・内職・段ボールまで一括対応できます
+      物流・輸送・資材まで一括対応
     </h2>
 
     <p className="mt-4 text-sm md:text-base text-white/90 leading-7">
-      保管・配送・流通加工・内職・段ボールまでまとめてお任せください。
+      保管・配送・流通加工・内職・段ボールまでまとめてお任せください。<br />
       複数業者に分ける手間をなくし、コスト削減と業務効率化を実現します。
     </p>
 
@@ -176,7 +176,8 @@ export default function Page() {
     </div>
 
     <p className="mt-4 text-xs text-white/70">
-      ※「まずは相談だけ」でもOKです。お気軽にお問い合わせください。
+      ※「まずは相談だけ」でもOKです。<br />
+      お気軽にお問い合わせください。
     </p>
 
   </div>
@@ -187,7 +188,8 @@ export default function Page() {
             <p className="text-sm font-semibold tracking-[0.2em] text-orange-500">LOGISTICS FIRST</p>
             <h2 className="mt-3 text-3xl font-bold md:text-4xl">物流運送事業を主軸にしたサービス構成へ再設計</h2>
             <p className="mt-5 text-base leading-8 text-zinc-600">
-              株式会社GAMIの主軸は物流運送事業です。配送だけでなく、保管・加工・資材提案まで含めて、
+              株式会社GAMIの主軸は物流運送事業です。<br />
+              配送だけでなく、保管・加工・資材提案まで含めて、<br />
               現場で本当に必要な機能をまとめてご提供します。
             </p>
           </div>
@@ -208,7 +210,7 @@ export default function Page() {
               <p className="text-sm font-semibold tracking-[0.2em] text-orange-500">WHY GAMI</p>
               <h2 className="mt-3 text-3xl font-bold md:text-4xl">GAMIが選ばれる理由</h2>
               <p className="mt-5 text-base leading-8 text-zinc-600">
-                利用運送、倉庫保管、流通加工、化粧品対応、段ボール提案まで、単発ではなく全体最適でご提案します。
+                物流作業・利用運送、倉庫保管、流通加工、化粧品対応、段ボール提案まで、単発ではなく全体最適でご提案します。
               </p>
             </div>
             <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
@@ -228,7 +230,8 @@ export default function Page() {
               <p className="text-sm font-semibold tracking-[0.2em] text-orange-300">ACHIEVEMENTS</p>
               <h2 className="mt-3 text-3xl font-bold">実績・対応分野</h2>
               <p className="mt-5 text-sm leading-7 text-zinc-300">
-                美容・食品・アパレル・ギフトなど、多様な商材の物流に対応。商材ごとの特性に合わせて最適な運用を行います。
+                美容・食品・アパレル・ギフトなど、多様な商材の物流に対応。<br />
+                商材ごとの特性に合わせて最適な運用を行います。
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 {achievements.map((item) => (
@@ -316,7 +319,9 @@ export default function Page() {
             <p className="text-sm font-semibold tracking-[0.2em] text-orange-300">CONTACT</p>
             <h2 className="mt-3 text-3xl font-bold md:text-4xl">物流のご相談・お見積りは無料です</h2>
             <p className="mt-5 max-w-3xl text-base leading-8 text-zinc-300">
-              物流業務は定期案件・スポット案件を問わず、利用運送、倉庫保管、流通加工、内職、段ボール見積りまで対応可能です。まずは現状とご希望をお聞かせください。株式会社GAMIが最適な形をご提案します。
+              物流業務は定期案件・スポット案件を問わず、利用運送、倉庫保管、流通加工、内職、段ボール見積りまで対応可能です。<br />
+              まずは現状とご希望をお聞かせください。<br />
+              株式会社GAMIが最適な形をご提案します。
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
@@ -345,7 +350,7 @@ export default function Page() {
     </h2>
 
     <p className="mt-5 max-w-3xl text-sm leading-7 text-zinc-700">
-      物流を主軸に、内職・軽作業、段ボール見積りまで一括で対応可能です。
+      物流を主軸に、内職・軽作業、段ボール見積りまで一括で対応可能です。<br />
       課題に合わせて、必要なサービスページをご覧ください。
     </p>
 
