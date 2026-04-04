@@ -34,7 +34,7 @@ const companyInfo = [
     label: "事業内容",
     value: "物流運送事業、ヘッドスパ事業、整理買取事業",
   },
-  { label: "メールアドレス", value: "f_fuchigami@gamigami.email" },
+  { label: "メールアドレス", value: "k_fuchigami@gamigami.email" },
   { label: "TEL", value: "06-6115-9935" },
   { label: "FAX", value: "06-6115-9936" },
   { label: "古物商許可", value: "大阪府公安委員会許可 第62229R076690号" },
