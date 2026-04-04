@@ -152,14 +152,22 @@ export default function CompanyPage() {
           <div className="mx-auto max-w-3xl text-center">
             <SectionHeading
               sub="ミッション"
-              title="繋ぐ。癒す。想う。"
-              catchCopy={"物流運送事業・ヘッドスパ事業・整理買取事業。\n３つの事業で、暮らしと事業に安心と価値を届けます。"}
+              title="繋ぐ。届ける。支える。"
+              catchCopy={"物流で、企業の成長を加速させる。"}
               className="mb-10"
             />
             <p className="text-sm leading-loose tracking-readable text-muted-foreground">
-              物流運送事業・ヘッドスパ事業・整理買取事業の３つの事業を通じて、人と人、モノと想いを繋ぎます。
+              株式会社GAMIは、大阪・福岡を中心に
+物流代行・発送代行・内職・軽作業の外注まで一括対応する物流会社です。
+
+企業様の業務効率化・コスト削減を実現し、
+「任せてよかった」と思える物流パートナーとして成長を支えます。
               <br className="sm:hidden" />
-              お客様の暮らしと事業に寄り添い、安心と価値を届けることが私たちの使命です。
+              物流・ヘッドスパ・整理買取の3事業を通じて、
+人・モノ・想いを繋ぎ、価値を届ける。
+
+お客様一人ひとりの課題に寄り添い、
+安心して任せられるサービスを提供することが私たちの使命です。
             </p>
           </div>
         </section>
