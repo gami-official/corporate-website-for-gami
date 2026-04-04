@@ -435,7 +435,8 @@ export default function HeadSpaFranchisePage() {
                         </div>
                       </div>
                       <p className="mt-4 text-sm leading-7 text-muted-foreground">
-                        妻が経営する現場ブランドとして、
+                        ヘッドスパ界を牽引する、
+                        ヘッドスパ専門店ゆうブランドとして、
                         技術・接客・空間づくり・継続来店につながる
                         実践的なノウハウを伝えます。
                       </p>
@@ -456,7 +457,7 @@ export default function HeadSpaFranchisePage() {
                         </div>
                       </div>
                       <p className="mt-4 text-sm leading-7 text-muted-foreground">
-                        夫が経営する事業支援会社として、
+                        ヘッドスパ専門店ゆう専属の事業支援会社として、
                         運営・経営コンサル・ホームページ制作・SEO・MEO・
                         導線設計までまとめて支援します。
                       </p>
