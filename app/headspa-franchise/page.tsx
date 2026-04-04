@@ -50,10 +50,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "ヘッドスパ専門店ゆう フランチャイズ募集 | 株式会社GAMI",
     description:
-      "技術指導はヘッドスパ専門店ゆう本店、大阪店。<br />
-      運営・経営支援は株式会社GAMI。<br />
-      現場力と経営支援を掛け合わせ、<br />
-      全国で愛されるヘッドスパ事業を育てます。",
+      "技術指導はヘッドスパ専門店ゆう本店、運営・経営支援は株式会社GAMI。現場力と経営支援を掛け合わせ、全国で愛されるヘッドスパ事業を育てます。",
     url: pagePath,
     type: "website",
   },
@@ -102,7 +99,7 @@ const formatTypes = [
   },
   {
     title: "ドライ導入プラン",
-    label: "美容師免許の有無問わず、低リスクで始めやすい",
+    label: "低リスクで始めやすい",
     points: [
       "省スペースでも始めやすく、初期投資を抑えやすい",
       "異業種参入・新規開業・空きスペース活用にも対応",
@@ -589,7 +586,14 @@ export default function HeadSpaFranchisePage() {
               <div className="mt-8 rounded-3xl border border-[#c89b55]/25 bg-[#fff9f0] p-5 text-[#5f4520] sm:p-6">
                 <div className="flex gap-3">
                   <BadgeCheck className="mt-0.5 h-5 w-5 shrink-0 text-[#b6802e]" />
-                
+                  <p className="text-sm leading-7">
+                    ウェット導入は
+                    <span className="font-medium">
+                      美容師免許取得者限定
+                    </span>
+                    の前提で案内するのがおすすめです。
+                    表記を明確にすることで、問い合わせ段階のミスマッチを減らせます。
+                  </p>
                 </div>
               </div>
             </ScrollAnimate>
@@ -701,7 +705,24 @@ export default function HeadSpaFranchisePage() {
                   <div className="flex items-start gap-3">
                     <FileText className="mt-0.5 h-5 w-5 shrink-0 text-[#b6802e]" />
                     <div>
-            
+                      <h3 className="text-xl font-medium tracking-[0.04em] text-[#5f4520]">
+                        料金表示の考え方
+                      </h3>
+                      <p className="mt-4 text-sm leading-7 text-[#6f5733]">
+                        ページ上では
+                        「55万円〜」「110万円〜」のように
+                        下限表示にしておき、
+                        ウェット / ドライ、店舗状況、制作範囲、
+                        追加支援の有無によって個別見積りにするのがおすすめです。
+                      </p>
+                      <p className="mt-4 text-sm leading-7 text-[#6f5733]">
+                        また、立ち上げ初期は
+                        <span className="font-medium text-[#5f4520]">
+                          売上連動ロイヤリティより、定額月額型
+                        </span>
+                        の方が分かりやすく、
+                        加盟障壁を下げながら展開しやすいです。
+                      </p>
                     </div>
                   </div>
                 </div>
