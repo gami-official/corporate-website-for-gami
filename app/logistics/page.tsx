@@ -539,6 +539,7 @@ export default function LogisticsPage() {
 内職・軽作業ページへ
 </a>
 </div>  
+</div>  
 </section>
 </main>
 <Footer />
