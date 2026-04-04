@@ -217,15 +217,7 @@ export function HeroVideoSlider() {
                 >
                   {slide.copy}
                 </h1>
-                <p
-                  className={`mx-auto max-w-2xl text-center text-pretty leading-8 tracking-wide text-primary-foreground/85 transition-all duration-700 delay-150 ${
-                    slide.copy === "癒す。"
-                      ? "text-base sm:text-lg"
-                      : "min-h-[3.5rem] text-sm sm:min-h-[4rem] sm:text-base"
-                  } ${i === current ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
-                >
-                  {slide.sub}
-                </p>
+               
                 <Link
                   href={slide.ctaHref}
                   className="w-full min-w-[200px] rounded-xl px-8 py-3.5 text-center text-sm font-medium tracking-widest text-white shadow-lg transition-all duration-300 active:scale-95 sm:w-auto sm:min-w-[220px] sm:hover:scale-105 sm:hover:shadow-glass-hover aurora-gradient touch-manipulation"
