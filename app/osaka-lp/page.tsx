@@ -170,16 +170,16 @@ export default function OsakaLP() {
 
        <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
   <Link
-    href="/contact"
-    className="bg-orange-500 px-8 py-4 rounded-xl font-bold"
-  >
+  href="/contact"
+  className="flex-1 text-center bg-orange-500 px-8 py-4 rounded-xl font-bold"
+>
     無料で相談する（最短即日対応）
   </Link>
 
   <Link
-    href="tel:0661159935"
-    className="border border-white px-8 py-4 rounded-xl"
-  >
+  href="tel:0661159935"
+  className="flex-1 text-center border border-white px-8 py-4 rounded-xl"
+>
     今すぐ電話する
   </Link>
 </div>
