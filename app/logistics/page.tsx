@@ -519,6 +519,7 @@ export default function LogisticsPage() {
           電話で相談する
         </Link>
       </div>
+      </div>
     </section>
 
     <section className="mx-auto max-w-7xl px-6 py-20 md:px-10 lg:px-12">
