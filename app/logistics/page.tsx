@@ -492,32 +492,34 @@ export default function LogisticsPage() {
       CONTACT
     </p>
 
-    <h2 className="mt-4 text-3xl font-bold">
-      物流の外注先をお探しなら、まずはご相談ください
-    </h2>
+          <h2 className="mt-4 text-3xl font-bold">
+        物流の外注先をお探しなら、まずはご相談ください
+      </h2>
 
-    <p className="mt-6 text-sm text-zinc-300 max-w-2xl mx-auto">
-      定期案件・スポット案件を問わず、最適な物流体制をご提案します。
-      「どこまで任せられるか相談したい」という段階でも問題ありません。
-      まずは無料見積りからお気軽にご相談ください。
-    </p>
+      <p className="mt-6 text-sm text-zinc-300 max-w-2xl mx-auto">
+        定期案件・スポット案件を問わず、最適な物流体制をご提案します。
+        <br />
+        「どこまで任せられるか相談したい」という段階でも問題ありません。
+        <br />
+        まずは無料見積りからお気軽にご相談ください。
+      </p>
 
-    <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center">
-      
-      <Link
-        href="/contact"
-        className="rounded-2xl bg-orange-500 px-8 py-4 text-base font-semibold text-white hover:bg-orange-600"
-      >
-        無料見積りはこちら
-      </Link>
+      <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center">
+        <Link
+          href="/contact"
+          className="rounded-2xl bg-orange-500 px-8 py-4 text-base font-semibold text-white hover:bg-orange-600"
+        >
+          無料見積りはこちら
+        </Link>
 
-            <Link
-        href="tel:0661159935"
-        className="rounded-2xl border border-white/20 px-8 py-4 text-base font-semibold text-white"
-      >
-        電話で相談する
-      </Link>
-    </div>
+        <Link
+          href="tel:0661159935"
+          className="rounded-2xl border border-white/20 px-8 py-4 text-base font-semibold text-white"
+        >
+          電話で相談する
+        </Link>
+      </div>
+    </section>
 
     <section className="mx-auto max-w-7xl px-6 py-20 md:px-10 lg:px-12">
       <div className="max-w-3xl mx-auto rounded-2xl bg-zinc-900 px-8 py-10 text-white text-center">
@@ -544,6 +546,7 @@ export default function LogisticsPage() {
       </div>
     </section>
   </main>
+
   <Footer />
 </div>
   )
