@@ -153,21 +153,21 @@ export default function LogisticsPage() {
     <div className="mt-6 flex flex-col sm:flex-row gap-4">
       <Link
         href="/naishoku"
-        className="inline-flex items-center justify-center rounded-xl bg-white px-6 py-3 text-sm font-semibold text-orange-600 hover:bg-orange-100 transition"
+        className="inline-flex items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-semibold text-orange-600 hover:bg-orange-100 transition"
       >
         内職・軽作業の詳細を見る
       </Link>
 
       <Link
         href="/danbo"
-        className="inline-flex items-center justify-center rounded-xl bg-white px-6 py-3 text-sm font-semibold text-orange-600 hover:bg-orange-100 transition"
+        className="inline-flex items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-semibold text-orange-600 hover:bg-orange-100 transition"
       >
         段ボール見積りを依頼する
       </Link>
 
       <Link
         href="/contact"
-        className="inline-flex items-center justify-center rounded-xl border border-white/40 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10 transition"
+        className="inline-flex items-center justify-center rounded-xl border border-white/40 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10 transition"
       >
         物流の無料相談はこちら
       </Link>
