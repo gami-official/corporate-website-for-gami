@@ -504,7 +504,7 @@ export default function HeadSpaFranchisePage() {
                       </h3>
                       <p className="mt-3 text-sm leading-7 text-white/85">
                         全国展開を通じて、ヘッドスパ専門店ゆう本店の認知と信頼を広げ、
-                        本店へのアクセスやブランド価値の向上にもつなげていきます。
+                        ブランド価値の向上にもつなげていきます。
                       </p>
                     </div>
                   </div>
