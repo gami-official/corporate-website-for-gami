@@ -880,6 +880,11 @@ export default function HeadSpaFranchisePage() {
             <p className="text-xs tracking-[0.22em] text-white/70">
               HEAD SPA FRANCHISE CONTACT
             </p>
+            
+            <p className="mt-3 text-xs tracking-[0.18em] text-white/70">
+  ※先着5社限定でのご案内となります
+</p>
+            
             <h2 className="mt-4 font-serif text-3xl tracking-[0.05em] sm:text-4xl">
               全国展開に向けた
               <br className="sm:hidden" />
