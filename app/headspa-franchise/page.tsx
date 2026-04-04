@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "ヘッドスパ専門店ゆう フランチャイズ募集 | 株式会社GAMI",
     description:
-      "技術指導はヘッドスパ専門店ゆう本店、運営・経営支援は株式会社GAMI。現場力と経営支援を掛け合わせ、全国で愛されるヘッドスパ事業を育てます。",
+      "技術指導はヘッドスパ専門店ゆう、運営・経営支援は株式会社GAMI。現場力と経営支援を掛け合わせ、全国で愛されるヘッドスパ事業を育てます。",
     url: pagePath,
     type: "website",
   },
@@ -64,7 +64,7 @@ const strengths = [
     icon: UserRound,
     title: "現役オーナーによる技術指導",
     description:
-      "外部講師として、ヘッドスパ専門店ゆう本店オーナー・淵上ゆうが実践的に技術指導。机上ではなく、現場ベースで再現性を高めます。",
+      "外部講師として、ヘッドスパ専門店ゆう本店オーナーが実践的に技術指導。机上ではなく、現場ベースで再現性を高めます。",
   },
   {
     icon: Briefcase,
@@ -99,7 +99,7 @@ const formatTypes = [
   },
   {
     title: "ドライ導入プラン",
-    label: "低リスクで始めやすい",
+    label: "美容師免許の有無関わらず、低リスクで始めやすい",
     points: [
       "省スペースでも始めやすく、初期投資を抑えやすい",
       "異業種参入・新規開業・空きスペース活用にも対応",
@@ -195,11 +195,11 @@ const faqs = [
   },
   {
     q: "ロイヤリティはどう考えればいいですか？",
-    a: "立ち上げ初期は高い売上連動型より、定額の月額サポート型の方が分かりやすく、加盟のハードルも下げやすいです。",
+    a: "ロイヤリティは売上連動型か定額型を選んで頂きます。立ち上げ初期は売上連動型より、定額の月額サポート型の方が分かりやすく、加盟のハードルも下げやすいです。",
   },
   {
     q: "どの地域でも加盟できますか？",
-    a: "エリアの重複を避けるため、一定の商圏保護を前提に個別相談制にするのがおすすめです。",
+    a: "全国どこでも加盟は可能です。エリアに関しては重複を避けるため、一定の商圏保護を行っております。",
   },
 ]
 
@@ -357,7 +357,7 @@ export default function HeadSpaFranchisePage() {
                     <p className="mt-2 text-sm font-medium leading-6">
                       ヘッドスパ専門店ゆう本店
                       <br />
-                      淵上ゆうオーナー起用
+                      ゆうオーナー起用
                     </p>
                   </div>
                   <div className="rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur">
@@ -409,7 +409,7 @@ export default function HeadSpaFranchisePage() {
               <SectionHeading
                 sub="FRANCHISE CONCEPT"
                 title="技術と経営の両輪で、全国に広げる。"
-                catchCopy="夫婦それぞれの強みを活かした、再現性の高いヘッドスパ事業モデル。"
+                catchCopy="ヘッドスパ歴15年以上の強みを活かした、再現性の高いヘッドスパ事業モデル。"
                 className="mb-14"
               />
             </ScrollAnimate>
