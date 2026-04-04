@@ -62,7 +62,7 @@ const organizationSchema = {
     "@type": "ContactPoint",
     telephone: "+81-6-6115-9935",
     contactType: "customer service",
-    email: "f_fuchigami@gamigami.email",
+    email: "k_fuchigami@gamigami.email",
     areaServed: "JP",
     availableLanguage: "Japanese",
   },
