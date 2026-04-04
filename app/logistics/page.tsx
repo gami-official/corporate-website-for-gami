@@ -544,6 +544,5 @@ export default function LogisticsPage() {
       </main>
 
       <Footer />
-    </div>
   )
 }
