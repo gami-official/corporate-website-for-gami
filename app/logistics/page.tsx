@@ -3,18 +3,19 @@ import { Footer } from "@/components/footer"
 import Link from "next/link"
 
 export const metadata = {
-  title: "大阪・福岡の物流会社｜保管・配送・内職・段ボール一括対応｜株式会社GAMI",
+  title: "大阪・福岡の物流会社｜内職・軽作業・発送代行なら株式会社GAMI",
   description:
-    "大阪・福岡で物流会社をお探しなら株式会社GAMI。保管・配送・流通加工・内職・段ボールまで一括対応。人手不足の解消とコスト削減を同時に実現します。",
+    "大阪・福岡で物流会社をお探しなら株式会社GAMI。内職・軽作業・梱包・発送代行まで一括対応。小ロットから対応可能でコスト削減と業務効率化を実現します。",
   keywords: [
-    "福岡 物流",
-    "大阪 物流",
-    "物流会社 福岡",
     "物流会社 大阪",
-    "内職 外注 福岡",
+    "物流会社 福岡",
+    "発送代行 大阪",
+    "発送代行 福岡",
     "内職 外注 大阪",
-    "段ボール 見積り 大阪",
-    "物流 外注",
+    "内職 外注 福岡",
+    "軽作業 外注",
+    "梱包 代行",
+    "物流 outsourcing",
   ],
 }
 const coreServices = [
@@ -525,7 +526,7 @@ export default function LogisticsPage() {
     <section className="mx-auto max-w-7xl px-6 py-20 md:px-10 lg:px-12">
       <div className="max-w-3xl mx-auto rounded-2xl bg-zinc-900 px-8 py-10 text-white text-center">
         <h2 className="text-2xl font-bold">
-          内職・軽作業の外注先をお探しならご相談ください
+          内職・軽作業・発送代行の外注なら株式会社GAMIへ（大阪・福岡対応）
         </h2>
 
         <p className="mt-4 text-sm text-zinc-300 leading-7">
