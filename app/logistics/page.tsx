@@ -521,25 +521,28 @@ export default function LogisticsPage() {
     </div>
   </div>
 <section className="mx-auto max-w-7xl px-6 py-20 md:px-10 lg:px-12">
-  <div className="rounded-2xl bg-zinc-900 px-8 py-10 text-white max-w-3xl mx-auto text-center">
+  <div className="max-w-3xl mx-auto rounded-2xl bg-zinc-900 px-8 py-10 text-white text-center">
     <h2 className="text-2xl font-bold">
-  内職・軽作業の外注先をお探しならご相談ください
-</h2>
-<p className="mt-4 text-sm text-zinc-300 leading-7">
-  シール貼り・封入・セット組み・検品・梱包など、
-  人手が必要な軽作業も一括対応可能です。
-  物流と合わせて委託することで、作業から発送までまとめて任せられます。
-</p>
+      内職・軽作業の外注先をお探しならご相談ください
+    </h2>
 
-    <div className="flex justify-center">
-<a
-  href="/naishoku"
-  className="mt-6 inline-block rounded-xl bg-orange-500 px-6 py-3 text-sm font-semibold text-white"
->
-内職・軽作業ページへ
-</a>
-</div>  
-</div>  
+    <p className="mt-4 text-sm text-zinc-300 leading-7">
+      シール貼り・封入・セット組み・検品・梱包など、
+      <br />
+      人手が必要な軽作業も一括対応可能です。
+      <br />
+      物流と合わせて委託することで、作業から発送までまとめて任せられます。
+    </p>
+
+    <div className="mt-6 flex justify-center">
+      <a
+        href="/naishoku"
+        className="inline-block rounded-xl bg-orange-500 px-6 py-3 text-sm font-semibold text-white"
+      >
+        内職・軽作業ページへ
+      </a>
+    </div>
+  </div>
 </section>
 </main>
 <Footer />
