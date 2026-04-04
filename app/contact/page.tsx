@@ -84,6 +84,7 @@ export default function ContactPage() {
       <option value="段ボール見積もり">段ボール見積もり</option>
       <option value="ヘッドスパ事業">ヘッドスパ事業</option>
       <option value="生前整理・遺品整理">生前整理・遺品整理</option>
+      <option value="買取査定">買取査定</option>
       <option value="その他">その他</option>
     </select>
   </div>
