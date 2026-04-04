@@ -555,11 +555,11 @@ export default function HeadSpaFranchisePage() {
                         FRANCHISE VISION
                       </p>
                       <h3 className="mt-2 font-serif text-2xl tracking-[0.05em]">
-                        ブランドを広げ、
-                        本店の価値も高める。
+                        ヘッドスパ専門店ゆうブランドを広げ、
+                        ヘッドスパの価値を高める。
                       </h3>
                       <p className="mt-3 text-sm leading-7 text-white/85">
-                        全国展開を通じて、ヘッドスパ専門店ゆう本店の認知と信頼を広げ、
+                        全国展開を通じて、ヘッドスパ専門店ゆうの認知と信頼を広げ、
                         ブランド価値の向上にもつなげていきます。
                       </p>
                     </div>
