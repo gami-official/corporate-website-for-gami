@@ -335,7 +335,9 @@ export default function HeadSpaFranchisePage() {
                   <br className="hidden sm:block" />
                   フランチャイズ募集
                 </h1>
-
+<p className="mt-4 inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs tracking-[0.15em] text-white/90">
+  先着5社限定で個別相談を受付中
+</p>
                 <p className="mt-5 max-w-2xl text-sm leading-7 text-white/90 sm:text-base">
                   技術指導は
                   <span className="font-medium text-white">
