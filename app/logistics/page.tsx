@@ -536,11 +536,12 @@ export default function LogisticsPage() {
   href="/naishoku"
   className="mt-6 inline-block rounded-xl bg-orange-500 px-6 py-3 text-sm font-semibold text-white"
 >
-  内職・軽作業ページへ
+内職・軽作業ページへ
 </a>
+</div>  
 </section>
 </main>
 <Footer />
 </div>
-  )
+)
 }
