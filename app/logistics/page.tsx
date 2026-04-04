@@ -519,7 +519,7 @@ export default function LogisticsPage() {
       </Link>
 
     </div>
-  </div>
+  
 <section className="mx-auto max-w-7xl px-6 py-20 md:px-10 lg:px-12">
   <div className="max-w-3xl mx-auto rounded-2xl bg-zinc-900 px-8 py-10 text-white text-center">
     <h2 className="text-2xl font-bold">
