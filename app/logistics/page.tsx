@@ -94,9 +94,7 @@ export default function LogisticsPage() {
           </div>
 
           <div className="relative mx-auto max-w-7xl px-6 py-20 md:px-10 lg:px-12 lg:py-24">
-            <p className="inline-flex rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm tracking-wide text-zinc-100">
-              物流運送事業 / 定期・スポットどちらにも対応
-            </p>
+           
             <div className="mt-6 grid gap-10 lg:grid-cols-[1.2fr_0.8fr]">
               <div>
                 <h1 className="max-w-5xl text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
