@@ -4,22 +4,23 @@ import { SectionHeading } from "@/components/section-heading"
 import { ScrollAnimate } from "@/components/scroll-animate"
 import {
   ArrowRight,
-  BadgeCheck,
   Briefcase,
   Building2,
   CheckCircle2,
   ChevronRight,
   CircleDollarSign,
   ExternalLink,
-  FileText,
   Globe,
   GraduationCap,
   HeartHandshake,
-  MapPinned,
   Phone,
   Sparkles,
   Store,
+  TrendingUp,
   UserRound,
+  Wallet,
+  ShieldCheck,
+  Crown,
 } from "lucide-react"
 import type { Metadata } from "next"
 import Image from "next/image"
@@ -31,10 +32,9 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.gamigami.net"
 const pageUrl = `${siteUrl}${pagePath}`
 
 export const metadata: Metadata = {
-  title:
-    "ヘッドスパ専門店ゆう フランチャイズ募集 | 株式会社GAMI",
+  title: "ヘッドスパ専門店ゆう フランチャイズ募集 | 株式会社GAMI",
   description:
-    "ヘッドスパ専門店ゆう本店の技術指導と、株式会社GAMIの経営・集客支援を掛け合わせたフランチャイズ募集ページ。ウェット・ドライ両対応、開業支援、ホームページ制作、SEO/MEOまで一貫サポート。",
+    "ヘッドスパ専門店ゆう本店の技術指導と株式会社GAMIの経営・集客支援を掛け合わせたフランチャイズ募集ページ。ウェット・ドライ両対応、開業支援、ホームページ制作、SEO・MEOまで一貫サポート。",
   keywords: [
     "ヘッドスパ フランチャイズ",
     "ヘッドスパ 開業",
@@ -46,11 +46,13 @@ export const metadata: Metadata = {
     "株式会社GAMI",
     "美容師向け フランチャイズ",
     "ヘッドスパ ホームページ制作",
+    "福岡 ヘッドスパ 開業",
+    "高単価 ヘッドスパ",
   ],
   openGraph: {
     title: "ヘッドスパ専門店ゆう フランチャイズ募集 | 株式会社GAMI",
     description:
-      "技術指導はヘッドスパ専門店ゆう、運営・経営支援は株式会社GAMI。現場力と経営支援を掛け合わせ、全国で愛されるヘッドスパ事業を育てます。",
+      "技術指導はヘッドスパ専門店ゆう本店、運営・経営支援は株式会社GAMI。現場力と経営支援を掛け合わせ、全国で愛されるヘッドスパ事業を育てます。",
     url: pagePath,
     type: "website",
   },
@@ -86,6 +88,39 @@ const strengths = [
   },
 ]
 
+const audienceCards = [
+  "ヘッドスパで独立・開業したい方",
+  "既存サロンに高付加価値メニューを導入したい方",
+  "技術だけでなく経営・集客もまとめて学びたい方",
+]
+
+const yuuFeatures = [
+  {
+    title: "実店舗のリアルな売上実績",
+    description:
+      "本店は子育てをしながらの運営でも、初年度約760万円、2年目以降は年商1000万円超えを達成。ワンオーナーで月商200万円以上の実績もあります。",
+    icon: TrendingUp,
+  },
+  {
+    title: "小規模でも成立するモデル",
+    description:
+      "テナントだけでなく、自宅やマンションの一室など、既存の空間を活用した低コスト開業も可能。実際に本店もこの形で運営しています。",
+    icon: Wallet,
+  },
+  {
+    title: "高単価 × 少人数モデル",
+    description:
+      "完全予約制・1日3名限定・高品質商材・高単価設計により、少ない人数でも売上を作るモデル。条件が整えば月商100万円以上も現実的に目指せます。",
+    icon: Crown,
+  },
+  {
+    title: "再現性のある仕組み",
+    description:
+      "技術だけでなく、価格設計・導線・運営方法まで含めて設計。属人化せず、他の地域でも再現できる形に落とし込んでいます。",
+    icon: ShieldCheck,
+  },
+]
+
 const formatTypes = [
   {
     title: "ウェット導入プラン",
@@ -99,7 +134,7 @@ const formatTypes = [
   },
   {
     title: "ドライ導入プラン",
-    label: "美容師免許の有無関わらず、低リスクで始めやすい",
+    label: "低リスクで始めやすい",
     points: [
       "省スペースでも始めやすく、初期投資を抑えやすい",
       "異業種参入・新規開業・空きスペース活用にも対応",
@@ -187,7 +222,7 @@ const faqs = [
   },
   {
     q: "ウェット導入は誰でもできますか？",
-    a: "ウェット導入は美容師免許取得者限定の想定です。ページ上でもその前提を明確にし、導入前に適性確認を行うのがおすすめです。",
+    a: "ウェット導入は美容師免許取得者限定の想定です。導入前に適性確認を行い、ミスマッチを防ぎます。",
   },
   {
     q: "ホームページ制作は必須ですか？",
@@ -195,11 +230,11 @@ const faqs = [
   },
   {
     q: "ロイヤリティはどう考えればいいですか？",
-    a: "ロイヤリティは売上連動型か定額型を選んで頂きます。立ち上げ初期は売上連動型より、定額の月額サポート型の方が分かりやすく、加盟のハードルも下げやすいです。",
+    a: "売上連動型か定額型を選ぶ設計も可能ですが、立ち上げ初期は定額の月額サポート型の方が分かりやすく、加盟のハードルも下げやすいです。",
   },
   {
     q: "どの地域でも加盟できますか？",
-    a: "全国どこでも加盟は可能です。エリアに関しては重複を避けるため、一定の商圏保護を行っております。",
+    a: "全国どこでもご相談は可能です。エリア重複を避けるため、一定の商圏保護を前提に個別相談でご案内します。",
   },
 ]
 
@@ -266,7 +301,7 @@ function PrimaryButton({
   return (
     <Link
       href={href}
-      className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-medium text-[#1f2f4d] transition-all hover:translate-y-[-1px] hover:bg-white/90 sm:px-7"
+      className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-medium text-[#1f2f4d] shadow-xl transition-all hover:translate-y-[-1px] hover:bg-white/90 sm:px-7"
     >
       {children}
       <ArrowRight className="h-4 w-4" />
@@ -312,19 +347,19 @@ export default function HeadSpaFranchisePage() {
       <main>
         {/* Hero */}
         <section className="relative isolate overflow-hidden">
-          <div className="relative min-h-[78vh]">
+          <div className="relative min-h-[82vh]">
             <Image
               src={IMAGES.heroSpa}
               alt="ヘッドスパ専門店ゆう フランチャイズ"
               fill
               priority
               unoptimized
-              className="object-cover object-[50%_28%]"
+              className="object-cover object-[50%_28%] scale-[1.04]"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#0e1830]/88 via-[#15284a]/72 to-[#1d3156]/50" />
-            <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(8,12,22,0.12),rgba(8,12,22,0.58))]" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#0b1221]/92 via-[#10203d]/76 to-[#223451]/52" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.18),transparent_28%),linear-gradient(to_bottom,rgba(8,12,22,0.12),rgba(8,12,22,0.68))]" />
 
-            <div className="relative z-10 mx-auto flex min-h-[78vh] max-w-6xl items-center px-4 py-20 sm:px-6 lg:px-8">
+            <div className="relative z-10 mx-auto flex min-h-[82vh] max-w-6xl items-center px-4 py-20 sm:px-6 lg:px-8">
               <div className="max-w-3xl text-white">
                 <p className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs tracking-[0.22em] text-white/90 backdrop-blur">
                   HEAD SPA FRANCHISE
@@ -335,9 +370,11 @@ export default function HeadSpaFranchisePage() {
                   <br className="hidden sm:block" />
                   フランチャイズ募集
                 </h1>
-<p className="mt-4 inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs tracking-[0.15em] text-white/90">
-  先着5社限定で個別相談を受付中
-</p>
+
+                <p className="mt-4 inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs tracking-[0.15em] text-white/90">
+                  先着5社限定で個別相談を受付中
+                </p>
+
                 <p className="mt-5 max-w-2xl text-sm leading-7 text-white/90 sm:text-base">
                   技術指導は
                   <span className="font-medium text-white">
@@ -359,7 +396,7 @@ export default function HeadSpaFranchisePage() {
                     <p className="mt-2 text-sm font-medium leading-6">
                       ヘッドスパ専門店ゆう本店
                       <br />
-                      ゆうオーナー起用
+                      オーナーが実践指導
                     </p>
                   </div>
                   <div className="rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur">
@@ -386,10 +423,10 @@ export default function HeadSpaFranchisePage() {
 
                 <div className="mt-8 flex flex-wrap gap-3">
                   <PrimaryButton href="/company#contact">
-                    無料相談をする
+                    無料で開業相談をする
                   </PrimaryButton>
                   <SecondaryButton href="https://lin.ee/3QGIdCY">
-                    LINEで相談する
+                    LINEで今すぐ相談
                   </SecondaryButton>
                   <SecondaryButton href="tel:0661159935">
                     電話で相談する
@@ -397,10 +434,30 @@ export default function HeadSpaFranchisePage() {
                 </div>
 
                 <p className="mt-5 text-xs leading-6 text-white/70">
-                  まずは資料請求・無料相談からご案内可能です。エリアや導入形態に応じて個別提案いたします。
+                  ご相談段階で費用はかかりません。無理な勧誘は行わず、現状に合う導入形態をご案内します。
                 </p>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Audience */}
+        <section className="px-4 py-12 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-6xl">
+            <ScrollAnimate>
+              <div className="grid gap-4 md:grid-cols-3">
+                {audienceCards.map((item) => (
+                  <div key={item} className="tech-card rounded-3xl p-5 shadow-lg">
+                    <p className="text-xs tracking-[0.18em] text-accent">
+                      RECOMMENDED
+                    </p>
+                    <p className="mt-3 text-sm leading-7 text-muted-foreground">
+                      {item}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </ScrollAnimate>
           </div>
         </section>
 
@@ -418,7 +475,7 @@ export default function HeadSpaFranchisePage() {
 
             <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
               <ScrollAnimate>
-                <div className="tech-card rounded-3xl p-6 sm:p-8">
+                <div className="tech-card rounded-3xl p-6 shadow-xl sm:p-8">
                   <div className="grid gap-6 md:grid-cols-2">
                     <div className="rounded-2xl border border-border/70 bg-background/70 p-5">
                       <div className="flex items-center gap-3">
@@ -435,8 +492,7 @@ export default function HeadSpaFranchisePage() {
                         </div>
                       </div>
                       <p className="mt-4 text-sm leading-7 text-muted-foreground">
-                        ヘッドスパ界を牽引する、
-                        ヘッドスパ専門店ゆうブランドとして、
+                        完全個室・1日3名限定の高付加価値モデルを実店舗で運営しながら、
                         技術・接客・空間づくり・継続来店につながる
                         実践的なノウハウを伝えます。
                       </p>
@@ -457,7 +513,7 @@ export default function HeadSpaFranchisePage() {
                         </div>
                       </div>
                       <p className="mt-4 text-sm leading-7 text-muted-foreground">
-                        ヘッドスパ専門店ゆう専属の事業支援会社として、
+                        ヘッドスパ専門店ゆうの事業支援パートナーとして、
                         運営・経営コンサル・ホームページ制作・SEO・MEO・
                         導線設計までまとめて支援します。
                       </p>
@@ -484,8 +540,8 @@ export default function HeadSpaFranchisePage() {
               </ScrollAnimate>
 
               <ScrollAnimate>
-                <div className="overflow-hidden rounded-3xl border border-border/70 bg-background">
-                  <div className="relative min-h-[420px]">
+                <div className="overflow-hidden rounded-3xl border border-border/70 bg-background shadow-xl">
+                  <div className="relative min-h-[460px]">
                     <Image
                       src={IMAGES.heroSpa}
                       alt="ヘッドスパ専門店ゆう本店の技術とブランドイメージ"
@@ -493,7 +549,7 @@ export default function HeadSpaFranchisePage() {
                       unoptimized
                       className="object-cover object-center"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0f1726]/78 via-[#0f1726]/20 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0f1726]/80 via-[#0f1726]/20 to-transparent" />
                     <div className="absolute bottom-0 p-6 text-white sm:p-8">
                       <p className="text-xs tracking-[0.2em] text-white/70">
                         FRANCHISE VISION
@@ -514,6 +570,73 @@ export default function HeadSpaFranchisePage() {
           </div>
         </section>
 
+        {/* Why Yuu */}
+        <section className="px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-28">
+          <div className="mx-auto max-w-6xl">
+            <ScrollAnimate>
+              <div className="mb-10">
+                <p className="inline-flex rounded-full bg-accent/5 px-4 py-1.5 text-xs font-medium text-accent">
+                  実際の店舗実績に基づいたフランチャイズモデル
+                </p>
+                <h2 className="mt-5 text-2xl font-serif tracking-[0.05em] sm:text-3xl">
+                  なぜヘッドスパ専門店ゆうなのか
+                </h2>
+                <p className="mt-4 max-w-2xl text-sm leading-7 text-muted-foreground">
+                  実際に運営している店舗のリアルな実績と、現場で再現できるモデルをベースに構築されています。
+                </p>
+              </div>
+            </ScrollAnimate>
+
+            <div className="grid gap-6 lg:grid-cols-[1fr_1.05fr]">
+              <ScrollAnimate>
+                <div className="relative overflow-hidden rounded-3xl shadow-2xl">
+                  <Image
+                    src={IMAGES.heroSpa}
+                    alt="ヘッドスパ専門店ゆうの世界観"
+                    width={900}
+                    height={1000}
+                    unoptimized
+                    className="h-full min-h-[520px] w-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0c1423]/85 via-transparent to-transparent" />
+                  <div className="absolute bottom-0 p-6 text-white sm:p-8">
+                    <p className="text-xs tracking-[0.18em] text-white/65">
+                      LUXURY × PRIVATE
+                    </p>
+                    <h3 className="mt-2 text-2xl font-medium tracking-[0.04em]">
+                      完全予約制・完全個室・
+                      <br />
+                      1日3名限定の高付加価値モデル
+                    </h3>
+                    <p className="mt-3 text-sm leading-7 text-white/82">
+                      高級感・特別感・再来店につながる体験価値を重視し、
+                      少人数でも売上を作れる設計を目指します。
+                    </p>
+                  </div>
+                </div>
+              </ScrollAnimate>
+
+              <div className="grid gap-6 sm:grid-cols-2">
+                {yuuFeatures.map((item) => (
+                  <ScrollAnimate key={item.title}>
+                    <div className="tech-card h-full rounded-3xl p-6 shadow-lg">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-accent/10">
+                        <item.icon className="h-5 w-5 text-accent" />
+                      </div>
+                      <h3 className="mt-5 text-lg font-medium tracking-[0.04em]">
+                        {item.title}
+                      </h3>
+                      <p className="mt-3 text-sm leading-7 text-muted-foreground">
+                        {item.description}
+                      </p>
+                    </div>
+                  </ScrollAnimate>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Strengths */}
         <section className="px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-28">
           <div className="mx-auto max-w-6xl">
@@ -529,7 +652,7 @@ export default function HeadSpaFranchisePage() {
             <div className="grid gap-6 sm:grid-cols-2">
               {strengths.map((item) => (
                 <ScrollAnimate key={item.title}>
-                  <div className="tech-card h-full rounded-3xl p-6 sm:p-7">
+                  <div className="tech-card h-full rounded-3xl p-6 shadow-lg sm:p-7">
                     <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-accent/10">
                       <item.icon className="h-5 w-5 text-accent" />
                     </div>
@@ -561,7 +684,7 @@ export default function HeadSpaFranchisePage() {
             <div className="grid gap-6 lg:grid-cols-2">
               {formatTypes.map((type) => (
                 <ScrollAnimate key={type.title}>
-                  <div className="tech-card h-full rounded-3xl p-6 sm:p-8">
+                  <div className="tech-card h-full rounded-3xl p-6 shadow-lg sm:p-8">
                     <div className="flex items-center justify-between gap-4">
                       <h3 className="text-xl font-medium tracking-[0.04em]">
                         {type.title}
@@ -584,7 +707,6 @@ export default function HeadSpaFranchisePage() {
                 </ScrollAnimate>
               ))}
             </div>
-
           </div>
         </section>
 
@@ -604,7 +726,7 @@ export default function HeadSpaFranchisePage() {
               {plans.map((plan, index) => (
                 <ScrollAnimate key={plan.name}>
                   <div
-                    className={`h-full rounded-3xl border p-6 sm:p-8 ${
+                    className={`h-full rounded-3xl border p-6 shadow-xl sm:p-8 ${
                       index === 1
                         ? "border-[#21324f] bg-[#21324f] text-white"
                         : "border-border bg-background"
@@ -664,6 +786,17 @@ export default function HeadSpaFranchisePage() {
                         </div>
                       ))}
                     </div>
+
+                    {index === 0 && (
+                      <p className="mt-5 text-xs leading-6 text-muted-foreground">
+                        ※導入形態や支援範囲により個別見積りとなります
+                      </p>
+                    )}
+                    {index === 1 && (
+                      <p className="mt-5 text-xs leading-6 text-white/65">
+                        ※導入形態や制作範囲により個別見積りとなります
+                      </p>
+                    )}
                   </div>
                 </ScrollAnimate>
               ))}
@@ -671,7 +804,7 @@ export default function HeadSpaFranchisePage() {
 
             <div className="mt-8 grid gap-6 lg:grid-cols-[1fr_0.95fr]">
               <ScrollAnimate>
-                <div className="tech-card rounded-3xl p-6 sm:p-8">
+                <div className="tech-card rounded-3xl p-6 shadow-lg sm:p-8">
                   <h3 className="text-xl font-medium tracking-[0.04em]">
                     オプション提案
                   </h3>
@@ -688,7 +821,89 @@ export default function HeadSpaFranchisePage() {
                 </div>
               </ScrollAnimate>
 
+              <ScrollAnimate>
+                <div className="rounded-3xl bg-[#21324f] p-6 text-white shadow-2xl sm:p-8">
+                  <p className="text-xs tracking-[0.18em] text-white/65">
+                    LIMITED OFFER
+                  </p>
+                  <h3 className="mt-3 text-2xl font-medium tracking-[0.04em]">
+                    初期展開につき、
+                    先着5社限定で個別相談を受付中
+                  </h3>
+                  <p className="mt-4 text-sm leading-7 text-white/82">
+                    全国展開を見据えた初期フェーズのため、エリアや導入形態を踏まえて個別にご案内しています。
+                    ご希望地域によっては優先的にご相談を進められる場合があります。
+                  </p>
+                </div>
+              </ScrollAnimate>
             </div>
+          </div>
+        </section>
+
+        {/* Revenue */}
+        <section className="px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-28">
+          <div className="mx-auto max-w-5xl">
+            <ScrollAnimate>
+              <div className="mb-10 overflow-hidden rounded-3xl shadow-2xl">
+                <Image
+                  src={IMAGES.heroSpa}
+                  alt="高級感のあるヘッドスパ空間"
+                  width={1400}
+                  height={650}
+                  unoptimized
+                  className="h-[320px] w-full object-cover"
+                />
+              </div>
+            </ScrollAnimate>
+
+            <ScrollAnimate>
+              <div className="rounded-3xl bg-[#0f172a] p-6 text-white shadow-2xl sm:p-10">
+                <p className="text-xs tracking-[0.2em] text-white/60">
+                  REVENUE MODEL
+                </p>
+                <h2 className="mt-3 text-3xl font-serif tracking-[0.05em]">
+                  売上イメージ
+                </h2>
+
+                <div className="mt-8 grid gap-6 text-center sm:grid-cols-3">
+                  <div>
+                    <p className="text-sm text-white/60">客単価</p>
+                    <p className="mt-2 text-2xl font-bold">30,000円</p>
+                  </div>
+                  <div>
+                    <p className="text-sm text-white/60">1日施術人数</p>
+                    <p className="mt-2 text-2xl font-bold">3名</p>
+                  </div>
+                  <div>
+                    <p className="text-sm text-white/60">日売上</p>
+                    <p className="mt-2 text-2xl font-bold text-[#f4c273]">
+                      約90,000円
+                    </p>
+                  </div>
+                </div>
+
+                <div className="mt-8 border-t border-white/10 pt-8 text-center">
+                  <p className="text-sm text-white/60">月売上（25日稼働想定）</p>
+                  <p className="mt-3 text-4xl font-bold text-[#f4c273]">
+                    約2,250,000円
+                  </p>
+                </div>
+
+                <div className="mt-8 rounded-3xl border border-white/10 bg-white/5 p-5 sm:p-6">
+                  <h3 className="text-xl font-medium tracking-[0.04em]">
+                    小規模でも月商100万円以上を目指せる設計
+                  </h3>
+                  <p className="mt-4 text-sm leading-7 text-white/82">
+                    条件（立地・導線・単価設計）が整えば、少人数・短時間でも売上を構築可能。
+                    長時間労働に依存しないビジネスモデルを目指せます。
+                  </p>
+                </div>
+
+                <p className="mt-6 text-xs text-white/60">
+                  ※実際の売上は立地・単価・稼働状況により変動します
+                </p>
+              </div>
+            </ScrollAnimate>
           </div>
         </section>
 
@@ -717,7 +932,7 @@ export default function HeadSpaFranchisePage() {
 
             <div className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
               <ScrollAnimate>
-                <div className="rounded-3xl border border-white/12 bg-white/8 p-6 backdrop-blur sm:p-8">
+                <div className="rounded-3xl border border-white/12 bg-white/10 p-6 backdrop-blur shadow-2xl sm:p-8">
                   <div className="space-y-5">
                     <div className="flex gap-3">
                       <ChevronRight className="mt-0.5 h-5 w-5 shrink-0 text-white/85" />
@@ -751,7 +966,7 @@ export default function HeadSpaFranchisePage() {
               </ScrollAnimate>
 
               <ScrollAnimate>
-                <div className="rounded-3xl border border-white/12 bg-white/8 p-6 backdrop-blur sm:p-8">
+                <div className="rounded-3xl border border-white/12 bg-white/10 p-6 backdrop-blur shadow-2xl sm:p-8">
                   <h3 className="text-xl font-medium tracking-[0.04em]">
                     研修でカバーしたい項目
                   </h3>
@@ -791,7 +1006,7 @@ export default function HeadSpaFranchisePage() {
             <div className="grid gap-6 lg:grid-cols-5">
               {flow.map((item) => (
                 <ScrollAnimate key={item.step}>
-                  <div className="tech-card h-full rounded-3xl p-5 sm:p-6">
+                  <div className="tech-card h-full rounded-3xl p-5 shadow-lg sm:p-6">
                     <p className="text-xs tracking-[0.2em] text-accent">
                       STEP {item.step}
                     </p>
@@ -808,8 +1023,6 @@ export default function HeadSpaFranchisePage() {
           </div>
         </section>
 
-        {/* Area / Brand */}
-
         {/* FAQ */}
         <section className="px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-28">
           <div className="mx-auto max-w-5xl">
@@ -825,7 +1038,7 @@ export default function HeadSpaFranchisePage() {
             <div className="space-y-4">
               {faqs.map((faq) => (
                 <ScrollAnimate key={faq.q}>
-                  <div className="tech-card rounded-3xl p-6 sm:p-7">
+                  <div className="tech-card rounded-3xl p-6 shadow-lg sm:p-7">
                     <h3 className="text-base font-medium tracking-[0.03em]">
                       {faq.q}
                     </h3>
@@ -858,7 +1071,7 @@ export default function HeadSpaFranchisePage() {
                   href={shop.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="tech-card group flex flex-col gap-3 rounded-3xl p-5 transition-all hover:translate-y-[-2px] sm:flex-row sm:items-center sm:justify-between sm:p-6"
+                  className="tech-card group flex flex-col gap-3 rounded-3xl p-5 shadow-lg transition-all hover:translate-y-[-2px] sm:flex-row sm:items-center sm:justify-between sm:p-6"
                 >
                   <div>
                     <p className="text-xs tracking-[0.18em] text-muted-foreground">
@@ -881,28 +1094,29 @@ export default function HeadSpaFranchisePage() {
             <p className="text-xs tracking-[0.22em] text-white/70">
               HEAD SPA FRANCHISE CONTACT
             </p>
-            
+
             <p className="mt-3 text-xs tracking-[0.18em] text-white/70">
-  ※先着5社限定でのご案内となります
-</p>
-            
+              ※先着5社限定でのご案内となります
+            </p>
+
             <h2 className="mt-4 font-serif text-3xl tracking-[0.05em] sm:text-4xl">
-              全国展開に向けた
+              まずは無料相談で、
               <br className="sm:hidden" />
-              加盟相談を受付中です
+              あなたに合う導入形態をご提案します
             </h2>
+
             <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-white/80 sm:text-base">
+              ウェット・ドライのどちらが合うか、必要な初期費用、導入までの流れを個別にご案内します。
               技術だけでなく、経営・導線・ホームページ・集客まで含めて、
               事業として成り立つヘッドスパ展開を一緒に設計します。
-              まずは無料相談、または資料請求からご連絡ください。
             </p>
 
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               <Link
                 href="/company#contact"
-                className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-medium text-[#223451] transition-all hover:bg-white/90"
+                className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-medium text-[#223451] shadow-xl transition-all hover:bg-white/90"
               >
-                無料相談をする
+                無料で開業相談をする
                 <ArrowRight className="h-4 w-4" />
               </Link>
 
@@ -912,7 +1126,7 @@ export default function HeadSpaFranchisePage() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full border border-white/60 px-7 py-3.5 text-sm font-medium text-white transition-all hover:bg-white/10"
               >
-                LINEで相談する
+                LINEで今すぐ相談
               </a>
 
               <a
@@ -923,6 +1137,10 @@ export default function HeadSpaFranchisePage() {
                 電話で相談する
               </a>
             </div>
+
+            <p className="mt-4 text-xs leading-6 text-white/65">
+              ご相談段階で費用はかかりません。導入可能性の確認だけでも歓迎しています。
+            </p>
           </div>
         </section>
       </main>
