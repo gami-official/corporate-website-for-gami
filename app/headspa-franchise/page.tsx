@@ -14,13 +14,13 @@ import {
   GraduationCap,
   HeartHandshake,
   Phone,
-  Sparkles,
   Store,
   TrendingUp,
   UserRound,
   Wallet,
   ShieldCheck,
   Crown,
+  Sparkles,
 } from "lucide-react"
 import type { Metadata } from "next"
 import Image from "next/image"
@@ -30,6 +30,11 @@ import { IMAGES } from "@/lib/images"
 const pagePath = "/headspa-franchise"
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.gamigami.net"
 const pageUrl = `${siteUrl}${pagePath}`
+
+const YUU_INTERIOR_IMAGE =
+  "https://www.yuheadspa.net/images/about-interior.png"
+const YUU_LOGO_IMAGE =
+  "https://www.yuheadspa.net/images/about-portrait.png"
 
 export const metadata: Metadata = {
   title: "ヘッドスパ専門店ゆう フランチャイズ募集 | 株式会社GAMI",
@@ -98,7 +103,7 @@ const yuuFeatures = [
   {
     title: "実店舗のリアルな売上実績",
     description:
-      "子育てをしながらの運営でも、初年度約800万円、2年目以降は年商1000万円超えを達成。ワンオーナーで月商200万円以上の実績もあります。",
+      "子育てをしながらの運営でも、初年度約760万円、2年目以降は年商1000万円超えを達成。ワンオーナーで月商200万円以上の実績もあります。",
     icon: TrendingUp,
   },
   {
@@ -570,6 +575,85 @@ export default function HeadSpaFranchisePage() {
           </div>
         </section>
 
+        {/* Proof gallery */}
+        <section className="px-4 py-16 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-6xl">
+            <ScrollAnimate>
+              <SectionHeading
+                sub="PROOF / BRAND"
+                title="実在する店舗の空気感を、そのまま強みに。"
+                catchCopy="実店舗として成立している空間・世界観・ブランド感があるから、言葉だけで終わらない。"
+                className="mb-14"
+              />
+            </ScrollAnimate>
+
+            <div className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
+              <ScrollAnimate>
+                <div className="overflow-hidden rounded-3xl bg-background shadow-2xl">
+                  <img
+                    src={YUU_INTERIOR_IMAGE}
+                    alt="ヘッドスパ専門店ゆう本店の施術空間"
+                    className="h-[430px] w-full object-cover"
+                  />
+                  <div className="p-6 sm:p-8">
+                    <h3 className="text-xl font-medium tracking-[0.04em]">
+                      完全個室の施術空間
+                    </h3>
+                    <p className="mt-4 text-sm leading-7 text-muted-foreground">
+                      実際の本店では、完全個室・完全予約制・1日3名限定という運営設計で、
+                      高付加価値な体験を提供しています。価格競争ではなく、
+                      “ここで受けたい”と思われる空間づくりそのものが武器になります。
+                    </p>
+                  </div>
+                </div>
+              </ScrollAnimate>
+
+              <div className="grid gap-6">
+                <ScrollAnimate>
+                  <div className="tech-card rounded-3xl p-6 shadow-lg sm:p-8">
+                    <div className="flex items-center gap-4">
+                      <img
+                        src={YUU_LOGO_IMAGE}
+                        alt="ヘッドスパ専門店ゆう本店ロゴ"
+                        className="h-20 w-20 rounded-full object-cover"
+                      />
+                      <div>
+                        <p className="text-xs tracking-[0.18em] text-accent">
+                          OFFICIAL BRAND
+                        </p>
+                        <h3 className="mt-2 text-lg font-medium tracking-[0.04em]">
+                          ヘッドスパ専門店ゆう本店
+                        </h3>
+                      </div>
+                    </div>
+                    <p className="mt-4 text-sm leading-7 text-muted-foreground">
+                      福岡市西区豊浜で運営されている、完全個室・1日3名限定のヘッドスパ専門店。
+                      実在店舗の世界観があるからこそ、加盟検討者にも安心感を与えやすくなります。
+                    </p>
+                  </div>
+                </ScrollAnimate>
+
+                <ScrollAnimate>
+                  <div className="rounded-3xl bg-[#21324f] p-6 text-white shadow-2xl sm:p-8">
+                    <p className="text-xs tracking-[0.18em] text-white/65">
+                      REAL BUSINESS MODEL
+                    </p>
+                    <h3 className="mt-3 text-2xl font-medium tracking-[0.04em]">
+                      言葉ではなく、
+                      実際に成立しているモデルを展開する
+                    </h3>
+                    <p className="mt-4 text-sm leading-7 text-white/82">
+                      完全個室・1日3名限定・高価格帯メニュー・実店舗運営実績という、
+                      すでに成立している現場モデルを土台にフランチャイズ化するため、
+                      机上の理論だけではない強さがあります。
+                    </p>
+                  </div>
+                </ScrollAnimate>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Why Yuu */}
         <section className="px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-28">
           <div className="mx-auto max-w-6xl">
@@ -590,12 +674,9 @@ export default function HeadSpaFranchisePage() {
             <div className="grid gap-6 lg:grid-cols-[1fr_1.05fr]">
               <ScrollAnimate>
                 <div className="relative overflow-hidden rounded-3xl shadow-2xl">
-                  <Image
-                    src={IMAGES.heroSpa}
+                  <img
+                    src={YUU_INTERIOR_IMAGE}
                     alt="ヘッドスパ専門店ゆうの世界観"
-                    width={900}
-                    height={1000}
-                    unoptimized
                     className="h-full min-h-[520px] w-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0c1423]/85 via-transparent to-transparent" />
@@ -845,12 +926,9 @@ export default function HeadSpaFranchisePage() {
           <div className="mx-auto max-w-5xl">
             <ScrollAnimate>
               <div className="mb-10 overflow-hidden rounded-3xl shadow-2xl">
-                <Image
-                  src={IMAGES.heroSpa}
+                <img
+                  src={YUU_INTERIOR_IMAGE}
                   alt="高級感のあるヘッドスパ空間"
-                  width={1400}
-                  height={650}
-                  unoptimized
                   className="h-[320px] w-full object-cover"
                 />
               </div>
