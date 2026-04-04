@@ -806,48 +806,6 @@ export default function HeadSpaFranchisePage() {
         </section>
 
         {/* Area / Brand */}
-        <section className="border-y border-border bg-secondary/40 px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-28">
-          <div className="mx-auto max-w-6xl">
-            <div className="grid gap-6 lg:grid-cols-2">
-              <ScrollAnimate>
-                <div className="tech-card h-full rounded-3xl p-6 sm:p-8">
-                  <div className="flex items-center gap-3">
-                    <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-accent/10">
-                      <MapPinned className="h-5 w-5 text-accent" />
-                    </div>
-                    <h3 className="text-xl font-medium tracking-[0.04em]">
-                      エリア戦略の提案
-                    </h3>
-                  </div>
-                  <p className="mt-5 text-sm leading-7 text-muted-foreground">
-                    加盟を取りやすくするためにも、
-                    「1エリア1加盟を基本」「商圏は個別相談」
-                    のような一定の保護ルールを用意するのがおすすめです。
-                    これにより、先行加盟の魅力を高めやすくなります。
-                  </p>
-                </div>
-              </ScrollAnimate>
-
-              <ScrollAnimate>
-                <div className="tech-card h-full rounded-3xl p-6 sm:p-8">
-                  <div className="flex items-center gap-3">
-                    <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-accent/10">
-                      <Sparkles className="h-5 w-5 text-accent" />
-                    </div>
-                    <h3 className="text-xl font-medium tracking-[0.04em]">
-                      ブランド価値の広がり
-                    </h3>
-                  </div>
-                  <p className="mt-5 text-sm leading-7 text-muted-foreground">
-                    フランチャイズ展開は加盟獲得だけでなく、
-                    ヘッドスパ専門店ゆう本店の認知拡大にも直結します。
-                    全国展開の文脈を持つことで、本店自体の信頼性や話題性も高めやすくなります。
-                  </p>
-                </div>
-              </ScrollAnimate>
-            </div>
-          </div>
-        </section>
 
         {/* FAQ */}
         <section className="px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-28">
