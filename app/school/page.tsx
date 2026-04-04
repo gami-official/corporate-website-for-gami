@@ -46,7 +46,7 @@ const services = [
   {
     icon: Sparkles,
     title: "ヘッドスパ専門店運営（2026現在 全国4店舗）",
-    description: "全国3拠点で直営店を展開。確かな技術力とホスピタリティでお客様の心と身体に安らぎをお届けします。",
+    description: "全国4拠点で直営店を展開。確かな技術力とホスピタリティでお客様の心と身体に安らぎをお届けします。",
   },
   {
     icon: Briefcase,
@@ -219,7 +219,7 @@ export default function SchoolPage() {
         {/* CTA */}
         <section className="bg-[#2d3e5e] px-6 py-14 text-center text-white">
           <h2 className="mb-4.5 text-[26px] font-medium tracking-[0.08em]">
-            ヘッドスパ事業 お見積り・ご相談
+            ヘッドスパ事業 お問い合わせ
           </h2>
           <p className="mx-auto mb-8 max-w-2xl text-[14.5px] leading-[1.9] text-[#d0d9e8]">
             店舗運営・スクール・開業支援・出張サービスなど、まずはお気軽にお問い合わせください。無料でご相談いたします。
