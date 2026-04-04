@@ -157,39 +157,7 @@ export default function OsakaLP() {
 </div>
 
 {/* 実績・選ばれる理由 */}
-<section className="px-6 py-16 bg-white text-black">
-  <h2 className="text-2xl md:text-3xl font-bold text-center">
-    選ばれている理由
-  </h2>
 
-  <div className="mt-10 grid gap-6 md:grid-cols-3">
-    
-    <div className="border rounded-xl p-6">
-      <p className="text-lg font-bold">一括対応</p>
-      <p className="mt-2 text-sm text-zinc-600">
-        保管・配送・内職・段ボールまで一括で対応可能。
-        複数業者に分かれていた業務をまとめます。
-      </p>
-    </div>
-
-    <div className="border rounded-xl p-6">
-      <p className="text-lg font-bold">最短即日対応</p>
-      <p className="mt-2 text-sm text-zinc-600">
-        急な案件にも柔軟対応。
-        大阪エリアでスピード対応が可能です。
-      </p>
-    </div>
-
-    <div className="border rounded-xl p-6">
-      <p className="text-lg font-bold">コスト削減</p>
-      <p className="mt-2 text-sm text-zinc-600">
-        業務を一本化することで無駄を削減。
-        物流コストの最適化を実現します。
-      </p>
-    </div>
-
-  </div>
-</section>
       {/* CTA */}
       <section className="bg-black text-white px-6 py-20 pb-56 text-center">
         <h2 className="text-2xl md:text-3xl font-bold">
