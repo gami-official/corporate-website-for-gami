@@ -540,8 +540,7 @@ export default function LogisticsPage() {
 </a>
   </div>
 </section>
-        
-        </section>
+      
       </main>
 
       <Footer />
