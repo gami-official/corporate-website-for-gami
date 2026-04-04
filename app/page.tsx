@@ -104,9 +104,6 @@ export default function Page() {
   <div className="absolute inset-0 bg-black/60" />
 
   <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center text-white">
-    <p className="mb-4 rounded-full bg-white/20 px-4 py-1 text-sm">
-      物流運送事業を主軸に、保管・加工・配送を一括対応
-    </p>
 
     <h1 className="text-3xl font-bold leading-tight md:text-5xl">
       物を止めない物流を。<br />
