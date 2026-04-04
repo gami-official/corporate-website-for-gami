@@ -411,7 +411,7 @@ export default function HeadSpaFranchisePage() {
               <SectionHeading
                 sub="FRANCHISE CONCEPT"
                 title="技術と経営の両輪で、全国に広げる。"
-                catchCopy="ヘッドスパ歴15年以上の強みを活かした、再現性の高いヘッドスパ事業モデル。"
+                catchCopy="ヘッドスパ専門店の強みを活かした、再現性の高いヘッドスパ事業モデル。"
                 className="mb-14"
               />
             </ScrollAnimate>
