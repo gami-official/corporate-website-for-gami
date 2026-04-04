@@ -24,7 +24,9 @@ export function Footer() {
             </Link>
             <p className="text-sm leading-7 tracking-wide text-muted-foreground">
   大阪・福岡で物流会社をお探しなら<br />
-  発送代行・内職・軽作業まで一括対応の株式会社GAMI
+  <span className="font-semibold text-white">
+    発送代行・内職・軽作業まで一括対応の株式会社GAMI
+  </span>
 </p>
           </div>
 
