@@ -109,7 +109,7 @@ export default function Page() {
     </p>
 
     <h1 className="text-3xl font-bold leading-tight md:text-5xl">
-      物止めない物流を。<br />
+      物を止めない物流を。<br />
       現場で支えるパートナー。
     </h1>
 
