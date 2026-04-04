@@ -582,21 +582,6 @@ export default function HeadSpaFranchisePage() {
               ))}
             </div>
 
-            <ScrollAnimate>
-              <div className="mt-8 rounded-3xl border border-[#c89b55]/25 bg-[#fff9f0] p-5 text-[#5f4520] sm:p-6">
-                <div className="flex gap-3">
-                  <BadgeCheck className="mt-0.5 h-5 w-5 shrink-0 text-[#b6802e]" />
-                  <p className="text-sm leading-7">
-                    ウェット導入は
-                    <span className="font-medium">
-                      美容師免許取得者限定
-                    </span>
-                    の前提で案内するのがおすすめです。
-                    表記を明確にすることで、問い合わせ段階のミスマッチを減らせます。
-                  </p>
-                </div>
-              </div>
-            </ScrollAnimate>
           </div>
         </section>
 
