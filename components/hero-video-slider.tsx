@@ -217,7 +217,17 @@ export function HeroVideoSlider() {
                 >
                   {slide.copy}
                 </h1>
-               
+               {false && (
+  <p
+    className={
+      slide.copy === "繋ぐ。"
+        ? "text-base sm:text-lg"
+        : "min-h-[3.5rem] text-sm sm:min-h-[4rem] sm:text-base"
+    }
+  >
+    {slide.sub}
+  </p>
+)}
                 <Link
                   href={slide.ctaHref}
                   className="w-full min-w-[200px] rounded-xl px-8 py-3.5 text-center text-sm font-medium tracking-widest text-white shadow-lg transition-all duration-300 active:scale-95 sm:w-auto sm:min-w-[220px] sm:hover:scale-105 sm:hover:shadow-glass-hover aurora-gradient touch-manipulation"
