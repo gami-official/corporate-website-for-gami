@@ -701,24 +701,7 @@ export default function HeadSpaFranchisePage() {
                   <div className="flex items-start gap-3">
                     <FileText className="mt-0.5 h-5 w-5 shrink-0 text-[#b6802e]" />
                     <div>
-                      <h3 className="text-xl font-medium tracking-[0.04em] text-[#5f4520]">
-                        料金表示の考え方
-                      </h3>
-                      <p className="mt-4 text-sm leading-7 text-[#6f5733]">
-                        ページ上では
-                        「55万円〜」「110万円〜」のように
-                        下限表示にしておき、
-                        ウェット / ドライ、店舗状況、制作範囲、
-                        追加支援の有無によって個別見積りにするのがおすすめです。
-                      </p>
-                      <p className="mt-4 text-sm leading-7 text-[#6f5733]">
-                        また、立ち上げ初期は
-                        <span className="font-medium text-[#5f4520]">
-                          売上連動ロイヤリティより、定額月額型
-                        </span>
-                        の方が分かりやすく、
-                        加盟障壁を下げながら展開しやすいです。
-                      </p>
+            
                     </div>
                   </div>
                 </div>
