@@ -290,11 +290,11 @@ export default function Page() {
                   <div className="rounded-2xl border border-zinc-200 p-5">
                     <h3 className="text-xl font-bold text-zinc-900">ヘッドスパ事業</h3>
                     <p className="mt-3 text-sm leading-7 text-zinc-600">
-                      ヘッドスパスクール・フランチャイズを全国に展開中。<br/>
-                      まずはヘッドスパ専門店ゆう本店の世界観をご確認くださいませ。
+                      ヘッドスパ専門店ゆうブランドのフランチャイズを全国に展開中。<br/>
+                      将来性のある、収益性の高いフランチャイズがここにございます。
                     </p>
-                    <Link href="https://www.yuheadspa.net" className="mt-4 inline-block text-sm font-semibold text-orange-500">
-                      ヘッドスパ専門店ゆう本店を見る →
+                    <Link href="https://www.gamigami.net/headspa-franchise" className="mt-4 inline-block text-sm font-semibold text-orange-500">
+                      ヘッドスパ専門店ゆうフランチャイズを見る →
                     </Link>
                   </div>
 
