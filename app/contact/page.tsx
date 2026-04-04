@@ -29,6 +29,7 @@ export default function ContactPage() {
   encType="application/x-www-form-urlencoded"
   className="space-y-4"
 >
+  <input type="hidden" name="_next" value="https://gamigami.net/contact/thanks" />
   <div>
     <label className="block text-sm font-medium mb-2">会社名</label>
     <input
