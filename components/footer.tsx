@@ -23,7 +23,8 @@ export function Footer() {
               <span className="font-serif text-lg tracking-widest">GAMI</span>
             </Link>
             <p className="text-sm leading-8 tracking-wide text-muted-foreground">
-              物流・保管・加工・配送を一括対応するパートナー企業 株式会社GAMI
+              大阪・福岡の物流代行・発送代行なら<br />
+              株式会社GAMI
             </p>
           </div>
 
