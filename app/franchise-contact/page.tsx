@@ -167,8 +167,9 @@ export default function FranchiseContactPage() {
                     お名前
                   </label>
                   <input
+                    name="name"
                     type="text"
-                    placeholder="例：山田 太郎"
+                    placeholder="例：山田 太郎" />
                     className="w-full rounded-2xl border border-slate-200 px-4 py-3 text-sm outline-none transition focus:border-[#223451]"
                   />
                 </div>
@@ -178,6 +179,7 @@ export default function FranchiseContactPage() {
                     会社名 / 屋号
                   </label>
                   <input
+                    name="company"
                     type="text"
                     placeholder="例：株式会社〇〇 / サロン〇〇"
                     className="w-full rounded-2xl border border-slate-200 px-4 py-3 text-sm outline-none transition focus:border-[#223451]"
@@ -190,7 +192,8 @@ export default function FranchiseContactPage() {
                       メールアドレス
                     </label>
                     <input
-                      type="email"
+                      name="email"
+                      type="email" />
                       placeholder="example@gmail.com"
                       className="w-full rounded-2xl border border-slate-200 px-4 py-3 text-sm outline-none transition focus:border-[#223451]"
                     />
@@ -201,7 +204,8 @@ export default function FranchiseContactPage() {
                       電話番号
                     </label>
                     <input
-                      type="tel"
+                      name="phone"
+                      type="tel" />
                       placeholder="09012345678"
                       className="w-full rounded-2xl border border-slate-200 px-4 py-3 text-sm outline-none transition focus:border-[#223451]"
                     />
@@ -213,7 +217,8 @@ export default function FranchiseContactPage() {
                     <label className="mb-2 block text-sm font-medium text-slate-700">
                       希望導入形態
                     </label>
-                    <select className="w-full rounded-2xl border border-slate-200 px-4 py-3 text-sm outline-none transition focus:border-[#223451]">
+                    <select name="type">
+                      className="w-full rounded-2xl border border-slate-200 px-4 py-3 text-sm outline-none transition focus:border-[#223451]">
                       <option>選択してください</option>
                       <option>ウェット導入プラン</option>
                       <option>ドライ導入プラン</option>
@@ -225,7 +230,8 @@ export default function FranchiseContactPage() {
                     <label className="mb-2 block text-sm font-medium text-slate-700">
                       希望プラン
                     </label>
-                    <select className="w-full rounded-2xl border border-slate-200 px-4 py-3 text-sm outline-none transition focus:border-[#223451]">
+                    <select name="plan">
+                      className="w-full rounded-2xl border border-slate-200 px-4 py-3 text-sm outline-none transition focus:border-[#223451]">
                       <option>選択してください</option>
                       <option>FC基本導入プラン</option>
                       <option>FCフルサポートプラン</option>
@@ -239,7 +245,8 @@ export default function FranchiseContactPage() {
                     開業希望エリア
                   </label>
                   <input
-                    type="text"
+                    name="area"
+                    type="text" />
                     placeholder="例：福岡県福岡市 / 大阪府大阪市"
                     className="w-full rounded-2xl border border-slate-200 px-4 py-3 text-sm outline-none transition focus:border-[#223451]"
                   />
@@ -249,7 +256,7 @@ export default function FranchiseContactPage() {
                   <label className="mb-2 block text-sm font-medium text-slate-700">
                     ご相談内容
                   </label>
-                  <textarea
+                  <textarea name="message" />
                     rows={6}
                     placeholder="例：自宅の一室で開業を検討しています。ウェットとドライどちらが向いているか知りたいです。"
                     className="w-full rounded-2xl border border-slate-200 px-4 py-3 text-sm outline-none transition focus:border-[#223451]"
