@@ -451,7 +451,7 @@ export default function HeadSpaFranchisePage() {
                 </div>
 
                 <div className="mt-8 flex flex-wrap gap-3">
-                  <PrimaryButton href="/company#contact">
+                  <PrimaryButton href="/franchise-contact">
                     無料で開業相談をする
                   </PrimaryButton>
                   <SecondaryButton href="https://lin.ee/3QGIdCY">
@@ -1259,7 +1259,7 @@ export default function HeadSpaFranchisePage() {
 
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               <Link
-                href="/company#contact"
+                href="/franchise-contact"
                 className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-medium text-[#223451] shadow-[0_12px_30px_rgba(255,255,255,0.18)] transition-all hover:bg-white/90"
               >
                 無料で開業相談をする
