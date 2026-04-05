@@ -131,7 +131,37 @@ export default function FranchiseContactPage() {
                 下記をご記入ください。内容を確認のうえ、順次ご連絡いたします。
               </p>
 
-              <form className="mt-8 space-y-5">
+              <form
+  className="mt-8 space-y-5"
+  onSubmit={async (e) => {
+    e.preventDefault()
+
+    const formData = new FormData(e.currentTarget)
+
+    const data = {
+      name: formData.get("name"),
+      company: formData.get("company"),
+      email: formData.get("email"),
+      phone: formData.get("phone"),
+      type: formData.get("type"),
+      plan: formData.get("plan"),
+      area: formData.get("area"),
+      message: formData.get("message"),
+    }
+
+    const res = await fetch("/api/franchise-contact", {
+      method: "POST",
+      body: JSON.stringify(data),
+    })
+
+    if (res.ok) {
+      alert("送信完了しました！")
+      e.currentTarget.reset()
+    } else {
+      alert("送信失敗しました")
+    }
+  }}
+>
                 <div>
                   <label className="mb-2 block text-sm font-medium text-slate-700">
                     お名前
