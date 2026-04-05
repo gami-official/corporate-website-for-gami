@@ -1205,7 +1205,7 @@ export default function HeadSpaFranchisePage() {
               />
             </ScrollAnimate>
 
-            <div className="grid gap-6 md:grid-cols-2">
+            <div className="flex justify-center">
               {shopLinks.map((shop) => (
                 <a
                   key={shop.name}
