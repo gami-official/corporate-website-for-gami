@@ -267,11 +267,6 @@ const faqs = [
   },
 ]
 
-const shopLinks = [
-  { name: "ヘッドスパ専門店ゆう本店", url: "https://www.yuheadspa.net/" },
-  { name: "旧ブランドサイト", url: "https://yuheadspa.jimdosite.com/" },
-]
-
 const franchisePageSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
