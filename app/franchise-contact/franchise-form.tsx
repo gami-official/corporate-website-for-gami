@@ -182,7 +182,7 @@ export default function FranchiseForm() {
         <p className="text-sm leading-7 text-[#223451]">{statusMessage}</p>
       ) : (
         <p className="text-xs leading-6 text-slate-500">
-          ※ご相談段階で費用はかかりません。送信できない場合は設定（API・Resend）をご確認ください。
+          ※ご相談段階で費用はかかりません。送信できない場合は設定をご確認ください。
         </p>
       )}
     </form>
