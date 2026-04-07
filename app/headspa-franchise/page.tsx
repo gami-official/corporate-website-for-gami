@@ -1242,12 +1242,16 @@ export default function HeadSpaFranchisePage() {
               ※先着5社限定でのご案内となります
             </p>
 
-            <h2 className="mt-4 font-serif text-3xl tracking-[0.05em] sm:text-4xl">
-              まずは無料相談で、
-              <br className="sm:hidden" />
-              あなたに合う導入形態をご提案します
-            </h2>
+           <h2 className="mt-4 font-serif text-3xl tracking-[0.05em] sm:text-4xl">
+  まずは無料相談で、
+  <br className="sm:hidden" />
+  「あなたが稼げるか」判断できます
+</h2>
 
+<p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-white/80 sm:text-base">
+  開業して本当に利益が出るのか、
+  あなたの状況に合わせてリアルにお伝えします。
+</p>
             <p className="mx-auto mt-4 max-w-xl text-sm leading-7 text-white/70">
               小規模開業・高単価設計・技術研修・集客導線まで、現状に合わせて個別にご提案します。
             </p>
