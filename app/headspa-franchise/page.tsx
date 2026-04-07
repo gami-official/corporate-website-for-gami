@@ -450,20 +450,22 @@ export default function HeadSpaFranchisePage() {
                 </div>
 
                 <div className="mt-8 flex flex-wrap gap-3">
-                  <PrimaryButton href="/franchise-contact">
-                    無料で開業相談をする
-                  </PrimaryButton>
-                  <SecondaryButton href="https://lin.ee/3QGIdCY">
-                    LINEで今すぐ相談
-                  </SecondaryButton>
-                  <SecondaryButton href="tel:0661159935">
-                    電話で相談する
-                  </SecondaryButton>
-                </div>
+  <PrimaryButton href="/franchise-contact">
+    【無料】開業相談はこちら
+  </PrimaryButton>
 
-                <p className="mt-5 text-xs leading-6 text-white/70">
-                  ご相談段階で費用はかかりません。無理な勧誘は行わず、現状に合う導入形態をご案内します。
-                </p>
+  <SecondaryButton href="https://lin.ee/3QGIdCY">
+    LINEで即相談（最短返信）
+  </SecondaryButton>
+
+  <SecondaryButton href="tel:0661159935">
+    電話で相談する
+  </SecondaryButton>
+</div>
+
+<p className="mt-5 text-xs leading-6 text-white/70">
+  ※無理な営業は一切ありません。まずは情報収集だけでもOKです。
+</p>
               </div>
             </div>
           </div>
