@@ -26,6 +26,7 @@ import {
   Clock3,
 } from "lucide-react"
 import type { Metadata } from "next"
+import type { ReactNode } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { IMAGES } from "@/lib/images"
@@ -324,7 +325,7 @@ function PrimaryButton({
   children,
 }: {
   href: string
-  children: React.ReactNode
+  children: ReactNode
 }) {
   return (
     <Link
@@ -342,7 +343,7 @@ function SecondaryButton({
   children,
 }: {
   href: string
-  children: React.ReactNode
+  children: ReactNode
 }) {
   return (
     <a
@@ -373,7 +374,6 @@ export default function HeadSpaFranchisePage() {
       <Header />
 
       <main>
-        {/* Hero */}
         <section className="relative isolate overflow-hidden">
           <div className="relative min-h-[82vh]">
             <Image
@@ -450,28 +450,25 @@ export default function HeadSpaFranchisePage() {
                 </div>
 
                 <div className="mt-8 flex flex-wrap gap-3">
-  <PrimaryButton href="/franchise-contact">
-    【無料】開業相談はこちら
-  </PrimaryButton>
+                  <PrimaryButton href="/franchise-contact">
+                    【無料】開業相談はこちら
+                  </PrimaryButton>
+                  <SecondaryButton href="https://lin.ee/3QGIdCY">
+                    LINEで即相談（最短返信）
+                  </SecondaryButton>
+                  <SecondaryButton href="tel:0661159935">
+                    電話で相談する
+                  </SecondaryButton>
+                </div>
 
-  <SecondaryButton href="https://lin.ee/3QGIdCY">
-    LINEで即相談（最短返信）
-  </SecondaryButton>
-
-  <SecondaryButton href="tel:0661159935">
-    電話で相談する
-  </SecondaryButton>
-</div>
-
-<p className="mt-5 text-xs leading-6 text-white/70">
-  ※無理な営業は一切ありません。まずは情報収集だけでもOKです。
-</p>
+                <p className="mt-5 text-xs leading-6 text-white/70">
+                  ※無理な営業は一切ありません。まずは情報収集だけでもOKです。
+                </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Audience */}
         <section className="px-4 py-12 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-6xl">
             <ScrollAnimate>
@@ -494,7 +491,6 @@ export default function HeadSpaFranchisePage() {
           </div>
         </section>
 
-        {/* Brand message */}
         <section className="px-4 py-20 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-6xl">
             <ScrollAnimate>
@@ -526,7 +522,6 @@ export default function HeadSpaFranchisePage() {
           </div>
         </section>
 
-        {/* Intro */}
         <section className="section-gradient px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-28">
           <div className="mx-auto max-w-6xl">
             <ScrollAnimate>
@@ -578,7 +573,7 @@ export default function HeadSpaFranchisePage() {
                         </div>
                       </div>
                       <p className="mt-4 text-sm leading-7 text-muted-foreground">
-                        ヘッドスパ専門店ゆうの事業支援パートナーとして、
+                        ヘッドスパ専門店ゆう専属の事業支援会社として、
                         運営・経営コンサル・ホームページ制作・SEO・MEO・
                         導線設計までまとめて支援します。
                       </p>
@@ -620,8 +615,8 @@ export default function HeadSpaFranchisePage() {
                         FRANCHISE VISION
                       </p>
                       <h3 className="mt-2 font-serif text-2xl tracking-[0.05em]">
-                        ヘッドスパ専門店ゆうブランドを広げ、
-                        ヘッドスパの価値を高める。
+                        ブランドを広げ、
+                        本店の価値も高める。
                       </h3>
                       <p className="mt-3 text-sm leading-7 text-white/85">
                         全国展開を通じて、ヘッドスパ専門店ゆうの認知と信頼を広げ、
@@ -635,7 +630,6 @@ export default function HeadSpaFranchisePage() {
           </div>
         </section>
 
-        {/* Proof gallery */}
         <section className="px-4 py-20 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-6xl">
             <ScrollAnimate>
@@ -719,7 +713,6 @@ export default function HeadSpaFranchisePage() {
           </div>
         </section>
 
-        {/* Why Yuu */}
         <section className="px-4 py-20 sm:px-6 sm:py-24 lg:px-8 lg:py-28">
           <div className="mx-auto max-w-6xl">
             <ScrollAnimate>
@@ -783,7 +776,6 @@ export default function HeadSpaFranchisePage() {
           </div>
         </section>
 
-        {/* Strengths */}
         <section className="px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-28">
           <div className="mx-auto max-w-6xl">
             <ScrollAnimate>
@@ -815,7 +807,6 @@ export default function HeadSpaFranchisePage() {
           </div>
         </section>
 
-        {/* Wet / Dry */}
         <section className="border-y border-border bg-secondary/40 px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-28">
           <div className="mx-auto max-w-6xl">
             <ScrollAnimate>
@@ -856,7 +847,6 @@ export default function HeadSpaFranchisePage() {
           </div>
         </section>
 
-        {/* Plans */}
         <section className="px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-28">
           <div className="mx-auto max-w-6xl">
             <ScrollAnimate>
@@ -933,12 +923,11 @@ export default function HeadSpaFranchisePage() {
                       ))}
                     </div>
 
-                    {index === 0 && (
+                    {index === 0 ? (
                       <p className="mt-5 text-xs leading-6 text-muted-foreground">
                         ※導入形態や支援範囲により個別見積りとなります
                       </p>
-                    )}
-                    {index === 1 && (
+                    ) : (
                       <p className="mt-5 text-xs leading-6 text-white/65">
                         ※導入形態や制作範囲により個別見積りとなります
                       </p>
@@ -986,7 +975,6 @@ export default function HeadSpaFranchisePage() {
           </div>
         </section>
 
-        {/* Revenue */}
         <section className="px-4 py-20 sm:px-6 sm:py-24 lg:px-8 lg:py-28">
           <div className="mx-auto max-w-5xl">
             <ScrollAnimate>
@@ -1050,7 +1038,6 @@ export default function HeadSpaFranchisePage() {
           </div>
         </section>
 
-        {/* Training */}
         <section className="relative overflow-hidden bg-[#182742] px-4 py-16 text-white sm:px-6 sm:py-24 lg:px-8 lg:py-28">
           <div className="absolute inset-0 opacity-20">
             <Image
@@ -1075,7 +1062,7 @@ export default function HeadSpaFranchisePage() {
 
             <div className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
               <ScrollAnimate>
-                <div className="rounded-[30px] border border-white/12 bg-white/10 p-6 backdrop-blur shadow-[0_24px_60px_rgba(15,23,42,0.18)] sm:p-8">
+                <div className="rounded-[30px] border border-white/12 bg-white/10 p-6 shadow-[0_24px_60px_rgba(15,23,42,0.18)] backdrop-blur sm:p-8">
                   <div className="space-y-5">
                     <div className="flex gap-3">
                       <ChevronRight className="mt-0.5 h-5 w-5 shrink-0 text-white/85" />
@@ -1109,7 +1096,7 @@ export default function HeadSpaFranchisePage() {
               </ScrollAnimate>
 
               <ScrollAnimate>
-                <div className="rounded-[30px] border border-white/12 bg-white/10 p-6 backdrop-blur shadow-[0_24px_60px_rgba(15,23,42,0.18)] sm:p-8">
+                <div className="rounded-[30px] border border-white/12 bg-white/10 p-6 shadow-[0_24px_60px_rgba(15,23,42,0.18)] backdrop-blur sm:p-8">
                   <h3 className="text-xl font-medium tracking-[0.04em]">
                     研修でカバーしたい項目
                   </h3>
@@ -1134,7 +1121,6 @@ export default function HeadSpaFranchisePage() {
           </div>
         </section>
 
-        {/* Flow */}
         <section className="px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-28">
           <div className="mx-auto max-w-6xl">
             <ScrollAnimate>
@@ -1166,7 +1152,6 @@ export default function HeadSpaFranchisePage() {
           </div>
         </section>
 
-        {/* FAQ */}
         <section className="px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-28">
           <div className="mx-auto max-w-5xl">
             <ScrollAnimate>
@@ -1195,7 +1180,6 @@ export default function HeadSpaFranchisePage() {
           </div>
         </section>
 
-        {/* Shop Links */}
         <section className="border-t border-border bg-secondary/40 px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-28">
           <div className="mx-auto max-w-4xl">
             <ScrollAnimate>
@@ -1214,7 +1198,7 @@ export default function HeadSpaFranchisePage() {
                   href={shop.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="tech-card group flex flex-col gap-3 rounded-[30px] p-5 shadow-[0_18px_50px_rgba(15,23,42,0.08)] transition-all hover:translate-y-[-2px] sm:flex-row sm:items-center sm:justify-between sm:p-6"
+                  className="tech-card group flex w-full max-w-md flex-col gap-3 rounded-[30px] p-5 shadow-[0_18px_50px_rgba(15,23,42,0.08)] transition-all hover:translate-y-[-2px] sm:flex-row sm:items-center sm:justify-between sm:p-6"
                 >
                   <div>
                     <p className="text-xs tracking-[0.18em] text-muted-foreground">
@@ -1231,7 +1215,6 @@ export default function HeadSpaFranchisePage() {
           </div>
         </section>
 
-        {/* Final CTA */}
         <section className="bg-[#223451] px-4 py-16 text-center text-white sm:px-6 sm:py-20 lg:px-8">
           <div className="mx-auto max-w-4xl">
             <p className="text-xs tracking-[0.22em] text-white/70">
@@ -1242,16 +1225,12 @@ export default function HeadSpaFranchisePage() {
               ※先着5社限定でのご案内となります
             </p>
 
-           <h2 className="mt-4 font-serif text-3xl tracking-[0.05em] sm:text-4xl">
-  まずは無料相談で、
-  <br className="sm:hidden" />
-  「あなたが稼げるか」判断できます
-</h2>
+            <h2 className="mt-4 font-serif text-3xl tracking-[0.05em] sm:text-4xl">
+              まずは無料相談で、
+              <br className="sm:hidden" />
+              「あなたが稼げるか」を整理できます
+            </h2>
 
-<p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-white/80 sm:text-base">
-  開業して本当に利益が出るのか、
-  あなたの状況に合わせてリアルにお伝えします。
-</p>
             <p className="mx-auto mt-4 max-w-xl text-sm leading-7 text-white/70">
               小規模開業・高単価設計・技術研修・集客導線まで、現状に合わせて個別にご提案します。
             </p>
