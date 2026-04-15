@@ -252,14 +252,27 @@ export default function HomePage() {
               ))}
             </div>
 
-            <div className="mt-8">
-              <Link
-                href="/logistics"
-                className="inline-flex rounded-xl bg-orange-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-orange-400"
-              >
-                物流サービスの詳細を見る
-              </Link>
-            </div>
+            <div className="mt-10 text-center">
+  <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+    <Link
+      href="/contact"
+      className="inline-flex rounded-xl bg-zinc-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-zinc-800"
+    >
+      物流の無料相談はこちら
+    </Link>
+
+    <Link
+      href="/logistics"
+      className="inline-flex rounded-xl bg-orange-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-orange-400"
+    >
+      物流サービスの詳細を見る
+    </Link>
+  </div>
+
+  <p className="mt-3 text-xs text-zinc-500">
+    最短当日対応・スポット案件もご相談いただけます
+  </p>
+</div>
           </div>
         </section>
 
@@ -289,7 +302,18 @@ export default function HomePage() {
   <p className="mt-3 text-sm text-zinc-500">
     最短当日対応可能・急ぎ案件も対応しています
   </p>
-</div> </section>
+</div> <div className="mt-10 text-center">
+  <Link
+    href="/contact"
+    className="inline-flex rounded-2xl bg-orange-500 px-6 py-4 text-base font-semibold text-white transition hover:bg-orange-400"
+  >
+    物流のご相談はこちら
+  </Link>
+
+  <p className="mt-3 text-sm text-zinc-500">
+    最短当日対応可能・急ぎ案件も対応しています
+  </p>
+</div></section>
 
         <section className="py-20">
           <div className="mx-auto max-w-6xl px-6">
