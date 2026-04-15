@@ -28,11 +28,10 @@ export default function HomePage() {
                 LOGISTICS / WAREHOUSE / TRANSPORTATION
               </p>
 
-              <h1 className="mt-4 text-[clamp(2.4rem,8vw,4.5rem)] font-bold leading-[1.2] tracking-[-0.02em]">
-                物流を止めない。
-                <br />
-                現場で支えるパートナー
-              </h1>
+            <h1 className="mt-4 text-[clamp(2.4rem,7vw,4.5rem)] font-bold leading-[1.15] tracking-[-0.02em] whitespace-nowrap sm:whitespace-normal">
+  物流を止めない<br />
+  現場で支えるパートナー
+</h1>
 
               <p className="mt-5 text-sm leading-8 text-gray-200 sm:mx-auto sm:max-w-3xl sm:text-base">
                 株式会社GAMIは物流運送事業を主軸に、
