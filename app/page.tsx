@@ -258,7 +258,7 @@ export default function HomePage() {
       href="/contact"
       className="inline-flex rounded-xl bg-zinc-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-zinc-800"
     >
-      最短当日対応｜物流の無料相談はこちら
+      物流の無料相談はこちら
     </Link>
 
     <Link
@@ -296,7 +296,7 @@ export default function HomePage() {
     href="/contact"
     className="inline-flex rounded-2xl bg-orange-500 px-6 py-4 text-base font-semibold text-white transition hover:bg-orange-400"
   >
-    物流のご相談はこちら
+    最短当日対応｜物流の無料相談はこちら
   </Link>
 
   <p className="mt-3 text-sm text-zinc-500">
@@ -307,7 +307,7 @@ export default function HomePage() {
     href="/contact"
     className="inline-flex rounded-2xl bg-orange-500 px-6 py-4 text-base font-semibold text-white transition hover:bg-orange-400"
   >
-    物流のご相談はこちら
+    急ぎ案件も対応｜今すぐ相談する
   </Link>
 
   <p className="mt-3 text-sm text-zinc-500">
