@@ -258,7 +258,7 @@ export default function HomePage() {
       href="/contact"
       className="inline-flex rounded-xl bg-zinc-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-zinc-800"
     >
-      物流の無料相談はこちら
+      最短当日対応｜物流の無料相談はこちら
     </Link>
 
     <Link
