@@ -135,7 +135,7 @@ export default function HomePage() {
       <Header />
 
       <main>
-        <section className="relative h-[78vh] min-h-[620px] w-full overflow-hidden sm:h-[85vh]">
+        <section className="relative h-[72vh] min-h-[560px] w-full overflow-hidden sm:h-[82vh] sm:min-h-[680px]">
           <video
             autoPlay
             loop
@@ -149,12 +149,12 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-black/60" />
 
           <div className="relative z-10 flex h-full items-center justify-center px-5 text-white">
-            <div className="w-full max-w-[360px] text-center sm:max-w-4xl">
+            <div className="w-full max-w-[350px] text-center sm:max-w-4xl">
               <p className="text-[11px] font-semibold tracking-[0.16em] text-orange-300 sm:text-sm sm:tracking-[0.24em]">
                 LOGISTICS / WAREHOUSE / TRANSPORTATION
               </p>
 
-              <h1 className="mt-4 text-[clamp(2rem,7vw,4.5rem)] font-bold leading-[1.18] tracking-[-0.03em]">
+              <h1 className="mt-4 text-[clamp(2rem,6.7vw,4.5rem)] font-bold leading-[1.14] tracking-[-0.03em]">
                 物流を止めない。
                 <br />
                 現場で支えるパートナー
