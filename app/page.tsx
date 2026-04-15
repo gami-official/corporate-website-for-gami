@@ -135,67 +135,62 @@ export default function HomePage() {
       <Header />
 
       <main>
-        <section className="relative h-[72vh] min-h-[560px] w-full overflow-hidden sm:h-[82vh] sm:min-h-[680px]">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="absolute inset-0 h-full w-full object-cover"
-          >
-            <source src="/video/hero-logistics.mp4" type="video/mp4" />
-          </video>
+       <section className="relative h-[65vh] min-h-[520px] w-full overflow-hidden sm:h-[75vh] sm:min-h-[620px]">
 
-          <div className="absolute inset-0 bg-black/60" />
+  <video
+    autoPlay
+    loop
+    muted
+    playsInline
+    className="absolute inset-0 h-full w-full object-cover"
+  >
+    <source src="/video/hero-logistics.mp4" type="video/mp4" />
+  </video>
 
-          <div className="relative z-10 flex h-full items-center justify-center px-5 text-white">
-            <div className="w-full max-w-[350px] text-center sm:max-w-4xl">
-              <p className="text-[11px] font-semibold tracking-[0.16em] text-orange-300 sm:text-sm sm:tracking-[0.24em]">
-                LOGISTICS / WAREHOUSE / TRANSPORTATION
-              </p>
+  <div className="absolute inset-0 bg-black/60" />
 
-              <h1 className="mt-4 text-[clamp(1.75rem,5.8vw,4.25rem)] font-bold leading-[1.18] tracking-[-0.03em]">
-  物流を止めない。<br />
-  現場で支えるパートナー
-</h1
+  <div className="relative z-10 flex h-full items-center justify-center px-5 text-white">
+    <div className="w-full max-w-[360px] text-center sm:max-w-4xl">
 
-              <p className="mt-5 text-sm leading-7 text-gray-200 sm:mx-auto sm:max-w-3xl sm:text-base sm:leading-8">
-                株式会社GAMIは物流運送事業を主軸に、
-                倉庫保管・流通加工・発送代行・内職・梱包資材まで一括対応。
-                定期案件からスポット案件まで、
-                現場に合った最適な体制をご提案します。
-              </p>
+      <p className="text-[11px] font-semibold tracking-[0.16em] text-orange-300 sm:text-sm">
+        LOGISTICS / WAREHOUSE / TRANSPORTATION
+      </p>
 
-              <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:justify-center">
-                <Link
-                  href="/contact"
-                  className="rounded-2xl bg-orange-500 px-6 py-4 text-center text-base font-semibold text-white transition hover:bg-orange-400 sm:text-lg"
-                >
-                  最短当日で無料見積り
-                </Link>
+      <h1 className="mt-4 text-[clamp(1.8rem,5.5vw,4rem)] font-bold leading-[1.2] tracking-[-0.02em]">
+        物流を止めない。<br />
+        現場で支えるパートナー
+      </h1>
 
-                <Link
-                  href="tel:0661159935"
-                  className="rounded-2xl border border-white/30 px-6 py-4 text-center text-base text-white transition hover:bg-white/10 sm:text-lg"
-                >
-                  電話で相談する
-                </Link>
+      <p className="mt-5 text-sm leading-7 text-gray-200 sm:mx-auto sm:max-w-2xl sm:text-base">
+        倉庫保管・流通加工・配送・内職・段ボールまで一括対応。
+        定期案件からスポット案件まで、現場に合った最適な体制をご提案します。
+      </p>
 
-                <Link
-                  href="/logistics"
-                  className="rounded-2xl bg-orange-600 px-6 py-4 text-center text-base font-bold text-white transition hover:bg-orange-500 sm:text-lg"
-                >
-                  物流サービスを見る
-                </Link>
-              </div>
+      <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:justify-center">
 
-              <p className="mt-4 text-xs leading-6 text-white/70 sm:text-sm">
-                倉庫・配送・流通加工・段ボールまで一括相談可能です
-              </p>
-            </div>
-          </div>
-        </section>
+        <Link
+          href="/contact"
+          className="rounded-2xl bg-orange-500 px-6 py-4 text-base font-semibold text-white transition hover:bg-orange-400"
+        >
+          無料見積りはこちら
+        </Link>
 
+        <Link
+          href="tel:0661159935"
+          className="rounded-2xl border border-white/30 px-6 py-4 text-base text-white transition hover:bg-white/10"
+        >
+          電話で相談する
+        </Link>
+
+      </div>
+
+      <p className="mt-4 text-xs text-white/70">
+        倉庫・配送・流通加工までまとめて対応可能
+      </p>
+
+    </div>
+  </div>
+</section>
         <section className="py-20">
           <div className="mx-auto max-w-6xl px-6">
             <div className="max-w-3xl">
