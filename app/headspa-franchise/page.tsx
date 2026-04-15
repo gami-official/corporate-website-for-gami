@@ -980,53 +980,54 @@ export default function HeadSpaFranchisePage() {
             </ScrollAnimate>
 
             <ScrollAnimate>
-              <div className="rounded-[30px] bg-[#0f172a] p-6 text-white shadow-[0_24px_60px_rgba(15,23,42,0.18)] sm:p-10">
-                <p className="text-xs tracking-[0.2em] text-white/60">
-                  REVENUE MODEL
-                </p>
-                <h2 className="mt-3 text-3xl font-serif tracking-[0.05em]">
-                  売上イメージ
-                </h2>
+  <div className="rounded-[30px] bg-[#0f172a] p-6 text-white shadow-[0_24px_60px_rgba(15,23,42,0.18)] sm:p-10">
+    <p className="text-xs tracking-[0.2em] text-white/60">
+      REVENUE MODEL
+    </p>
+    <h2 className="mt-3 text-3xl font-serif tracking-[0.05em]">
+      売上イメージ
+    </h2>
 
-                <div className="mt-8 grid gap-6 text-center sm:grid-cols-3">
-                  <div>
-                    <p className="text-sm text-white/60">客単価</p>
-                    <p className="mt-2 text-2xl font-bold">30,000円</p>
-                  </div>
-                  <div>
-                    <p className="text-sm text-white/60">1日施術人数</p>
-                    <p className="mt-2 text-2xl font-bold">3名</p>
-                  </div>
-                  <div>
-                    <p className="text-sm text-white/60">日売上</p>
-                    <p className="mt-2 text-2xl font-bold text-[#f4c273]">
-                      約90,000円
-                    </p>
-                  </div>
-                </div>
+    <div className="mt-8 grid gap-6 text-center sm:grid-cols-3">
+      <div>
+        <p className="text-sm text-white/60">客単価</p>
+        <p className="mt-2 text-2xl font-bold">20,000円</p>
+      </div>
+      <div>
+        <p className="text-sm text-white/60">1日施術人数</p>
+        <p className="mt-2 text-2xl font-bold">3名</p>
+      </div>
+      <div>
+        <p className="text-sm text-white/60">日売上</p>
+        <p className="mt-2 text-2xl font-bold text-[#f4c273]">
+          約60,000円
+        </p>
+      </div>
+    </div>
 
-                <div className="mt-8 border-t border-white/10 pt-8 text-center">
-                  <p className="text-sm text-white/60">月売上（25日稼働想定）</p>
-                  <p className="mt-3 text-4xl font-bold text-[#f4c273]">
-                    約2,250,000円
-                  </p>
-                </div>
+    <div className="mt-8 border-t border-white/10 pt-8 text-center">
+      <p className="text-sm text-white/60">月売上（25日稼働想定）</p>
+      <p className="mt-3 text-4xl font-bold text-[#f4c273]">
+        約1,500,000円
+      </p>
+    </div>
 
-                <div className="mt-8 rounded-[28px] border border-white/10 bg-white/5 p-5 sm:p-6">
-                  <h3 className="text-xl font-medium tracking-[0.04em]">
-                    小規模でも高売上を狙いやすい設計
-                  </h3>
-                  <p className="mt-4 text-sm leading-7 text-white/82">
-                    条件が整えば、少人数・短時間でも売上を構築可能。
-                    長時間労働に依存しないモデルとして展開しやすいのが特徴です。
-                  </p>
-                </div>
+    <div className="mt-8 rounded-[28px] border border-white/10 bg-white/5 p-5 sm:p-6">
+      <h3 className="text-xl font-medium tracking-[0.04em]">
+        小規模でも売上を作りやすい設計
+      </h3>
+      <p className="mt-4 text-sm leading-7 text-white/82">
+        条件が整えば、少人数・短時間でも売上を構築可能。
+        高単価設計と再来店導線を組み合わせることで、
+        無理のない運営モデルを目指せます。
+      </p>
+    </div>
 
-                <p className="mt-6 text-xs text-white/60">
-                  ※実際の売上は立地・単価・稼働状況により変動します
-                </p>
-              </div>
-            </ScrollAnimate>
+    <p className="mt-6 text-xs text-white/60">
+      ※実際の売上は立地・単価・稼働状況により変動します
+    </p>
+  </div>
+</ScrollAnimate>
           </div>
         </section>
 
