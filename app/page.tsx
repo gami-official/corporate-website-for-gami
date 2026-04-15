@@ -128,65 +128,65 @@ export default function Page() {
 
       <main>
         <section className="relative h-[90vh] w-full overflow-hidden">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="absolute inset-0 h-full w-full object-cover"
-          >
-            <source src="/video/hero-logistics.mp4" type="video/mp4" />
-          </video>
+  <video
+    autoPlay
+    loop
+    muted
+    playsInline
+    className="absolute inset-0 h-full w-full object-cover"
+  >
+    <source src="/video/hero-logistics.mp4" type="video/mp4" />
+  </video>
 
-          <div className="absolute inset-0 bg-black/60" />
+  <div className="absolute inset-0 bg-black/60" />
 
-          <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center text-white">
-            <p className="text-sm font-semibold tracking-[0.25em] text-orange-300">
-              LOGISTICS / WAREHOUSE / TRANSPORTATION
-            </p>
+  <div className="relative z-10 flex h-full flex-col items-center justify-center px-5 text-center text-white">
+    <p className="text-[11px] font-semibold tracking-[0.22em] text-orange-300 sm:text-sm sm:tracking-[0.25em]">
+      LOGISTICS / WAREHOUSE / TRANSPORTATION
+    </p>
 
-            <h1 className="mt-4 text-3xl font-bold leading-tight md:text-5xl">
-              物を止めない物流を、
-              <br />
-              現場で支えるパートナー
-            </h1>
+    <h1 className="mt-4 max-w-[340px] text-4xl font-bold leading-[1.25] sm:max-w-3xl sm:text-5xl">
+      物を止めない物流を、
+      <br className="hidden sm:block" />
+      現場で支えるパートナー
+    </h1>
 
-            <p className="mt-5 max-w-3xl text-sm leading-7 text-gray-200 md:text-base">
-              株式会社GAMIは物流運送事業を主軸に、
-              <br className="hidden md:block" />
-              倉庫保管・流通加工・発送代行・内職・梱包資材まで一括対応。
-              <br />
-              定期案件からスポット案件まで、現場に合った最適な体制をご提案します。
-            </p>
+    <p className="mt-5 max-w-[340px] text-sm leading-7 text-gray-200 sm:max-w-3xl sm:text-base">
+      株式会社GAMIは物流運送事業を主軸に、
+      <span className="hidden sm:inline"><br /></span>
+      倉庫保管・流通加工・発送代行・内職・梱包資材まで一括対応。
+      <span className="hidden sm:inline"><br /></span>
+      定期案件からスポット案件まで、現場に合った最適な体制をご提案します。
+    </p>
 
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Link
-                href="/contact"
-                className="rounded-2xl bg-orange-500 px-6 py-4 text-center font-semibold text-white transition hover:bg-orange-400"
-              >
-                無料見積りはこちら
-              </Link>
+    <div className="mt-8 flex w-full max-w-[320px] flex-col gap-3 sm:max-w-none sm:flex-row sm:justify-center">
+      <Link
+        href="/contact"
+        className="rounded-2xl bg-orange-500 px-6 py-4 text-center font-semibold text-white transition hover:bg-orange-400"
+      >
+        無料見積りはこちら
+      </Link>
 
-              <Link
-                href="tel:0661159935"
-                className="rounded-2xl border border-white/30 px-6 py-4 text-center text-white transition hover:bg-white/10"
-              >
-                電話で相談する
-              </Link>
+      <Link
+        href="tel:0661159935"
+        className="rounded-2xl border border-white/30 px-6 py-4 text-center text-white transition hover:bg-white/10"
+      >
+        電話で相談する
+      </Link>
 
-              <Link
-                href="/logistics"
-                className="rounded-2xl bg-orange-600 px-6 py-4 text-center font-bold text-white transition hover:bg-orange-500"
-              >
-                物流サービスを見る
-              </Link>
-            </div>
+      <Link
+        href="/logistics"
+        className="rounded-2xl bg-orange-600 px-6 py-4 text-center font-bold text-white transition hover:bg-orange-500"
+      >
+        物流サービスを見る
+      </Link>
+    </div>
 
-            <p className="mt-5 text-xs leading-6 text-white/70">
-              倉庫・配送・流通加工・段ボールまでまとめて相談可能です
-            </p>
-          </div>
-        </section>
+    <p className="mt-5 max-w-[340px] text-xs leading-6 text-white/70 sm:max-w-none">
+      倉庫・配送・流通加工・段ボールまでまとめて相談可能です
+    </p>
+  </div>
+</section>
 
         <section className="mx-auto max-w-7xl px-6 py-20 md:px-10 lg:px-12">
           <div className="max-w-3xl">
@@ -346,27 +346,27 @@ export default function Page() {
                 </p>
 
                 <div className="mt-8 grid gap-4 sm:grid-cols-2">
-                  <img
-                    src="/images/moriguchi-warehouse.jpg"
-                    alt="守口倉庫 外観"
-                    className="h-[200px] w-full rounded-2xl object-cover"
-                  />
-                  <img
-                    src="/images/osaka-minami-warehouse.jpg"
-                    alt="大阪南倉庫 外観"
-                    className="h-[200px] w-full rounded-2xl object-cover"
-                  />
-                  <img
-                    src="/images/moriguchi-inside.jpg"
-                    alt="守口倉庫 内観"
-                    className="h-[200px] w-full rounded-2xl object-cover"
-                  />
-                  <img
-                    src="/images/osaka-minami-inside.jpg"
-                    alt="大阪南倉庫 内観"
-                    className="h-[200px] w-full rounded-2xl object-cover"
-                  />
-                </div>
+  <img
+    src="/images/moriguchi-warehouse.jpg"
+    alt="守口倉庫 外観"
+    className="h-[200px] w-full rounded-2xl object-cover"
+  />
+  <img
+    src="/images/moriguchi-inside.jpg"
+    alt="守口倉庫 内観"
+    className="h-[200px] w-full rounded-2xl object-cover"
+  />
+  <img
+    src="/images/osaka-minami-warehouse.jpg"
+    alt="大阪南倉庫 外観"
+    className="h-[200px] w-full rounded-2xl object-cover"
+  />
+  <img
+    src="/images/osaka-minami-inside.jpg"
+    alt="大阪南倉庫 内観"
+    className="h-[200px] w-full rounded-2xl object-cover"
+  />
+</div>
               </div>
             </div>
           </div>
