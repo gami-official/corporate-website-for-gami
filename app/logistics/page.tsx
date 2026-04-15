@@ -371,20 +371,41 @@ export default function LogisticsPage() {
                   写真が入ることで、法人のお客様に対する信頼感が一気に高まります。
                 </p>
 
-                <div className="mt-8 grid gap-4 sm:grid-cols-2">
-                  <div className="flex min-h-[180px] items-center justify-center rounded-2xl border border-dashed border-zinc-300 bg-white text-sm text-zinc-400">
-                    守口倉庫 写真
-                  </div>
-                  <div className="flex min-h-[180px] items-center justify-center rounded-2xl border border-dashed border-zinc-300 bg-white text-sm text-zinc-400">
-                    大阪南倉庫 写真
-                  </div>
-                  <div className="flex min-h-[180px] items-center justify-center rounded-2xl border border-dashed border-zinc-300 bg-white text-sm text-zinc-400">
-                    倉庫内観 写真
-                  </div>
-                  <div className="flex min-h-[180px] items-center justify-center rounded-2xl border border-dashed border-zinc-300 bg-white text-sm text-zinc-400">
-                    作業風景 写真
-                  </div>
-                </div>
+                <div className="rounded-3xl bg-zinc-50 p-8">
+  <p className="text-sm font-semibold tracking-[0.2em] text-orange-500">
+    PHOTO SPACE
+  </p>
+  <h2 className="mt-3 text-3xl font-bold text-zinc-900">
+    倉庫写真
+  </h2>
+  <p className="mt-5 text-sm leading-7 text-zinc-600">
+    守口倉庫・大阪南倉庫の外観や内観をご紹介します。
+    写真が入ることで、法人のお客様に対する信頼感が一気に高まります。
+  </p>
+
+  <div className="mt-8 grid gap-4 sm:grid-cols-2">
+    <img
+      src="/images/moriguchi-warehouse.jpg"
+      alt="守口倉庫 外観"
+      className="h-[200px] w-full rounded-2xl object-cover"
+    />
+    <img
+      src="/images/moriguchi-inside.jpg"
+      alt="守口倉庫 内観"
+      className="h-[200px] w-full rounded-2xl object-cover"
+    />
+    <img
+      src="/images/osaka-minami-warehouse.jpg"
+      alt="大阪南倉庫 外観"
+      className="h-[200px] w-full rounded-2xl object-cover"
+    />
+    <img
+      src="/images/osaka-minami-inside.jpg"
+      alt="大阪南倉庫 内観"
+      className="h-[200px] w-full rounded-2xl object-cover"
+    />
+  </div>
+</div>
 
                 <p className="mt-5 text-xs leading-6 text-zinc-500">
                   ※次の修正で実画像に差し替えればOKです。今は枠だけ入れておけば十分です。
