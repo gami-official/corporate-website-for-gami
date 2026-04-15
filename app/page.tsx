@@ -191,7 +191,7 @@ export default function HomePage() {
               </div>
 
               <p className="mt-4 text-xs leading-6 text-white/70 sm:text-sm">
-                倉庫・配送・流通加工・段ボールまでまとめて相談可能です
+                倉庫・配送・流通加工・段ボールまで一括相談可能です
               </p>
             </div>
           </div>
