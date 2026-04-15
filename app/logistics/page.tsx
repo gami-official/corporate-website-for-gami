@@ -362,16 +362,6 @@ export default function LogisticsPage() {
               </div>
 
               <div className="rounded-3xl bg-zinc-50 p-8">
-                <p className="text-sm font-semibold tracking-[0.2em] text-orange-500">
-                  PHOTO SPACE
-                </p>
-                <h2 className="mt-3 text-3xl font-bold text-zinc-900">倉庫写真掲載エリア</h2>
-                <p className="mt-5 text-sm leading-7 text-zinc-600">
-                  ここには後ほど、守口倉庫・大阪南倉庫の外観や内観写真を掲載してください。
-                  写真が入ることで、法人のお客様に対する信頼感が一気に高まります。
-                </p>
-
-                <div className="rounded-3xl bg-zinc-50 p-8">
   <p className="text-sm font-semibold tracking-[0.2em] text-orange-500">
     PHOTO SPACE
   </p>
