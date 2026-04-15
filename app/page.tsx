@@ -5,7 +5,7 @@ import Link from "next/link"
 export const metadata = {
   title: "株式会社GAMI｜物流運送・倉庫保管・流通加工を一括対応",
   description:
-    "株式会社GAMIは大阪を拠点に、物流運送・倉庫保管・流通加工・発送代行・内職・梱包資材まで一括対応。物流を主軸に、ヘッドスパフランチャイズ事業、遺品整理・生前整理事業も展開しています。",
+    "株式会社GAMIは大阪を拠点に、物流運送・倉庫保管・流通加工・発送代行・内職・梱包資材まで一括対応。物流を主軸に、ヘッドスパフランチャイズ事業、整理買取事業も展開しています。",
 }
 
 const businessCards = [
@@ -24,7 +24,7 @@ const businessCards = [
     button: "フランチャイズを見る",
   },
   {
-    title: "遺品整理・生前整理事業",
+    title: "整理買取事業",
     lead: "整理を入口にした相談導線",
     body: "遺品整理・生前整理を入口に、出張対応・店舗対応・買取まで一括でご相談いただける事業です。",
     href: "/seihin",
@@ -206,7 +206,7 @@ export default function HomePage() {
               <h2 className="mt-3 text-3xl font-bold">株式会社GAMIの事業内容</h2>
               <p className="mt-5 text-base leading-8 text-zinc-600">
                 株式会社GAMIは物流運送事業を主軸に、
-                ヘッドスパ事業、遺品整理・生前整理事業を展開しています。
+                ヘッドスパ事業、整理買取事業を展開しています。
                 まずは主力である物流を中心に、必要に応じて各事業へご案内できる構成です。
               </p>
             </div>
