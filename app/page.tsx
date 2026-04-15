@@ -17,7 +17,7 @@ const businessCards = [
     button: "物流サービスを見る",
   },
   {
-    title: "ヘッドスパフランチャイズ事業",
+    title: "ヘッドスパ事業",
     lead: "実店舗実績を活かした展開",
     body: "ヘッドスパ専門店ゆう本店の実績をもとに、開業・技術・経営・集客まで支援するフランチャイズ事業です。",
     href: "/headspa-franchise",
@@ -206,7 +206,7 @@ export default function HomePage() {
               <h2 className="mt-3 text-3xl font-bold">株式会社GAMIの事業内容</h2>
               <p className="mt-5 text-base leading-8 text-zinc-600">
                 株式会社GAMIは物流運送事業を主軸に、
-                ヘッドスパフランチャイズ事業、遺品整理・生前整理事業を展開しています。
+                ヘッドスパ事業、遺品整理・生前整理事業を展開しています。
                 まずは主力である物流を中心に、必要に応じて各事業へご案内できる構成です。
               </p>
             </div>
@@ -326,7 +326,6 @@ export default function HomePage() {
                 <h2 className="mt-3 text-3xl font-bold text-zinc-900">倉庫写真</h2>
                 <p className="mt-5 text-sm leading-7 text-zinc-600">
                   守口倉庫・大阪南倉庫の外観や内観をご紹介します。
-                  写真が入ることで、法人のお客様に対する信頼感が高まります。
                 </p>
 
                 <div className="mt-8 grid gap-4 sm:grid-cols-2">
@@ -407,7 +406,7 @@ export default function HomePage() {
           <div className="mx-auto max-w-6xl px-6">
             <h2 className="text-3xl font-bold">主要サービス一覧</h2>
             <p className="mt-5 max-w-3xl text-sm leading-7 text-zinc-700">
-              物流を主軸に、内職・軽作業、段ボール見積り、フランチャイズ、
+              物流を主軸に、内職・軽作業、段ボール見積り、ヘッドスパフランチャイズ、
               遺品整理・生前整理まで展開しています。課題に合わせて必要なページをご覧ください。
             </p>
 
@@ -488,7 +487,7 @@ export default function HomePage() {
             <h2 className="text-3xl font-bold">関連事業のご案内</h2>
             <p className="mt-4 text-sm leading-7 text-zinc-600">
               株式会社GAMIでは、物流運送事業を主軸に、
-              ヘッドスパフランチャイズ事業や関連事業も展開しています。
+              ヘッドスパ事業や関連事業も展開しています。
             </p>
 
             <div className="mt-10 grid gap-6 md:grid-cols-2">
