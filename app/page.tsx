@@ -438,7 +438,33 @@ export default function Page() {
   </p>
 </section>
 
-      </main>
+<section className="py-20 px-6 text-center">
+  <h2 className="text-3xl font-bold">関連事業のご案内</h2>
+
+  <div className="mt-10 space-y-6">
+    <div>
+      <h3 className="text-xl font-bold">A-PRODUCE株式会社</h3>
+      <p className="text-gray-400 mt-2">
+        中古車販売・レッカー・軽運送・物流まで対応
+      </p>
+      <a href="https://www.a-produce.net/" target="_blank" className="underline">
+        A-PRODUCEサイトを見る
+      </a>
+    </div>
+
+    <div>
+      <h3 className="text-xl font-bold">ヘッドスパ専門店ゆう</h3>
+      <p className="text-gray-400 mt-2">
+        完全個室・1日3名限定のヘッドスパ専門店
+      </p>
+      <a href="https://www.yuheadspa.net/" target="_blank" className="underline">
+        ヘッドスパ専門店ゆうを見る
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
 
       <Footer />
     </div>
