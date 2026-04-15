@@ -41,9 +41,9 @@ const YUU_LOGO_IMAGE =
   "https://www.yuheadspa.net/images/about-portrait.png"
 
 export const metadata: Metadata = {
-  title: "ヘッドスパ専門店ゆう フランチャイズ募集 | 株式会社GAMI",
+  title: "ヘッドスパ専門店ゆう フランチャイズ募集｜開業支援・経営支援｜株式会社GAMI",
   description:
-    "ヘッドスパ専門店ゆう本店の技術指導と株式会社GAMIの経営・集客支援を掛け合わせたフランチャイズ募集ページ。ウェット・ドライ両対応、開業支援、ホームページ制作、SEO・MEOまで一貫サポート。",
+    "ヘッドスパ専門店ゆう本店の実店舗ノウハウと、株式会社GAMIの経営・集客支援を掛け合わせたフランチャイズ募集ページ。ウェット・ドライ両対応、技術研修、ホームページ制作、SEO・MEO、導線設計まで一貫サポート。",
   keywords: [
     "ヘッドスパ フランチャイズ",
     "ヘッドスパ 開業",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     "高単価 ヘッドスパ",
   ],
   openGraph: {
-    title: "ヘッドスパ専門店ゆう フランチャイズ募集 | 株式会社GAMI",
+    title: "ヘッドスパ専門店ゆう フランチャイズ募集｜株式会社GAMI",
     description:
       "技術指導はヘッドスパ専門店ゆう本店、運営・経営支援は株式会社GAMI。現場力と経営支援を掛け合わせ、全国で愛されるヘッドスパ事業を育てます。",
     url: pagePath,
@@ -75,7 +75,7 @@ const strengths = [
     icon: UserRound,
     title: "現役オーナーによる技術指導",
     description:
-      "外部講師ではなく、実際にヘッドスパ専門店ゆう本店を運営するオーナーが実践的に技術指導。机上ではなく、現場ベースで再現性を高めます。",
+      "ヘッドスパ専門店ゆう本店オーナーが実践的に技術指導。机上ではなく、現場ベースで再現性を高めます。",
   },
   {
     icon: Briefcase,
@@ -85,13 +85,13 @@ const strengths = [
   },
   {
     icon: GraduationCap,
-    title: "実店舗環境を活かした研修",
+    title: "実店舗ベースの研修",
     description:
-      "既存の予約枠や店舗環境を活用しながら技術指導を実施。実際の現場に近い流れで学べるのが強みです。",
+      "既存の予約導線や店舗環境を活かしながら技術指導を実施。現場に近い流れで学べるのが強みです。",
   },
   {
     icon: Globe,
-    title: "全国展開を見据えた設計",
+    title: "全国展開を前提にした設計",
     description:
       "ヘッドスパ専門店ゆう本店のブランド価値を広げながら、各エリアで継続的に選ばれる店舗づくりを目指します。",
   },
@@ -154,7 +154,7 @@ const yuuFeatures = [
 const formatTypes = [
   {
     title: "ウェット導入プラン",
-    label: "美容師免許取得者限定",
+    label: "美容師免許取得者向け",
     points: [
       "シャンプー台を活かした本格的なヘッドスパ導入",
       "高単価メニュー化・既存サロンへの追加導入に向く",
@@ -180,7 +180,7 @@ const plans = [
     price: "初期費用 55万円〜 / 月額 3.3万円〜",
     lead: "技術指導と経営コンサルを中心に導入したい方向け",
     features: [
-      "ヘッドスパ専門店ゆうブランド活用相談",
+      "ブランド活用相談",
       "初期技術研修・接客指導",
       "価格設計・メニュー設計支援",
       "運営・経営コンサル",
@@ -235,7 +235,7 @@ const flow = [
     step: "04",
     title: "技術研修・運営準備",
     description:
-      "ヘッドスパ専門店ゆう本店の空き枠や既存予約導線を活かしながら、実店舗ベースで技術指導を行います。",
+      "実店舗ベースで技術指導を行い、導入準備を進めます。接客や導線まで含めて整えていきます。",
   },
   {
     step: "05",
@@ -252,7 +252,7 @@ const faqs = [
   },
   {
     q: "ウェット導入は誰でもできますか？",
-    a: "ウェット導入は美容師免許取得者限定の想定です。導入前に適性確認を行い、ミスマッチを防ぎます。",
+    a: "ウェット導入は美容師免許取得者向けの想定です。導入前に適性確認を行い、ミスマッチを防ぎます。",
   },
   {
     q: "ホームページ制作は必須ですか？",
@@ -260,7 +260,7 @@ const faqs = [
   },
   {
     q: "ロイヤリティはどう考えればいいですか？",
-    a: "売上連動型か定額型を選ぶ設計も可能ですが、立ち上げ初期は定額の月額サポート型の方が分かりやすく、加盟のハードルも下げやすいです。",
+    a: "立ち上げ初期は定額の月額サポート型の方が分かりやすく、加盟のハードルも下げやすいです。個別相談の中で最適な設計をご案内します。",
   },
   {
     q: "どの地域でも加盟できますか？",
@@ -405,15 +405,11 @@ export default function HeadSpaFranchisePage() {
 
                 <p className="mt-6 max-w-2xl text-[15px] leading-8 text-white/90 sm:text-base">
                   技術指導は
-                  <span className="font-medium text-white">
-                    ヘッドスパ専門店ゆう本店
-                  </span>
-                  、
-                  運営・経営支援は
-                  <span className="font-medium text-white">株式会社GAMI</span>
-                  。
-                  現場力と事業設計の両面から、
-                  全国で愛されるヘッドスパ事業づくりを支援します。
+                  <span className="font-medium text-white">ヘッドスパ専門店ゆう本店</span>
+                  、運営・経営支援は
+                  <span className="font-medium text-white">株式会社GAMI</span>。
+                  実店舗の再現性と、事業として伸ばすための導線設計を両立した
+                  ヘッドスパフランチャイズモデルです。
                 </p>
 
                 <div className="mt-8 grid gap-3 sm:grid-cols-3 sm:gap-4">
@@ -422,9 +418,9 @@ export default function HeadSpaFranchisePage() {
                       技術指導
                     </p>
                     <p className="mt-2 text-sm font-medium leading-6">
-                      ヘッドスパ専門店ゆう本店
+                      ゆう本店オーナーが
                       <br />
-                      オーナーが実践指導
+                      実践ベースで指導
                     </p>
                   </div>
                   <div className="rounded-[28px] border border-white/15 bg-white/10 p-5 shadow-[0_10px_30px_rgba(0,0,0,0.18)] backdrop-blur">
@@ -462,7 +458,7 @@ export default function HeadSpaFranchisePage() {
                 </div>
 
                 <p className="mt-5 text-xs leading-6 text-white/70">
-                  ※無理な営業は一切ありません。まずは情報収集だけでもOKです。
+                  ※無理な営業は一切ありません。まずは情報収集だけでも大丈夫です。
                 </p>
               </div>
             </div>
@@ -553,8 +549,7 @@ export default function HeadSpaFranchisePage() {
                       </div>
                       <p className="mt-4 text-sm leading-7 text-muted-foreground">
                         完全個室・1日3名限定の高付加価値モデルを実店舗で運営しながら、
-                        技術・接客・空間づくり・継続来店につながる
-                        実践的なノウハウを伝えます。
+                        技術・接客・空間づくり・継続来店につながる実践的なノウハウを伝えます。
                       </p>
                     </div>
 
@@ -573,9 +568,8 @@ export default function HeadSpaFranchisePage() {
                         </div>
                       </div>
                       <p className="mt-4 text-sm leading-7 text-muted-foreground">
-                        ヘッドスパ専門店ゆう専属の事業支援会社として、
-                        運営・経営コンサル・ホームページ制作・SEO・MEO・
-                        導線設計までまとめて支援します。
+                        FCページ制作、導線設計、ホームページ制作、SEO・MEO、
+                        予約導線、経営相談まで一括で支援します。
                       </p>
                     </div>
                   </div>
@@ -588,10 +582,8 @@ export default function HeadSpaFranchisePage() {
                           このFCモデルの核
                         </h3>
                         <p className="mt-3 text-sm leading-7 text-white/85">
-                          現場を知る「ヘッドスパ専門店ゆう本店」と、
-                          事業設計を担う「株式会社GAMI」が連携することで、
-                          技術だけ・集客だけに偏らない、
-                          実務に強いフランチャイズモデルを目指します。
+                          「現場でできること」と「事業として伸ばすこと」を分けずに設計している点が強みです。
+                          技術だけ、集客だけに偏らず、開業後に売上へつなげるための支援まで一体で行います。
                         </p>
                       </div>
                     </div>
@@ -620,7 +612,7 @@ export default function HeadSpaFranchisePage() {
                       </h3>
                       <p className="mt-3 text-sm leading-7 text-white/85">
                         全国展開を通じて、ヘッドスパ専門店ゆうの認知と信頼を広げ、
-                        ブランド価値の向上にもつなげていきます。
+                        本店のブランド価値向上にもつなげていきます。
                       </p>
                     </div>
                   </div>
@@ -813,7 +805,7 @@ export default function HeadSpaFranchisePage() {
               <SectionHeading
                 sub="WET / DRY"
                 title="導入形態は2パターン"
-                catchCopy="事業規模・設備・資格・目指す単価に応じて選べる設計。"
+                catchCopy="事業規模・設備・資格・目指す単価に応じて選べる設計です。"
                 className="mb-16"
               />
             </ScrollAnimate>
@@ -961,10 +953,11 @@ export default function HeadSpaFranchisePage() {
                   </p>
                   <h3 className="mt-3 text-2xl font-medium tracking-[0.04em]">
                     初期展開につき、
+                    <br />
                     先着5社限定で個別相談を受付中
                   </h3>
                   <p className="mt-4 text-sm leading-7 text-white/82">
-                    全国展開を見据えた初期フェーズのため、エリアや導入形態を踏まえて個別にご案内しています。
+                    初期フェーズのため、エリアや導入形態を踏まえて個別にご案内しています。
                     ご希望地域によっては優先的にご相談を進められる場合があります。
                   </p>
                 </div>
@@ -1020,11 +1013,11 @@ export default function HeadSpaFranchisePage() {
 
                 <div className="mt-8 rounded-[28px] border border-white/10 bg-white/5 p-5 sm:p-6">
                   <h3 className="text-xl font-medium tracking-[0.04em]">
-                    少人数でも高単価を目指せる設計
+                    小規模でも高売上を狙いやすい設計
                   </h3>
                   <p className="mt-4 text-sm leading-7 text-white/82">
-                    条件（立地・導線・単価設計）が整えば、少人数・短時間でも売上を構築可能。
-                    長時間労働に依存しにくいビジネスモデルを目指せます。
+                    条件が整えば、少人数・短時間でも売上を構築可能。
+                    長時間労働に依存しないモデルとして展開しやすいのが特徴です。
                   </p>
                 </div>
 
@@ -1052,8 +1045,8 @@ export default function HeadSpaFranchisePage() {
             <ScrollAnimate>
               <SectionHeading
                 sub="TRAINING SYSTEM"
-                title="技術研修は“実店舗ベース”が強み"
-                catchCopy="ヘッドスパ専門店ゆう本店の既存予約システムを活かした、実店舗ベースの実践研修。"
+                title="技術研修は実店舗ベースで進める"
+                catchCopy="現場の流れに近い状態で学べるから、導入後も再現しやすい。"
                 className="mb-16 text-white [&_*]:text-white"
               />
             </ScrollAnimate>
@@ -1065,28 +1058,21 @@ export default function HeadSpaFranchisePage() {
                     <div className="flex gap-3">
                       <ChevronRight className="mt-0.5 h-5 w-5 shrink-0 text-white/85" />
                       <p className="text-sm leading-7 text-white/85">
-                        ヘッドスパ専門店ゆう本店の
-                        <span className="font-medium text-white">
-                          空き枠・既存予約導線
-                        </span>
-                        を有効活用しながら技術指導を行うことで、
-                        実務感のある学びに近づけます。
+                        実店舗の流れ・接客・カウンセリング・空間演出まで含めて学べるため、
+                        単なる技術講習で終わりにくいのが特徴です。
                       </p>
                     </div>
                     <div className="flex gap-3">
                       <ChevronRight className="mt-0.5 h-5 w-5 shrink-0 text-white/85" />
                       <p className="text-sm leading-7 text-white/85">
-                        単なるスクール形式ではなく、
-                        現場の流れ・接客・カウンセリング・空間演出も含めて
-                        体感しながら学べるのが大きな強みです。
+                        加盟検討者にとって「誰から、どこで学べるのか」が明確で、
+                        安心して導入判断しやすくなります。
                       </p>
                     </div>
                     <div className="flex gap-3">
                       <ChevronRight className="mt-0.5 h-5 w-5 shrink-0 text-white/85" />
                       <p className="text-sm leading-7 text-white/85">
-                        本店ブランドの信頼感をそのまま活かしやすく、
-                        加盟検討者にとっても
-                        「誰から、どこで学べるのか」が明確になります。
+                        技術だけでなく、価格設計やリピート導線につながる考え方まで共有します。
                       </p>
                     </div>
                   </div>
@@ -1266,4 +1252,14 @@ export default function HeadSpaFranchisePage() {
               </a>
             </div>
 
-           
+            <p className="mt-4 text-xs leading-6 text-white/65">
+              ご相談段階で費用はかかりません。導入可能性の確認だけでも歓迎しています。
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
+    </>
+  )
+}
