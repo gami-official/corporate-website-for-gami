@@ -603,18 +603,19 @@ export default function HeadSpaFranchisePage() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0f1726]/80 via-[#0f1726]/20 to-transparent" />
                     <div className="absolute bottom-0 p-6 text-white sm:p-8">
-                      <p className="text-xs tracking-[0.2em] text-white/70">
-                        FRANCHISE VISION
-                      </p>
-                      <h3 className="mt-2 font-serif text-2xl tracking-[0.05em]">
-                        ブランドを広げ、
-                        本店の価値も高める。
-                      </h3>
-                      <p className="mt-3 text-sm leading-7 text-white/85">
-                        全国展開を通じて、ヘッドスパ専門店ゆうの認知と信頼を広げ、
-                        本店のブランド価値向上にもつなげていきます。
-                      </p>
-                    </div>
+  <p className="text-xs tracking-[0.2em] text-white/70">
+    FRANCHISE VISION
+  </p>
+  <h3 className="mt-2 font-serif text-2xl tracking-[0.05em]">
+    ブランドを広げ、
+    <br />
+    本店の価値も高める。
+  </h3>
+  <p className="mt-3 text-sm leading-7 text-white/85">
+    フランチャイズ展開を通じて、ヘッドスパ専門店ゆうの認知と信頼を広げ、
+    ブランド全体の価値向上につなげていきます。
+  </p>
+</div>
                   </div>
                 </div>
               </ScrollAnimate>
