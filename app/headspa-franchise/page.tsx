@@ -731,20 +731,20 @@ export default function HeadSpaFranchisePage() {
                     className="h-full min-h-[520px] w-full scale-[1.02] object-cover transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0c1423]/85 via-transparent to-transparent" />
-                  <div className="absolute bottom-0 p-6 text-white sm:p-8">
-                    <p className="text-xs tracking-[0.18em] text-white/65">
-                      LUXURY × PRIVATE
-                    </p>
-                    <h3 className="mt-2 text-2xl font-medium tracking-[0.04em]">
-                      完全予約制・完全個室・
-                      <br />
-                      1日3名限定の高付加価値モデル
-                    </h3>
-                    <p className="mt-3 text-sm leading-7 text-white/82">
-                      高級感・特別感・再来店につながる体験価値を重視し、
-                      少人数でも売上を作れる設計を目指します。
-                    </p>
-                  </div>
+                  <div className="absolute bottom-0 p-5 text-white sm:p-8">
+  <p className="text-[11px] tracking-[0.18em] text-white/65 sm:text-xs">
+    LUXURY × PRIVATE
+  </p>
+  <h3 className="mt-2 text-2xl font-medium leading-[1.35] tracking-[0.03em] sm:text-2xl">
+    完全予約制・完全個室
+    <br />
+    1日3名限定モデル
+  </h3>
+  <p className="mt-3 text-sm leading-6 text-white/82 sm:leading-7">
+    高級感・特別感・再来店につながる体験価値を重視し、
+    少人数でも売上を作りやすい設計を目指します。
+  </p>
+</div>
                 </div>
               </ScrollAnimate>
 
