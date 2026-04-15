@@ -89,21 +89,18 @@ const processSteps = [
 const businessRatio = [
   {
     title: "物流運送事業",
-    ratio: "60%",
     body: "株式会社GAMIの主軸事業。利用運送、倉庫保管、流通加工、発送代行まで一括対応します。",
     href: "/logistics",
     button: "物流サービスを見る",
   },
   {
     title: "ヘッドスパフランチャイズ事業",
-    ratio: "30%",
     body: "ヘッドスパ専門店ゆうの実店舗運営実績を活かし、開業・運営を支援するフランチャイズ事業です。",
     href: "/headspa-franchise",
     button: "フランチャイズを見る",
   },
   {
     title: "遺品整理・生前整理事業",
-    ratio: "10%",
     body: "整理を入口に、出張対応・店舗対応・買取まで一括でご相談いただける事業です。",
     href: "/seihin",
     button: "整理・買取サービスを見る",
