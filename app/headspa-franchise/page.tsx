@@ -728,7 +728,7 @@ export default function HeadSpaFranchisePage() {
                   <img
                     src={YUU_INTERIOR_IMAGE}
                     alt="ヘッドスパ専門店ゆうの世界観"
-                    className="h-full min-h-[520px] w-full scale-[1.02] object-cover transition-transform duration-700"
+                    className="h-[420px] w-full scale-[1.02] object-cover transition-transform duration-700 sm:h-full sm:min-h-[520px]"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0c1423]/85 via-transparent to-transparent" />
                   <div className="absolute bottom-0 p-5 text-white sm:p-8">
