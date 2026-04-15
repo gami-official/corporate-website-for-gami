@@ -278,7 +278,18 @@ export default function HomePage() {
               ))}
             </div>
           </div>
-        </section>
+       <div className="mt-10 text-center">
+  <Link
+    href="/contact"
+    className="inline-flex rounded-2xl bg-orange-500 px-6 py-4 text-base font-semibold text-white transition hover:bg-orange-400"
+  >
+    物流のご相談はこちら
+  </Link>
+
+  <p className="mt-3 text-sm text-zinc-500">
+    最短当日対応可能・急ぎ案件も対応しています
+  </p>
+</div> </section>
 
         <section className="py-20">
           <div className="mx-auto max-w-6xl px-6">
