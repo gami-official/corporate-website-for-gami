@@ -75,7 +75,7 @@ const strengths = [
     icon: UserRound,
     title: "現役オーナーによる技術指導",
     description:
-      "外部講師として、ヘッドスパ専門店ゆう本店オーナーが実践的に技術指導。机上ではなく、現場ベースで再現性を高めます。",
+      "外部講師ではなく、実際にヘッドスパ専門店ゆう本店を運営するオーナーが実践的に技術指導。机上ではなく、現場ベースで再現性を高めます。",
   },
   {
     icon: Briefcase,
@@ -85,13 +85,13 @@ const strengths = [
   },
   {
     icon: GraduationCap,
-    title: "予約枠を活かした実店舗研修",
+    title: "実店舗環境を活かした研修",
     description:
-      "既存の予約システムや空き枠を有効活用しながら技術指導を実施。実際の店舗環境に近い流れで学べるのが強みです。",
+      "既存の予約枠や店舗環境を活用しながら技術指導を実施。実際の現場に近い流れで学べるのが強みです。",
   },
   {
     icon: Globe,
-    title: "全国展開を前提にした設計",
+    title: "全国展開を見据えた設計",
     description:
       "ヘッドスパ専門店ゆう本店のブランド価値を広げながら、各エリアで継続的に選ばれる店舗づくりを目指します。",
   },
@@ -454,7 +454,7 @@ export default function HeadSpaFranchisePage() {
                     【無料】開業相談はこちら
                   </PrimaryButton>
                   <SecondaryButton href="https://lin.ee/3QGIdCY">
-                    LINEで即相談（最短返信）
+                    LINEで即相談
                   </SecondaryButton>
                   <SecondaryButton href="tel:0661159935">
                     電話で相談する
@@ -923,15 +923,13 @@ export default function HeadSpaFranchisePage() {
                       ))}
                     </div>
 
-                    {index === 0 ? (
-                      <p className="mt-5 text-xs leading-6 text-muted-foreground">
-                        ※導入形態や支援範囲により個別見積りとなります
-                      </p>
-                    ) : (
-                      <p className="mt-5 text-xs leading-6 text-white/65">
-                        ※導入形態や制作範囲により個別見積りとなります
-                      </p>
-                    )}
+                    <p
+                      className={`mt-5 text-xs leading-6 ${
+                        index === 1 ? "text-white/65" : "text-muted-foreground"
+                      }`}
+                    >
+                      ※導入形態や支援範囲により個別見積りとなります
+                    </p>
                   </div>
                 </ScrollAnimate>
               ))}
@@ -1022,11 +1020,11 @@ export default function HeadSpaFranchisePage() {
 
                 <div className="mt-8 rounded-[28px] border border-white/10 bg-white/5 p-5 sm:p-6">
                   <h3 className="text-xl font-medium tracking-[0.04em]">
-                    小規模でも月商100万円以上を目指せる設計
+                    少人数でも高単価を目指せる設計
                   </h3>
                   <p className="mt-4 text-sm leading-7 text-white/82">
                     条件（立地・導線・単価設計）が整えば、少人数・短時間でも売上を構築可能。
-                    長時間労働に依存しないビジネスモデルを目指せます。
+                    長時間労働に依存しにくいビジネスモデルを目指せます。
                   </p>
                 </div>
 
@@ -1054,7 +1052,7 @@ export default function HeadSpaFranchisePage() {
             <ScrollAnimate>
               <SectionHeading
                 sub="TRAINING SYSTEM"
-                title="技術研修は“空き枠活用型”が強み"
+                title="技術研修は“実店舗ベース”が強み"
                 catchCopy="ヘッドスパ専門店ゆう本店の既存予約システムを活かした、実店舗ベースの実践研修。"
                 className="mb-16 text-white [&_*]:text-white"
               />
@@ -1228,7 +1226,7 @@ export default function HeadSpaFranchisePage() {
             <h2 className="mt-4 font-serif text-3xl tracking-[0.05em] sm:text-4xl">
               まずは無料相談で、
               <br className="sm:hidden" />
-              「あなたが稼げるか」を整理できます
+              導入の可能性を整理できます
             </h2>
 
             <p className="mx-auto mt-4 max-w-xl text-sm leading-7 text-white/70">
@@ -1268,14 +1266,4 @@ export default function HeadSpaFranchisePage() {
               </a>
             </div>
 
-            <p className="mt-4 text-xs leading-6 text-white/65">
-              ご相談段階で費用はかかりません。導入可能性の確認だけでも歓迎しています。
-            </p>
-          </div>
-        </section>
-      </main>
-
-      <Footer />
-    </>
-  )
-}
+           
