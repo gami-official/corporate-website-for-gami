@@ -400,7 +400,6 @@ export default function LogisticsPage() {
                 <p className="mt-5 text-xs leading-6 text-zinc-500">
                   ※次の修正で実画像に差し替えればOKです。今は枠だけ入れておけば十分です。
                 </p>
-              </div>
             </div>
           </div>
         </section>
