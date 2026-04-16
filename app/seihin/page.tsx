@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     "店舗買取 福岡",
   ],
   openGraph: {
-    title: "遺品整理・生前整理 | 株式会社GAMI",
+    title: "整理買取事業 | 株式会社GAMI",
     description:
       "整理から買取まで一括対応。遺品整理士・生前整理アドバイザーが在籍し、大切な想い出に寄り添いながら丁寧にサポートいたします。",
     url: "/seihin",
