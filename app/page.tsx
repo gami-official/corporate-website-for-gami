@@ -436,7 +436,7 @@ export default function HomePage() {
             <h2 className="text-3xl font-bold">主要サービス一覧</h2>
             <p className="mt-5 max-w-3xl text-sm leading-7 text-zinc-700">
               物流を主軸に、内職・軽作業、段ボール見積り、ヘッドスパフランチャイズ、
-              遺品整理・生前整理まで展開しています。課題に合わせて必要なページをご覧ください。
+              遺品整理・生前整理、買取まで展開しています。課題に合わせて必要なページをご覧ください。
             </p>
 
             <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
