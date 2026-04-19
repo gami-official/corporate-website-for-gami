@@ -18,7 +18,6 @@ import {
   UserCheck,
   Gem,
   Shield,
-  MapPin,
   Store,
   Truck,
 } from "lucide-react"
@@ -32,7 +31,7 @@ import { FlowTabs } from "@/components/flow-tabs"
 export const metadata: Metadata = {
   title: "整理買取事業｜大阪・福岡で整理から買取まで対応｜株式会社GAMI",
   description:
-    "大阪・福岡で遺品整理・生前整理をご検討なら株式会社GAMIへ。遺品整理士・生前整理アドバイザーが在籍し、整理・片付け・仕分けから買取まで丁寧に対応。大阪は出張型、福岡本店は店舗型でご相談いただけます。",
+    "大阪・福岡で遺品整理・生前整理をご検討なら株式会社GAMIへ。遺品整理士・生前整理アドバイザーが在籍し、整理・片付け・仕分けから買取まで丁寧に対応。大阪は出張型、福岡本店は完全予約制・完全個室の店舗型でご相談いただけます。",
   keywords: [
     "遺品整理 大阪",
     "生前整理 大阪",
@@ -44,11 +43,13 @@ export const metadata: Metadata = {
     "古物商",
     "出張買取 大阪",
     "店舗買取 福岡",
+    "完全予約制 福岡",
+    "完全個室 福岡",
   ],
   openGraph: {
     title: "整理買取事業 | 株式会社GAMI",
     description:
-      "整理から買取まで一括対応。遺品整理士・生前整理アドバイザーが在籍し、大切な想い出に寄り添いながら丁寧にサポートいたします。",
+      "整理から買取まで一括対応。遺品整理士・生前整理アドバイザーが在籍し、大切な想い出に寄り添いながら丁寧にサポート。福岡本店は完全予約制・完全個室の店舗型対応です。",
     url: "/seihin",
     type: "website",
   },
@@ -153,10 +154,10 @@ const supportTypes = [
     title: "整理買取専門店ゆう本店",
     sub: "店舗型対応",
     description:
-      "ヘッドスパ専門店ゆうの店舗内で、完全予約制の店舗型対応。持ち込み査定や落ち着いて相談したい方に向いています。",
-    point1: "福岡本店で完全予約制対応",
-    point2: "持ち込みでじっくり相談できる",
-    point3: "安心感を重視したい方におすすめ",
+      "ヘッドスパ専門店ゆうの店舗内で、完全予約制・完全個室の店舗型対応。持ち込み査定や、落ち着いた空間でじっくり相談したい方に向いています。",
+    point1: "福岡本店で完全予約制・一日限定3名様対応",
+    point2: "完全個室でまわりを気にせず相談可能",
+    point3: "安心感と上質さを重視したい方におすすめ",
   },
 ]
 
@@ -237,7 +238,7 @@ const seihinServiceSchema = {
     },
   ],
   description:
-    "遺品整理・生前整理を入口に、整理・片付け・仕分けから買取まで一括対応するサービス。",
+    "遺品整理・生前整理を入口に、整理・片付け・仕分けから買取まで一括対応するサービス。福岡本店は完全予約制・完全個室の店舗型対応。",
 }
 
 const breadcrumbSchema = {
@@ -290,12 +291,25 @@ export default function SeihinPage() {
               <h1 className="mt-3 font-serif text-2xl font-bold tracking-wider text-white sm:mt-4 sm:text-3xl md:text-4xl lg:text-5xl">
                 整理買取事業
               </h1>
-              <p className="mt-3 inline-block rounded-full bg-white/20 px-3 py-1 text-xs font-medium tracking-wider text-white backdrop-blur-sm">
-                整理から買取まで一括対応
-              </p>
+
+              <div className="mt-3 flex flex-wrap gap-2">
+                <p className="inline-block rounded-full bg-white/20 px-3 py-1 text-xs font-medium tracking-wider text-white backdrop-blur-sm">
+                  完全予約制・一日限定3名様
+                </p>
+                <p className="inline-block rounded-full bg-white/20 px-3 py-1 text-xs font-medium tracking-wider text-white backdrop-blur-sm">
+                  整理から買取まで一括対応
+                </p>
+              </div>
+
               <p className="mt-4 max-w-xl text-pretty text-sm leading-relaxed tracking-wide text-white sm:text-base">
                 大切な想い出に寄り添いながら、整理・片付け・仕分けから買取まで丁寧にサポートいたします。
-                大阪は出張型、福岡本店は店舗型でご相談いただけます。
+                大阪は出張型、福岡本店は完全予約制・完全個室の店舗型対応で、
+                落ち着いた空間の中ゆっくりご相談いただけます。
+              </p>
+
+              <p className="mt-3 max-w-xl text-xs leading-relaxed tracking-wide text-white/90 sm:text-sm">
+                完全予約制のため、他のお客様と顔を合わせることなく、
+                お一人おひとりに合わせて丁寧に対応いたします。
               </p>
 
               <div className="mt-6 flex flex-wrap gap-3">
@@ -583,7 +597,8 @@ export default function SeihinPage() {
                   LINE相談
                 </a>
                 <p className="mt-4 text-sm leading-7 text-muted-foreground">
-                  ヘッドスパ専門店ゆうの店舗内で、完全予約制の店舗型対応を行っています。
+                  ヘッドスパ専門店ゆうの店舗内で、完全予約制・完全個室の店舗型対応を行っています。
+                  一日限定3名様までのご案内のため、落ち着いた空間でゆっくりご相談いただけます。
                 </p>
               </div>
             </ScrollAnimate>
@@ -653,8 +668,11 @@ export default function SeihinPage() {
           <h2 className="mb-4.5 text-[26px] font-medium tracking-[0.08em]">
             遺品整理・生前整理・買取・お見積り・ご相談
           </h2>
-          <p className="mx-auto mb-8 max-w-2xl text-[14.5px] leading-[1.9] text-[#d0d9e8]">
+          <p className="mx-auto mb-4 max-w-2xl text-[14.5px] leading-[1.9] text-[#d0d9e8]">
             整理から買取まで一括でご相談いただけます。まずはお気軽にお問い合わせください。無料でお見積り・ご相談いたします。
+          </p>
+          <p className="mx-auto mb-8 max-w-2xl text-[13px] leading-[1.9] text-white/90">
+            福岡本店は完全予約制・一日限定3名様対応のため、ご希望日時がある場合はお早めのご予約をおすすめいたします。
           </p>
           <div className="flex flex-wrap justify-center gap-3.5">
             <Link
