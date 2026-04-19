@@ -651,7 +651,7 @@ export default function SeihinPage() {
 
         <section className="bg-[#2d3e5e] px-6 py-14 text-center text-white">
           <h2 className="mb-4.5 text-[26px] font-medium tracking-[0.08em]">
-            遺品整理・生前整理 お見積り・ご相談
+            遺品整理・生前整理・買取・お見積り・ご相談
           </h2>
           <p className="mx-auto mb-8 max-w-2xl text-[14.5px] leading-[1.9] text-[#d0d9e8]">
             整理から買取まで一括でご相談いただけます。まずはお気軽にお問い合わせください。無料でお見積り・ご相談いたします。
