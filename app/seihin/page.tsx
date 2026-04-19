@@ -253,7 +253,7 @@ const breadcrumbSchema = {
     {
       "@type": "ListItem",
       position: 2,
-      name: "遺品整理・生前整理",
+      name: "整理買取事業",
       item: `${siteUrl}/seihin`,
     },
   ],
@@ -275,7 +275,7 @@ export default function SeihinPage() {
         <section className="relative flex min-h-[68vh] items-end">
           <Image
             src={IMAGES.heroSeihin}
-            alt="遺品整理・生前整理"
+            alt="整理買取事業"
             fill
             className="object-cover"
             priority
@@ -288,7 +288,7 @@ export default function SeihinPage() {
                 ORGANIZE / BUY
               </p>
               <h1 className="mt-3 font-serif text-2xl font-bold tracking-wider text-white sm:mt-4 sm:text-3xl md:text-4xl lg:text-5xl">
-                遺品整理・生前整理
+                整理買取事業
               </h1>
               <p className="mt-3 inline-block rounded-full bg-white/20 px-3 py-1 text-xs font-medium tracking-wider text-white backdrop-blur-sm">
                 整理から買取まで一括対応
