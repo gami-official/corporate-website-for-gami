@@ -30,7 +30,7 @@ import { SeihinRecordCard } from "@/components/seihin-record-card"
 import { FlowTabs } from "@/components/flow-tabs"
 
 export const metadata: Metadata = {
-  title: "遺品整理・生前整理｜大阪・福岡で整理から買取まで対応｜株式会社GAMI",
+  title: "整理買取事業｜大阪・福岡で整理から買取まで対応｜株式会社GAMI",
   description:
     "大阪・福岡で遺品整理・生前整理をご検討なら株式会社GAMIへ。遺品整理士・生前整理アドバイザーが在籍し、整理・片付け・仕分けから買取まで丁寧に対応。大阪は出張型、福岡本店は店舗型でご相談いただけます。",
   keywords: [
