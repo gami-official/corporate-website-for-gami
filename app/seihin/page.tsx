@@ -580,7 +580,7 @@ export default function SeihinPage() {
                   rel="noopener noreferrer"
                   className="mt-2 block text-sm font-medium text-foreground transition-colors hover:text-amber-600"
                 >
-                  LINE ID: seirikaitoriyu
+                  LINE相談
                 </a>
                 <p className="mt-4 text-sm leading-7 text-muted-foreground">
                   ヘッドスパ専門店ゆうの店舗内で、完全予約制の店舗型対応を行っています。
