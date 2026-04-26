@@ -34,6 +34,14 @@ const companyInfo = [
     label: "事業内容",
     value: "物流運送事業、ヘッドスパ事業、整理買取事業",
   },
+
+  // ★追加ここから
+  {
+    label: "第一種貨物利用運送事業",
+    value: "貨物自動車運送（近運自貨第1190号）",
+  },
+  // ★追加ここまで
+
   { label: "メールアドレス", value: "k_fuchigami@gamigami.email" },
   { label: "TEL", value: "06-6115-9935" },
   { label: "FAX", value: "06-6115-9936" },
