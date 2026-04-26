@@ -18,11 +18,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "会社概要 | 株式会社GAMI",
     description: "株式会社GAMIの会社概要・お問い合わせ。物流運送事業、ヘッドスパ事業、整理買取事業を展開。",
-    url: '/company',
+    url: "/company",
     type: "website",
   },
   alternates: {
-    canonical: '/company',
+    canonical: "/company",
   },
 }
 
@@ -44,13 +44,10 @@ const companyInfo = [
     label: "化粧品製造業許可",
     value: "認証倉庫 許可番号 27CZ201072",
   },
-
-  // ★ここに移動
   {
     label: "第一種貨物利用運送事業",
     value: "貨物自動車運送（近運自貨第1190号）",
   },
-
   {
     label: "インボイス登録番号",
     value: "T9120001277055",
@@ -60,7 +57,7 @@ const companyInfo = [
   { label: "所在地（福岡支社）", value: "〒819-0014 福岡県福岡市西区豊浜2-20-20-2" },
 ]
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://gamigami.net'
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://gamigami.net"
 
 const organizationSchema = {
   "@context": "https://schema.org",
@@ -68,6 +65,8 @@ const organizationSchema = {
   name: "株式会社GAMI",
   url: siteUrl,
   logo: `${siteUrl}/images/logo.png`,
+  description:
+    "株式会社GAMIは大阪・福岡を拠点に物流運送、発送代行、内職・軽作業、ヘッドスパ、整理買取事業を展開しています。",
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "+81-6-6115-9935",
@@ -84,6 +83,44 @@ const organizationSchema = {
     postalCode: "570-0003",
     addressCountry: "JP",
   },
+
+  // ★SEO強化ここから
+  knowsAbout: [
+    "物流運送",
+    "発送代行",
+    "内職",
+    "軽作業",
+    "ヘッドスパ",
+    "整理買取",
+  ],
+
+  hasCredential: [
+    {
+      "@type": "EducationalOccupationalCredential",
+      name: "第一種貨物利用運送事業",
+      credentialCategory: "許認可",
+      recognizedBy: {
+        "@type": "Organization",
+        name: "近畿運輸局",
+      },
+      identifier: "近運自貨第1190号",
+      description: "運送機関の種類：貨物自動車運送",
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      name: "古物商許可",
+      credentialCategory: "許認可",
+      identifier: "大阪府公安委員会許可 第62229R076690号",
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      name: "化粧品製造業許可",
+      credentialCategory: "許認可",
+      identifier: "27CZ201072",
+    },
+  ],
+  // ★SEO強化ここまで
+
   sameAs: [],
 }
 
@@ -119,7 +156,7 @@ export default function CompanyPage() {
       />
       <Header />
       <main>
-        {/* Hero */}
+        {/* 既存そのまま */}
         <section className="relative py-16 pt-24 sm:py-20 sm:pt-32">
           <div className="absolute inset-0 aurora-gradient opacity-90" />
           <div className="relative z-10 mx-auto w-full max-w-6xl px-4 sm:px-6">
@@ -132,7 +169,6 @@ export default function CompanyPage() {
           </div>
         </section>
 
-        {/* Company Info Table */}
         <section className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-24 lg:py-32">
           <SectionHeading
             sub="企業情報"
@@ -142,10 +178,7 @@ export default function CompanyPage() {
           />
           <div className="divide-y divide-border rounded-2xl border border-border/60 bg-card p-2 shadow-glass">
             {companyInfo.map((row) => (
-              <div
-                key={row.label}
-                className="flex flex-col gap-2 px-4 py-4 sm:flex-row sm:gap-8 sm:px-6 sm:py-5"
-              >
+              <div key={row.label} className="flex flex-col gap-2 px-4 py-4 sm:flex-row sm:gap-8 sm:px-6 sm:py-5">
                 <dt className="w-full shrink-0 text-xs font-medium text-muted-foreground sm:w-40 sm:text-sm">
                   {row.label}
                 </dt>
@@ -157,7 +190,6 @@ export default function CompanyPage() {
           </div>
         </section>
 
-        {/* Mission */}
         <section className="border-t border-border bg-secondary/50 py-16 px-4 sm:px-6 sm:py-24 lg:py-32">
           <div className="mx-auto max-w-3xl text-center">
             <SectionHeading
@@ -167,25 +199,14 @@ export default function CompanyPage() {
               className="mb-10"
             />
             <p className="text-sm leading-loose tracking-readable text-muted-foreground">
-              株式会社GAMIは、大阪・福岡を中心に
-物流代行・発送代行・内職・軽作業の外注まで一括対応する物流会社です。
-
-企業様の業務効率化・コスト削減を実現し、
-「任せてよかった」と思える物流パートナーとして成長を支えます。
-              <br className="sm:hidden" />
-              物流・ヘッドスパ・整理買取の3事業を通じて、
-人・モノ・想いを繋ぎ、価値を届ける。
-
-お客様一人ひとりの課題に寄り添い、
-安心して任せられるサービスを提供することが私たちの使命です。
+              株式会社GAMIは、大阪・福岡を中心に物流代行・発送代行・内職・軽作業の外注まで一括対応する物流会社です。
+              企業様の業務効率化・コスト削減を実現し、「任せてよかった」と思える物流パートナーとして成長を支えます。
             </p>
           </div>
         </section>
 
-        {/* Credentials */}
         <CredentialsSection />
 
-        {/* Contact Form */}
         <section id="contact" className="mx-auto max-w-3xl px-4 py-24 sm:px-6 lg:py-32">
           <SectionHeading
             sub="お問い合わせ"
