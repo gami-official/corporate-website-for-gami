@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 
-const CONTACT_EMAIL = "f_fuchigami@gamigami.email"
+const CONTACT_EMAIL = "k_fuchigami@gamigami.email"
 
 const inquiryTypes = [
   "物流に関するお問い合わせ",
