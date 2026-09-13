@@ -1,6 +1,7 @@
 import React from "react"
 import type { Metadata, Viewport } from "next"
 import { Noto_Sans_JP, Noto_Serif_JP } from "next/font/google"
+import { GoogleTagManager } from "@next/third-parties/google"
 
 import "./globals.css"
 
@@ -117,6 +118,8 @@ export default function RootLayout({
       >
         {children}
       </body>
+
+      <GoogleTagManager gtmId="GTM-TJWG5GT5" />
     </html>
   )
 }
