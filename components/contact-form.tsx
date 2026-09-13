@@ -2,6 +2,12 @@
 
 import { useState } from "react"
 
+declare global {
+  interface Window {
+    dataLayer: Record<string, unknown>[]
+  }
+}
+
 const inquiryTypes = [
   "物流・発送代行の相談",
   "倉庫保管・流通加工の相談",
@@ -45,10 +51,21 @@ export function ContactForm() {
         throw new Error("送信に失敗しました")
       }
 
+      // Google Tag Manager
+      // 問い合わせ送信が成功した時だけ発火
+      if (typeof window !== "undefined") {
+        window.dataLayer = window.dataLayer || []
+        window.dataLayer.push({
+          event: "gami_contact_submit",
+        })
+      }
+
       setSubmitted(true)
       form.reset()
     } catch {
-      setError("送信できませんでした。お手数ですが、メールまたはお電話でご連絡ください。")
+      setError(
+        "送信できませんでした。お手数ですが、メールまたはお電話でご連絡ください。"
+      )
     } finally {
       setIsSending(false)
     }
@@ -57,7 +74,9 @@ export function ContactForm() {
   if (submitted) {
     return (
       <div className="rounded-[2rem] border border-black/5 bg-white p-6 text-center shadow-[0_18px_50px_rgba(0,0,0,0.06)] sm:p-10">
-        <p className="text-2xl font-bold text-black">送信ありがとうございます</p>
+        <p className="text-2xl font-bold text-black">
+          送信ありがとうございます
+        </p>
 
         <p className="mt-4 text-sm leading-8 text-black/60">
           内容を確認のうえ、担当よりご連絡します。
@@ -90,7 +109,10 @@ export function ContactForm() {
 
       <div className="grid gap-5">
         <div className="flex flex-col gap-2">
-          <label htmlFor="name" className="text-sm font-medium text-black/70">
+          <label
+            htmlFor="name"
+            className="text-sm font-medium text-black/70"
+          >
             お名前 <span className="text-amber-500">*</span>
           </label>
 
@@ -105,7 +127,10 @@ export function ContactForm() {
         </div>
 
         <div className="flex flex-col gap-2">
-          <label htmlFor="company" className="text-sm font-medium text-black/70">
+          <label
+            htmlFor="company"
+            className="text-sm font-medium text-black/70"
+          >
             会社名 / 屋号
           </label>
 
@@ -120,7 +145,10 @@ export function ContactForm() {
 
         <div className="grid gap-5 sm:grid-cols-2">
           <div className="flex flex-col gap-2">
-            <label htmlFor="email" className="text-sm font-medium text-black/70">
+            <label
+              htmlFor="email"
+              className="text-sm font-medium text-black/70"
+            >
               メールアドレス <span className="text-amber-500">*</span>
             </label>
 
@@ -135,7 +163,10 @@ export function ContactForm() {
           </div>
 
           <div className="flex flex-col gap-2">
-            <label htmlFor="phone" className="text-sm font-medium text-black/70">
+            <label
+              htmlFor="phone"
+              className="text-sm font-medium text-black/70"
+            >
               電話番号
             </label>
 
@@ -150,7 +181,10 @@ export function ContactForm() {
         </div>
 
         <div className="flex flex-col gap-2">
-          <label htmlFor="type" className="text-sm font-medium text-black/70">
+          <label
+            htmlFor="type"
+            className="text-sm font-medium text-black/70"
+          >
             相談内容 <span className="text-amber-500">*</span>
           </label>
 
@@ -174,7 +208,10 @@ export function ContactForm() {
         </div>
 
         <div className="flex flex-col gap-2">
-          <label htmlFor="message" className="text-sm font-medium text-black/70">
+          <label
+            htmlFor="message"
+            className="text-sm font-medium text-black/70"
+          >
             詳細 <span className="text-amber-500">*</span>
           </label>
 
