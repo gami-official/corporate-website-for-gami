@@ -11,6 +11,7 @@ const navLinks = [
   { href: "/warehouse", label: "倉庫紹介" },
   { href: "/company", label: "会社概要" },
   { href: "/other-business", label: "その他事業" },
+  { href: "/international", label: "ENGLISH" },
 ]
 
 const mobileLinkClass =
