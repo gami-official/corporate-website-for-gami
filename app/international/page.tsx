@@ -156,7 +156,7 @@ export default function InternationalPage() {
 
               <div className="mx-auto mt-9 flex max-w-sm flex-col gap-3 sm:max-w-none sm:flex-row sm:justify-center">
                 <Link
-                  href="/company#contact"
+                  href="/international/contact"
                   className="rounded-full bg-amber-500 px-8 py-4 text-center text-sm font-bold text-white shadow-lg transition hover:bg-amber-400"
                 >
                   Start Your Japan Operations
@@ -467,7 +467,7 @@ export default function InternationalPage() {
 
             <div className="mx-auto mt-9 max-w-sm">
               <Link
-                href="/company#contact"
+                href="/international/contact"
                 className="block rounded-full bg-amber-500 px-8 py-4 text-center text-sm font-bold text-white shadow-lg transition hover:bg-amber-400"
               >
                 Contact GAMI
