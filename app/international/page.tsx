@@ -270,7 +270,7 @@ export default function InternationalPage() {
         </section>
 
         {/* WHY GAMI */}
-        <section className="bg-zinc-950 py-16 text-white sm:py-28">
+        <section id="why-gami" className="bg-zinc-950 py-16 text-white sm:py-28">
           <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-12">
             <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
               <div>
