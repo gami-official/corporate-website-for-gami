@@ -395,6 +395,14 @@ export default function InternationalPage() {
                 </div>
 
                 <div>
+                  <Image
+  src="/images/moriguchi-inside.jpg"
+  alt="GAMI fulfillment warehouse in Moriguchi, Osaka, Japan"
+  width={900}
+  height={600}
+  className="mb-6 w-full rounded-2xl object-cover shadow-lg"
+/>
+                  
                   <p className="text-sm leading-8 text-white/65 sm:text-base">
                     Our main warehouse is located in Moriguchi, Osaka. From
                     receiving and storage to value-added work and domestic
