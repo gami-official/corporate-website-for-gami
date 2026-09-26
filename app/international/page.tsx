@@ -123,7 +123,21 @@ const faq = [
     a: "Absolutely. You can contact us while planning your Japan market entry so we can discuss the logistics setup in advance.",
   },
 ]
-
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "GAMI Co., Ltd.",
+  url: "https://www.gamigami.net",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "1-8-18 Dainichicho",
+    addressLocality: "Moriguchi",
+    addressRegion: "Osaka",
+    addressCountry: "JP",
+  },
+  description:
+    "GAMI provides fulfillment and 3PL services in Japan, including warehousing, inspection, labeling, packing and nationwide shipping.",
+}
 export default function InternationalPage() {
   return (
     <div className="min-h-screen overflow-x-hidden bg-white text-zinc-950">
