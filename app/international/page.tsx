@@ -412,7 +412,7 @@ export default function InternationalPage() {
         </section>
 
         {/* FAQ */}
-        <section className="bg-zinc-100 py-16 sm:py-28">
+        <section id="faq" className="bg-zinc-100 py-16 sm:py-28">
           <div className="mx-auto max-w-4xl px-5 sm:px-6">
             <div className="text-center">
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-600">
