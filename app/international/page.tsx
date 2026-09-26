@@ -1,4 +1,4 @@
-mport { Header } from "@/components/header"
+import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import Image from "next/image"
 import Link from "next/link"
@@ -44,7 +44,9 @@ export const metadata = {
     title: "Japan Fulfillment & 3PL | GAMI",
     description:
       "Warehousing, fulfillment and nationwide shipping for international brands entering Japan.",
-    images: ["https://www.gamigami.net/images/warehouse-moriguchi-inside.jpg"],
+    images: [
+      "https://www.gamigami.net/images/warehouse-moriguchi-inside.jpg",
+    ],
   },
 }
 
@@ -468,13 +470,13 @@ export default function InternationalPage() {
 
                 <div>
                   <Image
-  src="/images/warehouse-moriguchi-inside.jpg"
-  alt="GAMI fulfillment warehouse in Moriguchi, Osaka, Japan"
-  width={900}
-  height={600}
-  className="mb-6 w-full rounded-2xl object-cover shadow-lg"
-/>
-                  
+                    src="/images/warehouse-moriguchi-inside.jpg"
+                    alt="GAMI fulfillment warehouse in Moriguchi, Osaka, Japan"
+                    width={900}
+                    height={600}
+                    className="mb-6 w-full rounded-2xl object-cover shadow-lg"
+                  />
+
                   <p className="text-sm leading-8 text-white/65 sm:text-base">
                     Our main warehouse is located in Moriguchi, Osaka. From
                     receiving and storage to value-added work and domestic
@@ -542,8 +544,8 @@ export default function InternationalPage() {
             </h2>
 
             <p className="mx-auto mt-6 max-w-2xl text-[15px] leading-8 text-white/65 sm:text-base">
-              Tell us about your products and your plans for Japan.
-              We&apos;ll discuss a logistics setup that fits your business.
+              Tell us about your products and your plans for Japan. We&apos;ll
+              discuss a logistics setup that fits your business.
             </p>
 
             <div className="mx-auto mt-9 max-w-sm">
