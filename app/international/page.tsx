@@ -1,4 +1,4 @@
-import { Header } from "@/components/header"
+mport { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import Image from "next/image"
 import Link from "next/link"
@@ -19,6 +19,33 @@ export const metadata = {
     "ecommerce fulfillment Japan",
     "Osaka warehouse",
   ],
+  alternates: {
+    canonical: "https://www.gamigami.net/international",
+  },
+  openGraph: {
+    title: "Japan Fulfillment & 3PL | GAMI",
+    description:
+      "Warehousing, fulfillment, inspection, packing, labeling and nationwide shipping for international brands entering Japan.",
+    url: "https://www.gamigami.net/international",
+    siteName: "GAMI",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "https://www.gamigami.net/images/warehouse-moriguchi-inside.jpg",
+        width: 1200,
+        height: 630,
+        alt: "GAMI fulfillment warehouse in Moriguchi, Osaka, Japan",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Japan Fulfillment & 3PL | GAMI",
+    description:
+      "Warehousing, fulfillment and nationwide shipping for international brands entering Japan.",
+    images: ["https://www.gamigami.net/images/warehouse-moriguchi-inside.jpg"],
+  },
 }
 
 const services = [
@@ -123,11 +150,14 @@ const faq = [
     a: "Absolutely. You can contact us while planning your Japan market entry so we can discuss the logistics setup in advance.",
   },
 ]
-const structuredData = {
+
+const organizationStructuredData = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "GAMI Co., Ltd.",
   url: "https://www.gamigami.net",
+  description:
+    "GAMI provides fulfillment and 3PL services in Japan, including warehousing, inspection, labeling, packing and nationwide shipping.",
   address: {
     "@type": "PostalAddress",
     streetAddress: "1-8-18 Dainichicho",
@@ -135,20 +165,40 @@ const structuredData = {
     addressRegion: "Osaka",
     addressCountry: "JP",
   },
-  description:
-    "GAMI provides fulfillment and 3PL services in Japan, including warehousing, inspection, labeling, packing and nationwide shipping.",
 }
+
+const faqStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faq.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.a,
+    },
+  })),
+}
+
 export default function InternationalPage() {
   return (
-    <div className="min-h-screen overflow-x-hidden bg-white text-zinc-950">
-      <div className="min-h-screen overflow-x-hidden bg-white text-zinc-950">
-  <script
-    type="application/ld+json"
-    dangerouslySetInnerHTML={{
-      __html: JSON.stringify(structuredData),
-    }}
-  />
-  <Header />
+    <div
+      lang="en"
+      className="min-h-screen overflow-x-hidden bg-white text-zinc-950"
+    >
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(organizationStructuredData),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqStructuredData),
+        }}
+      />
+
       <Header />
 
       <main>
