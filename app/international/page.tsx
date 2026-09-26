@@ -141,6 +141,14 @@ const structuredData = {
 export default function InternationalPage() {
   return (
     <div className="min-h-screen overflow-x-hidden bg-white text-zinc-950">
+      <div className="min-h-screen overflow-x-hidden bg-white text-zinc-950">
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify(structuredData),
+    }}
+  />
+  <Header />
       <Header />
 
       <main>
