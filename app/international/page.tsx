@@ -396,7 +396,7 @@ export default function InternationalPage() {
 
                 <div>
                   <Image
-  src="/images/moriguchi-inside.jpg"
+  src="/images/warehouse-moriguchi-inside.jpg"
   alt="GAMI fulfillment warehouse in Moriguchi, Osaka, Japan"
   width={900}
   height={600}
