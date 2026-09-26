@@ -5,13 +5,20 @@ import { usePathname } from "next/navigation"
 import { useEffect, useState } from "react"
 import { Menu, X } from "lucide-react"
 
-const navLinks = [
+const japaneseNavLinks = [
   { href: "/", label: "物流トップ" },
   { href: "/logistics", label: "物流サービス" },
   { href: "/warehouse", label: "倉庫紹介" },
   { href: "/company", label: "会社概要" },
   { href: "/other-business", label: "その他事業" },
   { href: "/international", label: "ENGLISH" },
+]
+
+const internationalNavLinks = [
+  { href: "/international", label: "HOME" },
+  { href: "/international#services", label: "SERVICES" },
+  { href: "/international#why-gami", label: "WHY GAMI" },
+  { href: "/international#faq", label: "FAQ" },
 ]
 
 const mobileLinkClass =
@@ -22,6 +29,9 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false)
   const [logoError, setLogoError] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+
+  const isInternational = pathname.startsWith("/international")
+  const navLinks = isInternational ? internationalNavLinks : japaneseNavLinks
 
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 12)
@@ -43,7 +53,10 @@ export function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-2.5 sm:px-6 sm:py-3">
-        <Link href="/" className="flex min-w-0 items-center gap-2.5">
+        <Link
+          href={isInternational ? "/international" : "/"}
+          className="flex min-w-0 items-center gap-2.5"
+        >
           <div className="shrink-0 overflow-hidden rounded-full border border-black/5 bg-white p-1 shadow-sm">
             <img
               src={logoError ? "/placeholder-logo.svg" : "/images/logo.png"}
@@ -60,8 +73,10 @@ export function Header() {
               GAMI
             </span>
 
-            <span className="mt-1 block max-w-[9.5rem] truncate text-[9px] tracking-[0.04em] text-black/50 sm:max-w-none sm:text-[10px] sm:tracking-[0.14em]">
-              大阪の物流倉庫・発送代行
+            <span className="mt-1 block max-w-[12rem] truncate text-[9px] tracking-[0.04em] text-black/50 sm:max-w-none sm:text-[10px] sm:tracking-[0.10em]">
+              {isInternational
+                ? "JAPAN FULFILLMENT & 3PL"
+                : "大阪の物流倉庫・発送代行"}
             </span>
           </div>
         </Link>
@@ -69,8 +84,9 @@ export function Header() {
         <nav className="hidden items-center gap-5 lg:flex">
           {navLinks.map((link) => {
             const active =
-              pathname === link.href ||
-              (link.href !== "/" && pathname.startsWith(link.href))
+              !link.href.includes("#") &&
+              (pathname === link.href ||
+                (link.href !== "/" && pathname.startsWith(link.href)))
 
             return (
               <Link
@@ -92,26 +108,37 @@ export function Header() {
             )
           })}
 
-          <a
-            href="tel:0661159935"
-            className="rounded-full border border-black/10 px-5 py-3 text-xs font-bold tracking-[0.08em] text-black transition hover:bg-black hover:text-white"
-          >
-            電話相談
-          </a>
+          {isInternational ? (
+            <Link
+              href="/international/contact"
+              className="rounded-full bg-amber-500 px-5 py-3 text-xs font-bold tracking-[0.08em] text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-amber-600"
+            >
+              CONTACT US
+            </Link>
+          ) : (
+            <>
+              <a
+                href="tel:0661159935"
+                className="rounded-full border border-black/10 px-5 py-3 text-xs font-bold tracking-[0.08em] text-black transition hover:bg-black hover:text-white"
+              >
+                電話相談
+              </a>
 
-          <Link
-            href="/company#contact"
-            className="rounded-full bg-amber-500 px-5 py-3 text-xs font-bold tracking-[0.08em] text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-amber-600"
-          >
-            物流を無料相談
-          </Link>
+              <Link
+                href="/company#contact"
+                className="rounded-full bg-amber-500 px-5 py-3 text-xs font-bold tracking-[0.08em] text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-amber-600"
+              >
+                物流を無料相談
+              </Link>
+            </>
+          )}
         </nav>
 
         <button
           type="button"
           className="flex h-10 w-10 items-center justify-center rounded-full border border-black/5 bg-white text-black shadow-sm lg:hidden"
           onClick={() => setIsOpen(!isOpen)}
-          aria-label={isOpen ? "メニューを閉じる" : "メニューを開く"}
+          aria-label={isOpen ? "Close menu" : "Open menu"}
         >
           {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
@@ -120,20 +147,22 @@ export function Header() {
       {isOpen && (
         <nav className="border-t border-black/5 bg-[#f8f8f6] px-4 py-4 shadow-2xl sm:px-6 lg:hidden">
           <Link
-            href="/company#contact"
+            href={isInternational ? "/international/contact" : "/company#contact"}
             className="mb-3 flex items-center justify-center rounded-full bg-amber-500 px-4 py-4 text-center text-sm font-bold text-white shadow-lg active:scale-95"
             onClick={() => setIsOpen(false)}
           >
-            見積りを依頼する
+            {isInternational ? "CONTACT US" : "見積りを依頼する"}
           </Link>
 
-          <a
-            href="tel:0661159935"
-            className="mb-4 flex items-center justify-center rounded-full border border-black/10 bg-white px-4 py-4 text-center text-sm font-bold text-black shadow-sm active:scale-95"
-            onClick={() => setIsOpen(false)}
-          >
-            電話で相談する
-          </a>
+          {!isInternational && (
+            <a
+              href="tel:0661159935"
+              className="mb-4 flex items-center justify-center rounded-full border border-black/10 bg-white px-4 py-4 text-center text-sm font-bold text-black shadow-sm active:scale-95"
+              onClick={() => setIsOpen(false)}
+            >
+              電話で相談する
+            </a>
+          )}
 
           <ul className="flex flex-col gap-3">
             {navLinks.map((link) => (
@@ -151,7 +180,9 @@ export function Header() {
           </ul>
 
           <div className="mt-6 rounded-2xl bg-white px-4 py-4 text-center text-xs font-semibold leading-6 text-black/60 shadow-sm">
-            発送代行・流通加工・内職作業・倉庫保管に対応
+            {isInternational
+              ? "Warehousing · Fulfillment · Inspection · Packing · Shipping"
+              : "発送代行・流通加工・内職作業・倉庫保管に対応"}
           </div>
         </nav>
       )}
