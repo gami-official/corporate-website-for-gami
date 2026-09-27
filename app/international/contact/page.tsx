@@ -1,14 +1,49 @@
+"use client"
+
+import { FormEvent, useState } from "react"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import Link from "next/link"
 
-export const metadata = {
-  title: "Contact GAMI | Japan Fulfillment & 3PL",
-  description:
-    "Contact GAMI about warehousing, fulfillment, inspection, packing and nationwide shipping services in Japan.",
-}
-
 export default function InternationalContactPage() {
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [error, setError] = useState("")
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+
+    setIsSubmitting(true)
+    setError("")
+
+    const form = event.currentTarget
+    const formData = new FormData(form)
+
+    try {
+      const response = await fetch("https://formspree.io/f/mzdkjgwj", {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      })
+
+      if (response.ok) {
+        window.location.href = "/international/thank-you"
+        return
+      }
+
+      setError(
+        "We could not send your inquiry. Please try again."
+      )
+    } catch {
+      setError(
+        "We could not send your inquiry. Please try again."
+      )
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
   return (
     <div className="min-h-screen bg-zinc-50 text-zinc-950">
       <Header />
@@ -35,18 +70,9 @@ export default function InternationalContactPage() {
         <section className="mx-auto max-w-3xl px-5 py-12 sm:px-6 sm:py-20">
           <div className="rounded-[2rem] border border-zinc-200 bg-white p-5 shadow-sm sm:p-10">
             <form
-              action="https://formspree.io/f/mzdkjgwj"
-              method="POST"
-              acceptCharset="UTF-8"
-              encType="application/x-www-form-urlencoded"
+              onSubmit={handleSubmit}
               className="space-y-6"
             >
-              <input
-                type="hidden"
-                name="_next"
-                value="https://www.gamigami.net/international/thank-you"
-              />
-
               <input
                 type="hidden"
                 name="inquiry_source"
@@ -168,12 +194,24 @@ export default function InternationalContactPage() {
                   <option value="" disabled>
                     Select estimated volume
                   </option>
-                  <option value="Under 100">Under 100 orders</option>
-                  <option value="100-500">100 – 500 orders</option>
-                  <option value="500-1000">500 – 1,000 orders</option>
-                  <option value="1000-5000">1,000 – 5,000 orders</option>
-                  <option value="5000+">5,000+ orders</option>
-                  <option value="Not sure yet">Not sure yet</option>
+                  <option value="Under 100">
+                    Under 100 orders
+                  </option>
+                  <option value="100-500">
+                    100 – 500 orders
+                  </option>
+                  <option value="500-1000">
+                    500 – 1,000 orders
+                  </option>
+                  <option value="1000-5000">
+                    1,000 – 5,000 orders
+                  </option>
+                  <option value="5000+">
+                    5,000+ orders
+                  </option>
+                  <option value="Not sure yet">
+                    Not sure yet
+                  </option>
                 </select>
               </div>
 
@@ -189,11 +227,18 @@ export default function InternationalContactPage() {
                 />
               </div>
 
+              {error && (
+                <p className="text-center text-sm font-bold text-red-600">
+                  {error}
+                </p>
+              )}
+
               <button
                 type="submit"
-                className="w-full rounded-full bg-amber-500 px-7 py-4 text-base font-bold text-white shadow-lg transition hover:bg-amber-400"
+                disabled={isSubmitting}
+                className="w-full rounded-full bg-amber-500 px-7 py-4 text-base font-bold text-white shadow-lg transition hover:bg-amber-400 disabled:cursor-not-allowed disabled:opacity-60"
               >
-                Send Inquiry
+                {isSubmitting ? "Sending..." : "Send Inquiry"}
               </button>
             </form>
 
