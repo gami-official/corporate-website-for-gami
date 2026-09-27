@@ -1,6 +1,7 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import Link from "next/link"
+import Script from "next/script"
 
 export const metadata = {
   title: "Thank You | GAMI Japan Fulfillment",
@@ -14,6 +15,18 @@ export const metadata = {
 export default function InternationalThankYouPage() {
   return (
     <div className="min-h-screen bg-zinc-50 text-zinc-950">
+      <Script id="google-ads-conversion" strategy="afterInteractive">
+        {`
+          if (typeof gtag === 'function') {
+            gtag('event', 'conversion', {
+              'send_to': 'AW-18448548394/iHBSCIrd9ocdEKqE-txE',
+              'value': 1.0,
+              'currency': 'JPY'
+            });
+          }
+        `}
+      </Script>
+
       <Header />
 
       <main>
