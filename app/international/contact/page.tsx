@@ -44,7 +44,7 @@ export default function InternationalContactPage() {
               <input
                 type="hidden"
                 name="_next"
-                value="https://gamigami.net/international"
+                value="https://www.gamigami.net/international/thank-you"
               />
 
               <input
