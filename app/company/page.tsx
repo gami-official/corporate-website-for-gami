@@ -23,45 +23,46 @@ export const metadata: Metadata = {
 
 const companyInfo = [
   { label: "会社名", value: "株式会社GAMI" },
-  { label: "代表取締役", value: "淵上 和博" },
+  { label: "代表", value: "代表取締役 淵上 和博" },
   { label: "設立", value: "2025年6月17日" },
   {
     label: "主要事業",
     value:
-      "物流運送事業・倉庫保管・発送代行・流通加工・内職作業",
+      "物流運送・倉庫保管・発送代行・流通加工・内職作業",
   },
   {
-    label: "開業・運営支援",
-    value: "ヘッドスパFC事業",
+    label: "関連事業",
+    value: "ヘッドスパFC・開業支援",
   },
   {
-    label: "メールアドレス",
+    label: "メール",
     value: "k_fuchigami@gamigami.email",
   },
   { label: "TEL", value: "06-6115-9935" },
   { label: "FAX", value: "06-6115-9936" },
   {
-    label: "古物商許可",
+    label: "古物商",
     value: "大阪府公安委員会許可 第62229R076690号",
   },
   {
-    label: "化粧品製造業許可",
-    value: "認証倉庫 許可番号 27CZ201072",
+    label: "化粧品製造",
+    value: "化粧品製造業許可認証倉庫 27CZ201072",
   },
   {
-    label: "第一種貨物利用運送事業",
-    value: "貨物自動車運送（近運自貨第1190号）",
+    label: "利用運送",
+    value:
+      "第一種貨物利用運送事業・貨物自動車運送（近運自貨第1190号）",
   },
   {
-    label: "インボイス登録番号",
+    label: "インボイス",
     value: "T9120001277055",
   },
   {
-    label: "所在地（大阪本社）",
+    label: "大阪本社",
     value: "〒570-0003 大阪府守口市大日町1-8-18",
   },
   {
-    label: "所在地（福岡支社）",
+    label: "福岡支社",
     value: "〒819-0014 福岡県福岡市西区豊浜2-20-20-2",
   },
 ]
@@ -148,60 +149,67 @@ export default function CompanyPage() {
       <Header />
 
       <main>
-        <section className="bg-zinc-950 px-5 py-14 text-white sm:px-6 sm:py-20">
+        <section className="bg-zinc-950 px-4 py-8 text-white sm:px-6 sm:py-14">
           <div className="mx-auto max-w-6xl">
-            <p className="text-xs font-bold tracking-widest text-amber-300">
+            <p className="text-[11px] font-bold tracking-[0.12em] text-amber-300">
               COMPANY
             </p>
 
-            <h1 className="mt-5 text-3xl font-bold leading-snug sm:text-5xl">
-              物流を支える。
-              <br />
-              ビジネスを前へ。
+            <h1 className="mt-3 text-[26px] font-bold leading-[1.5] tracking-tight sm:text-5xl">
+              <span className="inline-block">物流を支える。</span>
+              <span className="inline-block">ビジネスを前へ。</span>
             </h1>
 
-            <p className="mt-5 max-w-2xl text-base leading-8 text-white/80">
+            <p className="mt-3 max-w-2xl text-sm leading-7 text-white/85 sm:text-base">
               365日、物流を止めない。まず返す。すぐ動く。
-              <br />
-              株式会社GAMIは、1坪からの保管、
-              小ロット発送、検品・流通加工まで、
+              1坪からの保管、小ロット発送、検品・流通加工まで。
               事業の規模に合わせて物流を支えます。
             </p>
 
-            <Link
-              href="#contact"
-              className="mt-7 inline-flex min-h-[52px] w-full items-center justify-center rounded-full bg-amber-500 px-6 py-3 text-sm font-bold text-white transition hover:bg-amber-600 sm:w-auto"
-            >
-              物流の見積り・相談をする
-            </Link>
+            <div className="mt-5 grid max-w-lg grid-cols-[1.35fr_1fr] gap-2">
+              <Link
+                href="#contact"
+                className="flex min-h-[48px] items-center justify-center rounded-full bg-amber-500 px-3 py-3 text-center text-sm font-bold text-white transition hover:bg-amber-600"
+              >
+                見積り・物流相談
+              </Link>
+              <a
+                href="tel:0661159935"
+                className="flex min-h-[48px] items-center justify-center rounded-full border border-white/40 px-3 py-3 text-center text-sm font-bold transition hover:bg-white/10"
+              >
+                電話で相談
+              </a>
+            </div>
           </div>
         </section>
 
-        <section className="mx-auto max-w-5xl px-5 py-14 sm:px-6 sm:py-20">
-          <p className="text-xs font-bold tracking-widest text-amber-700">
+        <section className="mx-auto max-w-5xl px-4 py-9 sm:px-6 sm:py-14">
+          <p className="text-[11px] font-bold tracking-[0.12em] text-amber-700">
             COMPANY INFO
           </p>
-          <h2 className="mt-3 text-3xl font-bold">会社概要</h2>
+          <h2 className="mt-2 text-2xl font-bold sm:text-3xl">
+            会社概要
+          </h2>
 
-          <dl className="mt-8 overflow-hidden rounded-3xl border border-black/10 bg-white">
+          <dl className="mt-5 overflow-hidden rounded-2xl border border-black/10 bg-white">
             {companyInfo.map((row, index) => (
               <div
                 key={row.label}
-                className={`flex flex-col gap-2 px-5 py-5 sm:flex-row sm:gap-8 sm:px-8 ${
+                className={`grid grid-cols-[82px_minmax(0,1fr)] gap-3 px-4 py-3 sm:grid-cols-[160px_minmax(0,1fr)] sm:gap-6 sm:px-6 sm:py-4 ${
                   index < companyInfo.length - 1
                     ? "border-b border-black/5"
                     : ""
                 }`}
               >
-                <dt className="shrink-0 text-sm font-semibold text-zinc-500 sm:w-44">
+                <dt className="text-xs font-semibold leading-6 text-zinc-500 sm:text-sm">
                   {row.label}
                 </dt>
 
-                <dd className="min-w-0 break-words text-sm leading-7 text-zinc-800">
-                  {row.label === "メールアドレス" ? (
+                <dd className="min-w-0 break-words text-sm leading-6 text-zinc-800 sm:leading-7">
+                  {row.label === "メール" ? (
                     <a
                       href={`mailto:${row.value}`}
-                      className="underline underline-offset-4"
+                      className="break-all underline underline-offset-4"
                     >
                       {row.value}
                     </a>
@@ -222,39 +230,37 @@ export default function CompanyPage() {
 
           <Link
             href="/headspa-franchise"
-            className="mt-5 inline-flex min-h-[44px] items-center text-sm font-semibold text-amber-700 underline underline-offset-4"
+            className="mt-3 inline-flex min-h-[44px] items-center text-sm font-semibold text-amber-700 underline underline-offset-4"
           >
-            ヘッドスパFC・開業支援はこちら →
+            ヘッドスパFC・開業支援 →
           </Link>
         </section>
 
-        <section className="border-y border-black/5 bg-amber-50 px-5 py-14 sm:px-6 sm:py-20">
-          <div className="mx-auto max-w-3xl">
-            <p className="text-xs font-bold tracking-widest text-amber-700">
-              PHILOSOPHY
-            </p>
+        <section className="border-y border-black/5 bg-amber-50 px-4 py-8 sm:px-6 sm:py-12">
+          <div className="mx-auto max-w-5xl sm:grid sm:grid-cols-[180px_minmax(0,1fr)] sm:gap-8">
+            <div>
+              <p className="text-[11px] font-bold tracking-[0.12em] text-amber-700">
+                PHILOSOPHY
+              </p>
+              <h2 className="mt-2 text-xl font-bold leading-7">
+                〜上へ、前へ。〜
+              </h2>
+            </div>
 
-            <h2 className="mt-3 text-3xl font-bold">
-              〜上へ、前へ。〜
-            </h2>
-
-            <p className="mt-5 text-base leading-8 text-zinc-600">
-              小さな事業の最初の一歩から、
-              取扱量が増えたときの物流まで。
-              困ったときに相談できるパートナーであることを
-              大切にしています。
-            </p>
-
-            <p className="mt-4 text-base leading-8 text-zinc-600">
-              すぐに答えが出ないご相談でも、まずご連絡。
-              商品、数量、作業、納期を確認し、
-              現場に合う方法を一緒に考えます。
-            </p>
-
-            <p className="mt-4 text-xs leading-6 text-zinc-500">
-              ※365日対応をご希望の場合は、
-              作業内容や出荷条件を事前にご相談ください。
-            </p>
+            <div className="mt-3 text-sm leading-7 text-zinc-600 sm:mt-0">
+              <p>
+                小さな事業の最初の一歩から、取扱量が増えたときまで。
+                困ったときに相談できる物流パートナーを目指します。
+              </p>
+              <p className="mt-2">
+                すぐに答えが出ないご相談でも、まずご連絡。
+                商品・数量・作業・納期を確認し、
+                現場に合う方法を一緒に考えます。
+              </p>
+              <p className="mt-2 text-xs leading-6 text-zinc-500">
+                ※365日対応の作業内容・出荷条件は事前にご相談ください。
+              </p>
+            </div>
           </div>
         </section>
 
@@ -262,52 +268,47 @@ export default function CompanyPage() {
 
         <section
           id="contact"
-          className="scroll-mt-24 px-4 py-14 sm:px-6 sm:py-20"
+          className="scroll-mt-24 px-4 py-9 sm:px-6 sm:py-14"
         >
           <div className="mx-auto max-w-3xl">
-            <p className="text-xs font-bold tracking-widest text-amber-700">
+            <p className="text-[11px] font-bold tracking-[0.12em] text-amber-700">
               LOGISTICS CONTACT
             </p>
 
-            <h2 className="mt-3 text-3xl font-bold leading-snug sm:text-4xl">
-              「これ頼める？」
-              <br />
-              まずはご相談ください。
+            <h2 className="mt-2 text-[23px] font-bold leading-[1.5] tracking-tight sm:text-4xl">
+              <span className="inline-block">「これ頼める？」</span>
+              <span className="inline-block">まずはご相談を。</span>
             </h2>
 
-            <p className="mt-5 text-sm leading-7 text-zinc-600">
-              倉庫保管・発送代行・検品・梱包・流通加工・
-              スポット出荷・輸送手配など。
+            <p className="mt-3 text-sm leading-7 text-zinc-600">
+              保管・発送・検品・梱包・流通加工・輸送手配など。
               物量が少ない場合や、開始時期が未定でも歓迎です。
             </p>
 
-            <div className="mt-6 rounded-2xl border border-amber-100 bg-amber-50 p-5">
-              <p className="text-sm font-bold">
-                内容欄に、分かる範囲でお知らせください。
+            <div className="mt-4 rounded-xl border border-amber-100 bg-amber-50 p-4">
+              <p className="text-sm font-bold leading-6">
+                分かる範囲の記入で大丈夫です。
               </p>
-              <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-zinc-600">
-                <li>商品の種類・大きさ</li>
-                <li>保管量・発送件数の目安</li>
-                <li>お願いしたい作業・お困りごと</li>
-                <li>開始希望時期・ご希望の納期</li>
+              <ul className="mt-3 grid grid-cols-2 gap-x-3 gap-y-2 text-sm leading-6 text-zinc-600">
+                <li>・商品・大きさ</li>
+                <li>・保管量・発送数</li>
+                <li>・作業・お困りごと</li>
+                <li>・希望時期・納期</li>
               </ul>
-              <p className="mt-3 text-xs leading-6 text-zinc-500">
-                未定の項目は「未定」で大丈夫です。
-              </p>
             </div>
 
             <a
               href="tel:0661159935"
-              className="mt-6 flex min-h-[52px] items-center justify-center rounded-full border border-black/15 bg-white px-4 py-3 text-center text-sm font-bold transition hover:bg-amber-50"
+              className="mt-4 flex min-h-[48px] items-center justify-center rounded-full border border-black/15 bg-white px-3 py-3 text-center text-sm font-bold transition hover:bg-amber-50"
             >
-              急ぎの物流相談：06-6115-9935
+              急ぎの相談：06-6115-9935
             </a>
 
-            <div className="mt-8 min-w-0">
+            <div className="mt-5 min-w-0">
               <ContactForm />
             </div>
 
-            <p className="mt-6 text-sm leading-7 text-zinc-600">
+            <p className="mt-4 text-sm leading-7 text-zinc-600">
               ヘッドスパFCのご相談は、
               <Link
                 href="/franchise-contact"
@@ -315,7 +316,7 @@ export default function CompanyPage() {
               >
                 FC専用フォーム
               </Link>
-              をご利用ください。
+              へ。
             </p>
           </div>
         </section>
