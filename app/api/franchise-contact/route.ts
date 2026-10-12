@@ -1,68 +1,162 @@
 import { NextResponse } from "next/server"
 import { Resend } from "resend"
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+export const runtime = "nodejs"
 
-export async function POST(req: Request) {
+function readText(
+  body: Record<string, unknown>,
+  key: string,
+  maxLength: number
+): string {
+  const value = body[key]
+
+  if (value === undefined || value === null) {
+    return ""
+  }
+
+  if (typeof value !== "string") {
+    throw new Error("INVALID_INPUT")
+  }
+
+  const text = value.trim()
+
+  if (text.length > maxLength) {
+    throw new Error("INVALID_INPUT")
+  }
+
+  return text
+}
+
+export async function POST(request: Request) {
+  let body: Record<string, unknown>
+
   try {
-    const body = await req.json()
+    const parsed: unknown = await request.json()
 
-    const {
-      name,
-      company,
-      email,
-      phone,
-      type,
-      plan,
-      area,
-      message,
-    } = body
+    if (
+      typeof parsed !== "object" ||
+      parsed === null ||
+      Array.isArray(parsed)
+    ) {
+      throw new Error("INVALID_INPUT")
+    }
 
-    await resend.emails.send({
-      from: "GAMI Franchise <onboarding@resend.dev>",
-      to: ["info@gamigami.net"],
+    body = parsed as Record<string, unknown>
+  } catch {
+    return NextResponse.json(
+      {
+        success: false,
+        message: "入力内容を確認してください。",
+      },
+      { status: 400 }
+    )
+  }
 
-      subject: `【FC相談】${name}様よりお問い合わせ`,
+  let name: string
+  let company: string
+  let email: string
+  let phone: string
+  let type: string
+  let plan: string
+  let area: string
+  let message: string
 
-      replyTo: email,
+  try {
+    name = readText(body, "name", 100)
+    company = readText(body, "company", 200)
+    email = readText(body, "email", 254)
+    phone = readText(body, "phone", 40)
+    type = readText(body, "type", 200)
+    plan = readText(body, "plan", 200)
+    area = readText(body, "area", 200)
+    message = readText(body, "message", 10000)
 
-      html: `
-        <div style="font-family: sans-serif; line-height: 1.9;">
-          <h2>フランチャイズ相談フォーム</h2>
+    if (
+      !name ||
+      !message ||
+      !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ||
+      /[\r\n]/.test(name) ||
+      /[\r\n]/.test(email)
+    ) {
+      throw new Error("INVALID_INPUT")
+    }
+  } catch {
+    return NextResponse.json(
+      {
+        success: false,
+        message: "お名前・メールアドレス・相談内容を確認してください。",
+      },
+      { status: 400 }
+    )
+  }
 
-          <p><strong>お名前：</strong>${name}</p>
+  const apiKey = process.env.RESEND_API_KEY
 
-          <p><strong>会社名 / 屋号：</strong>${company || "-"}</p>
-
-          <p><strong>メール：</strong>${email}</p>
-
-          <p><strong>電話番号：</strong>${phone || "-"}</p>
-
-          <p><strong>希望導入形態：</strong>${type || "-"}</p>
-
-          <p><strong>希望プラン：</strong>${plan || "-"}</p>
-
-          <p><strong>開業希望エリア：</strong>${area || "-"}</p>
-
-          <hr />
-
-          <p><strong>相談内容</strong></p>
-
-          <p style="white-space: pre-wrap;">${message}</p>
-        </div>
-      `,
-    })
-
-    return NextResponse.json({
-      success: true,
-    })
-  } catch (error) {
-    console.error(error)
+  if (!apiKey) {
+    console.error("FC contact: RESEND_API_KEY is missing")
 
     return NextResponse.json(
       {
         success: false,
-        message: "送信に失敗しました。",
+        message:
+          "現在フォームを送信できません。メールまたは電話でご連絡ください。",
+      },
+      { status: 503 }
+    )
+  }
+
+  const recipient =
+    process.env.FRANCHISE_CONTACT_EMAIL || "info@gamigami.net"
+
+  try {
+    const resend = new Resend(apiKey)
+
+    const { error } = await resend.emails.send({
+      from: "GAMI Franchise <contact@gamigami.net>",
+      to: [recipient],
+      replyTo: email,
+      subject: `【GAMI・FC開業相談】${name}様`,
+      text: [
+        "GAMIサイトからヘッドスパFCの相談が届きました。",
+        "",
+        `お名前：${name}`,
+        `会社名・屋号：${company || "未記入"}`,
+        `メール：${email}`,
+        `電話番号：${phone || "未記入"}`,
+        `希望導入形態：${type || "未定・相談したい"}`,
+        `希望プラン：${plan || "未定・相談したい"}`,
+        `開業希望エリア：${area || "未定"}`,
+        "",
+        "ご相談内容",
+        "--------------------------------",
+        message,
+      ].join("\n"),
+    })
+
+    if (error) {
+      console.error("FC contact: email provider rejected the send")
+
+      return NextResponse.json(
+        {
+          success: false,
+          message:
+            "送信できませんでした。再度お試しいただくか、メール・電話でご連絡ください。",
+        },
+        { status: 502 }
+      )
+    }
+
+    return NextResponse.json({
+      success: true,
+    })
+  } catch {
+    console.error("FC contact: email send failed")
+
+    return NextResponse.json(
+      {
+        success: false,
+        message:
+          "送信できませんでした。再度お試しいただくか、メール・電話でご連絡ください。",
       },
       { status: 500 }
     )
