@@ -138,12 +138,19 @@ export default function HomePage() {
 
       <main>
         <section className="relative isolate overflow-hidden bg-zinc-950 text-white">
-          <img
-            src="/images/hero-logistics.png"
-            alt=""
-            fetchPriority="high"
+                    <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            poster="/images/hero-logistics.png"
             className="absolute inset-0 -z-20 h-full w-full object-cover"
-          />
+          >
+            <source
+              src="/video/hero-logistics.mp4"
+              type="video/mp4"
+            />
+          </video>
           <div className="absolute inset-0 -z-10 bg-gradient-to-r from-black/95 via-black/85 to-black/60" />
 
           <div className={`${container} py-14 sm:py-20 lg:py-24`}>
