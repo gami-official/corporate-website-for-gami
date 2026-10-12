@@ -3,65 +3,71 @@
 import Link from "next/link"
 import { useState } from "react"
 
-const logisticsServices = [
-  "発送代行",
-  "倉庫保管",
-  "流通加工",
-  "検品・梱包",
-  "小ロット対応",
-  "スポット対応",
+const menuLinks = [
+  { href: "/logistics", label: "物流サービス" },
+  { href: "/warehouse", label: "倉庫紹介" },
+  { href: "/company", label: "会社概要" },
+  { href: "/company#contact", label: "物流の相談" },
 ]
 
 const linkClass =
-  "flex items-center justify-between gap-3 rounded-xl border border-black/5 bg-white px-4 py-4 text-sm font-semibold text-black/75 transition hover:border-amber-300 hover:text-black"
+  "flex min-h-[48px] min-w-0 items-center justify-between gap-2 rounded-xl border border-black/10 bg-white px-3 py-3 text-sm font-semibold leading-6 text-zinc-800 transition hover:border-amber-400"
 
 export function Footer() {
   const [logoError, setLogoError] = useState(false)
 
   return (
-    <footer className="border-t border-black/5 bg-[#f8f8f6] text-black">
-      <div className="mx-auto max-w-7xl px-5 py-12 sm:px-6 sm:py-16">
-        <div className="rounded-3xl bg-zinc-950 px-6 py-8 text-white sm:px-10 sm:py-10">
-          <p className="text-xs font-bold tracking-[0.18em] text-amber-300">
-            LOGISTICS PARTNER
-          </p>
+    <footer className="border-t border-black/10 bg-[#f8f8f6] text-zinc-900">
+      <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
+        <section className="rounded-2xl bg-zinc-950 p-5 text-white sm:p-8">
+          <div className="grid gap-5 lg:grid-cols-[1.2fr_1fr] lg:items-center">
+            <div>
+              <p className="text-[11px] font-bold tracking-[0.12em] text-amber-300">
+                LOGISTICS CONTACT
+              </p>
 
-          <h2 className="mt-4 text-2xl font-bold leading-relaxed sm:text-3xl">
-            365日、物流を止めない。
-            <br />
-            まず返す。すぐ動く。
-          </h2>
+              <h2 className="mt-2 text-[23px] font-bold leading-[1.5] tracking-tight sm:text-3xl">
+                <span className="inline-block">物流で困ったら、</span>
+                <span className="inline-block">まずGAMIへ。</span>
+              </h2>
 
-          <p className="mt-4 max-w-2xl text-sm leading-7 text-white/75">
-            1坪から、スモールビジネスを支える。
-            段ボール数箱の保管、少量の発送、検品・梱包だけのご依頼も、
-            まずはお気軽にご相談ください。
-          </p>
+              <p className="mt-3 text-sm leading-7 text-white/80">
+                365日、物流を止めない。まず返す。すぐ動く。
+                1坪からの保管、小ロット発送もご相談ください。
+              </p>
+            </div>
 
-          <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-            <Link
-              href="/company#contact"
-              className="inline-flex items-center justify-center rounded-full bg-amber-500 px-7 py-4 text-sm font-bold text-white transition hover:bg-amber-600"
-            >
-              物流の見積り・相談をする
-            </Link>
+            <div className="min-w-0">
+              <div className="grid grid-cols-[1.35fr_1fr] gap-2">
+                <Link
+                  href="/company#contact"
+                  className="flex min-h-[48px] items-center justify-center rounded-full bg-amber-500 px-3 py-3 text-center text-sm font-bold text-white transition hover:bg-amber-600"
+                >
+                  見積り・物流相談
+                </Link>
 
-            <a
-              href="tel:0661159935"
-              className="inline-flex items-center justify-center rounded-full border border-white/30 px-7 py-4 text-sm font-bold text-white transition hover:bg-white/10"
-            >
-              電話で相談：06-6115-9935
-            </a>
+                <a
+                  href="tel:0661159935"
+                  className="flex min-h-[48px] items-center justify-center rounded-full border border-white/40 px-3 py-3 text-center text-sm font-bold transition hover:bg-white/10"
+                >
+                  電話で相談
+                </a>
+              </div>
+
+              <p className="mt-3 text-[11px] leading-5 text-white/65">
+                ※365日対応は、作業内容・出荷条件を事前にご相談ください。
+              </p>
+            </div>
           </div>
+        </section>
 
-          <p className="mt-4 text-xs leading-6 text-white/55">
-            ※365日対応をご希望の案件は、出荷内容・作業内容・運用条件を事前にご相談ください。
-          </p>
-        </div>
-
-        <div className="mt-12 grid gap-10 lg:grid-cols-3">
-          <div>
-            <Link href="/" className="inline-flex items-center gap-3">
+        <div className="mt-7 grid gap-6 lg:grid-cols-[1.1fr_1fr_1fr] lg:gap-8">
+          <section>
+            <Link
+              href="/"
+              className="inline-flex items-center gap-3"
+              aria-label="GAMI トップページ"
+            >
               <img
                 src={
                   logoError
@@ -69,131 +75,99 @@ export function Footer() {
                     : "/images/logo.png"
                 }
                 alt="GAMI"
-                width={42}
-                height={42}
+                width={38}
+                height={38}
                 onError={() => setLogoError(true)}
-                className="h-[42px] w-[42px] rounded-full object-cover"
+                className="h-[38px] w-[38px] rounded-full object-cover"
               />
-
-              <span className="text-2xl font-bold tracking-[0.18em]">
+              <span className="text-xl font-bold tracking-[0.18em]">
                 GAMI
+              </span>
+              <span className="text-[11px] font-semibold text-zinc-500">
+                〜上へ、前へ。〜
               </span>
             </Link>
 
-            <p className="mt-4 text-xs font-bold tracking-[0.16em] text-amber-600">
-              〜上へ、前へ。〜
+            <p className="mt-3 text-sm leading-7 text-zinc-600">
+              大阪・福岡から全国へ。
+              保管・発送代行・検品・流通加工で、
+              スモールビジネスを支えます。
             </p>
 
-            <p className="mt-4 text-sm leading-7 text-black/65">
-              大阪・福岡の物流拠点から全国へ。
-              倉庫保管・発送代行・検品・流通加工・輸送手配まで、
-              事業の規模に合わせて物流を支えます。
-            </p>
-
-            <div className="mt-5 flex flex-wrap gap-2">
-              {logisticsServices.map((service) => (
-                <span
-                  key={service}
-                  className="rounded-full border border-black/5 bg-white px-3 py-2 text-xs text-black/65"
-                >
-                  {service}
-                </span>
-              ))}
-            </div>
-
-            <div className="mt-6 rounded-2xl border border-black/5 bg-white p-5">
-              <p className="text-xs font-bold tracking-[0.14em] text-amber-600">
+            <address className="mt-3 text-sm not-italic leading-6 text-zinc-600">
+              <span className="font-semibold text-zinc-800">
                 大阪物流センター
-              </p>
-              <address className="mt-3 text-sm not-italic leading-7 text-black/65">
-                〒570-0003
-                <br />
-                大阪府守口市大日町1-8-18
-              </address>
-              <p className="mt-2 text-xs text-black/50">
-                約100坪の倉庫・1坪から相談可能
-              </p>
-            </div>
-          </div>
+              </span>
+              <span className="mt-1 block">
+                〒570-0003 大阪府守口市大日町1-8-18
+              </span>
+            </address>
 
-          <div>
-            <h3 className="text-sm font-bold text-black">
+            <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1">
+              <a
+                href="tel:0661159935"
+                className="inline-flex min-h-[44px] items-center text-sm font-semibold underline underline-offset-4"
+              >
+                06-6115-9935
+              </a>
+              <a
+                href="mailto:k_fuchigami@gamigami.email"
+                className="inline-flex min-h-[44px] items-center text-sm font-semibold underline underline-offset-4"
+              >
+                メールで相談
+              </a>
+            </div>
+          </section>
+
+          <nav aria-label="フッターの物流メニュー">
+            <h3 className="text-sm font-bold">
               物流サービス・会社案内
             </h3>
 
-            <ul className="mt-4 space-y-3">
-              <li>
-                <Link href="/logistics" className={linkClass}>
-                  <span>物流サービス</span>
-                  <span aria-hidden="true">→</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/warehouse" className={linkClass}>
-                  <span>倉庫紹介</span>
-                  <span aria-hidden="true">→</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/company" className={linkClass}>
-                  <span>会社概要</span>
-                  <span aria-hidden="true">→</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/company#contact" className={linkClass}>
-                  <span>物流の見積り・相談</span>
-                  <span aria-hidden="true">→</span>
-                </Link>
-              </li>
+            <ul className="mt-3 grid grid-cols-2 gap-2">
+              {menuLinks.map((link) => (
+                <li key={link.href} className="min-w-0">
+                  <Link href={link.href} className={linkClass}>
+                    <span>{link.label}</span>
+                    <span aria-hidden="true">→</span>
+                  </Link>
+                </li>
+              ))}
             </ul>
-
-            <a
-              href="mailto:k_fuchigami@gamigami.email"
-              className="mt-4 inline-block text-sm font-medium text-black/65 underline underline-offset-4 hover:text-black"
-            >
-              メールで物流を相談する
-            </a>
 
             <Link
               href="/international"
-              className="mt-4 block text-xs font-semibold tracking-wider text-black/55 hover:text-black"
+              className="mt-2 inline-flex min-h-[44px] items-center text-xs font-semibold tracking-wide text-zinc-600 underline underline-offset-4"
             >
               ENGLISH / JAPAN FULFILLMENT
             </Link>
-          </div>
+          </nav>
 
-          <div>
-            <h3 className="text-sm font-bold text-black">
-              ヘッドスパ事業・開業支援
+          <nav aria-label="フッターのヘッドスパメニュー">
+            <h3 className="text-sm font-bold">
+              ヘッドスパ・開業支援
             </h3>
 
-            <p className="mt-4 text-sm leading-7 text-black/65">
-              ヘッドスパ専門店ゆうの技術と、
-              GAMIの経営・集客支援を組み合わせ、
-              開業から店舗運営までサポートします。
-            </p>
-
-            <ul className="mt-4 space-y-3">
-              <li>
+            <ul className="mt-3 grid grid-cols-2 gap-2">
+              <li className="min-w-0">
                 <Link
                   href="/headspa-franchise"
                   className={linkClass}
                 >
-                  <span>ヘッドスパFC・開業支援</span>
+                  <span>FC・開業支援</span>
                   <span aria-hidden="true">→</span>
                 </Link>
               </li>
-              <li>
+              <li className="min-w-0">
                 <Link
                   href="/franchise-contact"
                   className={linkClass}
                 >
-                  <span>FCの開業相談をする</span>
+                  <span>FCの相談</span>
                   <span aria-hidden="true">→</span>
                 </Link>
               </li>
-              <li>
+              <li className="col-span-2">
                 <a
                   href="https://www.yuheadspa.net/"
                   target="_blank"
@@ -206,15 +180,15 @@ export function Footer() {
               </li>
             </ul>
 
-            <p className="mt-4 text-xs leading-6 text-black/50">
+            <p className="mt-3 text-xs leading-6 text-zinc-500">
               施術メニュー・店舗情報・ご予約は、
-              ヘッドスパ専門店ゆうの公式サイトをご覧ください。
+              ゆうの公式サイトをご覧ください。
             </p>
-          </div>
+          </nav>
         </div>
 
-        <div className="mt-12 border-t border-black/10 pt-6">
-          <p className="text-center text-xs text-black/45">
+        <div className="mt-5 border-t border-black/10 pt-4">
+          <p className="text-center text-[11px] text-zinc-500">
             © GAMI INC.
           </p>
         </div>
