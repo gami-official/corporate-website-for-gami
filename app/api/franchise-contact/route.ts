@@ -105,8 +105,7 @@ export async function POST(request: Request) {
     )
   }
 
-  const recipient =
-    process.env.FRANCHISE_CONTACT_EMAIL || "info@gamigami.net"
+    const recipient = "k_fuchigami@gamigami.email"
 
   try {
     const resend = new Resend(apiKey)
