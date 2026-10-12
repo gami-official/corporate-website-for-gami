@@ -1,272 +1,173 @@
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
 import type { Metadata } from "next"
 import Link from "next/link"
-import {
-  ArrowLeft,
-  Phone,
-  MessageCircle,
-  FileText,
-  CircleCheck,
-  TrendingUp,
-  Wallet,
-  Crown,
-  BadgeCheck,
-  Sparkles,
-} from "lucide-react"
+import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
 import FranchiseForm from "./franchise-form"
 
 export const metadata: Metadata = {
-  title: "ヘッドスパ専門店ゆう フランチャイズ無料相談 | 株式会社GAMI",
+  title: "ヘッドスパFC・開業の無料相談",
   description:
-    "ヘッドスパ専門店ゆうのフランチャイズ無料相談ページ。高単価ヘッドスパモデル、開業相談、資料請求、導入相談を受け付けています。",
+    "ヘッドスパ専門店ゆうのFC・開業相談。経験、希望エリア、予算に合わせて、技術研修・導入形態・運営支援をご案内します。検討段階でもご相談いただけます。",
   alternates: {
     canonical: "/franchise-contact",
   },
 }
 
-const achievements = [
-  {
-    icon: TrendingUp,
-    title: "本店 初年度売上",
-    value: "760万円",
-    text: "実店舗運営から生まれた、再現性を目指すモデル。",
-  },
-  {
-    icon: Crown,
-    title: "2年目以降",
-    value: "年商1000万円超",
-    text: "高単価 × 少人数制で安売りに頼らない運営設計。",
-  },
-  {
-    icon: Wallet,
-    title: "ワンオーナー最高月商",
-    value: "200万円以上",
-    text: "1日3名限定でも売上を作れる可能性。",
-  },
-]
-
-const points = [
-  "未経験からでも始められるか",
-  "ウェットとドライのどちらが向いているか",
-  "自宅・マンション・空きスペースで開業できるか",
-  "必要な初期費用はどれくらいか",
-  "利益が残るモデルになるか",
-]
-
-const reasons = [
-  "無理な営業は行いません",
-  "相談だけ・資料請求だけでもOK",
-  "現状に合う導入形態を個別に案内",
+const consultationItems = [
+  "未経験からの開業",
+  "ウェット・ドライの選択",
+  "必要な設備・初期費用",
+  "自宅・空きスペース活用",
+  "メニュー・価格設計",
+  "集客・予約・運営",
 ]
 
 export default function FranchiseContactPage() {
   return (
-    <>
+    <div className="min-h-screen bg-[#fbfaf7] text-zinc-900">
       <Header />
 
-      <main className="bg-[#fbfaf7]">
-        <section className="relative overflow-hidden bg-[#111111] px-5 py-20 text-white sm:px-6 lg:px-8">
-          <div className="absolute inset-0 opacity-40">
-            <div className="absolute -left-16 top-0 h-72 w-72 rounded-full bg-amber-500 blur-3xl" />
-            <div className="absolute right-0 top-10 h-96 w-96 rounded-full bg-orange-400 blur-3xl" />
-          </div>
-
-          <div className="relative z-10 mx-auto max-w-5xl">
+      <main>
+        <section className="bg-zinc-950 px-4 py-8 text-white sm:px-6 sm:py-14">
+          <div className="mx-auto max-w-6xl">
             <Link
               href="/headspa-franchise"
-              className="inline-flex items-center gap-2 text-sm text-white/80 transition hover:text-white"
+              className="inline-flex min-h-[44px] items-center text-xs font-semibold text-white/75 underline underline-offset-4 hover:text-white"
             >
-              <ArrowLeft className="h-4 w-4" />
-              フランチャイズページに戻る
+              ← FC・開業支援の案内へ
             </Link>
 
-            <div className="mt-8 inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-[11px] tracking-[0.14em] text-white/90 backdrop-blur sm:text-xs sm:tracking-[0.18em]">
+            <p className="mt-2 text-[11px] font-bold tracking-[0.12em] text-amber-300">
               FRANCHISE CONTACT
-            </div>
-
-            <h1 className="mt-6 text-[clamp(2rem,8.5vw,4.8rem)] font-bold leading-[1.12] tracking-[-0.045em] text-white sm:leading-[1.08]">
-              ヘッドスパ専門店ゆう
-              <br />
-              フランチャイズ無料相談
-            </h1>
-
-            <p className="mt-6 max-w-3xl text-[15px] leading-8 text-white/85 sm:text-base">
-              高単価ヘッドスパモデルの導入相談を受付中。
-              技術・空間・経営・集客導線まで含め、
-              事業として成り立つ形を個別にご案内します。
             </p>
 
-            <div className="mt-8 grid max-w-[24rem] grid-cols-1 gap-3 sm:max-w-none sm:grid-cols-3">
-              {["先着5社限定", "ウェット / ドライ両対応", "無理な営業なし"].map(
+            <h1 className="mt-3 text-[28px] font-bold leading-[1.5] tracking-tight sm:text-5xl">
+              <span className="inline-block">ヘッドスパの開業、</span>
+              <span className="inline-block">まずは無料相談。</span>
+            </h1>
+
+            <p className="mt-3 max-w-2xl text-sm leading-7 text-white/85 sm:text-base">
+              経験・希望エリア・予算に合わせてご案内します。
+              まだ検討段階でも、導入形態が未定でも大丈夫です。
+            </p>
+
+            <div className="mt-4 grid max-w-lg grid-cols-3 gap-2">
+              {["先着5社限定", "検討段階もOK", "無理な営業なし"].map(
                 (item) => (
-                  <div
+                  <span
                     key={item}
-                    className="rounded-full border border-white/20 bg-white/10 px-4 py-2 text-center text-xs leading-5 text-white/90 backdrop-blur"
+                    className="flex items-center justify-center rounded-lg border border-white/20 bg-white/5 px-2 py-2 text-center text-[11px] font-semibold leading-5"
                   >
                     {item}
-                  </div>
-                ),
+                  </span>
+                )
               )}
             </div>
           </div>
         </section>
 
-        <section className="px-5 py-12 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-6xl">
-            <div className="grid gap-5 lg:grid-cols-3">
-              {achievements.map((item) => (
-                <div
-                  key={item.title}
-                  className="rounded-[30px] bg-[#111111] p-6 text-white shadow-[0_18px_50px_rgba(0,0,0,0.12)] sm:p-8"
-                >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10">
-                    <item.icon className="h-5 w-5 text-amber-300" />
-                  </div>
+        <section className="px-4 py-8 sm:px-6 sm:py-12">
+          <div className="mx-auto grid max-w-6xl items-start gap-5 lg:grid-cols-[1.2fr_0.8fr]">
+            <section className="min-w-0 rounded-2xl border border-black/10 bg-white p-4 sm:p-6">
+              <p className="text-[11px] font-bold tracking-[0.12em] text-amber-700">
+                FREE CONSULTATION
+              </p>
 
-                  <p className="mt-5 text-sm leading-6 text-white/70">
-                    {item.title}
-                  </p>
+              <h2 className="mt-2 text-2xl font-bold leading-snug">
+                無料相談フォーム
+              </h2>
 
-                  <p className="mt-2 text-2xl font-bold leading-tight tracking-[-0.02em]">
-                    {item.value}
-                  </p>
+              <p className="mt-3 text-sm leading-7 text-zinc-600">
+                分かる範囲でご記入ください。
+                開業方法・必要資金・支援内容を一緒に整理します。
+              </p>
 
-                  <p className="mt-3 text-sm leading-7 text-white/80">
-                    {item.text}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+              <FranchiseForm />
+            </section>
 
-        <section className="px-5 pb-16 sm:px-6 lg:px-8">
-          <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[0.95fr_1.05fr]">
-            <div className="space-y-6">
-              <div className="rounded-[30px] bg-white p-6 shadow-[0_18px_50px_rgba(0,0,0,0.06)] sm:p-8">
-                <div className="flex items-center gap-3">
-                  <Sparkles className="h-5 w-5 shrink-0 text-amber-500" />
-
-                  <h2 className="text-xl font-bold leading-snug tracking-[-0.02em] text-[#111111]">
-                    この無料相談でわかること
-                  </h2>
-                </div>
-
-                <div className="mt-5 space-y-4">
-                  {points.map((item) => (
-                    <div key={item} className="flex gap-3">
-                      <CircleCheck className="mt-0.5 h-5 w-5 shrink-0 text-amber-500" />
-                      <p className="text-sm leading-7 text-black/60">{item}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="rounded-[30px] bg-white p-6 shadow-[0_18px_50px_rgba(0,0,0,0.06)] sm:p-8">
-                <div className="flex items-center gap-3">
-                  <BadgeCheck className="h-5 w-5 shrink-0 text-amber-500" />
-
-                  <h2 className="text-xl font-bold leading-snug tracking-[-0.02em] text-[#111111]">
-                    安心してご相談ください
-                  </h2>
-                </div>
-
-                <div className="mt-5 space-y-4">
-                  {reasons.map((item) => (
-                    <div key={item} className="flex gap-3">
-                      <div className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-amber-500" />
-                      <p className="text-sm leading-7 text-black/60">{item}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="rounded-[30px] bg-white p-6 shadow-[0_18px_50px_rgba(0,0,0,0.06)] sm:p-8">
-                <h2 className="text-xl font-bold leading-snug tracking-[-0.02em] text-[#111111]">
-                  他の相談方法
+            <aside className="min-w-0 space-y-4">
+              <section className="rounded-2xl border border-amber-100 bg-amber-50 p-4 sm:p-5">
+                <h2 className="text-lg font-bold leading-7">
+                  こんなことを相談できます。
                 </h2>
 
-                <div className="mt-6 space-y-4">
+                <ul className="mt-4 grid grid-cols-2 gap-2">
+                  {consultationItems.map((item) => (
+                    <li
+                      key={item}
+                      className="min-w-0 rounded-lg bg-white px-3 py-3 text-sm leading-6"
+                    >
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+
+                <p className="mt-3 text-xs leading-6 text-zinc-600">
+                  導入条件や支援範囲は個別に確認します。
+                  相談だけでもご利用いただけます。
+                </p>
+              </section>
+
+              <section className="rounded-2xl border border-black/10 bg-white p-4 sm:p-5">
+                <h2 className="text-lg font-bold leading-7">
+                  LINE・電話でも相談。
+                </h2>
+
+                <div className="mt-4 grid grid-cols-2 gap-2">
                   <a
                     href="https://lin.ee/3QGIdCY"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-between rounded-2xl border border-black/5 px-4 py-4 transition hover:bg-black/[0.02]"
+                    className="flex min-h-[48px] items-center justify-center rounded-full bg-zinc-950 px-3 py-3 text-center text-sm font-bold text-white transition hover:bg-zinc-800"
                   >
-                    <div className="flex items-center gap-3">
-                      <MessageCircle className="h-5 w-5 shrink-0 text-[#111111]" />
-
-                      <div>
-                        <p className="text-sm font-bold text-[#111111]">
-                          LINEで相談
-                        </p>
-
-                        <p className="text-xs leading-5 text-black/50">
-                          すぐ相談したい方向け
-                        </p>
-                      </div>
-                    </div>
+                    LINEで相談
                   </a>
 
                   <a
                     href="tel:0661159935"
-                    className="flex items-center justify-between rounded-2xl border border-black/5 px-4 py-4 transition hover:bg-black/[0.02]"
+                    className="flex min-h-[48px] items-center justify-center rounded-full border border-black/15 px-3 py-3 text-center text-sm font-bold transition hover:bg-amber-50"
                   >
-                    <div className="flex items-center gap-3">
-                      <Phone className="h-5 w-5 shrink-0 text-[#111111]" />
-
-                      <div>
-                        <p className="text-sm font-bold text-[#111111]">
-                          電話で相談
-                        </p>
-
-                        <p className="text-xs leading-5 text-black/50">
-                          直接話して確認したい方向け
-                        </p>
-                      </div>
-                    </div>
+                    電話で相談
                   </a>
                 </div>
-              </div>
-            </div>
 
-            <div className="rounded-[30px] bg-white p-6 shadow-[0_18px_50px_rgba(0,0,0,0.06)] sm:p-8">
-              <div className="inline-flex rounded-full bg-amber-50 px-4 py-1.5 text-xs font-bold leading-5 tracking-[0.02em] text-[#111111]">
-                ＼ 先着5社限定 ／ 無料個別相談受付中
-              </div>
+                <p className="mt-3 text-sm leading-6 text-zinc-600">
+                  TEL：06-6115-9935
+                </p>
 
-              <div className="mt-5 flex items-center gap-3">
-                <FileText className="h-5 w-5 shrink-0 text-[#111111]" />
+                <a
+                  href="mailto:k_fuchigami@gamigami.email"
+                  className="mt-2 inline-flex min-h-[44px] items-center text-sm font-semibold underline underline-offset-4"
+                >
+                  メールで相談する
+                </a>
+              </section>
 
-                <h2 className="text-xl font-bold leading-snug tracking-[-0.02em] text-[#111111]">
-                  無料相談フォーム
+              <section className="rounded-2xl border border-black/10 bg-white p-4 sm:p-5">
+                <h2 className="text-lg font-bold leading-7">
+                  施術を予約したい方へ。
                 </h2>
-              </div>
 
-              <p className="mt-4 text-sm leading-7 text-black/60">
-                開業方法、必要資金、導入形態の向き不向きなどを、
-                現状に合わせて個別にご案内します。
-              </p>
-
-              <div className="mt-6 rounded-2xl bg-[#fbfaf7] p-4">
-                <p className="text-sm font-bold leading-6 text-[#111111]">
-                  入力は30秒ほどで完了します
+                <p className="mt-3 text-sm leading-7 text-zinc-600">
+                  こちらは加盟・開業相談の窓口です。
+                  店舗メニューや施術予約は、ゆう公式サイトへ。
                 </p>
 
-                <p className="mt-2 text-xs leading-6 text-black/60">
-                  まだ検討段階でも大丈夫です。まずは相談して、
-                  あなたに合う形を整理しましょう。
-                </p>
-              </div>
-
-              <FranchiseForm />
-            </div>
+                <a
+                  href="https://www.yuheadspa.net/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 inline-flex min-h-[44px] items-center text-sm font-semibold text-amber-800 underline underline-offset-4"
+                >
+                  ヘッドスパ専門店ゆう ↗
+                </a>
+              </section>
+            </aside>
           </div>
         </section>
       </main>
 
       <Footer />
-    </>
+    </div>
   )
 }
