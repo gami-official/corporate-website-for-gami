@@ -6,11 +6,11 @@ import { useEffect, useState } from "react"
 import { Menu, X } from "lucide-react"
 
 const japaneseNavLinks = [
-  { href: "/", label: "物流トップ" },
+  { href: "/", label: "トップ" },
   { href: "/logistics", label: "物流サービス" },
   { href: "/warehouse", label: "倉庫紹介" },
+  { href: "/headspa-franchise", label: "ヘッドスパFC" },
   { href: "/company", label: "会社概要" },
-  { href: "/other-business", label: "その他事業" },
   { href: "/international", label: "ENGLISH" },
 ]
 
@@ -21,169 +21,153 @@ const internationalNavLinks = [
   { href: "/international#faq", label: "FAQ" },
 ]
 
-const mobileLinkClass =
-  "group flex items-center justify-between rounded-2xl border border-black/5 bg-white px-4 py-4 text-[14px] font-semibold leading-6 text-black/75 shadow-sm transition-all duration-300 active:scale-[0.98]"
-
 export function Header() {
   const pathname = usePathname()
   const [isOpen, setIsOpen] = useState(false)
   const [logoError, setLogoError] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
 
   const isInternational = pathname.startsWith("/international")
-  const navLinks = isInternational ? internationalNavLinks : japaneseNavLinks
+  const isFranchise =
+    pathname.startsWith("/headspa-franchise") ||
+    pathname.startsWith("/franchise-contact")
 
-  useEffect(() => {
-    const onScroll = () => setIsScrolled(window.scrollY > 12)
-    onScroll()
-    window.addEventListener("scroll", onScroll, { passive: true })
-    return () => window.removeEventListener("scroll", onScroll)
-  }, [])
+  const navLinks = isInternational
+    ? internationalNavLinks
+    : japaneseNavLinks
+
+  const contactHref = isInternational
+    ? "/international/contact"
+    : isFranchise
+      ? "/franchise-contact"
+      : "/company#contact"
+
+  const contactLabel = isInternational
+    ? "CONTACT US"
+    : isFranchise
+      ? "FC開業相談"
+      : "物流を無料相談"
 
   useEffect(() => {
     setIsOpen(false)
   }, [pathname])
 
   return (
-    <header
-      className={`sticky left-0 right-0 top-0 z-50 border-b transition-all duration-300 ${
-        isScrolled
-          ? "border-black/5 bg-white/95 shadow-lg backdrop-blur-2xl"
-          : "border-transparent bg-white/82 backdrop-blur-xl"
-      }`}
-    >
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-2.5 sm:px-6 sm:py-3">
+    <header className="sticky top-0 z-50 border-b border-black/5 bg-white/95 shadow-sm backdrop-blur-xl">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
         <Link
           href={isInternational ? "/international" : "/"}
-          className="flex min-w-0 items-center gap-2.5"
+          className="flex shrink-0 items-center gap-3"
+          aria-label={isInternational ? "GAMI home" : "GAMI トップ"}
         >
-          <div className="shrink-0 overflow-hidden rounded-full border border-black/5 bg-white p-1 shadow-sm">
-            <img
-              src={logoError ? "/placeholder-logo.svg" : "/images/logo.png"}
-              alt="GAMI"
-              width={38}
-              height={38}
-              onError={() => setLogoError(true)}
-              className="h-[38px] w-[38px] rounded-full object-cover sm:h-[42px] sm:w-[42px]"
-            />
-          </div>
+          <img
+            src={logoError ? "/placeholder-logo.svg" : "/images/logo.png"}
+            alt="GAMI"
+            width={42}
+            height={42}
+            onError={() => setLogoError(true)}
+            className="h-10 w-10 rounded-full border border-black/5 object-cover"
+          />
 
-          <div className="min-w-0 leading-none">
-            <span className="block text-[15px] font-bold tracking-[0.14em] text-black sm:text-lg sm:tracking-[0.2em]">
+          <div>
+            <span className="block text-lg font-bold tracking-[0.18em] text-black">
               GAMI
             </span>
-
-            <span className="mt-1 block max-w-[12rem] truncate text-[9px] tracking-[0.04em] text-black/50 sm:max-w-none sm:text-[10px] sm:tracking-[0.10em]">
+            <span className="mt-1 block text-[10px] text-black/55">
               {isInternational
                 ? "JAPAN FULFILLMENT & 3PL"
-                : "大阪の物流倉庫・発送代行"}
+                : "物流・ヘッドスパ開業支援"}
             </span>
           </div>
         </Link>
 
-        <nav className="hidden items-center gap-5 lg:flex">
+        <nav
+          aria-label="メインナビゲーション"
+          className="hidden items-center gap-4 lg:flex"
+        >
           {navLinks.map((link) => {
             const active =
               !link.href.includes("#") &&
               (pathname === link.href ||
-                (link.href !== "/" && pathname.startsWith(link.href)))
+                (link.href !== "/" &&
+                  pathname.startsWith(link.href)))
 
             return (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`relative text-sm tracking-[0.04em] transition-all duration-300 ${
+                aria-current={active ? "page" : undefined}
+                className={`whitespace-nowrap border-b-2 py-2 text-sm transition ${
                   active
-                    ? "font-semibold text-black"
-                    : "text-black/60 hover:text-black"
+                    ? "border-amber-500 font-bold text-black"
+                    : "border-transparent text-black/65 hover:border-amber-300 hover:text-black"
                 }`}
               >
                 {link.label}
-                <span
-                  className={`absolute -bottom-2 left-0 h-[2px] rounded-full bg-amber-500 transition-all duration-300 ${
-                    active ? "w-full" : "w-0"
-                  }`}
-                />
               </Link>
             )
           })}
 
-          {isInternational ? (
-            <Link
-              href="/international/contact"
-              className="rounded-full bg-amber-500 px-5 py-3 text-xs font-bold tracking-[0.08em] text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-amber-600"
-            >
-              CONTACT US
-            </Link>
-          ) : (
-            <>
-              <a
-                href="tel:0661159935"
-                className="rounded-full border border-black/10 px-5 py-3 text-xs font-bold tracking-[0.08em] text-black transition hover:bg-black hover:text-white"
-              >
-                電話相談
-              </a>
-
-              <Link
-                href="/company#contact"
-                className="rounded-full bg-amber-500 px-5 py-3 text-xs font-bold tracking-[0.08em] text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-amber-600"
-              >
-                物流を無料相談
-              </Link>
-            </>
-          )}
+          <Link
+            href={contactHref}
+            className="whitespace-nowrap rounded-full bg-amber-500 px-5 py-3 text-xs font-bold text-white transition hover:bg-amber-600"
+          >
+            {contactLabel}
+          </Link>
         </nav>
 
         <button
           type="button"
-          className="flex h-10 w-10 items-center justify-center rounded-full border border-black/5 bg-white text-black shadow-sm lg:hidden"
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label={isOpen ? "Close menu" : "Open menu"}
+          onClick={() => setIsOpen((open) => !open)}
+          aria-label={isOpen ? "メニューを閉じる" : "メニューを開く"}
+          aria-expanded={isOpen}
+          aria-controls="mobile-navigation"
+          className="flex h-11 w-11 items-center justify-center rounded-full border border-black/10 text-black lg:hidden"
         >
-          {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          {isOpen ? (
+            <X className="h-5 w-5" />
+          ) : (
+            <Menu className="h-5 w-5" />
+          )}
         </button>
       </div>
 
       {isOpen && (
-        <nav className="border-t border-black/5 bg-[#f8f8f6] px-4 py-4 shadow-2xl sm:px-6 lg:hidden">
+        <nav
+          id="mobile-navigation"
+          aria-label="モバイルナビゲーション"
+          className="max-h-[calc(100dvh-80px)] overflow-y-auto border-t border-black/5 bg-[#f8f8f6] px-4 py-5 lg:hidden"
+        >
           <Link
-            href={isInternational ? "/international/contact" : "/company#contact"}
-            className="mb-3 flex items-center justify-center rounded-full bg-amber-500 px-4 py-4 text-center text-sm font-bold text-white shadow-lg active:scale-95"
+            href={contactHref}
             onClick={() => setIsOpen(false)}
+            className="mb-4 flex justify-center rounded-full bg-amber-500 px-5 py-4 text-sm font-bold text-white"
           >
-            {isInternational ? "CONTACT US" : "見積りを依頼する"}
+            {contactLabel}
           </Link>
 
-          {!isInternational && (
-            <a
-              href="tel:0661159935"
-              className="mb-4 flex items-center justify-center rounded-full border border-black/10 bg-white px-4 py-4 text-center text-sm font-bold text-black shadow-sm active:scale-95"
-              onClick={() => setIsOpen(false)}
-            >
-              電話で相談する
-            </a>
-          )}
-
-          <ul className="flex flex-col gap-3">
+          <ul className="space-y-2">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className={mobileLinkClass}
                   onClick={() => setIsOpen(false)}
+                  className="flex items-center justify-between rounded-xl border border-black/5 bg-white px-4 py-3 text-sm font-semibold text-black/75"
                 >
                   <span>{link.label}</span>
-                  <span>→</span>
+                  <span aria-hidden="true">→</span>
                 </Link>
               </li>
             ))}
           </ul>
 
-          <div className="mt-6 rounded-2xl bg-white px-4 py-4 text-center text-xs font-semibold leading-6 text-black/60 shadow-sm">
-            {isInternational
-              ? "Warehousing · Fulfillment · Inspection · Packing · Shipping"
-              : "発送代行・流通加工・内職作業・倉庫保管に対応"}
-          </div>
+          {!isInternational && !isFranchise && (
+            <a
+              href="tel:0661159935"
+              className="mt-4 flex justify-center rounded-full border border-black/10 bg-white px-5 py-4 text-sm font-bold text-black"
+            >
+              物流の電話相談：06-6115-9935
+            </a>
+          )}
         </nav>
       )}
     </header>
