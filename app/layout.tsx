@@ -1,4 +1,4 @@
-import React from "react"
+import type { ReactNode } from "react"
 import type { Metadata, Viewport } from "next"
 import { Noto_Sans_JP, Noto_Serif_JP } from "next/font/google"
 
@@ -29,36 +29,32 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://gamigami.net"),
 
   title: {
-    default: "株式会社GAMI｜大阪の物流会社・発送代行・倉庫保管",
+    default: "株式会社GAMI｜365日稼働の物流・発送代行・倉庫保管",
     template: "%s｜株式会社GAMI",
   },
 
   description:
-    "株式会社GAMIは大阪を拠点に、物流運送事業を中心として倉庫保管・発送代行・流通加工・スポット出荷に対応。スピードと現場対応力で、企業の物流を支えます。",
+    "365日、物流を止めない。まず返す。すぐ動く。株式会社GAMIは大阪・福岡から全国対応。1坪からの倉庫保管、小ロット発送、検品・梱包・流通加工でスモールビジネスを支えます。ヘッドスパFC・開業支援も展開しています。",
 
   keywords: [
     "株式会社GAMI",
     "物流会社 大阪",
-    "大阪 物流会社",
     "発送代行 大阪",
     "倉庫保管 大阪",
     "流通加工 大阪",
     "EC発送代行",
-    "物流運送",
+    "小ロット 発送代行",
+    "小規模 倉庫保管",
+    "365日 発送代行",
+    "検品 梱包",
     "スポット出荷",
-    "利用運送",
-    "ヘッドスパ事業",
     "ヘッドスパFC",
-    "車事業",
+    "ヘッドスパ 開業支援",
   ],
 
   authors: [{ name: "株式会社GAMI" }],
   creator: "株式会社GAMI",
   publisher: "株式会社GAMI",
-
-  alternates: {
-    canonical: "/",
-  },
 
   robots: {
     index: true,
@@ -83,24 +79,24 @@ export const metadata: Metadata = {
     locale: "ja_JP",
     url: "https://gamigami.net",
     siteName: "株式会社GAMI",
-    title: "株式会社GAMI｜大阪の物流会社・発送代行・倉庫保管",
+    title: "株式会社GAMI｜365日稼働の物流・発送代行・倉庫保管",
     description:
-      "大阪を拠点に、倉庫保管・発送代行・流通加工・スポット出荷まで対応する株式会社GAMI。スピードと現場対応力で企業の物流を支えます。",
+      "まず返す。すぐ動く。1坪から、スモールビジネスを支える。大阪・福岡から全国へ、保管・加工・発送・輸送をサポート。",
     images: [
       {
         url: "/ogp.jpg",
         width: 1200,
         height: 630,
-        alt: "株式会社GAMI｜大阪の物流会社・発送代行・倉庫保管",
+        alt: "株式会社GAMI｜物流・発送代行・倉庫保管",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "株式会社GAMI｜大阪の物流会社・発送代行・倉庫保管",
+    title: "株式会社GAMI｜365日稼働の物流・発送代行・倉庫保管",
     description:
-      "倉庫保管・発送代行・流通加工・スポット出荷まで対応する大阪の物流会社、株式会社GAMI。",
+      "まず返す。すぐ動く。1坪からの保管・小ロット発送も歓迎。大阪・福岡から全国の物流を支えます。",
     images: ["/ogp.jpg"],
   },
 }
@@ -108,12 +104,11 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: ReactNode
 }>) {
   return (
     <html lang="ja" suppressHydrationWarning>
       <head>
-        {/* Google Tag Manager */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -131,13 +126,11 @@ export default function RootLayout({
             `,
           }}
         />
-        {/* End Google Tag Manager */}
       </head>
 
       <body
         className={`${notoSansJP.variable} ${notoSerifJP.variable} bg-[#fbfaf7] font-sans text-[#111111] antialiased`}
       >
-        {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-TJWG5GT5"
@@ -146,7 +139,6 @@ export default function RootLayout({
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
-        {/* End Google Tag Manager (noscript) */}
 
         {children}
       </body>
