@@ -1,6 +1,7 @@
 "use client"
 
-import { useState } from "react"
+import { useId, useState } from "react"
+import type { FormEvent } from "react"
 
 declare global {
   interface Window {
@@ -13,33 +14,49 @@ const inquiryTypes = [
   "倉庫保管・流通加工の相談",
   "シール貼り・セット組み・内職作業の相談",
   "スポット出荷・急ぎ案件の相談",
-  "その他",
+  "依頼内容がまだ決まっていない",
+  "その他の物流相談",
 ]
 
+const inputClass =
+  "w-full min-w-0 rounded-xl border border-black/15 bg-white px-4 py-3 text-base text-black outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20"
+
+const logiUrl =
+  "https://nishinihon-logi.jp/?utm_source=gami&utm_medium=referral&utm_campaign=logistics_contact"
+
 export function ContactForm() {
+  const id = useId()
   const [submitted, setSubmitted] = useState(false)
   const [isSending, setIsSending] = useState(false)
   const [error, setError] = useState("")
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+    if (isSending) return
+
     setIsSending(true)
     setError("")
 
-    const form = e.currentTarget
+    const form = event.currentTarget
     const formData = new FormData(form)
 
     const payload = {
-      name: String(formData.get("name") || ""),
-      company: String(formData.get("company") || ""),
-      email: String(formData.get("email") || ""),
-      phone: String(formData.get("phone") || ""),
+      name: String(formData.get("name") || "").trim(),
+      company: String(formData.get("company") || "").trim(),
+      email: String(formData.get("email") || "").trim(),
+      phone: String(formData.get("phone") || "").trim(),
       type: String(formData.get("type") || ""),
-      message: String(formData.get("message") || ""),
+      message: String(formData.get("message") || "").trim(),
+    }
+
+    if (!payload.name || !payload.email || !payload.message) {
+      setError("お名前・メールアドレス・ご相談内容をご入力ください。")
+      setIsSending(false)
+      return
     }
 
     try {
-      const res = await fetch("/api/contact", {
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -47,202 +64,267 @@ export function ContactForm() {
         body: JSON.stringify(payload),
       })
 
-      if (!res.ok) {
+      if (!response.ok) {
         throw new Error("送信に失敗しました")
       }
 
-      // Google Tag Manager
-      // 問い合わせ送信が成功した時だけ発火
-      if (typeof window !== "undefined") {
-        window.dataLayer = window.dataLayer || []
-        window.dataLayer.push({
-          event: "gami_contact_submit",
-        })
+      const result = await response.json()
+
+      if (result.success !== true) {
+        throw new Error("送信を確認できませんでした")
       }
+
+      window.dataLayer = window.dataLayer || []
+      window.dataLayer.push({
+        event: "gami_contact_submit",
+      })
 
       setSubmitted(true)
       form.reset()
     } catch {
       setError(
-        "送信できませんでした。お手数ですが、メールまたはお電話でご連絡ください。"
+        "送信できませんでした。再度お試しいただくか、下記のメール・電話からご連絡ください。"
       )
     } finally {
       setIsSending(false)
     }
   }
 
+  function trackLogiClick() {
+    window.dataLayer = window.dataLayer || []
+    window.dataLayer.push({
+      event: "gami_loginavi_click",
+      link_url: logiUrl,
+    })
+  }
+
   if (submitted) {
     return (
-      <div className="rounded-[2rem] border border-black/5 bg-white p-6 text-center shadow-[0_18px_50px_rgba(0,0,0,0.06)] sm:p-10">
-        <p className="text-2xl font-bold text-black">
-          送信ありがとうございます
+      <div
+        role="status"
+        className="rounded-3xl border border-black/10 bg-white p-6 text-center sm:p-10"
+      >
+        <h3 className="text-2xl font-bold leading-snug">
+          ご相談を受け付けました。
+        </h3>
+
+        <p className="mt-4 text-sm leading-7 text-zinc-600">
+          内容を確認し、担当よりご連絡します。
+          <br />
+          お急ぎの場合は、お電話でもご相談いただけます。
         </p>
 
-        <p className="mt-4 text-sm leading-8 text-black/60">
-          内容を確認のうえ、担当よりご連絡します。
-        </p>
-
-        <div className="mt-6 rounded-2xl bg-[#fbfaf7] p-5">
-          <p className="text-xs leading-7 text-black/55">
-            TEL：06-6115-9935
-          </p>
-        </div>
+        <a
+          href="tel:0661159935"
+          className="mt-6 inline-flex min-h-[48px] items-center justify-center rounded-full border border-black/15 px-6 py-3 text-sm font-bold"
+        >
+          06-6115-9935
+        </a>
       </div>
     )
   }
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="rounded-[2rem] border border-black/5 bg-white p-5 shadow-[0_18px_50px_rgba(0,0,0,0.06)] sm:p-8"
-    >
-      <div className="mb-7 rounded-2xl border border-amber-500/10 bg-[#fbfaf7] p-5">
-        <p className="text-sm font-bold leading-7 text-black">
-          物流のご相談を中心に受け付けています
-        </p>
-
-        <p className="mt-2 text-xs leading-6 text-black/55">
-          倉庫保管、発送代行、流通加工、内職作業、スポット出荷など、
-          まずは現在の状況をお聞かせください。
-        </p>
-      </div>
-
-      <div className="grid gap-5">
-        <div className="flex flex-col gap-2">
-          <label
-            htmlFor="name"
-            className="text-sm font-medium text-black/70"
-          >
-            お名前 <span className="text-amber-500">*</span>
-          </label>
-
-          <input
-            id="name"
-            name="name"
-            type="text"
-            required
-            className="rounded-2xl border border-black/10 bg-white px-4 py-3.5 text-base text-black outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/10"
-            placeholder="山田 太郎"
-          />
-        </div>
-
-        <div className="flex flex-col gap-2">
-          <label
-            htmlFor="company"
-            className="text-sm font-medium text-black/70"
-          >
-            会社名 / 屋号
-          </label>
-
-          <input
-            id="company"
-            name="company"
-            type="text"
-            className="rounded-2xl border border-black/10 bg-white px-4 py-3.5 text-base text-black outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/10"
-            placeholder="株式会社〇〇"
-          />
-        </div>
-
-        <div className="grid gap-5 sm:grid-cols-2">
-          <div className="flex flex-col gap-2">
-            <label
-              htmlFor="email"
-              className="text-sm font-medium text-black/70"
-            >
-              メールアドレス <span className="text-amber-500">*</span>
-            </label>
-
-            <input
-              id="email"
-              name="email"
-              type="email"
-              required
-              className="rounded-2xl border border-black/10 bg-white px-4 py-3.5 text-base text-black outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/10"
-              placeholder="example@example.com"
-            />
-          </div>
-
-          <div className="flex flex-col gap-2">
-            <label
-              htmlFor="phone"
-              className="text-sm font-medium text-black/70"
-            >
-              電話番号
-            </label>
-
-            <input
-              id="phone"
-              name="phone"
-              type="tel"
-              className="rounded-2xl border border-black/10 bg-white px-4 py-3.5 text-base text-black outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/10"
-              placeholder="090-0000-0000"
-            />
-          </div>
-        </div>
-
-        <div className="flex flex-col gap-2">
-          <label
-            htmlFor="type"
-            className="text-sm font-medium text-black/70"
-          >
-            相談内容 <span className="text-amber-500">*</span>
-          </label>
-
-          <select
-            id="type"
-            name="type"
-            required
-            defaultValue=""
-            className="rounded-2xl border border-black/10 bg-white px-4 py-3.5 text-base text-black outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/10"
-          >
-            <option value="" disabled>
-              選択してください
-            </option>
-
-            {inquiryTypes.map((type) => (
-              <option key={type} value={type}>
-                {type}
-              </option>
-            ))}
-          </select>
-        </div>
-
-        <div className="flex flex-col gap-2">
-          <label
-            htmlFor="message"
-            className="text-sm font-medium text-black/70"
-          >
-            詳細 <span className="text-amber-500">*</span>
-          </label>
-
-          <textarea
-            id="message"
-            name="message"
-            required
-            rows={6}
-            className="resize-none rounded-2xl border border-black/10 bg-white px-4 py-3.5 text-base leading-7 text-black outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/10"
-            placeholder="例：EC商品の発送代行を相談したいです。月間出荷数は〇件ほどで、保管と梱包もお願いしたいです。"
-          />
-        </div>
-
-        {error && (
-          <p className="rounded-2xl bg-red-50 px-4 py-3 text-center text-xs font-bold leading-6 text-red-600">
-            {error}
+    <div className="min-w-0">
+      <form
+        onSubmit={handleSubmit}
+        aria-busy={isSending}
+        className="min-w-0 rounded-3xl border border-black/10 bg-white p-5 sm:p-8"
+      >
+        <div className="mb-7 rounded-2xl bg-amber-50 p-5">
+          <h3 className="text-base font-bold leading-7">
+            小さなご依頼も、まずはご相談ください。
+          </h3>
+          <p className="mt-2 text-sm leading-7 text-zinc-600">
+            物量や開始時期が未定でも大丈夫。
+            会社名と電話番号は任意です。
           </p>
-        )}
+        </div>
 
-        <button
-          type="submit"
-          disabled={isSending}
-          className="mt-2 inline-flex w-full items-center justify-center rounded-full bg-amber-500 px-8 py-4 text-sm font-bold text-white shadow-lg transition hover:bg-amber-400 active:scale-95 disabled:cursor-not-allowed disabled:opacity-60"
-        >
-          {isSending ? "送信中..." : "送信する"}
-        </button>
+        <fieldset disabled={isSending} className="min-w-0 space-y-5">
+          <legend className="sr-only">物流のご相談フォーム</legend>
 
-        <p className="text-center text-xs leading-6 text-black/45">
-          ※送信できない場合は、直接メールまたはお電話でご連絡ください。
+          <div>
+            <label
+              htmlFor={`${id}-name`}
+              className="mb-2 block text-sm font-semibold"
+            >
+              お名前（必須）
+            </label>
+            <input
+              id={`${id}-name`}
+              name="name"
+              type="text"
+              autoComplete="name"
+              required
+              maxLength={100}
+              className={inputClass}
+              placeholder="山田 太郎"
+            />
+          </div>
+
+          <div>
+            <label
+              htmlFor={`${id}-company`}
+              className="mb-2 block text-sm font-semibold"
+            >
+              会社名・屋号（任意）
+            </label>
+            <input
+              id={`${id}-company`}
+              name="company"
+              type="text"
+              autoComplete="organization"
+              maxLength={200}
+              className={inputClass}
+              placeholder="個人事業の方もご相談いただけます"
+            />
+          </div>
+
+          <div className="grid min-w-0 gap-5 sm:grid-cols-2">
+            <div className="min-w-0">
+              <label
+                htmlFor={`${id}-email`}
+                className="mb-2 block text-sm font-semibold"
+              >
+                メールアドレス（必須）
+              </label>
+              <input
+                id={`${id}-email`}
+                name="email"
+                type="email"
+                autoComplete="email"
+                required
+                maxLength={254}
+                className={inputClass}
+                placeholder="example@example.com"
+              />
+            </div>
+
+            <div className="min-w-0">
+              <label
+                htmlFor={`${id}-phone`}
+                className="mb-2 block text-sm font-semibold"
+              >
+                電話番号（任意）
+              </label>
+              <input
+                id={`${id}-phone`}
+                name="phone"
+                type="tel"
+                autoComplete="tel"
+                maxLength={40}
+                className={inputClass}
+                placeholder="090-0000-0000"
+              />
+            </div>
+          </div>
+
+          <div className="min-w-0">
+            <label
+              htmlFor={`${id}-type`}
+              className="mb-2 block text-sm font-semibold"
+            >
+              相談の種類（必須）
+            </label>
+            <select
+              id={`${id}-type`}
+              name="type"
+              required
+              defaultValue=""
+              className={inputClass}
+            >
+              <option value="" disabled>
+                選択してください
+              </option>
+              {inquiryTypes.map((type) => (
+                <option key={type} value={type}>
+                  {type}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <div>
+            <label
+              htmlFor={`${id}-message`}
+              className="mb-2 block text-sm font-semibold"
+            >
+              ご相談内容（必須）
+            </label>
+            <textarea
+              id={`${id}-message`}
+              name="message"
+              required
+              rows={6}
+              maxLength={10000}
+              className={`${inputClass} resize-y leading-7`}
+              placeholder={
+                "例：EC商品の保管と発送を相談したいです。\n商品：雑貨\n保管量：段ボール10箱ほど\n発送：月50件ほど\n開始時期：未定\n\n分かる範囲の記入で大丈夫です。"
+              }
+            />
+          </div>
+
+          {error && (
+            <p
+              role="alert"
+              className="rounded-xl bg-red-50 p-4 text-sm leading-7 text-red-700"
+            >
+              {error}
+            </p>
+          )}
+
+          <button
+            type="submit"
+            className="flex min-h-[54px] w-full items-center justify-center rounded-full bg-amber-500 px-5 py-4 text-sm font-bold text-white transition hover:bg-amber-600 disabled:cursor-not-allowed disabled:opacity-60"
+          >
+            {isSending ? "送信中…" : "この内容で物流を相談する"}
+          </button>
+        </fieldset>
+
+        <p className="mt-4 text-xs leading-6 text-zinc-500">
+          入力いただいた情報は、ご相談への対応・連絡に使用します。
         </p>
-      </div>
-    </form>
+
+        <div className="mt-5 border-t border-black/10 pt-5 text-sm leading-7">
+          <p className="text-zinc-600">
+            お急ぎの場合や送信できない場合はこちら。
+          </p>
+          <a
+            href="tel:0661159935"
+            className="mt-2 inline-block font-semibold underline underline-offset-4"
+          >
+            電話：06-6115-9935
+          </a>
+          <br />
+          <a
+            href="mailto:k_fuchigami@gamigami.email"
+            className="inline-block break-all font-semibold underline underline-offset-4"
+          >
+            メール：k_fuchigami@gamigami.email
+          </a>
+        </div>
+      </form>
+
+      <aside className="mt-6 rounded-2xl border border-black/10 bg-[#f8f8f6] p-5 sm:p-6">
+        <h3 className="text-base font-bold leading-7">
+          物流の依頼先選びから相談したい方へ
+        </h3>
+        <p className="mt-3 text-sm leading-7 text-zinc-600">
+          対応エリアや作業内容など、条件に合う依頼先を
+          探したい場合は、GAMIが運営する
+          「西日本ロジナビ」もご活用ください。
+        </p>
+        <a
+          href={logiUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={trackLogiClick}
+          className="mt-4 inline-flex min-h-[48px] items-center text-sm font-semibold text-zinc-800 underline underline-offset-4"
+        >
+          西日本ロジナビを見る ↗
+        </a>
+      </aside>
+    </div>
   )
 }
