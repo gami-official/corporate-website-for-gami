@@ -1,34 +1,23 @@
+import type { Metadata } from "next"
+import Link from "next/link"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { CredentialsSection } from "@/components/credentials-section"
-import { SectionHeading } from "@/components/section-heading"
 import { ContactForm } from "@/components/contact-form"
-import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "会社概要｜大阪の発送代行・物流倉庫なら株式会社GAMI",
+  title: "会社概要・物流のご相談",
   description:
-    "株式会社GAMIの会社概要。大阪府守口市大日町の約100坪倉庫を拠点に、発送代行・倉庫保管・流通加工・内職作業に対応しています。",
-  keywords: [
-    "株式会社GAMI",
-    "会社概要",
-    "物流会社",
-    "発送代行",
-    "倉庫保管",
-    "流通加工",
-    "大阪",
-    "守口",
-    "お問い合わせ",
-  ],
-  openGraph: {
-    title: "会社概要 | 株式会社GAMI",
-    description:
-      "大阪府守口市の物流会社。発送代行・倉庫保管・流通加工・内職作業に対応。",
-    url: "/company",
-    type: "website",
-  },
+    "株式会社GAMIの会社概要と物流相談。大阪・福岡から全国対応。365日稼働、1坪からの保管、小ロット発送、検品・梱包・流通加工をご相談いただけます。",
   alternates: {
     canonical: "/company",
+  },
+  openGraph: {
+    title: "会社概要・物流のご相談｜株式会社GAMI",
+    description:
+      "365日、物流を止めない。まず返す。すぐ動く。1坪からスモールビジネスを支える株式会社GAMI。",
+    url: "/company",
+    type: "website",
   },
 }
 
@@ -38,13 +27,17 @@ const companyInfo = [
   { label: "設立", value: "2025年6月17日" },
   {
     label: "主要事業",
-    value: "物流運送事業・倉庫保管・発送代行・流通加工・内職作業",
+    value:
+      "物流運送事業・倉庫保管・発送代行・流通加工・内職作業",
   },
   {
-    label: "関連事業",
-    value: "ヘッドスパ事業・ヘッドスパFC事業・車事業・整理・買取事業",
+    label: "開業・運営支援",
+    value: "ヘッドスパFC事業",
   },
-  { label: "メールアドレス", value: "k_fuchigami@gamigami.email" },
+  {
+    label: "メールアドレス",
+    value: "k_fuchigami@gamigami.email",
+  },
   { label: "TEL", value: "06-6115-9935" },
   { label: "FAX", value: "06-6115-9936" },
   {
@@ -73,7 +66,9 @@ const companyInfo = [
   },
 ]
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://gamigami.net"
+const siteUrl = (
+  process.env.NEXT_PUBLIC_SITE_URL || "https://gamigami.net"
+).replace(/\/$/, "")
 
 const organizationSchema = {
   "@context": "https://schema.org",
@@ -82,7 +77,7 @@ const organizationSchema = {
   url: siteUrl,
   logo: `${siteUrl}/images/logo.png`,
   description:
-    "株式会社GAMIは大阪・福岡を拠点に、物流運送、発送代行、倉庫保管、流通加工、内職作業に対応しています。",
+    "大阪・福岡を拠点に、物流運送、発送代行、倉庫保管、流通加工、内職作業に対応しています。",
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "+81-6-6115-9935",
@@ -99,8 +94,14 @@ const organizationSchema = {
     postalCode: "570-0003",
     addressCountry: "JP",
   },
-  knowsAbout: ["物流運送", "発送代行", "倉庫保管", "流通加工", "内職作業"],
-  sameAs: [],
+  knowsAbout: [
+    "物流運送",
+    "発送代行",
+    "倉庫保管",
+    "流通加工",
+    "内職作業",
+    "ヘッドスパ開業支援",
+  ],
 }
 
 const breadcrumbSchema = {
@@ -124,130 +125,135 @@ const breadcrumbSchema = {
 
 export default function CompanyPage() {
   return (
-    <>
+    <div className="min-h-screen bg-[#fbfaf7] text-zinc-900">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(organizationSchema),
+          __html: JSON.stringify(organizationSchema).replace(
+            /</g,
+            "\\u003c"
+          ),
         }}
       />
-
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbSchema),
+          __html: JSON.stringify(breadcrumbSchema).replace(
+            /</g,
+            "\\u003c"
+          ),
         }}
       />
 
       <Header />
 
       <main>
-        <section className="relative overflow-hidden bg-[#111111] px-5 py-14 pt-24 text-white sm:px-6 sm:py-24 sm:pt-36">
-          <div className="absolute inset-0 opacity-40">
-            <div className="absolute -left-16 top-0 h-72 w-72 rounded-full bg-amber-500 blur-3xl" />
-            <div className="absolute right-0 top-10 h-96 w-96 rounded-full bg-orange-400 blur-3xl" />
-          </div>
-
-          <div className="relative z-10 mx-auto w-full max-w-6xl text-center lg:text-left">
-            <p className="text-[10px] font-semibold tracking-[0.18em] text-amber-300 sm:text-sm sm:tracking-[0.22em]">
+        <section className="bg-zinc-950 px-5 py-14 text-white sm:px-6 sm:py-20">
+          <div className="mx-auto max-w-6xl">
+            <p className="text-xs font-bold tracking-widest text-amber-300">
               COMPANY
             </p>
 
-            <h1 className="mx-auto mt-5 max-w-[11em] text-[2rem] font-bold leading-[1.18] tracking-[-0.045em] text-white sm:max-w-none sm:text-6xl sm:leading-[1.08] lg:mx-0">
-              <span className="block">大阪の物流会社</span>
-              <span className="block">株式会社GAMI</span>
+            <h1 className="mt-5 text-3xl font-bold leading-snug sm:text-5xl">
+              物流を支える。
+              <br />
+              ビジネスを前へ。
             </h1>
 
-            <p className="mx-auto mt-5 max-w-[20rem] text-[14px] leading-7 text-white/80 sm:max-w-2xl sm:text-base sm:leading-8 lg:mx-0">
-              大阪府守口市大日町の約100坪倉庫を拠点に、発送代行・倉庫保管・流通加工・内職作業まで対応しています。
+            <p className="mt-5 max-w-2xl text-base leading-8 text-white/80">
+              365日、物流を止めない。まず返す。すぐ動く。
+              <br />
+              株式会社GAMIは、1坪からの保管、
+              小ロット発送、検品・流通加工まで、
+              事業の規模に合わせて物流を支えます。
             </p>
 
-            <div className="mx-auto mt-7 grid max-w-[20rem] grid-cols-2 gap-2.5 sm:max-w-xl sm:grid-cols-4 sm:gap-3 lg:mx-0">
-              {["発送代行", "倉庫保管", "流通加工", "内職作業"].map((item) => (
-                <div
-                  key={item}
-                  className="rounded-full border border-white/10 bg-white/10 px-3 py-2.5 text-center text-xs font-bold leading-5 tracking-[0.03em] text-white/85 backdrop-blur sm:px-4"
-                >
-                  {item}
-                </div>
-              ))}
-            </div>
+            <Link
+              href="#contact"
+              className="mt-7 inline-flex min-h-[52px] w-full items-center justify-center rounded-full bg-amber-500 px-6 py-3 text-sm font-bold text-white transition hover:bg-amber-600 sm:w-auto"
+            >
+              物流の見積り・相談をする
+            </Link>
           </div>
         </section>
 
-        <section className="mx-auto max-w-5xl px-5 py-14 sm:px-6 sm:py-24">
-          <div className="mb-8 text-center sm:mb-14">
-            <SectionHeading
-              sub="COMPANY INFO"
-              title="企業情報"
-              className="mb-5"
-            />
+        <section className="mx-auto max-w-5xl px-5 py-14 sm:px-6 sm:py-20">
+          <p className="text-xs font-bold tracking-widest text-amber-700">
+            COMPANY INFO
+          </p>
+          <h2 className="mt-3 text-3xl font-bold">会社概要</h2>
 
-            <p className="text-sm leading-7 text-muted-foreground sm:text-base sm:leading-8">
-              株式会社GAMIの会社概要です。
-              <br className="hidden sm:block" />
-              物流のご相談は下部フォームよりお問い合わせください。
-            </p>
-          </div>
-
-          <dl className="overflow-hidden rounded-[1.5rem] border border-black/5 bg-white shadow-[0_8px_32px_rgba(0,0,0,0.04)] sm:rounded-[2rem]">
+          <dl className="mt-8 overflow-hidden rounded-3xl border border-black/10 bg-white">
             {companyInfo.map((row, index) => (
               <div
                 key={row.label}
-                className={`flex flex-col gap-1 px-5 py-4 sm:flex-row sm:gap-10 sm:px-8 sm:py-5 ${
-                  index !== companyInfo.length - 1
+                className={`flex flex-col gap-2 px-5 py-5 sm:flex-row sm:gap-8 sm:px-8 ${
+                  index < companyInfo.length - 1
                     ? "border-b border-black/5"
                     : ""
                 }`}
               >
-                <dt
-                  className={`w-full shrink-0 text-xs leading-5 tracking-[0.04em] sm:w-48 sm:text-sm ${
-                    row.label === "主要事業"
-                      ? "font-bold text-black"
-                      : row.label === "関連事業"
-                        ? "font-semibold text-zinc-500"
-                        : "font-medium text-black/50"
-                  }`}
-                >
+                <dt className="shrink-0 text-sm font-semibold text-zinc-500 sm:w-44">
                   {row.label}
                 </dt>
 
-                <dd
-                  className={`break-words ${
-                    row.label === "主要事業"
-                      ? "text-[15px] font-bold leading-7 text-black sm:text-base"
-                      : row.label === "関連事業"
-                        ? "text-[15px] font-medium leading-7 text-zinc-700"
-                        : "text-sm leading-7 text-black/70"
-                  }`}
-                >
-                  {row.value}
+                <dd className="min-w-0 break-words text-sm leading-7 text-zinc-800">
+                  {row.label === "メールアドレス" ? (
+                    <a
+                      href={`mailto:${row.value}`}
+                      className="underline underline-offset-4"
+                    >
+                      {row.value}
+                    </a>
+                  ) : row.label === "TEL" ? (
+                    <a
+                      href="tel:0661159935"
+                      className="underline underline-offset-4"
+                    >
+                      {row.value}
+                    </a>
+                  ) : (
+                    row.value
+                  )}
                 </dd>
               </div>
             ))}
           </dl>
+
+          <Link
+            href="/headspa-franchise"
+            className="mt-5 inline-flex min-h-[44px] items-center text-sm font-semibold text-amber-700 underline underline-offset-4"
+          >
+            ヘッドスパFC・開業支援はこちら →
+          </Link>
         </section>
 
-        <section className="border-t border-black/5 bg-[#f8f8f6] px-5 py-14 sm:px-6 sm:py-24">
-          <div className="mx-auto max-w-3xl text-center">
-            <div className="mb-8">
-              <SectionHeading
-                sub="PHILOSOPHY"
-                title="〜上へ、前へ。〜"
-                className="mb-5"
-              />
+        <section className="border-y border-black/5 bg-amber-50 px-5 py-14 sm:px-6 sm:py-20">
+          <div className="mx-auto max-w-3xl">
+            <p className="text-xs font-bold tracking-widest text-amber-700">
+              PHILOSOPHY
+            </p>
 
-              <p className="text-sm leading-7 text-muted-foreground sm:text-base sm:leading-8">
-                レスポンスと現場対応力で、企業の物流を前へ進めます。
-              </p>
-            </div>
+            <h2 className="mt-3 text-3xl font-bold">
+              〜上へ、前へ。〜
+            </h2>
 
-            <p className="mx-auto max-w-[22rem] text-[14px] leading-8 text-muted-foreground sm:max-w-2xl sm:text-base sm:leading-[1.95]">
-              株式会社GAMIは、物流運送事業を主軸に展開しています。
-              倉庫保管、発送代行、流通加工、スポット対応、内職作業まで、
-              現場に合わせて柔軟に対応します。
-              <br className="hidden sm:block" />
-              小ロット案件や細かな手作業も、まずはお気軽にご相談ください。
+            <p className="mt-5 text-base leading-8 text-zinc-600">
+              小さな事業の最初の一歩から、
+              取扱量が増えたときの物流まで。
+              困ったときに相談できるパートナーであることを
+              大切にしています。
+            </p>
+
+            <p className="mt-4 text-base leading-8 text-zinc-600">
+              すぐに答えが出ないご相談でも、まずご連絡。
+              商品、数量、作業、納期を確認し、
+              現場に合う方法を一緒に考えます。
+            </p>
+
+            <p className="mt-4 text-xs leading-6 text-zinc-500">
+              ※365日対応をご希望の場合は、
+              作業内容や出荷条件を事前にご相談ください。
             </p>
           </div>
         </section>
@@ -256,31 +262,66 @@ export default function CompanyPage() {
 
         <section
           id="contact"
-          className="overflow-hidden px-4 py-14 sm:px-6 sm:py-24"
+          className="scroll-mt-24 px-4 py-14 sm:px-6 sm:py-20"
         >
-          <div className="mx-auto w-full max-w-3xl">
-            <div className="mb-8 text-center sm:mb-14">
-              <SectionHeading
-                sub="CONTACT"
-                title="物流を相談する"
-                className="mb-5"
-              />
+          <div className="mx-auto max-w-3xl">
+            <p className="text-xs font-bold tracking-widest text-amber-700">
+              LOGISTICS CONTACT
+            </p>
 
-              <p className="text-sm leading-7 text-muted-foreground sm:text-base sm:leading-8">
-                倉庫保管、発送代行、スポット出荷、流通加工、内職作業まで。
-                <br className="hidden sm:block" />
-                まずはお気軽にご相談ください。
+            <h2 className="mt-3 text-3xl font-bold leading-snug sm:text-4xl">
+              「これ頼める？」
+              <br />
+              まずはご相談ください。
+            </h2>
+
+            <p className="mt-5 text-sm leading-7 text-zinc-600">
+              倉庫保管・発送代行・検品・梱包・流通加工・
+              スポット出荷・輸送手配など。
+              物量が少ない場合や、開始時期が未定でも歓迎です。
+            </p>
+
+            <div className="mt-6 rounded-2xl border border-amber-100 bg-amber-50 p-5">
+              <p className="text-sm font-bold">
+                内容欄に、分かる範囲でお知らせください。
+              </p>
+              <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-zinc-600">
+                <li>商品の種類・大きさ</li>
+                <li>保管量・発送件数の目安</li>
+                <li>お願いしたい作業・お困りごと</li>
+                <li>開始希望時期・ご希望の納期</li>
+              </ul>
+              <p className="mt-3 text-xs leading-6 text-zinc-500">
+                未定の項目は「未定」で大丈夫です。
               </p>
             </div>
 
-            <div className="w-full overflow-hidden rounded-[1.5rem] sm:rounded-[2rem]">
+            <a
+              href="tel:0661159935"
+              className="mt-6 flex min-h-[52px] items-center justify-center rounded-full border border-black/15 bg-white px-4 py-3 text-center text-sm font-bold transition hover:bg-amber-50"
+            >
+              急ぎの物流相談：06-6115-9935
+            </a>
+
+            <div className="mt-8 min-w-0">
               <ContactForm />
             </div>
+
+            <p className="mt-6 text-sm leading-7 text-zinc-600">
+              ヘッドスパFCのご相談は、
+              <Link
+                href="/franchise-contact"
+                className="font-semibold text-amber-700 underline underline-offset-4"
+              >
+                FC専用フォーム
+              </Link>
+              をご利用ください。
+            </p>
           </div>
         </section>
       </main>
 
       <Footer />
-    </>
+    </div>
   )
 }
