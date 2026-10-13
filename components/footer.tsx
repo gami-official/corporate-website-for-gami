@@ -38,19 +38,20 @@ export function Footer() {
             </div>
 
             <div className="min-w-0">
-              <div className="grid grid-cols-[1.35fr_1fr] gap-2">
+              <div className="grid grid-cols-2 gap-2">
                 <Link
                   href="/company#contact"
-                  className="flex min-h-[48px] items-center justify-center rounded-full bg-amber-500 px-3 py-3 text-center text-sm font-bold text-white transition hover:bg-amber-600"
+                  className="flex min-h-[48px] items-center justify-center rounded-full bg-amber-500 px-2 py-3 text-center text-sm font-bold text-white transition hover:bg-amber-600"
                 >
                   見積り・物流相談
                 </Link>
 
                 <a
                   href="tel:0661159935"
-                  className="flex min-h-[48px] items-center justify-center rounded-full border border-white/40 px-3 py-3 text-center text-sm font-bold transition hover:bg-white/10"
+                  aria-label="06-6115-9935に電話する"
+                  className="flex min-h-[48px] items-center justify-center whitespace-nowrap rounded-full border border-white/40 px-2 py-3 text-center text-[13px] font-bold tabular-nums transition hover:bg-white/10 sm:text-sm"
                 >
-                  電話で相談
+                  06-6115-9935
                 </a>
               </div>
 
@@ -65,7 +66,7 @@ export function Footer() {
           <section>
             <Link
               href="/"
-              className="inline-flex items-center gap-3"
+              className="inline-flex flex-wrap items-center gap-3"
               aria-label="GAMI トップページ"
             >
               <img
@@ -90,8 +91,8 @@ export function Footer() {
 
             <p className="mt-3 text-sm leading-7 text-zinc-600">
               大阪・福岡から全国へ。
-              保管・発送代行・検品・流通加工で、
-              スモールビジネスを支えます。
+              <span className="inline-block">保管・発送代行・検品・流通加工</span>
+              で、スモールビジネスを支えます。
             </p>
 
             <address className="mt-3 text-sm not-italic leading-6 text-zinc-600">
@@ -106,7 +107,8 @@ export function Footer() {
             <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1">
               <a
                 href="tel:0661159935"
-                className="inline-flex min-h-[44px] items-center text-sm font-semibold underline underline-offset-4"
+                aria-label="06-6115-9935に電話する"
+                className="inline-flex min-h-[44px] items-center whitespace-nowrap text-sm font-semibold tabular-nums underline underline-offset-4"
               >
                 06-6115-9935
               </a>
