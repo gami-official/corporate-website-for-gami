@@ -3,6 +3,9 @@ import { Resend } from "resend"
 
 export const runtime = "nodejs"
 
+const contactEmail = "k_fuchigami@gamigami.email"
+const sender = "株式会社GAMI <contact@gamigami.net>"
+
 function readText(
   body: Record<string, unknown>,
   key: string,
@@ -10,9 +13,7 @@ function readText(
 ): string {
   const value = body[key]
 
-  if (value === undefined || value === null) {
-    return ""
-  }
+  if (value === undefined || value === null) return ""
 
   if (typeof value !== "string") {
     throw new Error("INVALID_INPUT")
@@ -28,7 +29,14 @@ function readText(
 }
 
 export async function POST(request: Request) {
-  let body: Record<string, unknown>
+  let name: string
+  let company: string
+  let email: string
+  let phone: string
+  let type: string
+  let plan: string
+  let area: string
+  let message: string
 
   try {
     const parsed: unknown = await request.json()
@@ -41,27 +49,8 @@ export async function POST(request: Request) {
       throw new Error("INVALID_INPUT")
     }
 
-    body = parsed as Record<string, unknown>
-  } catch {
-    return NextResponse.json(
-      {
-        success: false,
-        message: "入力内容を確認してください。",
-      },
-      { status: 400 }
-    )
-  }
+    const body = parsed as Record<string, unknown>
 
-  let name: string
-  let company: string
-  let email: string
-  let phone: string
-  let type: string
-  let plan: string
-  let area: string
-  let message: string
-
-  try {
     name = readText(body, "name", 100)
     company = readText(body, "company", 200)
     email = readText(body, "email", 254)
@@ -84,7 +73,7 @@ export async function POST(request: Request) {
     return NextResponse.json(
       {
         success: false,
-        message: "お名前・メールアドレス・相談内容を確認してください。",
+        message: "入力内容を確認してください。",
       },
       { status: 400 }
     )
@@ -93,7 +82,7 @@ export async function POST(request: Request) {
   const apiKey = process.env.RESEND_API_KEY
 
   if (!apiKey) {
-    console.error("FC contact: RESEND_API_KEY is missing")
+    console.error("FC contact: missing email configuration")
 
     return NextResponse.json(
       {
@@ -105,14 +94,12 @@ export async function POST(request: Request) {
     )
   }
 
-    const recipient = "k_fuchigami@gamigami.email"
+  const resend = new Resend(apiKey)
 
   try {
-    const resend = new Resend(apiKey)
-
-    const { error } = await resend.emails.send({
-      from: "GAMI Franchise <contact@gamigami.net>",
-      to: [recipient],
+    const notification = await resend.emails.send({
+      from: sender,
+      to: [contactEmail],
       replyTo: email,
       subject: `【GAMI・FC開業相談】${name}様`,
       text: [
@@ -132,32 +119,72 @@ export async function POST(request: Request) {
       ].join("\n"),
     })
 
-    if (error) {
-      console.error("FC contact: email provider rejected the send")
-
-      return NextResponse.json(
-        {
-          success: false,
-          message:
-            "送信できませんでした。再度お試しいただくか、メール・電話でご連絡ください。",
-        },
-        { status: 502 }
-      )
+    if (notification.error || !notification.data?.id) {
+      throw new Error("NOTIFICATION_FAILED")
     }
-
-    return NextResponse.json({
-      success: true,
-    })
   } catch {
-    console.error("FC contact: email send failed")
+    console.error("FC contact: notification failed")
 
     return NextResponse.json(
       {
         success: false,
         message:
-          "送信できませんでした。再度お試しいただくか、メール・電話でご連絡ください。",
+          "送信できませんでした。メールまたは電話でご連絡ください。",
       },
-      { status: 500 }
+      { status: 502 }
     )
   }
+
+  let autoReplySent = false
+
+  try {
+    const autoReply = await resend.emails.send({
+      from: sender,
+      to: [email],
+      replyTo: contactEmail,
+      subject:
+        "【株式会社GAMI】ヘッドスパFCのご相談ありがとうございます",
+      text: [
+        `${name} 様`,
+        "",
+        "このたびは、ヘッドスパ専門店ゆうの",
+        "フランチャイズ・開業支援についてお問い合わせいただき、",
+        "誠にありがとうございます。",
+        "",
+        "開業のご相談を受け付けました。",
+        "内容を確認のうえ、株式会社GAMIの担当者よりご連絡いたします。",
+        "",
+        "希望エリア・開業時期・ご予算など、",
+        "追加でお伝えしたいことがございましたら、",
+        "このメールにそのままご返信ください。",
+        "",
+        "────────────────────",
+        "株式会社GAMI",
+        "ヘッドスパ専門店ゆう FC・開業支援窓口",
+        "",
+        "TEL：06-6115-9935",
+        `メール：${contactEmail}`,
+        "FC案内：https://www.gamigami.net/headspa-franchise",
+        "ゆう公式サイト：https://www.yuheadspa.net/",
+        "────────────────────",
+        "",
+        "※このメールはフォーム受付後の自動返信です。",
+        "加盟契約・導入条件を確定するものではありません。",
+        "お心当たりがない場合は、お手数ですが上記窓口へお知らせください。",
+      ].join("\n"),
+    })
+
+    autoReplySent = !autoReply.error && Boolean(autoReply.data?.id)
+
+    if (!autoReplySent) {
+      console.error("FC contact: auto reply failed")
+    }
+  } catch {
+    console.error("FC contact: auto reply failed")
+  }
+
+  return NextResponse.json({
+    success: true,
+    autoReplySent,
+  })
 }
