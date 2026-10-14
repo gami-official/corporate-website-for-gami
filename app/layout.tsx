@@ -1,22 +1,8 @@
+
 import type { ReactNode } from "react"
 import type { Metadata, Viewport } from "next"
-import { Noto_Sans_JP, Noto_Serif_JP } from "next/font/google"
 
 import "./globals.css"
-
-const notoSansJP = Noto_Sans_JP({
-  subsets: ["latin"],
-  variable: "--font-noto-sans-jp",
-  weight: ["300", "400", "500", "700"],
-  display: "swap",
-})
-
-const notoSerifJP = Noto_Serif_JP({
-  subsets: ["latin"],
-  variable: "--font-noto-serif-jp",
-  weight: ["400", "500", "700"],
-  display: "swap",
-})
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -128,9 +114,7 @@ export default function RootLayout({
         />
       </head>
 
-      <body
-        className={`${notoSansJP.variable} ${notoSerifJP.variable} bg-[#fbfaf7] font-sans text-[#111111] antialiased`}
-      >
+      <body className="bg-[#fbfaf7] font-sans text-[#111111] antialiased">
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-TJWG5GT5"
