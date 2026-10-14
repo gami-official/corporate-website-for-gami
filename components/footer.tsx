@@ -48,7 +48,7 @@ export function Footer() {
 
                 <a
                   href="tel:0661159935"
-                  aria-label="06-6115-9935に電話する"
+                  aria-label="電話で相談"
                   className="flex min-h-[48px] items-center justify-center whitespace-nowrap rounded-full border border-white/40 px-2 py-3 text-center text-[13px] font-bold tabular-nums transition hover:bg-white/10 sm:text-sm"
                 >
                   06-6115-9935
