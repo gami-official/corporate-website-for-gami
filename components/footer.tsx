@@ -107,7 +107,7 @@ export function Footer() {
             <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1">
               <a
                 href="tel:0661159935"
-                aria-label="06-6115-9935に電話する"
+                aria-label="電話で相談"
                 className="inline-flex min-h-[44px] items-center whitespace-nowrap text-sm font-semibold tabular-nums underline underline-offset-4"
               >
                 06-6115-9935
