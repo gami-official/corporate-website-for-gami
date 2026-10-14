@@ -51,7 +51,7 @@ export function Footer() {
                   aria-label="電話で相談"
                   className="flex min-h-[48px] items-center justify-center whitespace-nowrap rounded-full border border-white/40 px-2 py-3 text-center text-[13px] font-bold tabular-nums transition hover:bg-white/10 sm:text-sm"
                 >
-                  電話で相談
+                  06-6115-9935
                 </a>
               </div>
 
@@ -110,7 +110,7 @@ export function Footer() {
                 aria-label="電話で相談"
                 className="inline-flex min-h-[44px] items-center whitespace-nowrap text-sm font-semibold tabular-nums underline underline-offset-4"
               >
-                電話で相談
+                06-6115-9935
               </a>
               <a
                 href="mailto:k_fuchigami@gamigami.email"
