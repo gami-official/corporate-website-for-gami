@@ -28,13 +28,10 @@ export default function InternationalContactPage() {
       })
 
       if (response.ok) {
-  window.dataLayer = window.dataLayer || []
-
-  window.dataLayer.push({
-    event: "gami_contact_submit",
-    form_language: "en",
-    form_name: "international_contact",
-  })
+  sessionStorage.setItem(
+    "gami_international_contact_success",
+    "1"
+  )
 
   window.location.href = "/international/thank-you"
   return
