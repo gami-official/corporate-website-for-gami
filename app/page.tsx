@@ -6,7 +6,7 @@ import { Footer } from "@/components/footer"
 export const metadata: Metadata = {
   title: "365日稼働の発送代行・物流倉庫｜1坪から対応",
   description:
-    "大阪・福岡から全国対応。365日稼働、1坪からの倉庫保管、小ロット発送、検品・梱包・流通加工。まず返す、すぐ動く。株式会社GAMIがスモールビジネスの物流を支えます。",
+    "大阪・福岡・神戸の物流ネットワークで全国対応。大阪物流センター、福岡検品センター、協力パートナー企業が連携し、小ロットから大規模案件まで保管・検品・梱包・発送をご相談いただけます。",
   alternates: {
     canonical: "/",
   },
@@ -162,7 +162,7 @@ export default function HomePage() {
           <div className={`${container} py-9 sm:py-16 lg:py-20`}>
             <div className="max-w-4xl">
               <p className="text-[11px] font-bold tracking-[0.12em] text-amber-300 sm:text-sm">
-                大阪・福岡から全国へ
+                大阪・福岡・神戸から全国へ
               </p>
 
               <h1 className="mt-4 text-[clamp(1.625rem,7.5vw,2.5rem)] font-bold leading-[1.35] tracking-tight sm:text-5xl lg:text-6xl">
@@ -396,9 +396,9 @@ export default function HomePage() {
         <section className={`bg-amber-50 ${sectionSpace}`}>
           <div className={container}>
             <p className={eyebrow}>LOGISTICS BASE & PARTNERS</p>
-            <h2 className={heading}>大阪・福岡から、全国へ。</h2>
+            <h2 className={heading}>大阪・福岡・神戸をつなぎ、全国へ。</h2>
             <p className="mt-3 max-w-3xl text-sm leading-7 text-zinc-600">
-              小ロットの保管・発送から大規模な封入・梱包・発送まで。自社拠点と協力パートナー企業が連携し、案件に合わせた物流体制をご提案します。
+              小ロットの保管・発送から大規模な封入・梱包・発送まで。大阪物流センター、福岡検品センターと協力パートナー企業が連携し、案件に合わせた物流体制をご提案します。
             </p>
 
             <div className="mt-5 grid gap-3 md:grid-cols-2">
@@ -415,8 +415,8 @@ export default function HomePage() {
 
               <article className="rounded-2xl border border-amber-100 bg-white p-4 sm:p-5">
                 <p className="text-[11px] font-bold text-amber-700">FUKUOKA</p>
-                <h3 className="mt-1 text-base font-bold leading-6 sm:text-xl">福岡物流センター</h3>
-                <p className="mt-2 text-sm leading-6 text-zinc-600">福岡市中央区の物流拠点。大阪と連携し、商品・配送先・作業内容に合わせて運用をご相談します。</p>
+                <h3 className="mt-1 text-base font-bold leading-6 sm:text-xl">福岡検品センター</h3>
+                <p className="mt-2 text-sm leading-6 text-zinc-600">福岡県福岡市博多区金隈1-21-9 A-produce内。検品業務を中心に、大阪物流センターや協力パートナー企業と連携し、案件に合わせた作業をご相談いただけます。</p>
               </article>
             </div>
 
