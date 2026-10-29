@@ -1,7 +1,9 @@
+
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import Link from "next/link"
-import Script from "next/script"
+import { Suspense } from "react"
+import { ConversionTracker } from "./conversion-tracker"
 
 export const metadata = {
   title: "Thank You | GAMI Japan Fulfillment",
@@ -15,17 +17,9 @@ export const metadata = {
 export default function InternationalThankYouPage() {
   return (
     <div className="min-h-screen bg-zinc-50 text-zinc-950">
-      <Script id="google-ads-conversion" strategy="afterInteractive">
-        {`
-          if (typeof gtag === 'function') {
-            gtag('event', 'conversion', {
-              'send_to': 'AW-18448548394/iHBSCIrd9ocdEKqE-txE',
-              'value': 1.0,
-              'currency': 'JPY'
-            });
-          }
-        `}
-      </Script>
+      <Suspense fallback={null}>
+        <ConversionTracker />
+      </Suspense>
 
       <Header />
 
@@ -49,7 +43,7 @@ export default function InternationalThankYouPage() {
             <div className="mt-8">
               <Link
                 href="/international"
-                className="inline-flex rounded-full bg-amber-500 px-7 py-4 text-sm font-bold text-white transition hover:bg-amber-400"
+                className="inline-flex rounded-full bg-amber-500 px-7 py-4 text-sm font-bold text-white shadow-lg transition hover:bg-amber-400"
               >
                 Back to Japan Fulfillment
               </Link>
