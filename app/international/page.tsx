@@ -408,11 +408,11 @@ export default function InternationalPage() {
               </article>
               <article className="overflow-hidden rounded-[1.75rem] border border-zinc-200 bg-white shadow-sm">
                 <div className="flex h-80 items-center justify-center bg-white p-5 sm:h-96">
-                  <Image src="/images/team-mayu.png" alt="Pixel-art portrait of Mayu Kodera" width={1024} height={1536} className="h-full w-full object-contain" />
+                  <Image src="/images/team-mayu.png" alt="Pixel-art portrait of Mayu Kotera" width={1024} height={1536} className="h-full w-full object-contain" />
                 </div>
                 <div className="border-t border-zinc-100 p-6 sm:p-8">
                   <p className="text-xs font-bold uppercase tracking-[0.14em] text-amber-700">Executive Managing Director</p>
-                  <h3 className="mt-2 text-2xl font-bold">Mayu Kodera</h3>
+                  <h3 className="mt-2 text-2xl font-bold">Mayu Kotera</h3>
                   <p className="mt-5 font-semibold text-zinc-900">Great service starts with great communication.</p>
                   <p className="mt-3 text-sm leading-8 text-zinc-600">We believe in clear communication, attention to detail, and flexible solutions. Even if your plans are still taking shape, we&apos;re here to help you find the right approach.</p>
                 </div>
