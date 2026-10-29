@@ -28,9 +28,17 @@ export default function InternationalContactPage() {
       })
 
       if (response.ok) {
-        window.location.href = "/international/thank-you"
-        return
-      }
+  window.dataLayer = window.dataLayer || []
+
+  window.dataLayer.push({
+    event: "gami_contact_submit",
+    form_language: "en",
+    form_name: "international_contact",
+  })
+
+  window.location.href = "/international/thank-you"
+  return
+}
 
       setError(
         "We could not send your inquiry. Please try again."
