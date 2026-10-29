@@ -6,7 +6,7 @@ import Link from "next/link"
 export const metadata = {
   title: "Japan Fulfillment & 3PL | Warehousing & Shipping in Japan | GAMI",
   description:
-    "GAMI provides flexible fulfillment and 3PL services in Japan for international brands. Warehousing, inspection, packing, labeling and nationwide shipping from Osaka, Japan.",
+    "GAMI provides flexible fulfillment and 3PL services in Japan for international brands. Warehousing in Osaka, inspection in Fukuoka, packing, kitting and nationwide shipping through our Osaka, Fukuoka and Kobe logistics network. Small and large projects welcome.",
   keywords: [
     "Japan fulfillment",
     "3PL Japan",
@@ -227,14 +227,14 @@ export default function InternationalPage() {
               </p>
 
               <h1 className="mx-auto mt-6 max-w-5xl text-[2.4rem] font-bold leading-[1.04] tracking-[-0.055em] sm:text-6xl lg:text-7xl">
-                Launch Your Brand
+                Your Logistics Partner
                 <span className="block text-amber-400">in Japan.</span>
               </h1>
 
               <p className="mx-auto mt-7 max-w-3xl text-[15px] leading-8 text-white/70 sm:text-lg sm:leading-9">
-                Your logistics partner for entering the Japanese market.
-                Warehousing, fulfillment, inspection, packing and nationwide
-                shipping — coordinated through our Osaka, Fukuoka and Kobe network.
+                From small-volume fulfillment to large-scale packing and shipping projects.
+                Warehousing in Osaka, inspection in Fukuoka and nationwide delivery,
+                coordinated with trusted logistics partners across Japan.
               </p>
 
               <div className="mx-auto mt-9 flex max-w-sm flex-col gap-3 sm:max-w-none sm:flex-row sm:justify-center">
@@ -242,7 +242,7 @@ export default function InternationalPage() {
                   href="/international/contact"
                   className="rounded-full bg-amber-500 px-8 py-4 text-center text-sm font-bold text-white shadow-lg transition hover:bg-amber-400"
                 >
-                  Start Your Japan Operations
+                  Request a Logistics Quote
                 </Link>
 
                 <a
@@ -257,7 +257,7 @@ export default function InternationalPage() {
                 {[
                   ["OSAKA", "Japan logistics base"],
                   ["365", "Day operations"],
-                  ["SMALL", "Flexible start"],
+                  ["FLEX", "Small to large projects"],
                   ["JAPAN", "Nationwide shipping"],
                 ].map(([big, small]) => (
                   <div
@@ -390,6 +390,32 @@ export default function InternationalPage() {
                   </div>
                 ))}
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* PROJECT CAPABILITIES */}
+        <section aria-labelledby="capabilities-title" className="bg-zinc-100 py-16 sm:py-24">
+          <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-12">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-700">Flexible Project Support</p>
+            <h2 id="capabilities-title" className="mt-4 text-3xl font-bold tracking-tight sm:text-5xl">From everyday orders to campaign-scale fulfillment.</h2>
+            <p className="mt-5 max-w-3xl text-sm leading-8 text-zinc-600 sm:text-base">We discuss your shipment volume, packaging requirements, timelines and handling needs before proposing a practical Japan logistics setup. Service scope and schedules are confirmed for each project.</p>
+            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {[
+                ["Storage & Pick/Pack", "Inventory storage, order picking, packing and domestic shipping."],
+                ["Inspection & Kitting", "Product inspection, labeling, inserts, set assembly and repacking."],
+                ["Bulk Mailing Projects", "Large-volume packing, inserts, campaign dispatch and shipping coordination."],
+              ].map(([name, description]) => (
+                <article key={name} className="rounded-2xl border border-zinc-200 bg-white p-6">
+                  <h3 className="text-lg font-bold">{name}</h3>
+                  <p className="mt-3 text-sm leading-7 text-zinc-600">{description}</p>
+                </article>
+              ))}
+            </div>
+            <div className="mt-8 rounded-2xl border border-amber-200 bg-white p-6">
+              <h3 className="text-lg font-bold">What to include in your inquiry</h3>
+              <p className="mt-2 text-sm leading-7 text-zinc-600">Product type, estimated quantity, storage needs, packing or inspection requirements, shipping destinations and target dates. Estimates are possible even if some details are not finalized.</p>
+              <Link href="/international/contact" className="mt-5 inline-flex min-h-11 items-center rounded-full bg-amber-500 px-6 py-3 text-sm font-bold text-white hover:bg-amber-400">Discuss Your Project</Link>
             </div>
           </div>
         </section>
