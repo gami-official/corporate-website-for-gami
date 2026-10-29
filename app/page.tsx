@@ -300,22 +300,22 @@ export default function HomePage() {
             <div className="mt-6 grid gap-4 md:grid-cols-2 lg:gap-6">
               <article className="overflow-hidden rounded-2xl border border-black/10 bg-[#fbfaf7]">
                 <div className="flex h-64 items-center justify-center bg-white sm:h-80">
-                  <img src="/images/team-kazuhiro.jpg" alt="代表取締役社長 淵上和博のドット絵" width={1024} height={1024} loading="lazy" className="h-full w-full object-contain" />
+                  <img src="/images/team-kazuhiro.jpg" alt="代表取締役社長 Kazuhiro Fuchigamiのドット絵" width={1024} height={1024} loading="lazy" className="h-full w-full object-contain" />
                 </div>
                 <div className="p-5 sm:p-6">
                   <p className="text-xs font-bold tracking-wide text-amber-700">代表取締役社長</p>
-                  <h3 className="mt-1 text-xl font-bold">淵上 和博</h3>
+                  <h3 className="mt-1 text-xl font-bold">Kazuhiro Fuchigami</h3>
                   <p className="mt-3 text-base font-bold">小さなご相談にも、大きな責任を。</p>
                   <p className="mt-2 text-sm leading-7 text-zinc-600">段ボール数箱の保管から大規模な発送案件まで、一つひとつのご依頼に真剣に向き合います。気軽に相談でき、安心して任せていただける会社を目指しています。</p>
                 </div>
               </article>
               <article className="overflow-hidden rounded-2xl border border-black/10 bg-[#fbfaf7]">
                 <div className="flex h-64 items-center justify-center bg-white sm:h-80">
-                  <img src="/images/team-mayu.png" alt="専務取締役 小寺真夢のドット絵" width={1024} height={1536} loading="lazy" className="h-full w-full object-contain" />
+                  <img src="/images/team-mayu.png" alt="専務取締役 Mayu Koderaのドット絵" width={1024} height={1536} loading="lazy" className="h-full w-full object-contain" />
                 </div>
                 <div className="p-5 sm:p-6">
                   <p className="text-xs font-bold tracking-wide text-amber-700">専務取締役</p>
-                  <h3 className="mt-1 text-xl font-bold">小寺 真夢</h3>
+                  <h3 className="mt-1 text-xl font-bold">Mayu Kodera</h3>
                   <p className="mt-3 text-base font-bold">相談しやすさも、私たちのサービスです。</p>
                   <p className="mt-2 text-sm leading-7 text-zinc-600">物流のご相談が初めてでも、まだ内容が決まっていなくても大丈夫です。お客様とのコミュニケーションを大切にしながら、最適な進め方を一緒に考えます。</p>
                 </div>
