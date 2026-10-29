@@ -386,6 +386,41 @@ export default function InternationalPage() {
           </div>
         </section>
 
+        {/* OUR TEAM */}
+        <section aria-labelledby="our-team-title" className="bg-white py-16 sm:py-28">
+          <div className="mx-auto max-w-6xl px-5 sm:px-6 lg:px-12">
+            <div className="text-center">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-600">Our Team</p>
+              <h2 id="our-team-title" className="mt-4 text-[2rem] font-bold tracking-[-0.04em] sm:text-5xl">The People Behind GAMI</h2>
+              <p className="mx-auto mt-5 max-w-2xl text-sm leading-8 text-zinc-600 sm:text-base">Your logistics partner, with real people you can trust.</p>
+            </div>
+            <div className="mt-12 grid gap-8 md:grid-cols-2">
+              <article className="overflow-hidden rounded-[1.75rem] border border-zinc-200 bg-white shadow-sm">
+                <div className="flex h-80 items-center justify-center bg-white p-5 sm:h-96">
+                  <Image src="/images/team-kazuhiro.jpg" alt="Pixel-art portrait of Kazuhiro Fuchigami" width={1024} height={1024} className="h-full w-full object-contain" />
+                </div>
+                <div className="border-t border-zinc-100 p-6 sm:p-8">
+                  <p className="text-xs font-bold uppercase tracking-[0.14em] text-amber-700">President &amp; CEO</p>
+                  <h3 className="mt-2 text-2xl font-bold">Kazuhiro Fuchigami</h3>
+                  <p className="mt-5 font-semibold text-zinc-900">Every shipment matters, no matter the size.</p>
+                  <p className="mt-3 text-sm leading-8 text-zinc-600">We approach every project with care and responsibility, from small shipments to large-scale fulfillment operations. Our goal is to be a logistics partner you can always count on.</p>
+                </div>
+              </article>
+              <article className="overflow-hidden rounded-[1.75rem] border border-zinc-200 bg-white shadow-sm">
+                <div className="flex h-80 items-center justify-center bg-white p-5 sm:h-96">
+                  <Image src="/images/team-mayu.png" alt="Pixel-art portrait of Mayu Kodera" width={1024} height={1536} className="h-full w-full object-contain" />
+                </div>
+                <div className="border-t border-zinc-100 p-6 sm:p-8">
+                  <p className="text-xs font-bold uppercase tracking-[0.14em] text-amber-700">Executive Managing Director</p>
+                  <h3 className="mt-2 text-2xl font-bold">Mayu Kodera</h3>
+                  <p className="mt-5 font-semibold text-zinc-900">Great service starts with great communication.</p>
+                  <p className="mt-3 text-sm leading-8 text-zinc-600">We believe in clear communication, attention to detail, and flexible solutions. Even if your plans are still taking shape, we&apos;re here to help you find the right approach.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
         {/* INDUSTRIES */}
         <section className="py-16 sm:py-24">
           <div className="mx-auto max-w-6xl px-5 sm:px-6">
