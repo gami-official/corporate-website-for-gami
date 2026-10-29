@@ -311,11 +311,11 @@ export default function HomePage() {
               </article>
               <article className="overflow-hidden rounded-2xl border border-black/10 bg-[#fbfaf7]">
                 <div className="flex h-64 items-center justify-center bg-white sm:h-80">
-                  <img src="/images/team-mayu.png" alt="専務取締役 Mayu Koderaのドット絵" width={1024} height={1536} loading="lazy" className="h-full w-full object-contain" />
+                  <img src="/images/team-mayu.png" alt="専務取締役 Mayu Koteraのドット絵" width={1024} height={1536} loading="lazy" className="h-full w-full object-contain" />
                 </div>
                 <div className="p-5 sm:p-6">
                   <p className="text-xs font-bold tracking-wide text-amber-700">専務取締役</p>
-                  <h3 className="mt-1 text-xl font-bold">Mayu Kodera</h3>
+                  <h3 className="mt-1 text-xl font-bold">Mayu Kotera</h3>
                   <p className="mt-3 text-base font-bold">相談しやすさも、私たちのサービスです。</p>
                   <p className="mt-2 text-sm leading-7 text-zinc-600">物流のご相談が初めてでも、まだ内容が決まっていなくても大丈夫です。お客様とのコミュニケーションを大切にしながら、最適な進め方を一緒に考えます。</p>
                 </div>
