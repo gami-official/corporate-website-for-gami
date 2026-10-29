@@ -4,7 +4,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 
 export const metadata: Metadata = {
-  title: "365日稼働の発送代行・物流倉庫｜1坪から対応",
+  title: "発送代行・検品・物流倉庫｜小ロットから大規模案件まで｜株式会社GAMI",
   description:
     "大阪・福岡・神戸の物流ネットワークで全国対応。大阪物流センター、福岡検品センター、協力パートナー企業が連携し、小ロットから大規模案件まで保管・検品・梱包・発送をご相談いただけます。",
   alternates: {
@@ -19,6 +19,7 @@ const concerns = [
   "土日祝の出荷",
   "検品・梱包だけ",
   "急な出荷・繁忙期",
+  "大量の封入・セット組み・発送",
 ]
 
 const strengths = [
@@ -43,7 +44,7 @@ const services = [
   {
     number: "01",
     title: "倉庫保管",
-    text: "1坪からの保管、EC在庫、一時保管を相談できます。",
+    text: "1坪からの保管、EC在庫、一時保管、物量に応じた運用をご相談いただけます。",
   },
   {
     number: "02",
@@ -58,7 +59,7 @@ const services = [
   {
     number: "04",
     title: "スポット・輸送",
-    text: "繁忙期の応援、一時的な出荷、全国への輸送手配。",
+    text: "繁忙期の応援、大量封入・一斉発送、全国への輸送手配をご相談いただけます。",
   },
 ]
 
@@ -123,6 +124,10 @@ const faqs = [
     answer:
       "希望日、商品、数量、作業内容をお知らせください。状況を確認し、対応可否と進め方をご案内します。",
   },
+  {
+    question: "大量の封入・梱包・発送も相談できる？",
+    answer: "はい。作業内容・数量・納期・配送条件を確認し、自社拠点と協力パートナー企業による対応体制をご提案します。",
+  },
 ]
 
 const container = "mx-auto max-w-6xl px-4 sm:px-6"
@@ -175,9 +180,9 @@ export default function HomePage() {
               </p>
 
               <p className="mt-4 max-w-xl text-sm leading-7 text-white/90 sm:text-base">
-                1坪から、スモールビジネスを支える。
-                保管・発送・検品・流通加工まで、
-                小さなご依頼も歓迎します。
+                1坪からの保管・小ロット発送も、大規模な封入・梱包・発送案件も。
+                大阪物流センター・福岡検品センターと協力パートナーの連携で、
+                物流の課題に柔軟に向き合います。
               </p>
 
               <div className="mt-5 grid max-w-lg grid-cols-4 gap-1.5">
@@ -367,6 +372,7 @@ export default function HomePage() {
           <div className={container}>
             <p className={eyebrow}>EXPERIENCE</p>
             <h2 className={heading}>物流・発送・加工の実績。</h2>
+            <p className="mt-3 max-w-3xl text-sm leading-7 text-zinc-600">小ロットの継続発送から、検品・セット組み・封入などの作業まで。数量・納期・品質条件を確認し、案件ごとに運用を組み立てます。</p>
 
             <div className="mt-5 overflow-hidden rounded-2xl border border-black/10 bg-white">
               {achievements.map((item, index) => (
@@ -454,6 +460,7 @@ export default function HomePage() {
           <div className={container}>
             <p className={eyebrow}>HOW TO START</p>
             <h2 className={heading}>相談から開始まで、3ステップ。</h2>
+            <p className="mt-3 text-sm leading-7 text-zinc-600">お見積り時は、商品・数量・保管の有無・作業内容・出荷頻度・希望納期をお伝えいただくとスムーズです。未定でもご相談いただけます。</p>
 
             <ol className="mt-5 grid gap-2 md:grid-cols-3">
               {steps.map((item, index) => (
@@ -479,7 +486,7 @@ export default function HomePage() {
                 まだ決まっていなくても、大丈夫。
               </p>
               <p className="mt-2 text-sm leading-7 text-zinc-600">
-                商品・数量・作業内容・希望時期を、
+                商品・数量・作業内容・希望時期・配送先件数を、
                 分かる範囲でお知らせください。
                 未定の項目は、一緒に整理できます。
               </p>
