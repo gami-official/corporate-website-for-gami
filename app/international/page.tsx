@@ -204,13 +204,21 @@ export default function InternationalPage() {
       <Header />
 
       <main>
-        {/* HERO */}
-        <section className="relative overflow-hidden bg-zinc-950 text-white">
-          <div className="absolute inset-0">
-            <div className="absolute -left-32 top-10 h-80 w-80 rounded-full bg-amber-500/20 blur-3xl" />
-            <div className="absolute -right-24 top-0 h-96 w-96 rounded-full bg-orange-500/20 blur-3xl" />
-            <div className="absolute bottom-0 left-1/2 h-64 w-[42rem] -translate-x-1/2 rounded-full bg-amber-300/10 blur-3xl" />
-          </div>
+        {/* HERO — same background video as Japanese homepage */}
+        <section className="relative isolate overflow-hidden bg-zinc-950 text-white">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="metadata"
+            poster="/images/hero-logistics.png"
+            className="pointer-events-none absolute inset-0 -z-20 h-full w-full object-cover"
+            aria-hidden="true"
+          >
+            <source src="/video/hero-logistics.mp4" type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 -z-10 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
 
           <div className="relative mx-auto max-w-7xl px-5 py-16 sm:px-6 sm:py-24 lg:px-12 lg:py-32">
             <div className="mx-auto max-w-5xl text-center">
@@ -226,7 +234,7 @@ export default function InternationalPage() {
               <p className="mx-auto mt-7 max-w-3xl text-[15px] leading-8 text-white/70 sm:text-lg sm:leading-9">
                 Your logistics partner for entering the Japanese market.
                 Warehousing, fulfillment, inspection, packing and nationwide
-                shipping — handled from Osaka, Japan.
+                shipping — coordinated through our Osaka, Fukuoka and Kobe network.
               </p>
 
               <div className="mx-auto mt-9 flex max-w-sm flex-col gap-3 sm:max-w-none sm:flex-row sm:justify-center">
@@ -417,6 +425,59 @@ export default function InternationalPage() {
                   <p className="mt-3 text-sm leading-8 text-zinc-600">We believe in clear communication, attention to detail, and flexible solutions. Even if your plans are still taking shape, we&apos;re here to help you find the right approach.</p>
                 </div>
               </article>
+            </div>
+          </div>
+        </section>
+
+        {/* JAPAN OPERATIONS NETWORK */}
+        <section aria-labelledby="network-title" className="bg-amber-50 py-16 sm:py-24">
+          <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-12">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-700">Japan Operations Network</p>
+            <h2 id="network-title" className="mt-4 text-[2rem] font-bold leading-tight tracking-tight sm:text-5xl">
+              Connected across Osaka, Fukuoka &amp; Kobe.
+            </h2>
+            <p className="mt-5 max-w-3xl text-sm leading-8 text-zinc-600 sm:text-base">
+              From small-volume fulfillment to large packing and shipping projects, GAMI coordinates operations through its own facilities and trusted partner companies, based on each project&apos;s requirements.
+            </p>
+
+            <div className="mt-9 grid gap-4 md:grid-cols-2">
+              <article className="overflow-hidden rounded-3xl border border-amber-100 bg-white">
+                <Image src="/images/warehouse-moriguchi.jpg" alt="GAMI Osaka Logistics Center exterior" width={960} height={600} className="h-48 w-full object-cover sm:h-56" />
+                <div className="p-5 sm:p-6">
+                  <p className="text-xs font-bold tracking-widest text-amber-700">OSAKA · GAMI FACILITY</p>
+                  <h3 className="mt-2 text-xl font-bold">Osaka Logistics Center</h3>
+                  <p className="mt-3 text-sm leading-7 text-zinc-600">1-8-18 Dainichicho, Moriguchi, Osaka. Approximately 100 tsubo of warehouse space for storage, processing and shipping. Small-volume projects are welcome.</p>
+                </div>
+              </article>
+              <article className="rounded-3xl border border-amber-100 bg-white p-5 sm:p-6">
+                <p className="text-xs font-bold tracking-widest text-amber-700">FUKUOKA · GAMI FACILITY</p>
+                <h3 className="mt-2 text-xl font-bold">Fukuoka Inspection Center</h3>
+                <p className="mt-3 text-sm leading-7 text-zinc-600">Inside A-produce, 1-21-9 Kanenokuma, Hakata-ku, Fukuoka City, Fukuoka. An inspection center supporting projects in coordination with our Osaka operations.</p>
+              </article>
+            </div>
+
+            <div className="mt-5 rounded-3xl border border-amber-100 bg-white p-5 sm:p-7">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-700">Partner Companies</p>
+              <h3 className="mt-2 text-2xl font-bold">Trusted Logistics Partners</h3>
+              <p className="mt-3 text-sm leading-7 text-zinc-600">We work with partner companies according to the scale and operational needs of each project.</p>
+              <div className="mt-5 grid gap-4 sm:grid-cols-2">
+                <article className="overflow-hidden rounded-2xl border border-zinc-200 bg-[#fbfaf7]">
+                  <Image src="/images/partner-maxexpress.png" alt="MAX EXPRESS logistics facility exterior" width={800} height={500} className="h-48 w-full object-cover sm:h-56" />
+                  <div className="p-5">
+                    <p className="text-xs font-bold text-amber-700">FUKUOKA · PARTNER</p>
+                    <h4 className="mt-2 text-lg font-bold">MAX EXPRESS Co., Ltd.</h4>
+                    <a href="https://www.maxexpress.co.jp/" target="_blank" rel="noopener noreferrer" className="mt-3 inline-flex min-h-11 items-center text-sm font-bold text-amber-800 underline underline-offset-4">Visit official website ↗</a>
+                  </div>
+                </article>
+                <article className="overflow-hidden rounded-2xl border border-zinc-200 bg-[#fbfaf7]">
+                  <Image src="/images/partner-sgrow.png" alt="S-GROW company building exterior" width={280} height={280} className="h-48 w-full object-cover object-center sm:h-56" />
+                  <div className="p-5">
+                    <p className="text-xs font-bold text-amber-700">KOBE · PARTNER</p>
+                    <h4 className="mt-2 text-lg font-bold">S-GROW Co., Ltd.</h4>
+                    <a href="https://www.s-grow.co.jp/" target="_blank" rel="noopener noreferrer" className="mt-3 inline-flex min-h-11 items-center text-sm font-bold text-amber-800 underline underline-offset-4">Visit official website ↗</a>
+                  </div>
+                </article>
+              </div>
             </div>
           </div>
         </section>
