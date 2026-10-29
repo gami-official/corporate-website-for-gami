@@ -395,55 +395,56 @@ export default function HomePage() {
 
         <section className={`bg-amber-50 ${sectionSpace}`}>
           <div className={container}>
-            <p className={eyebrow}>LOGISTICS BASE</p>
+            <p className={eyebrow}>LOGISTICS BASE & PARTNERS</p>
             <h2 className={heading}>大阪・福岡から、全国へ。</h2>
+            <p className="mt-3 max-w-3xl text-sm leading-7 text-zinc-600">
+              小ロットの保管・発送から大規模な封入・梱包・発送まで。自社拠点と協力パートナー企業が連携し、案件に合わせた物流体制をご提案します。
+            </p>
 
             <div className="mt-5 grid gap-3 md:grid-cols-2">
               <article className="overflow-hidden rounded-2xl border border-amber-100 bg-white">
                 <div className="grid grid-cols-[32%_minmax(0,1fr)]">
-                  <img
-                    src="/images/warehouse-moriguchi.jpg"
-                    alt="GAMI大阪物流センター"
-                    width={960}
-                    height={600}
-                    loading="lazy"
-                    className="h-full min-h-[150px] w-full object-cover"
-                  />
-
+                  <img src="/images/warehouse-moriguchi.jpg" alt="GAMI大阪物流センター" width={960} height={600} loading="lazy" className="h-full min-h-[150px] w-full object-cover" />
                   <div className="min-w-0 p-4 sm:p-5">
-                    <p className="text-[11px] font-bold text-amber-700">
-                      OSAKA
-                    </p>
-                    <h3 className="mt-1 text-base font-bold leading-6 sm:text-xl">
-                      大阪物流センター
-                    </h3>
-                    <p className="mt-2 text-sm leading-6 text-zinc-600">
-                      守口市大日町1-8-18。約100坪の倉庫で、
-                      保管・加工・発送に対応。1坪から相談できます。
-                    </p>
+                    <p className="text-[11px] font-bold text-amber-700">OSAKA</p>
+                    <h3 className="mt-1 text-base font-bold leading-6 sm:text-xl">大阪物流センター</h3>
+                    <p className="mt-2 text-sm leading-6 text-zinc-600">守口市大日町1-8-18。約100坪の倉庫で、保管・加工・発送に対応。1坪から相談できます。</p>
                   </div>
                 </div>
               </article>
 
               <article className="rounded-2xl border border-amber-100 bg-white p-4 sm:p-5">
-                <p className="text-[11px] font-bold text-amber-700">
-                  FUKUOKA
-                </p>
-                <h3 className="mt-1 text-base font-bold leading-6 sm:text-xl">
-                  福岡物流センター
-                </h3>
-                <p className="mt-2 text-sm leading-6 text-zinc-600">
-                  福岡市中央区の物流拠点。
-                  大阪と連携し、商品・配送先・作業内容に合わせて
-                  運用をご相談します。
-                </p>
+                <p className="text-[11px] font-bold text-amber-700">FUKUOKA</p>
+                <h3 className="mt-1 text-base font-bold leading-6 sm:text-xl">福岡物流センター</h3>
+                <p className="mt-2 text-sm leading-6 text-zinc-600">福岡市中央区の物流拠点。大阪と連携し、商品・配送先・作業内容に合わせて運用をご相談します。</p>
               </article>
             </div>
 
-            <Link
-              href="/warehouse"
-              className="mt-4 inline-flex min-h-[44px] items-center text-sm font-semibold text-amber-800 underline underline-offset-4"
-            >
+            <div className="mt-4 rounded-2xl border border-amber-100 bg-white p-4 sm:p-6">
+              <p className={eyebrow}>PARTNER COMPANIES</p>
+              <h3 className="mt-2 text-lg font-bold sm:text-2xl">協力パートナー企業</h3>
+              <p className="mt-2 text-sm leading-7 text-zinc-600">案件の規模や作業内容に応じて、協力パートナー企業と連携します。</p>
+              <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                <article className="overflow-hidden rounded-xl border border-black/10 bg-[#fbfaf7]">
+                  <img src="/images/partner-maxexpress.png" alt="株式会社マックスエクスプレス 福岡の物流施設外観" width={800} height={500} loading="lazy" className="h-44 w-full object-cover sm:h-52" />
+                  <div className="p-4">
+                    <p className="text-xs font-bold text-amber-700">福岡 / FUKUOKA</p>
+                    <h4 className="mt-1 text-base font-bold">株式会社マックスエクスプレス</h4>
+                    <a href="https://www.maxexpress.co.jp/" target="_blank" rel="noopener noreferrer" className="mt-3 inline-flex min-h-10 items-center text-sm font-semibold text-amber-800 underline underline-offset-4">公式サイトを見る ↗</a>
+                  </div>
+                </article>
+                <article className="overflow-hidden rounded-xl border border-black/10 bg-[#fbfaf7]">
+                  <img src="/images/partner-sgrow.png" alt="株式会社エスグロー 神戸の建物外観" width={280} height={280} loading="lazy" className="h-44 w-full object-cover object-center sm:h-52" />
+                  <div className="p-4">
+                    <p className="text-xs font-bold text-amber-700">神戸 / KOBE</p>
+                    <h4 className="mt-1 text-base font-bold">株式会社エスグロー</h4>
+                    <a href="https://www.s-grow.co.jp/" target="_blank" rel="noopener noreferrer" className="mt-3 inline-flex min-h-10 items-center text-sm font-semibold text-amber-800 underline underline-offset-4">公式サイトを見る ↗</a>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <Link href="/warehouse" className="mt-4 inline-flex min-h-[44px] items-center text-sm font-semibold text-amber-800 underline underline-offset-4">
               倉庫・物流拠点を詳しく見る →
             </Link>
           </div>
