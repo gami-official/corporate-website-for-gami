@@ -152,23 +152,41 @@ export default function CompanyPage() {
       <Header />
 
       <main>
-        {/* HERO */}
-        <section className="bg-zinc-950 px-4 py-10 text-white sm:px-6 sm:py-16">
-          <div className="mx-auto max-w-6xl">
-            <p className="text-[11px] font-bold tracking-[0.16em] text-amber-300">
+        {/* HERO - VIDEO BACKGROUND */}
+        <section className="relative isolate overflow-hidden bg-zinc-950 text-white">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="metadata"
+            poster="/images/hero-logistics.png"
+            className="pointer-events-none absolute inset-0 -z-20 h-full w-full object-cover"
+            aria-hidden="true"
+          >
+            <source
+              src="/video/hero-logistics.mp4"
+              type="video/mp4"
+            />
+          </video>
+
+          <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
+
+          <div className="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24 lg:py-32">
+            <p className="text-[11px] font-bold tracking-[0.2em] text-amber-300 sm:text-sm">
               COMPANY
             </p>
 
-            <h1 className="mt-4 text-[26px] font-bold leading-[1.5] tracking-tight sm:text-5xl">
-              <span className="inline-block">
+            <h1 className="mt-5 text-[30px] font-bold leading-[1.35] tracking-tight sm:text-5xl lg:text-6xl">
+              <span className="block">
                 物流を支える。
               </span>
-              <span className="inline-block">
+              <span className="block">
                 ビジネスを前へ。
               </span>
             </h1>
 
-            <p className="mt-4 max-w-3xl text-sm leading-8 text-white/85 sm:text-base">
+            <p className="mt-6 max-w-3xl text-sm leading-8 text-white/85 sm:text-base sm:leading-9">
               大阪の自社倉庫「GAMI OSAKA BASE」を主軸に、
               福岡・神戸の協力ネットワークと連携。
               1坪からの倉庫保管、小ロット発送、
@@ -176,21 +194,25 @@ export default function CompanyPage() {
               事業の規模に合わせた物流体制をご提案します。
             </p>
 
-            <div className="mt-6 grid max-w-lg grid-cols-[1.35fr_1fr] gap-2">
+            <div className="mt-8 flex max-w-lg flex-col gap-3 sm:flex-row">
               <Link
                 href="#contact"
-                className="flex min-h-[48px] items-center justify-center rounded-full bg-amber-500 px-3 py-3 text-center text-sm font-bold text-zinc-950 transition hover:bg-amber-400"
+                className="flex min-h-[52px] flex-1 items-center justify-center rounded-full bg-amber-500 px-6 py-3 text-center text-sm font-bold text-zinc-950 transition hover:bg-amber-400"
               >
                 見積り・物流相談
               </Link>
 
               <a
                 href="tel:0661159935"
-                className="flex min-h-[48px] items-center justify-center rounded-full border border-white/40 px-3 py-3 text-center text-sm font-bold transition hover:bg-white/10"
+                className="flex min-h-[52px] flex-1 items-center justify-center rounded-full border border-white/40 bg-black/20 px-6 py-3 text-center text-sm font-bold text-white backdrop-blur-sm transition hover:bg-white/10"
               >
                 電話で相談
               </a>
             </div>
+
+            <p className="mt-8 text-xs font-medium tracking-[0.16em] text-white/60">
+              OSAKA · FUKUOKA · KOBE
+            </p>
           </div>
         </section>
 
