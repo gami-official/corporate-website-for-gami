@@ -1,66 +1,118 @@
+
 import type { Metadata } from "next"
 import Link from "next/link"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 
 export const metadata: Metadata = {
-  title: "物流サービス｜発送代行・倉庫保管・流通加工",
+  title: "物流サービス｜発送代行・倉庫保管・流通加工｜株式会社GAMI",
   description:
-    "大阪・福岡から全国対応。365日稼働、1坪からの倉庫保管、小ロット発送、検品・梱包・シール貼り・セット組み・輸送手配まで。株式会社GAMIがスモールビジネスの物流を支えます。",
+    "株式会社GAMIの物流サービス。福岡を主軸に、大阪・神戸のネットワークと連携。1坪からの倉庫保管、小ロット発送代行、検品、シール貼り、セット組み、封入、大量発送、輸送手配まで幅広くご相談いただけます。",
   alternates: {
     canonical: "/logistics",
   },
 }
 
+const container = "mx-auto max-w-6xl px-4 sm:px-6"
+
+const sectionSpace = "py-16 sm:py-24"
+
+const goldLabel =
+  "text-[11px] font-bold tracking-[0.18em] text-amber-700"
+
+const darkGoldLabel =
+  "text-[11px] font-bold tracking-[0.18em] text-amber-400"
+
+const heading =
+  "mt-3 text-[clamp(1.55rem,5.5vw,2.5rem)] font-bold leading-[1.45] tracking-tight"
+
+const primaryButton =
+  "inline-flex min-h-[50px] items-center justify-center rounded-full bg-amber-500 px-6 py-3 text-center text-sm font-bold text-zinc-950 transition hover:bg-amber-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-500"
+
 const services = [
   {
     number: "01",
-    title: "倉庫保管",
-    text: "1坪からの小規模保管、EC在庫、一時保管に対応。商品・数量・期間に合わせてご相談します。",
+    english: "WAREHOUSING",
+    title: "倉庫保管・在庫管理",
+    text: "段ボール数箱から、EC商品の継続保管、資材の一時保管まで。1坪からの保管相談にも対応し、商品特性・数量・保管期間に合わせた運用をご提案します。",
+    points: [
+      "小ロット・1坪からの保管相談",
+      "EC商品・販売在庫の保管",
+      "一時保管・繁忙期の保管",
+      "入出庫・在庫管理",
+    ],
   },
   {
     number: "02",
-    title: "発送代行",
-    text: "ピッキング・梱包・発送を代行。出荷頻度や販売方法に合わせて運用をご提案します。",
+    english: "FULFILLMENT",
+    title: "発送代行・EC物流",
+    text: "商品のピッキング、梱包、送り状作成、発送まで。ECの継続出荷から企業向け発送、キャンペーン商品の一斉発送までご相談いただけます。",
+    points: [
+      "ピッキング・梱包・発送",
+      "EC・通販商品の出荷",
+      "企業向け発送・一斉発送",
+      "出荷データ・送り状対応",
+    ],
   },
   {
     number: "03",
-    title: "検品・流通加工",
-    text: "検品、シール貼り、セット組み、封入、梱包など。必要な作業だけでもご相談ください。",
+    english: "INSPECTION",
+    title: "商品検品・品質確認",
+    text: "入荷時や出荷前の商品確認、数量確認、外観検査など。必要な検品工程を組み込み、商品ごとの条件に合わせて作業を行います。",
+    points: [
+      "数量・品番確認",
+      "外観・パッケージ確認",
+      "出荷前チェック",
+      "検品結果の管理・報告",
+    ],
   },
   {
     number: "04",
-    title: "輸送手配",
-    text: "第一種貨物利用運送事業の登録を活かし、商品・数量・配送先に合う輸送方法をご相談します。",
+    english: "VALUE-ADDED SERVICES",
+    title: "流通加工・セット組み",
+    text: "シール貼り、セット組み、封入、箱組立、包装などの手作業に対応。複数工程をまとめてご依頼いただくことも、作業単体でのご相談も可能です。",
+    points: [
+      "シール貼り・ラベル貼付",
+      "セット組み・アッセンブリ",
+      "封入・包装・箱組立",
+      "内職作業・スポット作業",
+    ],
+  },
+  {
+    number: "05",
+    english: "BULK OPERATIONS",
+    title: "大量発送・スポット案件",
+    text: "キャンペーン、販促物、カード・印刷物などの大量封入や一斉発送。数量・納期・資材・配送条件を確認し、案件ごとの作業体制を組み立てます。",
+    points: [
+      "大量封入・セット作業",
+      "キャンペーン商品の発送",
+      "販促物・印刷物の一斉発送",
+      "繁忙期・短期案件の相談",
+    ],
+  },
+  {
+    number: "06",
+    english: "TRANSPORTATION",
+    title: "輸送手配・配送調整",
+    text: "第一種貨物利用運送事業の登録を活かし、商品・物量・配送先・納期に応じた輸送方法を検討。物流作業から輸送手配までまとめてご相談いただけます。",
+    points: [
+      "国内輸送の手配",
+      "物量に応じた配送方法の検討",
+      "出荷・配送スケジュール調整",
+      "協力運送会社との連携",
+    ],
   },
 ]
 
 const concerns = [
-  "発送が追いつかない",
+  "発送作業が追いつかない",
   "保管場所が足りない",
   "EC物流を外注したい",
-  "加工だけ任せたい",
-  "繁忙期を手伝ってほしい",
-  "土日祝も出荷したい",
-]
-
-const strengths = [
-  {
-    title: "365日対応",
-    text: "休日出荷や繁忙期も、事前に決めた運用条件に合わせて対応。",
-  },
-  {
-    title: "まず返す",
-    text: "急な相談にも、まず状況を確認。対応可否と進め方を迅速にご案内。",
-  },
-  {
-    title: "小ロット歓迎",
-    text: "段ボール数箱の保管や少量発送から、事業の成長に合わせて支援。",
-  },
-  {
-    title: "作業をまとめる",
-    text: "保管・検品・加工・梱包・発送まで、一括でも一部だけでも相談可能。",
-  },
+  "検品・加工だけ任せたい",
+  "繁忙期だけ依頼したい",
+  "土日祝の出荷を相談したい",
+  "大量の封入・発送を任せたい",
+  "物流拠点を新たに確保したい",
 ]
 
 const workItems = [
@@ -72,6 +124,10 @@ const workItems = [
   "箱組立",
   "内職作業",
   "スポット出荷",
+  "ラベル貼付",
+  "ピッキング",
+  "発送代行",
+  "流通加工",
 ]
 
 const industries = [
@@ -81,125 +137,160 @@ const industries = [
   "食品関連",
   "輸入商材",
   "ふるさと納税",
+  "販促物・印刷物",
+  "カード・雑貨",
 ]
 
 const gallery = [
   {
     src: "/images/warehouse-01.png",
     alt: "GAMIの倉庫全景",
+    title: "WAREHOUSE",
+    caption: "倉庫・保管スペース",
   },
   {
     src: "/images/warehouse-03.png",
-    alt: "梱包作業スペース",
+    alt: "GAMIの梱包作業スペース",
+    title: "OPERATIONS",
+    caption: "梱包・作業スペース",
   },
   {
     src: "/images/warehouse-05.png",
-    alt: "出荷前商品の保管",
+    alt: "出荷前商品の保管スペース",
+    title: "STORAGE",
+    caption: "商品保管・出荷準備",
   },
   {
     src: "/images/warehouse-07.png",
     alt: "箱組立作業",
+    title: "PROCESSING",
+    caption: "箱組立・流通加工",
   },
 ]
 
 const steps = [
   {
-    title: "ご相談",
-    text: "商品・物量・作業内容・希望時期をお知らせください。",
+    number: "01",
+    title: "お問い合わせ",
+    text: "商品・数量・希望時期・お困りごとをお知らせください。",
   },
   {
-    title: "条件確認",
-    text: "保管量・出荷頻度・配送条件を整理します。",
+    number: "02",
+    title: "内容・条件の確認",
+    text: "保管量、作業内容、出荷頻度、配送条件などを整理します。",
   },
   {
-    title: "お見積り",
-    text: "必要な作業と運用条件に合わせてご提案します。",
+    number: "03",
+    title: "お見積り・運用設計",
+    text: "作業工程や物流体制、費用、スケジュールをご提案します。",
   },
   {
-    title: "運用開始",
-    text: "入庫・加工・出荷の手順を決めて開始します。",
+    number: "04",
+    title: "業務開始",
+    text: "入庫・検品・加工・発送などの手順を決めて運用を開始します。",
   },
 ]
 
-const container = "mx-auto max-w-6xl px-4 sm:px-6"
-const sectionSpace = "py-9 sm:py-14"
-const eyebrow =
-  "text-[11px] font-bold tracking-[0.12em] text-amber-700"
-const heading =
-  "mt-2 text-[23px] font-bold leading-[1.5] tracking-tight sm:text-4xl"
-const primaryButton =
-  "inline-flex min-h-[48px] items-center justify-center rounded-full bg-amber-500 px-4 py-3 text-center text-sm font-bold text-white transition hover:bg-amber-600"
-
 export default function LogisticsPage() {
   return (
-    <div className="min-h-screen bg-[#fbfaf7] text-zinc-900">
+    <div className="min-h-screen bg-[#f7f7f5] font-sans text-zinc-900">
       <Header />
 
       <main>
+        {/* HERO VIDEO */}
         <section className="relative isolate overflow-hidden bg-zinc-950 text-white">
-          <img
-            src="/images/hero-logistics.png"
-            alt=""
-            fetchPriority="high"
-            className="absolute inset-0 -z-20 h-full w-full object-cover"
-          />
-          <div className="absolute inset-0 -z-10 bg-gradient-to-r from-black/90 via-black/75 to-black/50" />
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            poster="/images/hero-logistics.png"
+            className="absolute inset-0 z-0 h-full w-full object-cover"
+          >
+            <source
+              src="/video/hero-logistics.mp4"
+              type="video/mp4"
+            />
+          </video>
 
-          <div className={`${container} py-9 sm:py-16`}>
-            <p className="text-[11px] font-bold tracking-[0.12em] text-amber-300">
-              LOGISTICS SERVICES
-            </p>
+          <div className="absolute inset-0 z-10 bg-gradient-to-r from-black/90 via-black/75 to-black/50" />
 
-            <h1 className="mt-3 text-[28px] font-bold leading-[1.5] tracking-tight sm:text-5xl">
-              <span className="inline-block">保管から発送まで、</span>
-              <span className="inline-block">GAMIへ。</span>
-            </h1>
+          <div className={`${container} relative z-20 py-16 sm:py-24 lg:py-32`}>
+            <div className="max-w-4xl">
+              <p className={darkGoldLabel}>
+                GAMI LOGISTICS SERVICES
+              </p>
 
-            <p className="mt-3 max-w-2xl text-sm leading-7 text-white/85 sm:text-base">
-              365日対応。まず返す。1坪から。
-              小ロット発送・検品・流通加工・輸送手配まで、
-              必要な業務からご相談いただけます。
-            </p>
+              <h1 className="mt-5 text-[clamp(2rem,7vw,4.2rem)] font-black leading-[1.35] tracking-tight">
+                必要な物流を、
+                <br />
+                <span className="text-amber-400">
+                  必要なだけ。
+                </span>
+              </h1>
 
-            <div className="mt-5 grid max-w-lg grid-cols-[1.35fr_1fr] gap-2">
-              <Link
-                href="/company#contact"
-                className={primaryButton}
-              >
-                見積り・物流相談
-              </Link>
+              <p className="mt-6 max-w-2xl text-sm leading-8 text-white/80 sm:text-base">
+                倉庫保管、発送代行、検品、流通加工、
+                大量発送、輸送手配まで。
+                一部の作業だけでも、まとめてのご依頼でも。
+                お客様の業務に合わせた物流サービスをご提案します。
+              </p>
 
-              <a
-                href="tel:0661159935"
-                className="flex min-h-[48px] items-center justify-center rounded-full border border-white/40 px-3 py-3 text-sm font-bold transition hover:bg-white/10"
-              >
-                電話で相談
-              </a>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Link
+                  href="/company#contact"
+                  className={primaryButton}
+                >
+                  見積り・物流相談 →
+                </Link>
+
+                <Link
+                  href="#services"
+                  className="inline-flex min-h-[50px] items-center justify-center rounded-full border border-white/35 px-6 py-3 text-sm font-bold transition hover:bg-white/10"
+                >
+                  サービス一覧を見る
+                </Link>
+              </div>
+
+              <p className="mt-5 text-[11px] leading-6 text-white/60">
+                ※休日出荷や特別な作業条件は、事前のご相談が必要です。
+              </p>
             </div>
-
-            <p className="mt-3 max-w-xl text-[11px] leading-5 text-white/70">
-              ※365日対応は、作業内容・締切・出荷条件を事前にご相談ください。
-            </p>
           </div>
         </section>
 
-        <section className={`bg-amber-50 ${sectionSpace}`}>
+        {/* CHALLENGES */}
+        <section className={sectionSpace}>
           <div className={container}>
-            <p className={eyebrow}>YOUR CHALLENGES</p>
-            <h2 className={heading}>こんなお困りごとに。</h2>
+            <p className={goldLabel}>
+              YOUR CHALLENGES
+            </p>
 
-            <ul className="mt-5 grid grid-cols-2 gap-2 lg:grid-cols-3">
+            <h2 className={heading}>
+              こんな物流の課題、
+              <br />
+              ありませんか？
+            </h2>
+
+            <p className="mt-4 max-w-3xl text-sm leading-8 text-zinc-600">
+              物流業務のすべてを任せる必要はありません。
+              お困りの工程や不足している部分だけでも、
+              お気軽にご相談ください。
+            </p>
+
+            <ul className="mt-8 grid grid-cols-2 gap-3 lg:grid-cols-4">
               {concerns.map((item) => (
                 <li
                   key={item}
-                  className="flex min-w-0 items-start gap-2 rounded-xl border border-amber-100 bg-white p-3"
+                  className="flex min-w-0 items-start gap-3 rounded-xl border border-black/10 bg-white p-4"
                 >
                   <span
                     aria-hidden="true"
-                    className="shrink-0 text-amber-600"
+                    className="shrink-0 font-bold text-amber-600"
                   >
                     ✓
                   </span>
+
                   <span className="text-sm font-semibold leading-6">
                     {item}
                   </span>
@@ -209,176 +300,255 @@ export default function LogisticsPage() {
           </div>
         </section>
 
-        <section className={sectionSpace}>
+        {/* SERVICE DETAILS */}
+        <section
+          id="services"
+          className={`scroll-mt-24 bg-white ${sectionSpace}`}
+        >
           <div className={container}>
-            <p className={eyebrow}>SERVICES</p>
-            <h2 className={heading}>
-              <span className="inline-block">必要な作業から、</span>
-              <span className="inline-block">まとめて任せられる。</span>
-            </h2>
-
-            <div className="mt-5 grid grid-cols-2 gap-2 lg:grid-cols-4 lg:gap-4">
-              {services.map((item) => (
-                <article
-                  key={item.number}
-                  className="min-w-0 rounded-2xl border border-black/10 bg-white p-3 sm:p-5"
-                >
-                  <p className="text-xs font-bold text-amber-600">
-                    {item.number}
-                  </p>
-                  <h3 className="mt-2 text-base font-bold leading-6 sm:text-xl">
-                    {item.title}
-                  </h3>
-                  <p className="mt-2 text-sm leading-6 text-zinc-600">
-                    {item.text}
-                  </p>
-                </article>
-              ))}
-            </div>
-
-            <div className="mt-5 rounded-2xl bg-amber-50 p-4 sm:p-5">
-              <h3 className="text-base font-bold">
-                細かな手作業にも対応。
-              </h3>
-              <ul className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-4">
-                {workItems.map((item) => (
-                  <li
-                    key={item}
-                    className="rounded-lg bg-white px-3 py-2 text-center text-sm font-semibold leading-6"
-                  >
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <section className={`bg-zinc-950 text-white ${sectionSpace}`}>
-          <div className={container}>
-            <p className="text-[11px] font-bold tracking-[0.12em] text-amber-300">
-              WHY GAMI
+            <p className={goldLabel}>
+              OUR SERVICES
             </p>
+
             <h2 className={heading}>
-              <span className="inline-block">小さなご依頼も、</span>
-              <span className="inline-block">急なご相談も。</span>
+              GAMIが対応する、
+              <br />
+              6つの物流サービス。
             </h2>
 
-            <div className="mt-5 grid gap-2 md:grid-cols-2">
-              {strengths.map((item) => (
+            <p className="mt-4 max-w-3xl text-sm leading-8 text-zinc-600">
+              保管・発送・検品・加工・大量発送・輸送手配。
+              案件に合わせて必要な工程を組み合わせ、
+              物流業務をサポートします。
+            </p>
+
+            <div className="mt-9 grid gap-5 md:grid-cols-2">
+              {services.map((service) => (
                 <article
-                  key={item.title}
-                  className="grid grid-cols-[88px_minmax(0,1fr)] items-start gap-3 rounded-xl border border-white/15 bg-white/5 p-4"
+                  key={service.number}
+                  className="group overflow-hidden rounded-2xl border border-black/10 bg-[#fafaf9] transition hover:border-amber-300 hover:shadow-lg"
                 >
-                  <h3 className="text-sm font-bold leading-6 text-amber-300">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm leading-6 text-white/80">
-                    {item.text}
-                  </p>
+                  <div className="border-b border-black/10 bg-zinc-950 px-6 py-5 text-white">
+                    <div className="flex items-center justify-between gap-4">
+                      <p className="text-[10px] font-bold tracking-[0.14em] text-amber-400">
+                        {service.english}
+                      </p>
+
+                      <span className="text-2xl font-black text-white/30">
+                        {service.number}
+                      </span>
+                    </div>
+
+                    <h3 className="mt-3 text-xl font-bold leading-relaxed sm:text-2xl">
+                      {service.title}
+                    </h3>
+                  </div>
+
+                  <div className="p-6">
+                    <p className="text-sm leading-8 text-zinc-600">
+                      {service.text}
+                    </p>
+
+                    <ul className="mt-5 space-y-3 border-t border-black/10 pt-5">
+                      {service.points.map((point) => (
+                        <li
+                          key={point}
+                          className="flex items-start gap-3 text-sm leading-7"
+                        >
+                          <span
+                            aria-hidden="true"
+                            className="shrink-0 font-bold text-amber-600"
+                          >
+                            ✓
+                          </span>
+
+                          <span>{point}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </article>
               ))}
             </div>
-
-            <Link
-              href="/company#contact"
-              className={`${primaryButton} mt-5`}
-            >
-              対応できるか相談する
-            </Link>
           </div>
         </section>
 
+        {/* MANUAL OPERATIONS */}
         <section className={sectionSpace}>
           <div className={container}>
-            <p className={eyebrow}>INDUSTRIES</p>
-            <h2 className={heading}>幅広い事業の物流を支援。</h2>
+            <p className={goldLabel}>
+              VALUE-ADDED OPERATIONS
+            </p>
 
-            <ul className="mt-5 grid grid-cols-2 gap-2 sm:grid-cols-3">
-              {industries.map((item) => (
-                <li
+            <h2 className={heading}>
+              細かな手作業も、
+              <br />
+              お任せください。
+            </h2>
+
+            <p className="mt-4 max-w-3xl text-sm leading-8 text-zinc-600">
+              物流は、商品を運ぶだけではありません。
+              検品、ラベル貼り、セット組み、封入など、
+              人の手が必要な工程にも対応します。
+            </p>
+
+            <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+              {workItems.map((item) => (
+                <div
                   key={item}
-                  className="rounded-xl border border-black/10 bg-white px-3 py-3 text-center text-sm font-semibold leading-6"
+                  className="flex min-h-[64px] items-center justify-center rounded-xl border border-black/10 bg-white px-3 py-4 text-center text-sm font-bold"
                 >
                   {item}
-                </li>
+                </div>
               ))}
-            </ul>
+            </div>
 
-            <p className="mt-4 text-sm leading-7 text-zinc-600">
+            <div className="mt-8 rounded-2xl bg-zinc-950 p-6 text-white sm:p-8">
+              <p className={darkGoldLabel}>
+                FLEXIBLE OPERATIONS
+              </p>
+
+              <h3 className="mt-3 text-xl font-bold leading-relaxed sm:text-2xl">
+                「この作業だけお願いしたい」
+                <br />
+                そんなご相談も歓迎です。
+              </h3>
+
+              <p className="mt-4 text-sm leading-8 text-white/70">
+                作業内容、数量、納期、商品仕様を確認し、
+                ご依頼に合わせた作業方法をご提案します。
+              </p>
+
+              <Link
+                href="/company#contact"
+                className={`${primaryButton} mt-6`}
+              >
+                作業について相談する →
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* INDUSTRIES */}
+        <section className={`bg-white ${sectionSpace}`}>
+          <div className={container}>
+            <p className={goldLabel}>
+              INDUSTRIES
+            </p>
+
+            <h2 className={heading}>
+              幅広い商品・業種の、
+              <br />
+              物流ニーズに対応。
+            </h2>
+
+            <p className="mt-4 max-w-3xl text-sm leading-8 text-zinc-600">
+              商品の特性や保管条件、数量、納期に応じて、
+              適した作業・出荷体制を検討します。
+            </p>
+
+            <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
+              {industries.map((item) => (
+                <div
+                  key={item}
+                  className="flex min-h-[68px] items-center justify-center rounded-xl border border-black/10 bg-[#fafaf9] px-4 py-4 text-center text-sm font-bold"
+                >
+                  {item}
+                </div>
+              ))}
+            </div>
+
+            <p className="mt-6 text-sm leading-8 text-zinc-600">
               ふるさと納税返礼品の発送、美容商材の検品・セット組み、
-              EC・アパレル商品の保管・発送などに対応しています。
-              商品ごとの保管条件・作業条件は個別に確認します。
+              EC・アパレル商品の保管・発送など、
+              多様な物流業務をご相談いただけます。
             </p>
           </div>
         </section>
 
-        <section className={`bg-amber-50 ${sectionSpace}`}>
+        {/* WAREHOUSE LINK */}
+        <section className={sectionSpace}>
           <div className={container}>
-            <p className={eyebrow}>WAREHOUSE</p>
-            <h2 className={heading}>
-              <span className="inline-block">大阪・守口の倉庫から、</span>
-              <span className="inline-block">全国へ。</span>
-            </h2>
-
-            <div className="mt-5 overflow-hidden rounded-2xl border border-amber-100 bg-white">
-              <div className="grid grid-cols-[32%_minmax(0,1fr)] sm:grid-cols-2">
+            <div className="grid overflow-hidden rounded-2xl border border-black/10 bg-white lg:grid-cols-2">
+              <div className="relative min-h-[240px] overflow-hidden bg-zinc-900 sm:min-h-[320px]">
                 <img
                   src="/images/warehouse-moriguchi.jpg"
-                  alt="GAMI守口倉庫の外観"
+                  alt="GAMI OSAKA BASEの倉庫外観"
                   width={960}
                   height={600}
                   loading="lazy"
-                  className="h-full min-h-[160px] w-full object-cover"
+                  className="absolute inset-0 h-full w-full object-cover"
                 />
-                <div className="min-w-0 p-4 sm:p-6">
-                  <h3 className="text-base font-bold leading-6 sm:text-xl">
-                    約100坪・1坪から相談可能
-                  </h3>
-                  <p className="mt-2 text-sm leading-6 text-zinc-600">
-                    大阪府守口市大日町1-8-18。
-                    保管・検品・加工・梱包・発送まで、
-                    商品と物量に合わせて運用します。
-                  </p>
-                  <Link
-                    href="/warehouse"
-                    className="mt-2 inline-flex min-h-[44px] items-center text-sm font-semibold text-amber-800 underline underline-offset-4"
-                  >
-                    倉庫紹介を見る →
-                  </Link>
-                </div>
+              </div>
+
+              <div className="flex flex-col justify-center p-6 sm:p-9">
+                <p className={goldLabel}>
+                  GAMI OSAKA BASE
+                </p>
+
+                <h2 className={heading}>
+                  御社の物流拠点を、
+                  <br />
+                  大阪に。
+                </h2>
+
+                <p className="mt-5 text-sm leading-8 text-zinc-600">
+                  大阪府守口市にある約100坪のGAMI自社倉庫。
+                  商品の保管・加工・発送だけでなく、
+                  お客様の物流拠点として活用いただくこともご相談可能です。
+                </p>
+
+                <Link
+                  href="/warehouse"
+                  className="mt-6 inline-flex min-h-[44px] items-center text-sm font-bold text-amber-800 underline underline-offset-4"
+                >
+                  物流拠点・倉庫の詳細を見る →
+                </Link>
               </div>
             </div>
-
-            <p className="mt-4 text-sm leading-7 text-zinc-600">
-              福岡の物流拠点や提携ネットワークとも連携。
-              配送先・数量・必要な作業に合わせて、
-              発送・輸送方法をご相談いただけます。
-            </p>
           </div>
         </section>
 
-        <section className={sectionSpace}>
+        {/* GALLERY */}
+        <section className={`bg-white ${sectionSpace}`}>
           <div className={container}>
-            <p className={eyebrow}>GALLERY</p>
-            <h2 className={heading}>実際の倉庫・作業風景。</h2>
+            <p className={goldLabel}>
+              OPERATIONS GALLERY
+            </p>
 
-            <div className="mt-5 grid grid-cols-2 gap-2 lg:grid-cols-4">
+            <h2 className={heading}>
+              倉庫・作業風景。
+            </h2>
+
+            <p className="mt-4 text-sm leading-8 text-zinc-600">
+              保管・梱包・出荷など、物流業務を支える現場をご紹介します。
+            </p>
+
+            <div className="mt-8 grid grid-cols-2 gap-3 lg:grid-cols-4">
               {gallery.map((image) => (
                 <figure
                   key={image.src}
-                  className="overflow-hidden rounded-xl border border-black/10 bg-white"
+                  className="flex min-w-0 flex-col overflow-hidden rounded-2xl border border-black/10 bg-[#fafaf9]"
                 >
-                  <img
-                    src={image.src}
-                    alt={image.alt}
-                    width={640}
-                    height={480}
-                    loading="lazy"
-                    className="aspect-[4/3] w-full object-cover"
-                  />
-                  <figcaption className="px-3 py-2 text-xs leading-5 text-zinc-600">
-                    {image.alt}
+                  <div className="aspect-[4/3] overflow-hidden bg-zinc-200">
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      width={640}
+                      height={480}
+                      loading="lazy"
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+
+                  <figcaption className="flex min-h-[70px] flex-col justify-center bg-white px-3 py-3">
+                    <span className="text-[9px] font-bold tracking-[0.1em] text-amber-700 sm:text-[10px]">
+                      {image.title}
+                    </span>
+
+                    <span className="mt-1 text-xs font-semibold leading-5 text-zinc-800 sm:text-sm">
+                      {image.caption}
+                    </span>
                   </figcaption>
                 </figure>
               ))}
@@ -386,49 +556,62 @@ export default function LogisticsPage() {
           </div>
         </section>
 
-        <section className={`bg-white ${sectionSpace}`}>
+        {/* PROCESS */}
+        <section className={sectionSpace}>
           <div className={container}>
-            <p className={eyebrow}>FLOW</p>
-            <h2 className={heading}>ご相談から、運用開始まで。</h2>
+            <p className={goldLabel}>
+              HOW WE WORK
+            </p>
 
-            <ol className="mt-5 grid gap-2 md:grid-cols-2">
-              {steps.map((item, index) => (
-                <li
-                  key={item.title}
-                  className="grid grid-cols-[26px_70px_minmax(0,1fr)] items-start gap-2 rounded-xl border border-black/10 bg-[#fbfaf7] p-4"
+            <h2 className={heading}>
+              ご相談から、
+              <br />
+              業務開始まで。
+            </h2>
+
+            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {steps.map((step) => (
+                <article
+                  key={step.number}
+                  className="rounded-2xl border border-black/10 bg-white p-6"
                 >
-                  <span className="flex h-6 w-6 items-center justify-center rounded-full bg-amber-100 text-xs font-bold text-amber-800">
-                    {index + 1}
-                  </span>
-                  <h3 className="text-sm font-bold leading-6">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm leading-6 text-zinc-600">
-                    {item.text}
+                  <p className="text-3xl font-black text-amber-600">
+                    {step.number}
                   </p>
-                </li>
-              ))}
-            </ol>
 
-            <div className="mt-5 rounded-2xl bg-amber-50 p-4 sm:p-6">
-              <h3 className="text-base font-bold leading-7">
-                条件が未定でも、お気軽に。
+                  <h3 className="mt-4 text-lg font-bold">
+                    {step.title}
+                  </h3>
+
+                  <p className="mt-3 text-sm leading-7 text-zinc-600">
+                    {step.text}
+                  </p>
+                </article>
+              ))}
+            </div>
+
+            <div className="mt-9 rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
+              <h3 className="text-lg font-bold leading-relaxed sm:text-xl">
+                まだ条件が決まっていなくても、大丈夫。
               </h3>
-              <p className="mt-2 text-sm leading-7 text-zinc-600">
-                商品・数量・作業内容・希望時期を、分かる範囲で
-                お知らせください。小ロットやスポット案件も歓迎です。
+
+              <p className="mt-3 max-w-3xl text-sm leading-8 text-zinc-600">
+                商品・数量・保管の有無・作業内容・希望時期など、
+                分かる範囲でお知らせください。
+                必要な条件は一緒に整理できます。
               </p>
 
-              <div className="mt-4 grid max-w-lg grid-cols-[1.35fr_1fr] gap-2">
+              <div className="mt-6 flex flex-wrap gap-3">
                 <Link
                   href="/company#contact"
                   className={primaryButton}
                 >
-                  見積り・物流相談
+                  見積り・物流相談 →
                 </Link>
+
                 <a
                   href="tel:0661159935"
-                  className="flex min-h-[48px] items-center justify-center rounded-full border border-black/15 bg-white px-3 py-3 text-sm font-bold transition hover:bg-amber-100"
+                  className="inline-flex min-h-[50px] items-center justify-center rounded-full border border-black/15 bg-white px-6 py-3 text-sm font-bold transition hover:bg-amber-100"
                 >
                   電話で相談
                 </a>
