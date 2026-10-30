@@ -5,9 +5,10 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 
 export const metadata: Metadata = {
-  title: "物流サービス｜発送代行・倉庫保管・流通加工｜株式会社GAMI",
+  title:
+    "物流サービス｜発送代行・倉庫保管・流通加工｜株式会社GAMI",
   description:
-    "株式会社GAMIの物流サービス。福岡を主軸に、大阪・神戸のネットワークと連携。1坪からの倉庫保管、小ロット発送代行、検品、シール貼り、セット組み、封入、大量発送、輸送手配まで幅広くご相談いただけます。",
+    "大阪の自社倉庫GAMI OSAKA BASEを主軸に、福岡・神戸の協力ネットワークと連携。倉庫保管、発送代行、検品、シール貼り、セット組み、封入、大量発送、輸送手配まで幅広くご相談いただけます。",
   alternates: {
     canonical: "/logistics",
   },
@@ -34,7 +35,8 @@ const services = [
     number: "01",
     english: "WAREHOUSING",
     title: "倉庫保管・在庫管理",
-    text: "段ボール数箱から、EC商品の継続保管、資材の一時保管まで。1坪からの保管相談にも対応し、商品特性・数量・保管期間に合わせた運用をご提案します。",
+    text:
+      "段ボール数箱から、EC商品の継続保管、資材の一時保管まで。1坪からの保管相談にも対応し、商品特性・数量・保管期間に合わせた運用をご提案します。",
     points: [
       "小ロット・1坪からの保管相談",
       "EC商品・販売在庫の保管",
@@ -46,7 +48,8 @@ const services = [
     number: "02",
     english: "FULFILLMENT",
     title: "発送代行・EC物流",
-    text: "商品のピッキング、梱包、送り状作成、発送まで。ECの継続出荷から企業向け発送、キャンペーン商品の一斉発送までご相談いただけます。",
+    text:
+      "商品のピッキング、梱包、送り状作成、発送まで。ECの継続出荷から企業向け発送、キャンペーン商品の一斉発送までご相談いただけます。",
     points: [
       "ピッキング・梱包・発送",
       "EC・通販商品の出荷",
@@ -58,7 +61,8 @@ const services = [
     number: "03",
     english: "INSPECTION",
     title: "商品検品・品質確認",
-    text: "入荷時や出荷前の商品確認、数量確認、外観検査など。必要な検品工程を組み込み、商品ごとの条件に合わせて作業を行います。",
+    text:
+      "入荷時や出荷前の商品確認、数量確認、外観検査など。必要な検品工程を組み込み、商品ごとの条件に合わせて作業を行います。",
     points: [
       "数量・品番確認",
       "外観・パッケージ確認",
@@ -70,7 +74,8 @@ const services = [
     number: "04",
     english: "VALUE-ADDED SERVICES",
     title: "流通加工・セット組み",
-    text: "シール貼り、セット組み、封入、箱組立、包装などの手作業に対応。複数工程をまとめてご依頼いただくことも、作業単体でのご相談も可能です。",
+    text:
+      "シール貼り、セット組み、封入、箱組立、包装などの手作業に対応。複数工程をまとめてご依頼いただくことも、作業単体でのご相談も可能です。",
     points: [
       "シール貼り・ラベル貼付",
       "セット組み・アッセンブリ",
@@ -82,7 +87,8 @@ const services = [
     number: "05",
     english: "BULK OPERATIONS",
     title: "大量発送・スポット案件",
-    text: "キャンペーン、販促物、カード・印刷物などの大量封入や一斉発送。数量・納期・資材・配送条件を確認し、案件ごとの作業体制を組み立てます。",
+    text:
+      "キャンペーン、販促物、カード・印刷物などの大量封入や一斉発送。数量・納期・資材・配送条件を確認し、案件ごとの作業体制を組み立てます。",
     points: [
       "大量封入・セット作業",
       "キャンペーン商品の発送",
@@ -94,7 +100,8 @@ const services = [
     number: "06",
     english: "TRANSPORTATION",
     title: "輸送手配・配送調整",
-    text: "第一種貨物利用運送事業の登録を活かし、商品・物量・配送先・納期に応じた輸送方法を検討。物流作業から輸送手配までまとめてご相談いただけます。",
+    text:
+      "第一種貨物利用運送事業の登録を活かし、商品・物量・配送先・納期に応じた輸送方法を検討。物流作業から輸送手配までまとめてご相談いただけます。",
     points: [
       "国内輸送の手配",
       "物量に応じた配送方法の検討",
@@ -172,22 +179,26 @@ const steps = [
   {
     number: "01",
     title: "お問い合わせ",
-    text: "商品・数量・希望時期・お困りごとをお知らせください。",
+    text:
+      "商品・数量・希望時期・お困りごとをお知らせください。",
   },
   {
     number: "02",
     title: "内容・条件の確認",
-    text: "保管量、作業内容、出荷頻度、配送条件などを整理します。",
+    text:
+      "保管量、作業内容、出荷頻度、配送条件などを整理します。",
   },
   {
     number: "03",
     title: "お見積り・運用設計",
-    text: "作業工程や物流体制、費用、スケジュールをご提案します。",
+    text:
+      "作業工程や物流体制、費用、スケジュールをご提案します。",
   },
   {
     number: "04",
     title: "業務開始",
-    text: "入庫・検品・加工・発送などの手順を決めて運用を開始します。",
+    text:
+      "入庫・検品・加工・発送などの手順を決めて運用を開始します。",
   },
 ]
 
@@ -215,7 +226,9 @@ export default function LogisticsPage() {
 
           <div className="absolute inset-0 z-10 bg-gradient-to-r from-black/90 via-black/75 to-black/50" />
 
-          <div className={`${container} relative z-20 py-16 sm:py-24 lg:py-32`}>
+          <div
+            className={`${container} relative z-20 py-16 sm:py-24 lg:py-32`}
+          >
             <div className="max-w-4xl">
               <p className={darkGoldLabel}>
                 GAMI LOGISTICS SERVICES
@@ -230,9 +243,10 @@ export default function LogisticsPage() {
               </h1>
 
               <p className="mt-6 max-w-2xl text-sm leading-8 text-white/80 sm:text-base">
+                大阪の自社倉庫を主軸に、
+                福岡・神戸の協力ネットワークと連携。
                 倉庫保管、発送代行、検品、流通加工、
                 大量発送、輸送手配まで。
-                一部の作業だけでも、まとめてのご依頼でも。
                 お客様の業務に合わせた物流サービスをご提案します。
               </p>
 
@@ -477,7 +491,7 @@ export default function LogisticsPage() {
                   width={960}
                   height={600}
                   loading="lazy"
-                  className="absolute inset-0 h-full w-full object-cover"
+                  className="absolute inset-0 h-full w-full object-cover object-top"
                 />
               </div>
 
@@ -530,14 +544,14 @@ export default function LogisticsPage() {
                   key={image.src}
                   className="flex min-w-0 flex-col overflow-hidden rounded-2xl border border-black/10 bg-[#fafaf9]"
                 >
-                  <div className="aspect-[4/3] overflow-hidden bg-zinc-200">
+                  <div className="relative aspect-[4/3] overflow-hidden bg-zinc-200">
                     <img
                       src={image.src}
                       alt={image.alt}
                       width={640}
                       height={480}
                       loading="lazy"
-                      className="h-full w-full object-cover"
+                      className="absolute inset-0 h-full w-full scale-[1.15] object-cover object-top"
                     />
                   </div>
 
