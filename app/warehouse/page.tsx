@@ -7,7 +7,7 @@ import { Footer } from "@/components/footer"
 export const metadata: Metadata = {
   title: "物流拠点・倉庫紹介｜GAMI LOGISTICS NETWORK",
   description:
-    "福岡を主軸に、大阪・神戸と連携するGAMIの物流ネットワーク。大阪府守口市の約100坪の自社倉庫は、お客様の物流拠点としても活用可能。倉庫保管、検品、流通加工、梱包、発送代行をご相談いただけます。",
+    "大阪の自社倉庫を主軸に、福岡・神戸の協力ネットワークと連携するGAMIの物流ネットワーク。大阪府守口市の約100坪の自社倉庫は、お客様の物流拠点としても活用可能。倉庫保管、検品、流通加工、梱包、発送代行をご相談いただけます。",
   alternates: {
     canonical: "/warehouse",
   },
@@ -64,24 +64,24 @@ const warehouseInfo = [
 
 const network = [
   {
-    english: "FUKUOKA",
-    type: "MAIN OPERATIONS",
-    title: "福岡・主軸拠点",
-    text: "GAMIの物流事業を支える中心エリア。協力パートナーと連携し、保管・加工・発送など多様な案件に対応します。",
+    english: "OSAKA",
+    type: "MAIN OPERATIONS / OWN WAREHOUSE",
+    title: "GAMI OSAKA BASE",
+    text: "大阪府守口市の約100坪の自社倉庫。GAMIの物流事業の主軸として、保管・検品・加工・発送を担います。",
     featured: true,
   },
   {
-    english: "OSAKA",
-    type: "GAMI OWN WAREHOUSE",
-    title: "GAMI OSAKA BASE",
-    text: "大阪府守口市の約100坪の自社倉庫。お客様の物流拠点としての活用も含め、保管・作業・出荷の運用を設計します。",
+    english: "FUKUOKA",
+    type: "PARTNER NETWORK",
+    title: "福岡・協力ネットワーク",
+    text: "福岡の物流パートナーと連携し、案件規模や作業内容に応じた物流体制を支えます。",
     featured: false,
   },
   {
     english: "KOBE",
     type: "PARTNER NETWORK",
-    title: "神戸・提携ネットワーク",
-    text: "神戸の協力パートナーと連携。物量・作業内容・納期に合わせて物流体制を補完します。",
+    title: "神戸・協力ネットワーク",
+    text: "神戸の物流パートナーと連携し、物量・作業内容・納期に合わせて物流体制を補完します。",
     featured: false,
   },
 ]
@@ -162,7 +162,7 @@ export default function WarehousePage() {
               </p>
 
               <p className="mt-4 text-xs font-semibold tracking-[0.12em] text-white/65">
-                FUKUOKA / OSAKA / KOBE
+                OSAKA / FUKUOKA / KOBE
               </p>
 
               <h1 className="mt-5 text-[clamp(2rem,7vw,4.2rem)] font-black leading-[1.35] tracking-tight">
@@ -174,7 +174,7 @@ export default function WarehousePage() {
               </h1>
 
               <p className="mt-6 max-w-2xl text-sm leading-8 text-white/80 sm:text-base">
-                福岡を主軸に、大阪の自社倉庫と神戸の協力ネットワークを活用。
+                大阪の自社倉庫「GAMI OSAKA BASE」を主軸に、福岡・神戸の協力ネットワークと連携。
                 お客様の事業に合わせた物流拠点・運用体制をご提案します。
               </p>
 
@@ -214,8 +214,8 @@ export default function WarehousePage() {
             </h2>
 
             <p className="mt-5 max-w-3xl text-sm leading-8 text-white/70">
-              福岡を主軸とした物流オペレーション、
-              大阪の自社倉庫、神戸の協力ネットワーク。
+              大阪の自社倉庫を物流事業の主軸に、
+              福岡・神戸の協力ネットワークと連携。
               それぞれの役割を活かして、案件に適した体制を組み立てます。
             </p>
 
@@ -361,7 +361,7 @@ export default function WarehousePage() {
                         width={640}
                         height={480}
                         loading="lazy"
-                        className="h-full w-full object-cover"
+                        className="h-full w-full object-cover object-top"
                       />
                     </div>
 
