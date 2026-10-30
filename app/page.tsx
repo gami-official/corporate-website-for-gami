@@ -5,46 +5,48 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 
 export const metadata: Metadata = {
-  title: "発送代行・検品・物流倉庫｜福岡を主軸に全国対応｜株式会社GAMI",
+  title: "発送代行・倉庫保管・物流サービス｜大阪を主軸に全国対応｜株式会社GAMI",
   description:
-    "福岡を主軸に、大阪・神戸の物流ネットワークと連携する株式会社GAMI。倉庫保管、検品、流通加工、梱包、発送代行から大規模な封入・一斉発送まで、小ロット・スポット案件もご相談ください。",
-  alternates: { canonical: "/" },
+    "大阪府守口市の自社倉庫GAMI OSAKA BASEを主軸に、福岡・神戸の協力ネットワークと連携。倉庫保管、発送代行、検品、流通加工、大量封入・一斉発送まで株式会社GAMIにご相談ください。",
+  alternates: {
+    canonical: "/",
+  },
 }
 
 const container = "mx-auto max-w-6xl px-4 sm:px-6"
 
 const label =
-  "text-[11px] font-bold tracking-[0.2em] text-amber-700"
+  "text-[11px] font-bold tracking-[0.18em] text-amber-700"
 
 const labelDark =
-  "text-[11px] font-bold tracking-[0.2em] text-amber-400"
+  "text-[11px] font-bold tracking-[0.18em] text-amber-400"
 
 const heading =
   "mt-3 text-[clamp(1.55rem,5.5vw,2.5rem)] font-bold leading-[1.45] tracking-tight"
 
-const primaryButton =
-  "inline-flex min-h-[50px] items-center justify-center rounded-full bg-amber-500 px-6 py-3 text-center text-sm font-bold text-zinc-950 transition hover:bg-amber-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-500"
+const button =
+  "inline-flex min-h-[50px] items-center justify-center rounded-full bg-amber-500 px-6 py-3 text-center text-sm font-bold text-zinc-950 transition hover:bg-amber-400"
 
 const services = [
   {
     english: "WAREHOUSING",
     title: "倉庫保管",
-    text: "1坪からの保管相談、EC在庫、一時保管など。商品・物量・期間に合わせた保管をご提案します。",
+    text: "1坪からの保管相談、EC在庫、一時保管など。商品・数量・期間に合わせた保管をご提案します。",
   },
   {
     english: "FULFILLMENT",
     title: "発送代行",
-    text: "ピッキング・梱包・発送まで。ECの継続出荷から企業向けの発送業務まで対応を検討します。",
+    text: "ピッキング・梱包・発送まで。継続的なEC出荷から企業向け発送まで対応します。",
   },
   {
     english: "INSPECTION & PROCESSING",
     title: "検品・流通加工",
-    text: "商品検品、シール貼り、セット組み、封入、包装など。必要な工程だけでもご相談いただけます。",
+    text: "商品検品、シール貼り、セット組み、封入、包装など、必要な工程だけでもご相談可能です。",
   },
   {
     english: "BULK OPERATIONS",
     title: "大量発送・スポット案件",
-    text: "キャンペーン商品の一斉発送、大量封入、繁忙期の作業など、案件に応じた体制を組み立てます。",
+    text: "キャンペーン商品の一斉発送、大量封入、繁忙期の作業など、案件に応じた体制を構築します。",
   },
 ]
 
@@ -52,22 +54,22 @@ const strengths = [
   {
     number: "01",
     title: "まず返す。すぐ動く。",
-    text: "ご相談には迅速に対応。実現できる方法を考えます。",
+    text: "ご相談には迅速に対応。状況を確認し、実現できる方法を考えます。",
   },
   {
     number: "02",
     title: "小ロットから大規模まで。",
-    text: "段ボール数箱の保管から、大量の封入・梱包・一斉発送まで。",
+    text: "段ボール数箱の保管から、大量の封入・梱包・一斉発送まで対応をご提案します。",
   },
   {
     number: "03",
-    title: "御社の物流拠点として。",
-    text: "大阪の自社倉庫を、お客様の物流拠点として活用いただくこともご相談可能です。",
+    title: "大阪の自社倉庫が主軸。",
+    text: "GAMI OSAKA BASEを中心に、福岡・神戸の協力ネットワークと連携します。",
   },
   {
     number: "04",
-    title: "柔軟な物流ネットワーク。",
-    text: "福岡を主軸に、大阪・神戸の拠点や協力パートナーと連携します。",
+    title: "御社の物流拠点として。",
+    text: "GAMIの大阪倉庫を、お客様自身の物流拠点として活用することもご相談可能です。",
   },
 ]
 
@@ -79,6 +81,7 @@ const concerns = [
   "検品・梱包だけの依頼",
   "急な出荷・繁忙期対応",
   "大量の封入・セット組み・発送",
+  "自社物流拠点の確保",
 ]
 
 const achievements = [
@@ -118,7 +121,7 @@ const faqs = [
   {
     question: "発送件数が少なくても相談できますか？",
     answer:
-      "はい。小ロット発送やECを始めたばかりの事業も歓迎しています。商品や数量に応じて対応方法をご相談します。",
+      "はい。小ロット発送やECを始めたばかりの事業も歓迎しています。商品や数量に応じて対応方法をご提案します。",
   },
   {
     question: "段ボール数箱だけの保管も可能ですか？",
@@ -138,17 +141,12 @@ const faqs = [
   {
     question: "大量の封入・一斉発送も相談できますか？",
     answer:
-      "はい。数量、納期、商品仕様、配送条件などを確認し、自社拠点と協力パートナーによる対応体制をご提案します。",
+      "はい。数量、納期、商品仕様、配送条件などを確認し、対応体制をご提案します。",
   },
   {
     question: "海外企業から日本国内への発送も依頼できますか？",
     answer:
       "はい。日本国内での保管、梱包、セット組み、発送などについてご相談いただけます。",
-  },
-  {
-    question: "物量や開始時期が未定でも大丈夫ですか？",
-    answer:
-      "はい。現時点で分かる範囲の情報をお知らせください。必要な条件を一緒に整理します。",
   },
 ]
 
@@ -183,7 +181,7 @@ export default function HomePage() {
               </p>
 
               <p className="mt-4 text-xs font-semibold tracking-[0.14em] text-white/65">
-                FUKUOKA / OSAKA / KOBE
+                OSAKA / FUKUOKA / KOBE
               </p>
 
               <h1 className="mt-5 text-[clamp(2.1rem,7vw,4.4rem)] font-black leading-[1.3] tracking-tight">
@@ -201,7 +199,7 @@ export default function HomePage() {
               </p>
 
               <p className="mt-5 max-w-2xl text-sm leading-8 text-white/80 sm:text-base">
-                福岡を主軸に、大阪・神戸と連携。
+                大阪の自社倉庫を主軸に、福岡・神戸と連携。
                 1坪からの保管、小ロットの発送代行、
                 検品・流通加工から大規模な一斉発送まで。
                 お客様の物流課題に、柔軟な実行力で応えます。
@@ -210,7 +208,7 @@ export default function HomePage() {
               <div className="mt-8 flex flex-wrap gap-3">
                 <Link
                   href="/company#contact"
-                  className={primaryButton}
+                  className={button}
                 >
                   見積り・物流相談 →
                 </Link>
@@ -272,9 +270,11 @@ export default function HomePage() {
 
         {/* OSAKA BASE */}
         <section className="py-16 sm:py-24">
-          <div className={`${container} grid gap-8 lg:grid-cols-[1.1fr_1fr] lg:items-center`}>
+          <div className={`${container} grid gap-8 lg:grid-cols-2 lg:items-center`}>
             <div>
-              <p className={label}>BUILT FOR YOUR BUSINESS</p>
+              <p className={label}>
+                GAMI OSAKA BASE
+              </p>
 
               <h2 className={heading}>
                 御社の物流拠点を、
@@ -293,14 +293,7 @@ export default function HomePage() {
               <p className="mt-4 text-sm leading-8 text-zinc-600">
                 自社で倉庫を新設せずに、
                 保管・在庫管理・検品・梱包・発送を一体化。
-                拠点としての利用方法や運用範囲は、
-                ご希望に応じて個別に設計します。
-              </p>
-
-              <p className="mt-4 text-sm font-bold leading-7">
-                倉庫を借りるだけではなく、
-                <br />
-                事業を動かす物流拠点へ。
+                利用方法や運用範囲は個別に設計します。
               </p>
 
               <Link
@@ -323,13 +316,13 @@ export default function HomePage() {
 
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 to-transparent p-5 sm:p-7">
                 <p className="text-[11px] font-bold tracking-[0.2em] text-amber-300">
-                  GAMI OSAKA BASE
+                  YOUR LOGISTICS BASE
                 </p>
 
                 <p className="mt-2 text-lg font-bold text-white sm:text-2xl">
-                  御社の物流拠点として、
+                  GAMIの倉庫を、
                   <br />
-                  GAMIの倉庫を活用。
+                  御社の物流拠点に。
                 </p>
               </div>
             </div>
@@ -347,14 +340,15 @@ export default function HomePage() {
             </p>
 
             <h2 className={heading}>
-              福岡を主軸に、
+              大阪を主軸に、
               <br />
-              大阪・神戸と連携。
+              福岡・神戸と連携。
             </h2>
 
             <p className="mt-5 max-w-3xl text-sm leading-8 text-white/70">
-              福岡を中心に、大阪の自社拠点と
-              神戸の提携ネットワークを活用。
+              GAMIの物流事業は、大阪の自社倉庫
+              「GAMI OSAKA BASE」を主軸に展開。
+              福岡・神戸の協力パートナーと連携し、
               案件規模や作業内容に応じた物流体制を構築します。
             </p>
 
@@ -363,32 +357,19 @@ export default function HomePage() {
                 <p className="text-[10px] font-bold tracking-[0.2em] text-amber-400">
                   MAIN OPERATIONS
                 </p>
-                <h3 className="mt-6 text-3xl font-black">
-                  FUKUOKA
-                </h3>
-                <p className="mt-2 text-base font-bold text-amber-300">
-                  福岡・主軸拠点
-                </p>
-                <p className="mt-4 text-sm leading-7 text-white/65">
-                  GAMIの物流事業を支える中心拠点。
-                  協力パートナーとの連携を通じて、
-                  多様な物流業務に対応します。
-                </p>
-              </article>
 
-              <article className="rounded-2xl border border-white/15 bg-white/5 p-6">
-                <p className="text-[10px] font-bold tracking-[0.2em] text-white/50">
-                  GAMI OPERATIONS
-                </p>
                 <h3 className="mt-6 text-3xl font-black">
                   OSAKA
                 </h3>
-                <p className="mt-2 text-base font-bold">
+
+                <p className="mt-2 text-base font-bold text-amber-300">
                   GAMI OSAKA BASE
                 </p>
+
                 <p className="mt-4 text-sm leading-7 text-white/65">
                   大阪府守口市の約100坪の自社倉庫。
-                  お客様の物流拠点としての利用もご相談可能です。
+                  GAMIの物流事業を支える主軸拠点として、
+                  保管・検品・流通加工・発送に対応します。
                 </p>
               </article>
 
@@ -396,16 +377,39 @@ export default function HomePage() {
                 <p className="text-[10px] font-bold tracking-[0.2em] text-white/50">
                   PARTNER NETWORK
                 </p>
+
+                <h3 className="mt-6 text-3xl font-black">
+                  FUKUOKA
+                </h3>
+
+                <p className="mt-2 text-base font-bold">
+                  福岡・協力ネットワーク
+                </p>
+
+                <p className="mt-4 text-sm leading-7 text-white/65">
+                  福岡の物流パートナーと連携。
+                  案件規模や作業内容に合わせて、
+                  保管・加工・発送などの物流業務を支えます。
+                </p>
+              </article>
+
+              <article className="rounded-2xl border border-white/15 bg-white/5 p-6">
+                <p className="text-[10px] font-bold tracking-[0.2em] text-white/50">
+                  PARTNER NETWORK
+                </p>
+
                 <h3 className="mt-6 text-3xl font-black">
                   KOBE
                 </h3>
+
                 <p className="mt-2 text-base font-bold">
-                  神戸・提携ネットワーク
+                  神戸・協力ネットワーク
                 </p>
+
                 <p className="mt-4 text-sm leading-7 text-white/65">
                   神戸の物流パートナーと連携。
                   案件の内容や物量に合わせて、
-                  対応体制を補完します。
+                  対応体制を構築します。
                 </p>
               </article>
             </div>
@@ -422,7 +426,9 @@ export default function HomePage() {
         {/* SERVICES */}
         <section className="bg-white py-16 sm:py-24">
           <div className={container}>
-            <p className={label}>OUR SERVICES</p>
+            <p className={label}>
+              OUR SERVICES
+            </p>
 
             <h2 className={heading}>
               必要な物流業務を、
@@ -432,20 +438,21 @@ export default function HomePage() {
 
             <p className="mt-4 max-w-3xl text-sm leading-8 text-zinc-600">
               一部の工程だけでも、一括でのご依頼でも。
-              詳しいサービス内容は専用ページでご案内しています。
+              お客様の業務に合わせたサービスをご提案します。
             </p>
 
             <div className="mt-9 grid gap-4 sm:grid-cols-2">
               {services.map((service, index) => (
                 <article
                   key={service.english}
-                  className="group rounded-2xl border border-black/10 bg-[#fafaf9] p-6 transition hover:border-amber-300 hover:shadow-lg"
+                  className="rounded-2xl border border-black/10 bg-[#fafaf9] p-6 transition hover:border-amber-300 hover:shadow-lg"
                 >
                   <div className="flex items-start justify-between gap-4">
                     <p className="text-[10px] font-bold tracking-[0.16em] text-amber-700">
                       {service.english}
                     </p>
-                    <span className="text-3xl font-black text-zinc-200 group-hover:text-amber-200">
+
+                    <span className="text-3xl font-black text-zinc-200">
                       0{index + 1}
                     </span>
                   </div>
@@ -473,7 +480,9 @@ export default function HomePage() {
         {/* FLEXIBILITY */}
         <section className="py-16 sm:py-24">
           <div className={container}>
-            <p className={label}>FLEXIBLE LOGISTICS</p>
+            <p className={label}>
+              FLEXIBLE LOGISTICS
+            </p>
 
             <h2 className={heading}>
               「こんな依頼でも？」
@@ -487,7 +496,7 @@ export default function HomePage() {
               まずはご相談ください。
             </p>
 
-            <ul className="mt-7 grid grid-cols-2 gap-3 lg:grid-cols-3">
+            <ul className="mt-7 grid grid-cols-2 gap-3 lg:grid-cols-4">
               {concerns.map((item) => (
                 <li
                   key={item}
@@ -499,6 +508,7 @@ export default function HomePage() {
                   >
                     ✓
                   </span>
+
                   <span className="text-sm font-semibold leading-6">
                     {item}
                   </span>
@@ -508,7 +518,7 @@ export default function HomePage() {
 
             <Link
               href="/company#contact"
-              className={`${primaryButton} mt-8`}
+              className={`${button} mt-8`}
             >
               対応できるか相談する →
             </Link>
@@ -518,7 +528,9 @@ export default function HomePage() {
         {/* WHY GAMI */}
         <section className="bg-white py-16 sm:py-24">
           <div className={container}>
-            <p className={label}>WHY GAMI</p>
+            <p className={label}>
+              WHY GAMI
+            </p>
 
             <h2 className={heading}>
               選ばれる理由は、
@@ -551,7 +563,7 @@ export default function HomePage() {
 
         {/* INTERNATIONAL */}
         <section className="bg-zinc-950 py-16 text-white sm:py-24">
-          <div className={`${container} grid gap-8 lg:grid-cols-[1.2fr_1fr] lg:items-center`}>
+          <div className={`${container} grid gap-8 lg:grid-cols-2 lg:items-center`}>
             <div>
               <p className={labelDark}>
                 INTERNATIONAL FULFILLMENT
@@ -569,13 +581,13 @@ export default function HomePage() {
                 日本での物流オペレーションをご相談いただけます。
               </p>
 
-              <p className="mt-4 text-sm font-semibold leading-7 text-amber-300">
+              <p className="mt-4 text-sm font-semibold text-amber-300">
                 No Japan Office? We Handle It.
               </p>
 
               <Link
                 href="/international"
-                className={`${primaryButton} mt-7`}
+                className={`${button} mt-7`}
               >
                 Japan Fulfillment →
               </Link>
@@ -600,6 +612,7 @@ export default function HomePage() {
                     <span className="text-xs font-bold text-amber-400">
                       0{index + 1}
                     </span>
+
                     <span className="text-sm font-semibold text-white/85">
                       {item}
                     </span>
@@ -613,18 +626,15 @@ export default function HomePage() {
         {/* EXPERIENCE */}
         <section className="py-16 sm:py-24">
           <div className={container}>
-            <p className={label}>OUR EXPERIENCE</p>
+            <p className={label}>
+              OUR EXPERIENCE
+            </p>
 
             <h2 className={heading}>
               多様な商品と、
               <br />
               多様な物流ニーズに。
             </h2>
-
-            <p className="mt-4 max-w-3xl text-sm leading-8 text-zinc-600">
-              商品特性や数量、納期、品質条件に応じて、
-              案件ごとの作業・出荷体制を組み立てます。
-            </p>
 
             <div className="mt-8 grid gap-4 md:grid-cols-3">
               {achievements.map((item, index) => (
@@ -646,18 +656,15 @@ export default function HomePage() {
                 </article>
               ))}
             </div>
-
-            <p className="mt-6 text-sm leading-7 text-zinc-600">
-              化粧品製造業許可・第一種貨物利用運送事業など、
-              保有する許認可も活かして物流を支えます。
-            </p>
           </div>
         </section>
 
         {/* PARTNERS */}
         <section className="bg-white py-16 sm:py-24">
           <div className={container}>
-            <p className={label}>TRUSTED PARTNERS</p>
+            <p className={label}>
+              TRUSTED PARTNERS
+            </p>
 
             <h2 className={heading}>
               信頼できる仲間と、
@@ -666,7 +673,7 @@ export default function HomePage() {
             </h2>
 
             <p className="mt-4 max-w-3xl text-sm leading-8 text-zinc-600">
-              GAMIは自社拠点だけでなく、
+              大阪の自社倉庫を中心に、
               福岡・神戸の協力パートナーとも連携。
               案件規模や作業内容に応じた物流体制をご提案します。
             </p>
@@ -705,7 +712,7 @@ export default function HomePage() {
               <article className="overflow-hidden rounded-2xl border border-black/10 bg-[#fafaf9]">
                 <img
                   src="/images/partner-sgrow.png"
-                  alt="株式会社エスグローの施設"
+                  alt="株式会社エスグローの物流施設"
                   width={800}
                   height={500}
                   loading="lazy"
@@ -738,7 +745,9 @@ export default function HomePage() {
         {/* TEAM */}
         <section className="py-16 sm:py-24">
           <div className={container}>
-            <p className={label}>OUR TEAM</p>
+            <p className={label}>
+              OUR TEAM
+            </p>
 
             <h2 className={heading}>
               顔が見える、
@@ -756,7 +765,7 @@ export default function HomePage() {
                 <div className="flex h-64 items-center justify-center bg-[#fafaf9] sm:h-80">
                   <img
                     src="/images/team-kazuhiro.jpg"
-                    alt="代表取締役社長 Kazuhiro Fuchigamiのイラスト"
+                    alt="代表取締役社長 Kazuhiro Fuchigami"
                     width={1024}
                     height={1024}
                     loading="lazy"
@@ -789,7 +798,7 @@ export default function HomePage() {
                 <div className="flex h-64 items-center justify-center bg-[#fafaf9] sm:h-80">
                   <img
                     src="/images/team-mayu.png"
-                    alt="専務取締役 Mayu Koteraのイラスト"
+                    alt="専務取締役 Mayu Kotera"
                     width={1024}
                     height={1536}
                     loading="lazy"
@@ -825,7 +834,9 @@ export default function HomePage() {
         {/* PROCESS */}
         <section className="bg-white py-16 sm:py-24">
           <div className={container}>
-            <p className={label}>HOW WE WORK</p>
+            <p className={label}>
+              HOW WE WORK
+            </p>
 
             <h2 className={heading}>
               ご相談から、
@@ -853,32 +864,15 @@ export default function HomePage() {
                 </article>
               ))}
             </div>
-
-            <div className="mt-8 rounded-2xl bg-amber-50 p-6 sm:p-8">
-              <h3 className="text-lg font-bold">
-                まだ条件が決まっていなくても、大丈夫。
-              </h3>
-
-              <p className="mt-3 text-sm leading-7 text-zinc-600">
-                商品・数量・保管の有無・作業内容・希望時期など、
-                分かる範囲でお知らせください。
-                必要な条件は一緒に整理できます。
-              </p>
-
-              <Link
-                href="/company#contact"
-                className={`${primaryButton} mt-5`}
-              >
-                物流の見積り・相談をする →
-              </Link>
-            </div>
           </div>
         </section>
 
         {/* FAQ */}
         <section className="py-16 sm:py-24">
           <div className={`${container} max-w-4xl`}>
-            <p className={label}>FAQ</p>
+            <p className={label}>
+              FAQ
+            </p>
 
             <h2 className={heading}>
               よくあるご質問。
@@ -892,6 +886,7 @@ export default function HomePage() {
                 >
                   <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-sm font-bold leading-7 [&::-webkit-details-marker]:hidden">
                     <span>{item.question}</span>
+
                     <span
                       aria-hidden="true"
                       className="shrink-0 text-xl text-amber-700 group-open:rotate-45"
