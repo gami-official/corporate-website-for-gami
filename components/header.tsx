@@ -281,21 +281,31 @@ export function Header() {
               </a>
             )}
 
-            {/* NETWORK */}
+            {/* LOGISTICS NETWORK */}
             {!isInternational && !isFranchise && (
               <div className="mt-7 border-t border-black/10 pt-5">
                 <p className="text-[10px] font-bold tracking-[0.15em] text-zinc-400">
                   GAMI LOGISTICS NETWORK
                 </p>
 
-                <p className="mt-2 text-xs font-semibold text-zinc-600">
-                  FUKUOKA · OSAKA · KOBE
+                <p className="mt-2 text-xs font-bold tracking-[0.08em] text-zinc-700">
+                  OSAKA · FUKUOKA · KOBE
                 </p>
 
                 <p className="mt-2 text-xs leading-6 text-zinc-500">
-                  福岡を主軸に、大阪・神戸と連携。
-                  小ロットから大規模な物流案件まで対応します。
+                  大阪の自社倉庫「GAMI OSAKA BASE」を主軸に、
+                  福岡・神戸の協力ネットワークと連携。
+                  小ロットから大規模な物流案件まで、
+                  内容に応じた物流体制をご提案します。
                 </p>
+
+                <Link
+                  href="/warehouse"
+                  onClick={closeMenu}
+                  className="mt-3 inline-flex min-h-[44px] items-center text-xs font-bold text-amber-800 underline underline-offset-4"
+                >
+                  大阪の物流拠点を見る →
+                </Link>
               </div>
             )}
           </div>
