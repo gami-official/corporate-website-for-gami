@@ -1,7 +1,7 @@
 
 "use client"
 
-import { useId, useState } from "react"
+import { useEffect, useId, useState } from "react"
 import type { FormEvent } from "react"
 
 declare global {
@@ -14,6 +14,8 @@ type Language = "ja" | "en"
 type ContactFormProps = { language?: Language }
 
 const inquiryTypes = [
+  { value: "全国チャーター・輸送費のお見積り", ja: "全国チャーター・輸送費のお見積り", en: "Nationwide charter transport / freight quote" },
+  { value: "化粧品・美容商材の検品・セット組み", ja: "化粧品・美容商材の検品・セット組み", en: "Cosmetics and beauty product inspection / kitting" },
   {
     value: "ダンボール単体のお見積り",
     ja: "ダンボール単体のお見積り",
@@ -76,6 +78,134 @@ const cardboardFields = [
   { name: "box_url", ja: "現在の商品・購入先URL", en: "Current product or supplier URL", placeholderJa: "https://example.com/product", placeholderEn: "https://example.com/product" },
   { name: "box_destination", ja: "納品先（府県・市区町村）", en: "Delivery location", placeholderJa: "例：大阪府守口市", placeholderEn: "e.g. Moriguchi, Osaka" },
   { name: "box_date", ja: "希望納期", en: "Required delivery date", placeholderJa: "例：来月上旬／未定", placeholderEn: "e.g. early next month / undecided" }
+]
+
+const transportFields = [
+  {
+    "name": "transport_from",
+    "ja": "集荷先",
+    "en": "Pickup location",
+    "placeholderJa": "例：大阪府守口市／事業所・倉庫",
+    "placeholderEn": "City, address or facility"
+  },
+  {
+    "name": "transport_to",
+    "ja": "納品先",
+    "en": "Delivery location",
+    "placeholderJa": "例：東京都江東区／倉庫",
+    "placeholderEn": "City, address or facility"
+  },
+  {
+    "name": "transport_pickup",
+    "ja": "集荷希望日・時間",
+    "en": "Pickup date and time",
+    "placeholderJa": "例：11月10日 午前／未定",
+    "placeholderEn": "Date, time window or undecided"
+  },
+  {
+    "name": "transport_delivery",
+    "ja": "納品希望日・時間",
+    "en": "Delivery date and time",
+    "placeholderJa": "例：翌日10時必着／時間指定なし",
+    "placeholderEn": "Deadline or time window"
+  },
+  {
+    "name": "transport_goods",
+    "ja": "荷物・数量・寸法・総重量",
+    "en": "Cargo, quantity, dimensions and total weight",
+    "placeholderJa": "例：雑貨10パレット、1,100×1,100mm、計3t",
+    "placeholderEn": "Goods, packages, dimensions, total weight"
+  },
+  {
+    "name": "transport_vehicle",
+    "ja": "希望車格・設備",
+    "en": "Vehicle size and equipment",
+    "placeholderJa": "例：軽貨物／2t／4t／大型、ウイング・ゲート車／未定",
+    "placeholderEn": "Light van / 2t / 4t / large, wing body / tail lift / undecided"
+  },
+  {
+    "name": "transport_handling",
+    "ja": "積み降ろし・現地条件",
+    "en": "Loading, unloading and site conditions",
+    "placeholderJa": "例：両側フォークリフト／手積み／高さ制限",
+    "placeholderEn": "Forklift / manual handling / access restrictions"
+  },
+  {
+    "name": "transport_frequency",
+    "ja": "頻度・台数",
+    "en": "Frequency and vehicle count",
+    "placeholderJa": "例：単発1台／毎週月曜1台",
+    "placeholderEn": "One-off or regular schedule, vehicle count"
+  }
+]
+
+const beautyFields = [
+  {
+    "name": "beauty_product",
+    "ja": "商品・容器の種類",
+    "en": "Products or containers",
+    "placeholderJa": "例：化粧水容器／美容液／ヘアケア商材",
+    "placeholderEn": "Bottles / serums / hair care products"
+  },
+  {
+    "name": "beauty_work",
+    "ja": "希望作業",
+    "en": "Requested services",
+    "placeholderJa": "例：外観検品、3点セット組み、梱包・発送",
+    "placeholderEn": "Inspection, three-item kits, packing and shipping"
+  },
+  {
+    "name": "beauty_quantity",
+    "ja": "数量・品種数・頻度",
+    "en": "Quantity, SKUs and frequency",
+    "placeholderJa": "例：3品種・計5,000個、単発",
+    "placeholderEn": "3 SKUs, 5,000 units, one-off"
+  },
+  {
+    "name": "beauty_quality",
+    "ja": "検品基準・作業手順",
+    "en": "Inspection criteria and work instructions",
+    "placeholderJa": "例：傷・汚れ確認、見本あり／相談したい",
+    "placeholderEn": "Defect criteria, reference samples or advice needed"
+  },
+  {
+    "name": "beauty_date",
+    "ja": "入荷予定・希望納期",
+    "en": "Arrival date and deadline",
+    "placeholderJa": "例：11月15日入荷、11月末完了希望",
+    "placeholderEn": "Expected arrival and completion dates"
+  },
+  {
+    "name": "beauty_materials",
+    "ja": "資材・保管・発送の条件",
+    "en": "Materials, storage and shipping",
+    "placeholderJa": "例：箱は支給、作業後に一括納品",
+    "placeholderEn": "Supplied packaging, storage needs, delivery method"
+  }
+]
+
+const priceFields = [
+  {
+    "name": "current_price",
+    "ja": "現在の料金・単価（分かれば）",
+    "en": "Current fee or unit price, if available",
+    "placeholderJa": "例：1便50,000円／1個30円／月20万円",
+    "placeholderEn": "e.g. JPY 50,000/trip, 30/item or 200,000/month"
+  },
+  {
+    "name": "target_budget",
+    "ja": "希望予算・目安（あれば）",
+    "en": "Target budget, if any",
+    "placeholderJa": "例：1便45,000円程度／未定",
+    "placeholderEn": "e.g. around JPY 45,000/trip or undecided"
+  },
+  {
+    "name": "price_scope",
+    "ja": "料金に含まれる内容",
+    "en": "What the price includes",
+    "placeholderJa": "例：税別・高速代別／送料込み／作業費のみ",
+    "placeholderEn": "Tax, tolls, delivery, handling and other inclusions"
+  }
 ]
 
 const inputClass =
@@ -171,6 +301,27 @@ export function ContactForm({
   const t = copy[language]
   const [inquiryType, setInquiryType] = useState("")
   const isCardboardQuote = inquiryType === "ダンボール単体のお見積り"
+  const isTransportQuote = inquiryType === "全国チャーター・輸送費のお見積り"
+  const isBeautyQuote = inquiryType === "化粧品・美容商材の検品・セット組み"
+  const isSpecialQuote = isCardboardQuote || isTransportQuote || isBeautyQuote
+  const projectFields = isTransportQuote ? transportFields : isBeautyQuote ? beautyFields : []
+
+  useEffect(() => {
+    const selections: Record<string, string> = {
+      transport: "全国チャーター・輸送費のお見積り",
+      beauty: "化粧品・美容商材の検品・セット組み",
+      cardboard: "ダンボール単体のお見積り",
+      education: "教材・パンフレット発送の相談",
+    }
+    const applyInquiry = () => {
+      const value = selections[new URLSearchParams(window.location.search).get("inquiry") || ""]
+      if (value) setInquiryType(value)
+    }
+    applyInquiry()
+    window.addEventListener("popstate", applyInquiry)
+    return () => window.removeEventListener("popstate", applyInquiry)
+  }, [])
+
   const messagePlaceholder = isCardboardQuote
     ? language === "ja"
       ? "例：ダンボールのみの見積りを希望します。\n箱の内寸：縦×横×高さ（mm）／宅配60サイズなど\n必要数量：500枚\n納品先：大阪府守口市\n希望納期：未定\n印刷の有無：なし\n\nサイズが未定でも、入れる商品や現在の箱について分かる範囲でお知らせください。"
@@ -187,28 +338,28 @@ export function ContactForm({
     const formData = new FormData(form)
 
     const notes = String(formData.get("message") || "").trim()
-    const cardboardDetails = isCardboardQuote
-      ? cardboardFields.map((field) => {
-          const value = String(formData.get(field.name) || "").trim()
-          return `${field[language]}: ${value || (language === "ja" ? "未記入" : "Not provided")}`
-        }).join("\n")
-      : ""
+    const detailFields = isCardboardQuote ? cardboardFields : projectFields
+    const detailLines = [...detailFields, ...priceFields].flatMap((field) => {
+      const value = String(formData.get(field.name) || "").trim()
+      return value ? [`${field[language]}: ${value}`] : []
+    })
+    const quotedDetails = detailLines.join("\n")
+    const combinedMessage = [notes, quotedDetails].filter(Boolean).join("\n\n")
     const payload = {
       name: String(formData.get("name") || "").trim(),
       company: String(formData.get("company") || "").trim(),
       email: String(formData.get("email") || "").trim(),
       phone: String(formData.get("phone") || "").trim(),
       type: String(formData.get("type") || ""),
-      message: isCardboardQuote
-        ? `${language === "ja" ? "【ダンボール単体のお見積り】" : "[Cardboard box quote]"}\n${cardboardDetails}\n\n${language === "ja" ? "その他のご要望" : "Additional notes"}: ${notes || (language === "ja" ? "なし" : "None")}`
-        : notes,
+      message: combinedMessage || (isSpecialQuote ? (language === "ja" ? `${inquiryType}について相談希望。詳細は担当者と相談したいです。` : "Quote requested. I would like to discuss the details with your team.") : ""),
     }
 
     if (
       !payload.name ||
       !payload.email ||
       !payload.type ||
-      !payload.message
+      !payload.message ||
+      (!isSpecialQuote && !notes)
     ) {
       setError(t.missing)
       return
@@ -462,22 +613,50 @@ export function ContactForm({
             </div>
           )}
 
+          {(isTransportQuote || isBeautyQuote) && (
+            <div className="space-y-5 rounded-2xl border border-amber-200 bg-amber-50/50 p-4 sm:p-5">
+              <h4 className="text-base font-bold">{language === "ja" ? (isTransportQuote ? "チャーター便・輸送のお見積り条件" : "化粧品・美容商材の作業条件") : (isTransportQuote ? "Transport details" : "Cosmetics and beauty project details")}</h4>
+              <p className="text-sm leading-7 text-zinc-600">{language === "ja" ? "すべて任意です。分かる範囲だけご入力ください。未定の項目は担当者と相談できます。" : "All fields are optional. Share what you know; we can discuss undecided details."}</p>
+              <div className="grid min-w-0 gap-5 sm:grid-cols-2">
+                {projectFields.map(field => (
+                  <div key={field.name} className="min-w-0">
+                    <label htmlFor={`${id}-${field.name}`} className="mb-2 block text-sm font-semibold">{field[language]}{language === "ja" ? "（任意）" : " (optional)"}</label>
+                    <input id={`${id}-${field.name}`} name={field.name} type="text" maxLength={400} className={inputClass} placeholder={language === "ja" ? field.placeholderJa : field.placeholderEn} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          <details key={inquiryType} className="rounded-2xl border border-black/10 bg-[#fafaf9] p-4 sm:p-5">
+            <summary className="cursor-pointer text-sm font-bold leading-7">{language === "ja" ? "現在の料金・希望予算を伝える（任意）＋" : "Share current pricing or a target budget (optional) +"}</summary>
+            <p className="mt-3 text-sm leading-7 text-zinc-600">{language === "ja" ? "比較しやすいお見積りの参考にします。差し支えなければ、現在の料金やご希望の目安をお知らせください。未記入でもご相談・お見積りいただけます。" : "This helps us prepare a comparable quote. Share current pricing or a target only if comfortable. You can request a quote without providing either."}</p>
+            <div className="mt-4 grid min-w-0 gap-5 sm:grid-cols-2">
+              {priceFields.filter(field => !isCardboardQuote || field.name !== "current_price").map(field => (
+                <div key={field.name} className="min-w-0">
+                  <label htmlFor={`${id}-${field.name}`} className="mb-2 block text-sm font-semibold">{field[language]}{language === "ja" ? "（任意）" : " (optional)"}</label>
+                  <input id={`${id}-${field.name}`} name={field.name} type="text" maxLength={300} className={inputClass} placeholder={language === "ja" ? field.placeholderJa : field.placeholderEn} />
+                </div>
+              ))}
+            </div>
+          </details>
+
           <div>
             <label
               htmlFor={`${id}-message`}
               className="mb-2 block text-sm font-semibold"
             >
-              {isCardboardQuote ? (language === "ja" ? "その他のご要望（任意）" : "Additional notes (optional)") : t.message}
+              {isSpecialQuote ? (language === "ja" ? "その他のご要望（任意）" : "Additional notes (optional)") : t.message}
             </label>
 
             <textarea
               id={`${id}-message`}
               name="message"
-              required={!isCardboardQuote}
+              required={!isSpecialQuote}
               rows={6}
-              maxLength={10000}
+              maxLength={5000}
               className={`${inputClass} resize-y leading-7`}
-              placeholder={isCardboardQuote ? (language === "ja" ? "用途や印刷のご希望、現在お困りのことなどがあればお知らせください。" : "Tell us about intended use, printing or other requirements.") : messagePlaceholder}
+              placeholder={isSpecialQuote ? (language === "ja" ? "補足や現在お困りのこと、ご希望などがあればお知らせください。" : "Tell us about intended use, printing or other requirements.") : messagePlaceholder}
             />
           </div>
 
