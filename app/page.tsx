@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { MetricsBar } from "@/components/metrics-bar"
 
 export const metadata: Metadata = {
   title: "株式会社GAMI｜365日対応の発送代行・全国チャーター・化粧品物流",
@@ -320,7 +321,7 @@ export default function HomePage() {
                 365-DAY FULFILLMENT / GAMI
               </p>
 
-              <p className="mt-5 inline-flex rounded-full border border-amber-300/50 bg-amber-300/10 px-4 py-2 text-sm font-bold leading-6 text-amber-200">365日対応。土日祝・年末年始の出荷もご相談ください。</p>
+              <p className="mt-4 inline-flex max-w-full whitespace-nowrap rounded-full border border-amber-300/50 bg-amber-300/10 px-3 py-2 text-[11px] font-bold leading-5 text-amber-200 sm:text-sm">土日祝・年末年始も、365日対応。</p>
               <p className="mt-4 text-xs font-semibold tracking-[0.14em] text-white/65">
                 OSAKA / FUKUOKA / KOBE
               </p>
@@ -365,53 +366,11 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* NUMBER BLOCKS */}
-        <section
-          aria-label="GAMIの物流対応力"
-          className="bg-[#0b0b0b] text-white"
-        >
-          <div className="mx-auto grid max-w-6xl grid-cols-3 divide-x divide-white/20 border-t border-white/15 px-2 py-6 sm:px-6 sm:py-9">
-            <div className="min-w-0 px-2 text-center sm:px-5">
-              <p className="whitespace-nowrap text-[clamp(1.5rem,5vw,2.8rem)] font-bold leading-none tabular-nums">
-                100
-                <span className="ml-1 text-[11px] font-semibold text-amber-400 sm:text-sm">
-                  坪
-                </span>
-              </p>
-              <p className="mt-2 text-[10px] leading-4 text-white/65 sm:text-xs">
-                大阪自社倉庫・約
-              </p>
-            </div>
-
-            <div className="min-w-0 px-2 text-center sm:px-5">
-              <p className="whitespace-nowrap text-[clamp(1.5rem,5vw,2.8rem)] font-bold leading-none tabular-nums">
-                1
-                <span className="ml-1 text-[11px] font-semibold text-amber-400 sm:text-sm">
-                  坪〜
-                </span>
-              </p>
-              <p className="mt-2 text-[10px] leading-4 text-white/65 sm:text-xs">
-                小規模保管も相談可能
-              </p>
-            </div>
-
-            <div className="min-w-0 px-2 text-center sm:px-5">
-              <p className="whitespace-nowrap text-[clamp(1.5rem,5vw,2.8rem)] font-bold leading-none tabular-nums">
-                365
-                <span className="ml-1 text-[11px] font-semibold text-amber-400 sm:text-sm">
-                  日
-                </span>
-              </p>
-              <p className="mt-2 text-[10px] leading-4 text-white/65 sm:text-xs">
-                土日祝・年末年始も相談可能
-              </p>
-            </div>
-          </div>
-        </section>
+        <MetricsBar />
 
         <nav aria-label="トップページ内の案内" className="border-b border-black/10 bg-white">
           <div className={`${container} flex flex-wrap gap-2 py-4`}>
-            {[["#operations-365","365日対応"],["#services","サービス"],["#educational-logistics","教材発送"],["#case-studies","導入事例"],["#warehouse","倉庫・アクセス"],["#cardboard","ダンボール見積り"]].map(([href,text])=><a key={href} href={href} className="inline-flex min-h-[44px] items-center rounded-full border border-black/10 px-4 py-2 text-xs font-bold text-zinc-700 transition hover:border-amber-400 hover:bg-amber-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-amber-600">{text}</a>)}
+            {[["#operations-365","365日対応"],["#osaka-leadtime","大阪の強み"],["#services","サービス"],["#educational-logistics","教材発送"],["#case-studies","導入事例"],["#warehouse","倉庫・アクセス"],["#cardboard","ダンボール見積り"]].map(([href,text])=><a key={href} href={href} className="inline-flex min-h-[44px] items-center rounded-full border border-black/10 px-4 py-2 text-xs font-bold text-zinc-700 transition hover:border-amber-400 hover:bg-amber-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-amber-600">{text}</a>)}
           </div>
         </nav>
 
@@ -449,6 +408,23 @@ export default function HomePage() {
             </details>
             <p className="mt-5 text-xs leading-6 text-zinc-500">※365日対応は24時間受付・作業を意味するものではありません。出荷日・受付締切・当日出荷の条件・休日の作業体制・費用を案件ごとに事前に取り決めます。</p>
             <Link href="/company#contact" className={`${button} mt-6`}>365日対応・年末年始の出荷を相談する →</Link>
+          </div>
+        </section>
+
+        {/* OSAKA LEAD TIME ADVANTAGE */}
+        <section id="osaka-leadtime" aria-labelledby="leadtime-heading" className="scroll-mt-24 bg-amber-50 py-14 sm:py-20">
+          <div className={container}>
+            <p className={label}>THE OSAKA ADVANTAGE</p>
+            <div className="mt-4 grid gap-7 lg:grid-cols-2 lg:items-center">
+              <div>
+                <h2 id="leadtime-heading" className={heading}>大阪から、<br />届くまでを短く。</h2>
+                <p className="mt-5 text-sm leading-8 text-zinc-700">九州から関東まで、幅広いエリアへの翌日配送を見込める大阪の立地。即日出荷と組み合わせることで、注文から到着までの待ち時間を短くする物流をご提案します。</p>
+                <p className="mt-3 text-sm leading-8 text-zinc-700">「早く届く」は、購入したお客様の安心や満足度につながります。会社や調達先の場所にとらわれず、届け先に合った大阪の出荷拠点を活用しませんか。</p>
+                <ol className="mt-6 space-y-3">{[{title:"発送指示を受ける",text:"商品・件数・受付締切を事前に取り決めます。"},{title:"大阪で即日出荷",text:"取り決めた条件に沿って、検品・セット組み・梱包から出荷まで対応。"},{title:"九州〜関東の対象地域へ翌日配送",text:"ご利用の配送サービス・お届け先に合わせて手配します。"}].map((item,i)=><li key={item.title} className="flex gap-3 rounded-xl border border-amber-200 bg-white p-4"><span className="text-sm font-bold text-amber-700">0{i+1}</span><div><h3 className="text-sm font-bold leading-6">{item.title}</h3><p className="mt-1 text-xs leading-6 text-zinc-600">{item.text}</p></div></li>)}</ol>
+                <Link href="/company#contact" className={`${button} mt-6`}>配送日数・即日出荷について相談する →</Link>
+              </div>
+              <figure className="min-w-0"><img src="/images/osaka-leadtime-map-ja.png" alt="大阪から九州・中国・四国・中部・関東へ向かう配送ルートの概略図" width={2400} height={2000} loading="lazy" className="h-auto w-full rounded-2xl border border-amber-200" /><figcaption className="mt-3 text-xs leading-6 text-zinc-600">配送ルートの概略です。翌日配送はすべての地域・荷物に適用されるものではありません。配送会社・宛先・受付締切・離島等の条件により異なり、道路状況・天候・繁忙期などで遅延する場合があります。</figcaption></figure>
+            </div>
           </div>
         </section>
 
@@ -609,28 +585,28 @@ export default function HomePage() {
                 </figure>
               ))}
             </div>
-            <details className="group mt-6 rounded-2xl border border-black/10 bg-[#fafaf9] p-5 sm:p-6">
-              <summary className="flex min-h-[44px] cursor-pointer list-none items-center justify-between gap-4 text-sm font-bold [&::-webkit-details-marker]:hidden">施設概要・拠点としての利用について<span aria-hidden="true" className="text-xl text-amber-700 group-open:rotate-45">+</span></summary>
-              <dl className="mt-4">{warehouseInfo.map(item=><div key={item.label} className="grid grid-cols-[88px_minmax(0,1fr)] gap-3 border-t border-black/10 py-4 text-sm sm:grid-cols-[120px_minmax(0,1fr)]"><dt className="font-semibold text-zinc-500">{item.label}</dt><dd className="min-w-0 break-words leading-7">{item.value}</dd></div>)}</dl>
-              <p className="mt-3 text-xs leading-6 text-zinc-500">※拠点名称の使用、保管条件、作業範囲、契約条件などは事前の取り決めによります。</p>
-            </details>
-            <div className="mt-6 rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
-              <h3 className="text-lg font-bold sm:text-xl">大阪から、届けるまでの時間を短く。</h3>
-              <p className="mt-4 text-sm leading-8 text-zinc-700">九州地方から関東地方までの幅広いエリアへ、基本的に翌日のお届けが可能です。調達先・作業内容・配送先を踏まえ、どこで作業し、どこから発送するかをご提案します。</p>
-              <p className="mt-3 text-xs leading-6 text-zinc-600">※お届け日数は配送先・配送サービスにより異なります。道路状況、気象条件、繁忙期などにより遅延する場合があります。</p>
+            <div className="mt-8 grid gap-5 lg:grid-cols-2">
+              <section aria-labelledby="facility-info-title" className="rounded-2xl border border-black/10 bg-[#fafaf9] p-5 sm:p-6">
+                <h3 id="facility-info-title" className="text-lg font-bold">大阪倉庫について</h3>
+                <dl className="mt-4">{warehouseInfo.map(item=><div key={item.label} className="grid grid-cols-[80px_minmax(0,1fr)] gap-3 border-t border-black/10 py-3 text-sm sm:grid-cols-[110px_minmax(0,1fr)]"><dt className="font-semibold text-zinc-500">{item.label}</dt><dd className="min-w-0 break-words leading-7">{item.value}</dd></div>)}</dl>
+                <p className="mt-3 text-xs leading-6 text-zinc-500">保管量や作業内容、ご希望の運用に合わせてご提案します。拠点としてのご利用条件は、事前にご相談ください。</p>
+              </section>
+              <section id="access" aria-labelledby="access-title" className="scroll-mt-24 rounded-2xl border border-black/10 bg-white p-5 sm:p-6">
+                <h3 id="access-title" className="text-lg font-bold">所在地・アクセス</h3>
+                <p className="mt-3 text-sm leading-7 text-zinc-600">GAMI OSAKA BASE<br />〒570-0003 大阪府守口市大日町1-8-18</p>
+                <iframe title="GAMI OSAKA BASEの所在地" src="https://www.google.com/maps?q=大阪府守口市大日町1-8-18&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="mt-4 h-[240px] w-full rounded-xl border-0 sm:h-[300px]" />
+                <a href="https://www.google.com/maps/search/?api=1&query=大阪府守口市大日町1-8-18" target="_blank" rel="noopener noreferrer" className="mt-3 inline-flex min-h-[44px] items-center text-sm font-bold text-amber-800 underline underline-offset-4">Googleマップで開く ↗</a>
+              </section>
             </div>
-            <div id="network" className="mt-8 scroll-mt-24">
-              <h3 className="text-lg font-bold">大阪を主軸に、福岡・神戸の協力パートナーと連携。</h3>
-              <p className="mt-3 text-sm leading-8 text-zinc-600">案件規模や作業内容に応じて、協力ネットワークを活かした体制を構築します。</p>
+            <section id="network" aria-labelledby="network-title" className="mt-8 scroll-mt-24 border-t border-black/10 pt-7">
+              <p className={label}>PARTNER NETWORK</p>
+              <h3 id="network-title" className="mt-3 text-lg font-bold">必要な作業に合わせて、福岡・神戸とも連携。</h3>
+              <p className="mt-3 text-sm leading-8 text-zinc-600">GAMIの自社倉庫は大阪にあります。案件の内容に応じて、福岡・神戸の協力会社とも連携します。</p>
               <div className="mt-4 grid gap-3 sm:grid-cols-2">
-                <a href="https://www.maxexpress.co.jp/" target="_blank" rel="noopener noreferrer" className="rounded-2xl border border-black/10 p-5 transition hover:border-amber-400"><span className="text-[10px] font-bold tracking-widest text-amber-700">FUKUOKA PARTNER</span><span className="mt-2 block text-sm font-bold">株式会社マックスエクスプレス ↗</span></a>
-                <a href="https://www.s-grow.co.jp/" target="_blank" rel="noopener noreferrer" className="rounded-2xl border border-black/10 p-5 transition hover:border-amber-400"><span className="text-[10px] font-bold tracking-widest text-amber-700">KOBE PARTNER</span><span className="mt-2 block text-sm font-bold">株式会社エスグロー ↗</span></a>
+                <a href="https://www.maxexpress.co.jp/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between gap-3 rounded-xl border border-black/10 px-4 py-4 transition hover:border-amber-400"><span><span className="text-xs font-bold text-amber-700">福岡の協力会社</span><span className="mt-1 block text-sm font-semibold">株式会社マックスエクスプレス</span></span><span aria-hidden="true">↗</span></a>
+                <a href="https://www.s-grow.co.jp/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between gap-3 rounded-xl border border-black/10 px-4 py-4 transition hover:border-amber-400"><span><span className="text-xs font-bold text-amber-700">神戸の協力会社</span><span className="mt-1 block text-sm font-semibold">株式会社エスグロー</span></span><span aria-hidden="true">↗</span></a>
               </div>
-            </div>
-            <details id="access" className="group mt-6 scroll-mt-24 rounded-2xl border border-black/10 p-5 sm:p-6">
-              <summary className="flex min-h-[44px] cursor-pointer list-none items-center justify-between gap-4 text-sm font-bold [&::-webkit-details-marker]:hidden"><span>所在地・アクセス<span className="mt-1 block text-xs font-normal leading-6 text-zinc-600">〒570-0003 大阪府守口市大日町1-8-18</span></span><span aria-hidden="true" className="text-xl text-amber-700 group-open:rotate-45">+</span></summary>
-              <iframe title="GAMI OSAKA BASEの所在地" src="https://www.google.com/maps?q=大阪府守口市大日町1-8-18&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="mt-5 h-[260px] w-full rounded-2xl border-0 sm:h-[340px]" />
-            </details>
+            </section>
             <Link href="/company#contact" className={`${button} mt-7`}>大阪拠点の利用を相談する →</Link>
           </div>
         </section>
