@@ -124,29 +124,6 @@ const photos = [
   },
 ]
 
-const uses = [
-  {
-    number: "01",
-    title: "自社物流拠点として",
-    text: "GAMIの倉庫を、お客様の物流拠点としてご利用いただく形をご相談いただけます。拠点としての運用範囲や名称の使用なども個別に調整します。",
-  },
-  {
-    number: "02",
-    title: "在庫保管・発送拠点として",
-    text: "商品の保管から在庫管理、ピッキング、梱包、発送まで。継続的な出荷体制を事業に合わせて設計します。",
-  },
-  {
-    number: "03",
-    title: "一時保管・作業拠点として",
-    text: "キャンペーン、繁忙期、スポット案件などに伴う一時保管や検品・セット組み・封入作業もご相談いただけます。",
-  },
-  {
-    number: "04",
-    title: "教材・資料の発送拠点として",
-    text: "印刷会社から届く教材やパンフレットを保管し、講座別の丁合・セット組み、受講者への発送、教室への小分け発送をご相談いただけます。",
-  },
-]
-
 export default function WarehousePage() {
   return (
     <div className="min-h-screen bg-[#f7f7f5] font-sans text-zinc-900">
@@ -191,7 +168,7 @@ export default function WarehousePage() {
 
               <p className="mt-6 max-w-2xl text-sm leading-8 text-white/80 sm:text-base">
                 大阪の自社倉庫「GAMI OSAKA BASE」を主軸に、福岡・神戸の協力ネットワークと連携。
-                お客様の事業に合わせた物流拠点・運用体制をご提案します。
+                施設概要、保管・作業スペース、協力ネットワーク、所在地をご紹介します。
               </p>
 
               <div className="mt-8 flex flex-wrap gap-3">
@@ -407,62 +384,13 @@ export default function WarehousePage() {
               <p className="mt-3 text-xs leading-6 text-zinc-600">※お届け日数は配送先・配送サービスにより異なります。道路状況、気象条件、繁忙期などにより遅延する場合があります。即日出荷の条件は事前に取り決めます。</p>
             </div>
             <div className="rounded-2xl border border-amber-200 bg-white p-6 sm:p-8">
-              <h3 className="text-xl font-bold leading-9">拠点と資材、両方から物流を見直す。</h3>
-              <p className="mt-4 text-sm leading-8 text-zinc-600">保管・検品・セット組み・出荷を大阪にまとめることで、商品が届くまでの流れを整えます。近隣の提携ダンボール会社との連携を活かし、梱包資材のコストもご相談いただけます。</p>
+              <h3 className="text-xl font-bold leading-9">届け先に合わせて、発送拠点を選ぶ。</h3>
+              <p className="mt-4 text-sm leading-8 text-zinc-600">主要なお届け先が関西地方・関東地方にある場合など、商品の調達先と配送先を踏まえて大阪拠点の活用方法を検討します。自社で新たに倉庫を構える前に、GAMIの拠点利用をご相談ください。</p>
               <div className="mt-5 flex flex-wrap gap-3">
-                <Link href="/logistics#case-studies" className="inline-flex min-h-[44px] items-center text-sm font-bold text-amber-800 underline underline-offset-4">物流改善の事例を見る →</Link>
-                <Link href="/logistics#cardboard" className="inline-flex min-h-[44px] items-center text-sm font-bold text-amber-800 underline underline-offset-4">ダンボール見積りについて →</Link>
+                <Link href="/#case-studies" className="inline-flex min-h-[44px] items-center text-sm font-bold text-amber-800 underline underline-offset-4">物流改善の事例を見る →</Link>
+                <Link href="/logistics" className="inline-flex min-h-[44px] items-center text-sm font-bold text-amber-800 underline underline-offset-4">依頼できる業務を見る →</Link>
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* HOW TO USE */}
-        <section className="bg-white py-16 sm:py-24">
-          <div className={container}>
-            <p className={goldLabel}>
-              HOW TO USE OUR BASE
-            </p>
-
-            <h2 className={heading}>
-              倉庫の使い方も、
-              <br />
-              事業に合わせて。
-            </h2>
-
-            <p className="mt-4 max-w-3xl text-sm leading-8 text-zinc-600">
-              保管場所の確保だけでなく、
-              お客様の物流体制の一部として、
-              さまざまな活用方法をご相談いただけます。
-            </p>
-
-            <div className="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-              {uses.map((item) => (
-                <article
-                  key={item.number}
-                  className="rounded-2xl border border-black/10 bg-[#fafaf9] p-6"
-                >
-                  <p className="text-xs font-bold tracking-[0.2em] text-amber-700">
-                    {item.number}
-                  </p>
-
-                  <h3 className="mt-4 text-lg font-bold leading-relaxed">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-3 text-sm leading-7 text-zinc-600">
-                    {item.text}
-                  </p>
-                </article>
-              ))}
-            </div>
-
-            <Link
-              href="/logistics"
-              className="mt-8 inline-flex min-h-[44px] items-center text-sm font-bold text-amber-800 underline underline-offset-4"
-            >
-              対応できる物流サービスを見る →
-            </Link>
           </div>
         </section>
 
@@ -570,6 +498,15 @@ export default function WarehousePage() {
               referrerPolicy="no-referrer-when-downgrade"
               className="mt-6 h-[260px] w-full rounded-2xl border-0 sm:h-[360px]"
             />
+          </div>
+        </section>
+        {/* FACILITY INQUIRY */}
+        <section className="bg-zinc-950 py-14 text-white sm:py-20">
+          <div className={container}>
+            <p className={darkGoldLabel}>DISCUSS YOUR LOGISTICS BASE</p>
+            <h2 className={heading}>大阪の物流拠点を、お探しですか。</h2>
+            <p className="mt-5 max-w-2xl text-sm leading-8 text-white/75">保管したい商品、必要な広さ、利用期間、開始希望時期をお知らせください。施設の利用方法と、必要な作業範囲を確認します。</p>
+            <Link href="/company#contact" className={`${primaryButton} mt-7`}>大阪拠点の利用を相談する →</Link>
           </div>
         </section>
       </main>
