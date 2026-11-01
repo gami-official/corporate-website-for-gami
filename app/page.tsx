@@ -5,9 +5,13 @@ import { Footer } from "@/components/footer"
 import { MetricsBar } from "@/components/metrics-bar"
 
 export const metadata: Metadata = {
-  title: "株式会社GAMI｜365日対応の発送代行・全国チャーター・化粧品物流",
-  description: "大阪の自社倉庫GAMI OSAKA BASEを主軸に、福岡・神戸と連携。発送代行、教材・パンフレットの丁合・セット組み、検品、流通加工、365日対応、ダンボール単体見積りまで。導入事例・倉庫写真とともにご紹介します。",
-  alternates: { canonical: "/" },
+  title: { absolute: "大阪の発送代行・倉庫保管｜365日対応の株式会社GAMI" },
+  description: "大阪府守口市の自社倉庫で、1坪からの保管・EC発送代行・教材発送・化粧品の検品やセット組みに対応。土日祝・年末年始を含む365日対応、全国チャーター、ダンボール単体見積りもご相談ください。",
+  alternates: { canonical: "https://www.gamigami.net/",
+    languages: { ja: "https://www.gamigami.net/", en: "https://www.gamigami.net/international", "x-default": "https://www.gamigami.net/" },
+  },
+  openGraph: { type: "website", locale: "ja_JP", url: "https://www.gamigami.net/", siteName: "株式会社GAMI", title: "大阪の発送代行・倉庫保管｜365日対応の株式会社GAMI", description: "大阪府守口市の自社倉庫で、1坪からの保管・EC発送代行・教材発送・化粧品の検品やセット組みに対応。土日祝・年末年始を含む365日対応、全国チャーター、ダンボール単体見積りもご相談ください。", images: [{ url: "/ogp.jpg", width: 1200, height: 630, alt: "株式会社GAMI｜大阪の物流・発送代行・倉庫保管" }] },
+  twitter: { card: "summary_large_image", title: "大阪の発送代行・倉庫保管｜365日対応の株式会社GAMI", description: "大阪府守口市の自社倉庫で、1坪からの保管・EC発送代行・教材発送・化粧品の検品やセット組みに対応。土日祝・年末年始を含む365日対応、全国チャーター、ダンボール単体見積りもご相談ください。", images: ["/ogp.jpg"] },
 }
 
 const container = "mx-auto max-w-6xl px-4 sm:px-6"
@@ -27,7 +31,7 @@ const button =
 const services = [
   {
     number: "01",
-    image: "warehouse-interior-nesting.png",
+    image: "seo-warehouse-interior-nesting.webp",
     english: "WAREHOUSING",
     title: "倉庫保管・在庫管理",
     text:
@@ -41,7 +45,7 @@ const services = [
   },
   {
     number: "02",
-    image: "section-365-fulfillment.png",
+    image: "seo-section-365-fulfillment.webp",
     english: "FULFILLMENT",
     title: "発送代行・EC物流",
     text:
@@ -55,7 +59,7 @@ const services = [
   },
   {
     number: "03",
-    image: "case-inspection.png",
+    image: "seo-case-inspection.webp",
     english: "INSPECTION",
     title: "商品検品・品質確認",
     text:
@@ -69,7 +73,7 @@ const services = [
   },
   {
     number: "04",
-    image: "section-logistics-team.png",
+    image: "seo-section-logistics-team.webp",
     english: "VALUE-ADDED SERVICES",
     title: "流通加工・セット組み",
     text:
@@ -83,7 +87,7 @@ const services = [
   },
   {
     number: "05",
-    image: "section-japan-fulfillment.png",
+    image: "seo-section-japan-fulfillment.webp",
     english: "BULK OPERATIONS",
     title: "大量発送・スポット案件",
     text:
@@ -97,7 +101,7 @@ const services = [
   },
   {
     number: "06",
-    image: "charter-transport.png",
+    image: "seo-charter-transport.webp",
     english: "TRANSPORTATION",
     title: "全国チャーター・輸送手配",
     text:
@@ -111,7 +115,7 @@ const services = [
   },
   {
     number: "07",
-    image: "section-education-kitting.png",
+    image: "seo-section-education-kitting.webp",
     english: "EDUCATIONAL MATERIALS",
     title: "教材・パンフレットの発送",
     text: "学習塾・スクール・オンライン講座・セミナー運営会社様へ。教材やパンフレットの保管から丁合・折り・封入・セット組み・発送まで、必要な工程をまとめて承ります。",
@@ -119,7 +123,7 @@ const services = [
   },
   {
     number: "08",
-    image: "section-cardboard-supply.png",
+    image: "seo-section-cardboard-supply.webp",
     english: "CARDBOARD & PACKAGING",
     title: "ダンボール・梱包資材",
     text: "ダンボールの価格に自信があります。近隣の提携ダンボール会社との連携で、安くご提供できる体制を整えています。ダンボールのみのお見積り・ご購入も歓迎。現在の単価や仕様をもとに、コスト削減をご提案します。",
@@ -155,7 +159,7 @@ const caseStudies = [
   {
     "id": "apparel",
     "industry": "アパレル販売事業者様",
-    "image": "/images/case-apparel.png",
+    "image": "/images/seo-case-apparel.webp",
     "alt": "帽子・衣類の梱包を表現したイメージ",
     "title": "届くまでの2日を、1日へ。",
     "summary": "大阪での仕分けと即日出荷を組み合わせ、お届けまでの時間を短縮しました。",
@@ -168,7 +172,7 @@ const caseStudies = [
   {
     "id": "distribution",
     "industry": "九州地方の事業者様",
-    "image": "/images/case-distribution.png",
+    "image": "/images/seo-case-distribution.webp",
     "alt": "大阪を拠点に各地へ届ける物流のイメージ",
     "title": "会社は九州地方に。物流拠点は大阪へ。",
     "summary": "主要な届け先に合わせて出荷拠点を見直し、配送リードタイムの課題を解消しました。",
@@ -181,7 +185,7 @@ const caseStudies = [
   {
     "id": "rice",
     "industry": "ふるさと納税返礼品を扱う食品事業者様",
-    "image": "/images/case-rice.png",
+    "image": "/images/seo-case-rice.webp",
     "alt": "お米の返礼品と発送用ダンボールのイメージ",
     "title": "返礼品を、もっと早く。待つ間の不安を減らす。",
     "summary": "大阪で作業・発送する体制に変え、寄附者様の安心と配送確認の負担軽減につなげています。",
@@ -194,7 +198,7 @@ const caseStudies = [
   {
     "id": "beauty",
     "industry": "美容関連事業者様",
-    "image": "/images/case-beauty.png",
+    "image": "/images/seo-case-beauty.webp",
     "alt": "美容商材を丁寧に梱包するイメージ",
     "title": "365日対応の、その先へ。相談と現場が近い物流。",
     "summary": "出荷できる日を増やし、素早いレスポンスと細かな提案で日々の運営を支えています。",
@@ -207,7 +211,7 @@ const caseStudies = [
   {
     "id": "inspection",
     "industry": "化粧品メーカー様",
-    "image": "/images/case-inspection.png",
+    "image": "/images/seo-case-inspection.webp",
     "alt": "手袋を着けて化粧品容器を検品するイメージ",
     "title": "急な検品にも、すぐ動く。品質と納期に向き合う。",
     "summary": "急ぎの容器検品を納期までに対応。現在も大阪と九州地方で検品を行っています。",
@@ -257,31 +261,31 @@ const warehouseInfo = [
 
 const photos = [
   {
-    src: "/images/warehouse-moriguchi.jpg",
+    src: "/images/seo-warehouse-moriguchi.webp",
     alt: "GAMI OSAKA BASEの倉庫外観",
     english: "EXTERIOR",
     caption: "倉庫外観",
   },
   {
-    src: "/images/warehouse-interior-nesting.png",
+    src: "/images/seo-warehouse-interior-nesting.webp",
     alt: "ネステナーのある倉庫内観と茶色の中二階を表現した運用イメージ",
     english: "INTERIOR",
     caption: "倉庫内観（運用イメージ）",
   },
   {
-    src: "/images/warehouse-operations-clean.png",
+    src: "/images/seo-warehouse-operations-clean.webp",
     alt: "物流作業スペース",
     english: "OPERATIONS",
     caption: "作業スペース",
   },
   {
-    src: "/images/warehouse-dispatch-clean.png",
+    src: "/images/seo-warehouse-dispatch-clean.webp",
     alt: "商品保管スペース",
     english: "STORAGE",
     caption: "商品保管",
   },
   {
-    src: "/images/warehouse-processing-clean.png",
+    src: "/images/seo-warehouse-processing-clean.webp",
     alt: "箱組立・流通加工の作業風景",
     english: "PROCESSING",
     caption: "箱組立・流通加工",
@@ -289,12 +293,21 @@ const photos = [
 ]
 
 function SectionImage({ src, alt, dark = false }: { src: string; alt: string; dark?: boolean }) {
-  return <figure className="mt-7 overflow-hidden rounded-2xl"><img src={`/images/${src}`} alt={alt} width={1536} height={1024} loading="lazy" className="aspect-[16/9] w-full object-cover" /><figcaption className={`pt-2 text-[11px] leading-6 ${dark ? "text-white/60" : "text-zinc-500"}`}>サービスのイメージです。</figcaption></figure>
+  return <figure className="mt-7 overflow-hidden rounded-2xl"><img decoding="async" src={`/images/${src}`} alt={alt} width={1536} height={1024} loading="lazy" className="aspect-[16/9] w-full object-cover" /><figcaption className={`pt-2 text-[11px] leading-6 ${dark ? "text-white/60" : "text-zinc-500"}`}>サービスのイメージです。</figcaption></figure>
+}
+
+const homeStructuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "Organization", "@id": "https://www.gamigami.net/#organization", name: "株式会社GAMI", alternateName: "GAMI Co., Ltd.", url: "https://www.gamigami.net/", logo: "https://www.gamigami.net/images/logo.png", telephone: "+81-6-6115-9935", email: "k_fuchigami@gamigami.email", address: { "@type": "PostalAddress", streetAddress: "大日町1-8-18", addressLocality: "守口市", addressRegion: "大阪府", postalCode: "570-0003", addressCountry: "JP" } },
+    { "@type": "WebSite", "@id": "https://www.gamigami.net/#website", url: "https://www.gamigami.net/", name: "株式会社GAMI", inLanguage: ["ja", "en"], publisher: { "@id": "https://www.gamigami.net/#organization" } },
+  ],
 }
 
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-[#f7f7f5] font-sans text-zinc-900">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homeStructuredData).replace(/</g, "\\u003c") }} />
       <Header />
       <main>
         {/* HERO */}
@@ -385,7 +398,7 @@ export default function HomePage() {
               カレンダーに合わせて発送を待つ運用から、お客様の事業に合わせた出荷体制へ。
               小さな組織だからこそ、お客様と現場が近く、細かな調整や改善提案まで一緒に進めます。
             </p>
-            <SectionImage src="section-365-fulfillment.png" alt="365日対応の出荷作業イメージ" />
+            <SectionImage src="seo-section-365-fulfillment.webp" alt="365日対応の出荷作業イメージ" />
             <div className="mt-7 grid gap-4 sm:grid-cols-3">
               {[{title:"休日の注文も、次の出荷へ。",text:"平日までの出荷待ちを減らし、お客様に商品を届ける流れを整えます。"},{title:"年末年始も見据えた体制。",text:"必要な出荷日・件数・受付締切を事前に確認し、継続して任せられる運用をご提案します。"},{title:"365日対応と、細かな対応力。",text:"出荷するだけでなく、セット内容の確認や梱包の工夫、現場との連絡まで支えます。"}].map(item=><article key={item.title} className="rounded-2xl border border-amber-200 bg-amber-50 p-5"><h3 className="font-bold leading-7">{item.title}</h3><p className="mt-3 text-sm leading-7 text-zinc-600">{item.text}</p></article>)}
             </div>
@@ -423,7 +436,7 @@ export default function HomePage() {
                 <ol className="mt-6 space-y-3">{[{title:"発送指示を受ける",text:"商品・件数・受付締切を事前に取り決めます。"},{title:"大阪で即日出荷",text:"取り決めた条件に沿って、検品・セット組み・梱包から出荷まで対応。"},{title:"九州〜関東の対象地域へ翌日配送",text:"ご利用の配送サービス・お届け先に合わせて手配します。"}].map((item,i)=><li key={item.title} className="flex gap-3 rounded-xl border border-amber-200 bg-white p-4"><span className="text-sm font-bold text-amber-700">0{i+1}</span><div><h3 className="text-sm font-bold leading-6">{item.title}</h3><p className="mt-1 text-xs leading-6 text-zinc-600">{item.text}</p></div></li>)}</ol>
                 <Link href="/company#contact" className={`${button} mt-6`}>配送日数・即日出荷について相談する →</Link>
               </div>
-              <figure className="min-w-0"><img src="/images/osaka-leadtime-map-ja-v2.png" alt="大阪から九州・中国・四国・中部・関東へ向かう配送ルートの概略図" width={2400} height={2000} loading="lazy" className="h-auto w-full rounded-2xl border border-amber-200" /><figcaption className="mt-3 text-xs leading-6 text-zinc-600">配送ルートの概略です。翌日配送はすべての地域・荷物に適用されるものではありません。配送会社・宛先・受付締切・離島等の条件により異なり、道路状況・天候・繁忙期などで遅延する場合があります。</figcaption></figure>
+              <figure className="min-w-0"><img decoding="async" src="/images/osaka-leadtime-map-ja-v2.png" alt="大阪から九州・中国・四国・中部・関東へ向かう配送ルートの概略図" width={2400} height={2000} loading="lazy" className="h-auto w-full rounded-2xl border border-amber-200" /><figcaption className="mt-3 text-xs leading-6 text-zinc-600">配送ルートの概略です。翌日配送はすべての地域・荷物に適用されるものではありません。配送会社・宛先・受付締切・離島等の条件により異なり、道路状況・天候・繁忙期などで遅延する場合があります。</figcaption></figure>
             </div>
           </div>
         </section>
@@ -441,7 +454,7 @@ export default function HomePage() {
               動けること。
             </h2>
 
-            <SectionImage src="section-logistics-team.png" alt="現場と連携しながら進める物流業務のイメージ" />
+            <SectionImage src="seo-section-logistics-team.webp" alt="現場と連携しながら進める物流業務のイメージ" />
             <div className="mt-9 grid gap-4 sm:grid-cols-2">
               {strengths.map((item) => (
                 <article
@@ -475,7 +488,7 @@ export default function HomePage() {
               {services.map(service=>(
                 <details id={`service-${service.number}`} key={service.number} className="group scroll-mt-24 rounded-2xl border border-black/10 bg-[#fafaf9] p-5 sm:p-6">
                   <summary className="flex min-h-[60px] cursor-pointer list-none items-center justify-between gap-4 [&::-webkit-details-marker]:hidden">
-                    <img src={`/images/${service.image}`} alt={`${service.title}のイメージ`} width={240} height={180} loading="lazy" className="h-20 w-24 shrink-0 rounded-xl object-cover sm:h-24 sm:w-32" /><span className="min-w-0 flex-1"><span className="block text-[10px] font-bold tracking-[0.14em] text-amber-700">{service.number} / {service.english}</span><span className="mt-3 block text-lg font-bold leading-7 sm:text-xl">{service.title}</span></span>
+                    <img decoding="async" src={`/images/${service.image}`} alt={`${service.title}のイメージ`} width={240} height={180} loading="lazy" className="h-20 w-24 shrink-0 rounded-xl object-cover sm:h-24 sm:w-32" /><span className="min-w-0 flex-1"><span className="block text-[10px] font-bold tracking-[0.14em] text-amber-700">{service.number} / {service.english}</span><span className="mt-3 block text-lg font-bold leading-7 sm:text-xl">{service.title}</span></span>
                     <span aria-hidden="true" className="shrink-0 text-2xl text-amber-700 group-open:rotate-45">+</span>
                   </summary>
                   <div className="mt-5 border-t border-black/10 pt-5">
@@ -504,7 +517,7 @@ export default function HomePage() {
               <Link href="/company?inquiry=education#contact" className={`${button} mt-7`}>教材・パンフレットの発送を相談する →</Link>
             </div>
             <div className="grid gap-3 sm:grid-cols-2">
-              <div className="sm:col-span-2"><SectionImage src="section-education-kitting.png" alt="教材の丁合・セット組みと発送準備のイメージ" dark /></div>
+              <div className="sm:col-span-2"><SectionImage src="seo-section-education-kitting.webp" alt="教材の丁合・セット組みと発送準備のイメージ" dark /></div>
               {[
                 { title: "教材の丁合・セット組み", text: "講座・コースごとに必要な教材を順番にまとめ、案内状なども同梱。" },
                 { title: "受講者への個別発送", text: "継続的な教材発送や、開講に合わせた一斉発送をご相談いただけます。" },
@@ -543,7 +556,7 @@ export default function HomePage() {
               {caseStudies.map((item, index) => (
                 <article id={`case-${item.id}`} key={item.id} aria-labelledby={`case-heading-${item.id}`} className="w-[88%] min-w-0 shrink-0 snap-start scroll-mt-28 overflow-hidden rounded-2xl border border-black/10 bg-white sm:w-[65%] lg:w-[48%]">
                   <figure>
-                    <img src={item.image} alt={item.alt} width={1536} height={1024} loading="lazy" className="aspect-[3/2] w-full object-cover" />
+                    <img decoding="async" src={item.image} alt={item.alt} width={1536} height={1024} loading="lazy" className="aspect-[3/2] w-full object-cover" />
                     <figcaption className="px-5 pt-2 text-[11px] text-zinc-500">画像はイメージです</figcaption>
                   </figure>
                   <div className="p-5 sm:p-7">
@@ -580,7 +593,7 @@ export default function HomePage() {
             <div className="mt-8 grid grid-cols-2 gap-3 lg:grid-cols-3">
               {photos.map(photo=>(
                 <figure key={photo.src} className="overflow-hidden rounded-2xl border border-black/10 bg-[#fafaf9]">
-                  <img src={photo.src} alt={photo.alt} width={900} height={675} loading="lazy" className="aspect-[4/3] w-full object-cover object-center" />
+                  <img decoding="async" src={photo.src} alt={photo.alt} width={900} height={675} loading="lazy" className="aspect-[4/3] w-full object-cover object-center" />
                   <figcaption className="px-4 py-3 text-xs font-semibold leading-6 sm:text-sm">{photo.caption}</figcaption>
                 </figure>
               ))}
@@ -623,7 +636,7 @@ export default function HomePage() {
               <Link href="/company?inquiry=beauty#contact" className={`${button} mt-6`}>化粧品・美容商材の作業を相談する →</Link>
             </div>
             <div className="overflow-hidden rounded-2xl border border-black/10 bg-white">
-              <img src="/images/case-inspection.png" alt="化粧品容器の検品を表現したイメージ" width={1536} height={1024} loading="lazy" className="aspect-[3/2] w-full object-cover" />
+              <img decoding="async" src="/images/seo-case-inspection.webp" alt="化粧品容器の検品を表現したイメージ" width={1536} height={1024} loading="lazy" className="aspect-[3/2] w-full object-cover" />
               <div className="p-6"><p className="text-xs text-zinc-500">画像はイメージです。</p><ul className="mt-4 grid gap-3 text-sm font-semibold leading-7 sm:grid-cols-2">{["容器・商品の外観検品", "数量・品番・付属品の確認", "美容商材のセット組み", "ギフトセット・同梱作業", "梱包・保管・発送", "作業に伴う輸送手配"].map(item=><li key={item}>✓ {item}</li>)}</ul></div>
             </div>
           </div>
@@ -641,7 +654,7 @@ export default function HomePage() {
               <Link href="/company?inquiry=transport#contact" className={`${button} mt-6`}>チャーター便・輸送費を見積もる →</Link>
             </div>
             <div className="overflow-hidden rounded-2xl border border-amber-200 bg-amber-50">
-              <figure><img src="/images/charter-transport.png" alt="軽貨物・中型トラック・大型トラックによる輸送手配のイメージ" width={1536} height={1024} loading="lazy" className="aspect-[16/9] w-full object-cover" /><figcaption className="px-6 pt-3 text-xs leading-6 text-zinc-500">輸送手配のイメージです。掲載車両は自社保有車両を示すものではありません。</figcaption></figure>
+              <figure><img decoding="async" src="/images/seo-charter-transport.webp" alt="軽貨物・中型トラック・大型トラックによる輸送手配のイメージ" width={1536} height={1024} loading="lazy" className="aspect-[16/9] w-full object-cover" /><figcaption className="px-6 pt-3 text-xs leading-6 text-zinc-500">輸送手配のイメージです。掲載車両は自社保有車両を示すものではありません。</figcaption></figure>
               <div className="p-6 sm:p-8">
               <h3 className="text-xl font-bold">まずは、この条件をお知らせください。</h3>
               <ul className="mt-5 space-y-3 text-sm leading-7">{["集荷先・納品先（市区町村まででも可）", "集荷日・納品日・時間帯", "荷物の種類・個数・寸法・総重量", "希望車格・車両設備（未定でも可）", "手積み・フォークリフトなどの作業条件", "現在の運賃・希望予算（任意）"].map(item=><li key={item}>✓ {item}</li>)}</ul>
@@ -655,7 +668,7 @@ export default function HomePage() {
         <section id="cardboard" aria-labelledby="cardboard-heading" className="scroll-mt-24 bg-zinc-950 py-16 text-white sm:py-24">
           <div className={`${container} grid gap-8 lg:grid-cols-2 lg:items-center`}>
             <div>
-<SectionImage src="section-cardboard-supply.png" alt="サイズ・材質に合わせて選べるダンボール資材のイメージ" dark />
+<SectionImage src="seo-section-cardboard-supply.webp" alt="サイズ・材質に合わせて選べるダンボール資材のイメージ" dark />
               <p className={`${labelDark} mt-5`}>PACKAGING COSTS</p>
               <h2 id="cardboard-heading" className={heading}>ダンボールを、もっと安く。<br />価格に自信があります。</h2>
               <p className="mt-5 text-sm leading-8 text-white/75">近隣の提携ダンボール会社との連携により、安くご提供できる体制を整えています。今お使いのダンボールと、ぜひ価格を比べてください。ダンボールのみのご購入も承ります。</p>
@@ -692,7 +705,7 @@ export default function HomePage() {
               <article className="overflow-hidden rounded-2xl border border-black/10 bg-white">
                 <div className="flex h-64 items-center justify-center bg-[#fafaf9] sm:h-80">
                   <img
-                    src="/images/team-kazuhiro.jpg"
+                    src="/images/seo-team-kazuhiro.webp"
                     alt="代表取締役社長 Kazuhiro Fuchigami"
                     width={1024}
                     height={1024}
@@ -725,7 +738,7 @@ export default function HomePage() {
               <article className="overflow-hidden rounded-2xl border border-black/10 bg-white">
                 <div className="flex h-64 items-center justify-center bg-[#fafaf9] sm:h-80">
                   <img
-                    src="/images/team-mayu.png"
+                    src="/images/seo-team-mayu.webp"
                     alt="専務取締役 Mayu Kotera"
                     width={1024}
                     height={1536}
@@ -762,7 +775,7 @@ export default function HomePage() {
         {/* ENGLISH ENTRANCE */}
         <section className="bg-white py-12 sm:py-16">
           <div className={`${container} grid gap-7 lg:grid-cols-2 lg:items-center`}>
-            <div><SectionImage src="section-japan-fulfillment.png" alt="海外企業の商品の受入れから日本国内発送までを支える物流イメージ" /></div>
+            <div><SectionImage src="seo-section-japan-fulfillment.webp" alt="海外企業の商品の受入れから日本国内発送までを支える物流イメージ" /></div>
             <div><p className={label}>JAPAN FULFILLMENT</p><h2 className="mt-3 text-xl font-bold sm:text-2xl">海外企業の日本国内物流も、ご相談ください。</h2><p lang="en" className="mt-3 text-sm leading-7 text-zinc-600">Warehousing, kitting, packing and domestic shipping in Japan.</p><Link href="/international" className={`${button} mt-6`}>ENGLISH / Japan Fulfillment →</Link></div>
           </div>
         </section>
@@ -771,7 +784,7 @@ export default function HomePage() {
         <section aria-labelledby="next-step-heading" className="bg-zinc-950 py-16 text-white sm:py-24">
           <div className={container}>
             <p className={labelDark}>LET’S TALK</p>
-            <div className="max-w-3xl"><SectionImage src="section-logistics-consultation.png" alt="商品や梱包条件を確認する物流相談のイメージ" dark /></div>
+            <div className="max-w-3xl"><SectionImage src="seo-section-logistics-consultation.webp" alt="商品や梱包条件を確認する物流相談のイメージ" dark /></div>
             <h2 id="next-step-heading" className={heading}>「これ頼める？」<br />その一言から、始めましょう。</h2>
             <p className="mt-5 max-w-2xl text-sm leading-8 text-white/75">商品・数量・希望時期を、分かる範囲でお知らせください。具体的な作業内容や費用は、お客様のご要望を伺いながら整理します。</p>
             <div className="mt-8 flex flex-wrap gap-3">
