@@ -102,6 +102,20 @@ const services = [
       "協力運送会社との連携",
     ],
   },
+  {
+    number: "07",
+    english: "EDUCATIONAL MATERIALS",
+    title: "教材・パンフレットの発送",
+    text: "学習塾・スクール・オンライン講座・セミナー運営会社様へ。教材やパンフレットの保管から丁合・折り・封入・セット組み・発送まで、必要な工程をまとめて承ります。",
+    points: ["教材の丁合・内容照合・セット組み", "案内用紙の折り・封入・同梱", "受講者様・教室への個別発送", "定期発送・一斉発送・365日対応のご相談"],
+  },
+  {
+    number: "08",
+    english: "CARDBOARD & PACKAGING",
+    title: "ダンボール・梱包資材",
+    text: "ダンボールの価格に自信があります。近隣の提携ダンボール会社との連携で、安くご提供できる体制を整えています。ダンボールのみのお見積り・ご購入も歓迎。現在の単価や仕様をもとに、コスト削減をご提案します。",
+    points: ["対象エリア：大阪・近隣府県", "ダンボール単体のお見積り・販売", "サイズ・硬さ・色・ロット数に合わせてご提案", "現在の購入価格・参考URLをもとに比較見積り"],
+  },
 
 ]
 
@@ -451,10 +465,6 @@ export default function HomePage() {
                 </details>
               ))}
             </div>
-            <div className="mt-6 flex flex-wrap gap-3">
-              <a href="#educational-logistics" className="inline-flex min-h-[44px] items-center rounded-full border border-amber-300 bg-amber-50 px-5 py-2 text-sm font-bold text-amber-900">教材・パンフレット発送について詳しく見る →</a>
-              <a href="#cardboard" className="inline-flex min-h-[44px] items-center rounded-full border border-amber-300 bg-amber-50 px-5 py-2 text-sm font-bold text-amber-900">ダンボールだけの見積りも歓迎 →</a>
-            </div>
           </div>
         </section>
 
@@ -615,14 +625,15 @@ export default function HomePage() {
           <div className={`${container} grid gap-8 lg:grid-cols-2 lg:items-center`}>
             <div>
               <p className={labelDark}>PACKAGING COSTS</p>
-              <h2 id="cardboard-heading" className={heading}>そのダンボール代、<br />見直してみませんか？</h2>
-              <p className="mt-5 text-sm leading-8 text-white/75">近隣の提携ダンボール会社との連携により、価格には自信があります。物流委託と合わせたご相談も、資材だけのご相談も歓迎です。</p>
+              <h2 id="cardboard-heading" className={heading}>ダンボールを、もっと安く。<br />価格に自信があります。</h2>
+              <p className="mt-5 text-sm leading-8 text-white/75">近隣の提携ダンボール会社との連携により、安くご提供できる体制を整えています。今お使いのダンボールと、ぜひ価格を比べてください。ダンボールのみのご購入も承ります。</p>
             </div>
             <div className="rounded-2xl border border-amber-400/35 bg-white/5 p-6 sm:p-8">
               <h3 className="text-xl font-bold leading-9 text-amber-300 sm:text-2xl">ダンボールだけの<br />お見積りも大歓迎。</h3>
-              <p className="mt-4 text-sm leading-8 text-white/75">今お使いのサイズ・仕様・数量・納品先を、分かる範囲でお知らせください。価格を比べて、驚いていただきたい。まずは一度、GAMIにご相談ください。</p>
+              <p className="mt-4 text-sm leading-8 text-white/75">3辺合計サイズ・硬さ・色・現在の購入価格・ロット数を、分かる範囲でお知らせください。購入先や商品ページのURLがあれば、比較見積りの参考にいたします。</p>
+              <p className="mt-4 rounded-xl border border-amber-400/40 bg-amber-400/10 p-4 text-sm font-bold leading-7 text-amber-200">対象エリア：大阪・近隣府県<br /><span className="text-xs font-normal">納品先・数量に応じて配送可否とお見積りを確認します。</span></p>
               <Link href="/company#contact" className={`${button} mt-6`}>ダンボールの見積りを依頼する →</Link>
-              <p className="mt-3 text-xs leading-6 text-white/60">ご相談内容に「ダンボール見積り」とご記入ください。</p>
+              <p className="mt-3 text-xs leading-6 text-white/60">フォームで「ダンボール単体のお見積り」をお選びください。</p>
             </div>
           </div>
         </section>
