@@ -14,12 +14,16 @@ type Language = "ja" | "en"
 type ContactFormProps = { language?: Language }
 
 const inquiryTypes = [
-  { value: "全国チャーター・輸送費のお見積り", ja: "全国チャーター・輸送費のお見積り", en: "Nationwide charter transport / freight quote" },
-  { value: "化粧品・美容商材の検品・セット組み", ja: "化粧品・美容商材の検品・セット組み", en: "Cosmetics and beauty product inspection / kitting" },
   {
-    value: "ダンボール単体のお見積り",
-    ja: "ダンボール単体のお見積り",
-    en: "Cardboard boxes only — request a quote",
+    value: "物流・発送代行の相談",
+    ja: "物流・発送代行の相談",
+    en: "Logistics and fulfillment",
+  },
+  { value: "365日対応・土日祝・年末年始の出荷相談", ja: "365日対応・土日祝・年末年始の出荷相談", en: "365-day fulfillment / weekend and New Year dispatch" },
+  {
+    value: "倉庫保管・流通加工の相談",
+    ja: "倉庫保管・流通加工の相談",
+    en: "Warehousing and value-added services",
   },
   {
     value: "教材・パンフレット発送の相談",
@@ -27,20 +31,11 @@ const inquiryTypes = [
     en: "Educational materials and brochure fulfillment",
   },
   {
-    value: "物流・発送代行の相談",
-    ja: "物流・発送代行の相談",
-    en: "Logistics and fulfillment",
-  },
-  {
-    value: "倉庫保管・流通加工の相談",
-    ja: "倉庫保管・流通加工の相談",
-    en: "Warehousing and value-added services",
-  },
-  {
     value: "検品・品質チェックの相談",
     ja: "検品・品質チェックの相談",
     en: "Inspection and quality checks",
   },
+  { value: "化粧品・美容商材の検品・セット組み", ja: "化粧品・美容商材の検品・セット組み", en: "Cosmetics and beauty product inspection / kitting" },
   {
     value: "シール貼り・セット組み・内職作業の相談",
     ja: "シール貼り・セット組み・内職作業の相談",
@@ -55,6 +50,12 @@ const inquiryTypes = [
     value: "スポット出荷・急ぎ案件の相談",
     ja: "スポット出荷・急ぎ案件の相談",
     en: "One-time or urgent shipments",
+  },
+  { value: "全国チャーター・輸送費のお見積り", ja: "全国チャーター・輸送費のお見積り", en: "Nationwide charter transport / freight quote" },
+  {
+    value: "ダンボール単体のお見積り",
+    ja: "ダンボール単体のお見積り",
+    en: "Cardboard boxes only — request a quote",
   },
   {
     value: "依頼内容がまだ決まっていない",
@@ -308,6 +309,7 @@ export function ContactForm({
 
   useEffect(() => {
     const selections: Record<string, string> = {
+      "operations-365": "365日対応・土日祝・年末年始の出荷相談",
       transport: "全国チャーター・輸送費のお見積り",
       beauty: "化粧品・美容商材の検品・セット組み",
       cardboard: "ダンボール単体のお見積り",
