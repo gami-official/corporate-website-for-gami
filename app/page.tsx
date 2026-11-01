@@ -4,7 +4,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 
 export const metadata: Metadata = {
-  title: "株式会社GAMI｜発送代行・教材発送・倉庫保管・ダンボール見積り",
+  title: "株式会社GAMI｜365日対応の発送代行・全国チャーター・化粧品物流",
   description: "大阪の自社倉庫GAMI OSAKA BASEを主軸に、福岡・神戸と連携。発送代行、教材・パンフレットの丁合・セット組み、検品、流通加工、365日対応、ダンボール単体見積りまで。導入事例・倉庫写真とともにご紹介します。",
   alternates: { canonical: "/" },
 }
@@ -122,8 +122,8 @@ const services = [
 const strengths = [
   {
     number: "01",
-    title: "まず返す。すぐ動く。",
-    text: "ご相談には迅速に対応。状況を確認し、実現できる方法を考えます。",
+    title: "365日、事業に合わせて。",
+    text: "土日祝・年末年始も見据えた出荷体制をご提案。現場との距離の近さを活かし、柔軟に対応します。",
   },
   {
     number: "02",
@@ -311,9 +311,10 @@ export default function HomePage() {
           <div className={`${container} relative z-20 py-16 sm:py-24 lg:py-32`}>
             <div className="max-w-4xl">
               <p className={labelDark}>
-                GAMI LOGISTICS SOLUTIONS
+                365-DAY FULFILLMENT / GAMI
               </p>
 
+              <p className="mt-5 inline-flex rounded-full border border-amber-300/50 bg-amber-300/10 px-4 py-2 text-sm font-bold leading-6 text-amber-200">365日対応。土日祝・年末年始の出荷もご相談ください。</p>
               <p className="mt-4 text-xs font-semibold tracking-[0.14em] text-white/65">
                 OSAKA / FUKUOKA / KOBE
               </p>
@@ -336,7 +337,7 @@ export default function HomePage() {
                 大阪の自社倉庫を主軸に、福岡・神戸と連携。
                 1坪からの保管、小ロットの発送代行、
                 検品・流通加工から大規模な一斉発送まで。
-                お客様の物流課題に、柔軟な実行力で応えます。
+                土日祝・年末年始を含む365日の出荷体制を、ご依頼に合わせて整えます。
               </p>
 
               <div className="mt-8 flex flex-wrap gap-3">
@@ -344,7 +345,7 @@ export default function HomePage() {
                   href="/company#contact"
                   className={button}
                 >
-                  見積り・物流相談 →
+                  365日対応・物流を相談する →
                 </Link>
 
                 <Link
@@ -396,7 +397,7 @@ export default function HomePage() {
                 </span>
               </p>
               <p className="mt-2 text-[10px] leading-4 text-white/65 sm:text-xs">
-                条件に応じた出荷対応
+                土日祝・年末年始も相談可能
               </p>
             </div>
           </div>
@@ -404,9 +405,45 @@ export default function HomePage() {
 
         <nav aria-label="トップページ内の案内" className="border-b border-black/10 bg-white">
           <div className={`${container} flex flex-wrap gap-2 py-4`}>
-            {[["#services","サービス"],["#educational-logistics","教材発送"],["#case-studies","導入事例"],["#warehouse","倉庫・アクセス"],["#cardboard","ダンボール見積り"]].map(([href,text])=><a key={href} href={href} className="inline-flex min-h-[44px] items-center rounded-full border border-black/10 px-4 py-2 text-xs font-bold text-zinc-700 transition hover:border-amber-400 hover:bg-amber-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-amber-600">{text}</a>)}
+            {[["#operations-365","365日対応"],["#services","サービス"],["#educational-logistics","教材発送"],["#case-studies","導入事例"],["#warehouse","倉庫・アクセス"],["#cardboard","ダンボール見積り"]].map(([href,text])=><a key={href} href={href} className="inline-flex min-h-[44px] items-center rounded-full border border-black/10 px-4 py-2 text-xs font-bold text-zinc-700 transition hover:border-amber-400 hover:bg-amber-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-amber-600">{text}</a>)}
           </div>
         </nav>
+
+        {/* 365-DAY OPERATIONS */}
+        <section id="operations-365" aria-labelledby="operations-heading" className="scroll-mt-24 py-16 sm:py-24">
+          <div className={container}>
+            <p className={label}>365-DAY OPERATIONS</p>
+            <h2 id="operations-heading" className={heading}>土日祝も、年末年始も。<br />発送を止めない、365日対応。</h2>
+            <p className="mt-5 max-w-3xl text-sm leading-8 text-zinc-600">
+              「土日祝に発送できない」「年末年始に出荷が止まる」。そんなお悩みに、GAMIの365日対応で応えます。
+              EC商品や教材、美容商材など、事前に取り決めた作業内容・出荷条件に合わせて対応。
+              カレンダーに合わせて発送を待つ運用から、お客様の事業に合わせた出荷体制へ。
+              小さな組織だからこそ、お客様と現場が近く、細かな調整や改善提案まで一緒に進めます。
+            </p>
+            <div className="mt-7 grid gap-4 sm:grid-cols-3">
+              {[{title:"休日の注文も、次の出荷へ。",text:"平日までの出荷待ちを減らし、お客様に商品を届ける流れを整えます。"},{title:"年末年始も見据えた体制。",text:"必要な出荷日・件数・受付締切を事前に確認し、継続して任せられる運用をご提案します。"},{title:"365日対応と、細かな対応力。",text:"出荷するだけでなく、セット内容の確認や梱包の工夫、現場との連絡まで支えます。"}].map(item=><article key={item.title} className="rounded-2xl border border-amber-200 bg-amber-50 p-5"><h3 className="font-bold leading-7">{item.title}</h3><p className="mt-3 text-sm leading-7 text-zinc-600">{item.text}</p></article>)}
+            </div>
+            <details className="group mt-7 rounded-2xl border border-black/10 bg-white p-5 sm:p-7">
+              <summary className="flex min-h-[44px] cursor-pointer list-none items-center justify-between gap-4 text-sm font-bold text-amber-800 [&::-webkit-details-marker]:hidden">受付・作業・連絡の進め方を確認する<span aria-hidden="true" className="text-xl group-open:rotate-45">+</span></summary>
+            <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {[
+                { title: "必要な出荷日を確認", text: "平日・土日祝を含め、出荷を希望する日や頻度を伺います。" },
+                { title: "受付と出荷の流れを設計", text: "商品・件数・作業内容に合わせ、発送指示の方法や受付締切を取り決めます。" },
+                { title: "セット組みと確認手順", text: "同梱物や梱包方法を確認し、事前準備を含めた作業の進め方を決めます。" },
+                { title: "連絡・繁忙期対応を相談", text: "日々の連絡方法と、出荷が増える時期・数量を確認し、対応体制を調整します。" },
+              ].map((item, index) => (
+                <article key={item.title} className="rounded-2xl border border-black/10 bg-white p-6">
+                  <p className="text-xs font-bold tracking-[0.18em] text-amber-700">0{index + 1}</p>
+                  <h3 className="mt-4 text-base font-bold">{item.title}</h3>
+                  <p className="mt-3 text-sm leading-7 text-zinc-600">{item.text}</p>
+                </article>
+              ))}
+            </div>
+            </details>
+            <p className="mt-5 text-xs leading-6 text-zinc-500">※365日対応は24時間受付・作業を意味するものではありません。出荷日・受付締切・当日出荷の条件・休日の作業体制・費用を案件ごとに事前に取り決めます。</p>
+            <Link href="/company#contact" className={`${button} mt-6`}>365日対応・年末年始の出荷を相談する →</Link>
+          </div>
+        </section>
 
         {/* WHY GAMI */}
         <section className="bg-white py-16 sm:py-24">
@@ -495,37 +532,6 @@ export default function HomePage() {
                 </article>
               ))}
             </div>
-          </div>
-        </section>
-
-        {/* 365-DAY OPERATIONS */}
-        <section id="operations-365" aria-labelledby="operations-heading" className="scroll-mt-24 py-16 sm:py-24">
-          <div className={container}>
-            <p className={label}>365-DAY OPERATIONS</p>
-            <h2 id="operations-heading" className={heading}>365日対応を、<br />御社に合う運用で。</h2>
-            <p className="mt-5 max-w-3xl text-sm leading-8 text-zinc-600">
-              土日祝の出荷も、事前に取り決めた作業内容・運用条件に応じて対応。
-              出荷する日だけでなく、受付・作業・連絡の流れまで、お客様と一緒に整えます。
-            </p>
-            <details className="group mt-7 rounded-2xl border border-black/10 bg-white p-5 sm:p-7">
-              <summary className="flex min-h-[44px] cursor-pointer list-none items-center justify-between gap-4 text-sm font-bold text-amber-800 [&::-webkit-details-marker]:hidden">受付・作業・連絡の進め方を確認する<span aria-hidden="true" className="text-xl group-open:rotate-45">+</span></summary>
-            <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-              {[
-                { title: "必要な出荷日を確認", text: "平日・土日祝を含め、出荷を希望する日や頻度を伺います。" },
-                { title: "受付と出荷の流れを設計", text: "商品・件数・作業内容に合わせ、発送指示の方法や受付締切を取り決めます。" },
-                { title: "セット組みと確認手順", text: "同梱物や梱包方法を確認し、事前準備を含めた作業の進め方を決めます。" },
-                { title: "連絡・繁忙期対応を相談", text: "日々の連絡方法と、出荷が増える時期・数量を確認し、対応体制を調整します。" },
-              ].map((item, index) => (
-                <article key={item.title} className="rounded-2xl border border-black/10 bg-white p-6">
-                  <p className="text-xs font-bold tracking-[0.18em] text-amber-700">0{index + 1}</p>
-                  <h3 className="mt-4 text-base font-bold">{item.title}</h3>
-                  <p className="mt-3 text-sm leading-7 text-zinc-600">{item.text}</p>
-                </article>
-              ))}
-            </div>
-            </details>
-            <p className="mt-5 text-xs leading-6 text-zinc-500">※即日出荷・365日対応の条件は、案件ごとに事前に取り決めます。</p>
-            <Link href="/company#contact" className={`${button} mt-6`}>土日祝の出荷・運用を相談する →</Link>
           </div>
         </section>
 
