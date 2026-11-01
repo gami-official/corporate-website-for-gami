@@ -66,6 +66,18 @@ const inquiryTypes = [
   },
 ]
 
+const cardboardFields = [
+  { name: "box_size", ja: "3辺合計サイズ（cm）", en: "Total of three sides (cm)", placeholderJa: "例：60cm／80cm／100cm", placeholderEn: "e.g. 60 cm / 80 cm / 100 cm" },
+  { name: "box_dimensions", ja: "縦・横・高さ（分かれば）", en: "Dimensions, if known", placeholderJa: "例：外寸 300×200×100mm", placeholderEn: "e.g. external 300 × 200 × 100 mm" },
+  { name: "box_strength", ja: "硬さ・厚さ・材質", en: "Strength, thickness and material", placeholderJa: "例：硬め／Aフルート／不明", placeholderEn: "e.g. strong / A flute / unknown" },
+  { name: "box_color", ja: "色・印刷の有無", en: "Color and printing", placeholderJa: "例：茶色・印刷なし／白色", placeholderEn: "e.g. brown, unprinted / white" },
+  { name: "box_price", ja: "現在の購入単価（円／枚）", en: "Current unit price (JPY per box)", placeholderJa: "例：1枚45円（税込・送料込み）", placeholderEn: "e.g. JPY 45, including tax and delivery" },
+  { name: "box_lot", ja: "ロット数・1回の購入枚数", en: "Lot size / quantity per order", placeholderJa: "例：1回500枚、月2回購入", placeholderEn: "e.g. 500 boxes per order, twice a month" },
+  { name: "box_url", ja: "現在の商品・購入先URL", en: "Current product or supplier URL", placeholderJa: "https://example.com/product", placeholderEn: "https://example.com/product" },
+  { name: "box_destination", ja: "納品先（府県・市区町村）", en: "Delivery location", placeholderJa: "例：大阪府守口市", placeholderEn: "e.g. Moriguchi, Osaka" },
+  { name: "box_date", ja: "希望納期", en: "Required delivery date", placeholderJa: "例：来月上旬／未定", placeholderEn: "e.g. early next month / undecided" }
+]
+
 const inputClass =
   "w-full min-w-0 rounded-xl border border-black/15 bg-white px-4 py-3 text-base text-black outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20"
 
@@ -174,13 +186,22 @@ export function ContactForm({
     const form = event.currentTarget
     const formData = new FormData(form)
 
+    const notes = String(formData.get("message") || "").trim()
+    const cardboardDetails = isCardboardQuote
+      ? cardboardFields.map((field) => {
+          const value = String(formData.get(field.name) || "").trim()
+          return `${field[language]}: ${value || (language === "ja" ? "未記入" : "Not provided")}`
+        }).join("\n")
+      : ""
     const payload = {
       name: String(formData.get("name") || "").trim(),
       company: String(formData.get("company") || "").trim(),
       email: String(formData.get("email") || "").trim(),
       phone: String(formData.get("phone") || "").trim(),
       type: String(formData.get("type") || ""),
-      message: String(formData.get("message") || "").trim(),
+      message: isCardboardQuote
+        ? `${language === "ja" ? "【ダンボール単体のお見積り】" : "[Cardboard box quote]"}\n${cardboardDetails}\n\n${language === "ja" ? "その他のご要望" : "Additional notes"}: ${notes || (language === "ja" ? "なし" : "None")}`
+        : notes,
     }
 
     if (
@@ -416,11 +437,29 @@ export function ContactForm({
           </div>
 
           {isCardboardQuote && (
-            <p className="rounded-xl bg-amber-50 p-4 text-sm leading-7 text-zinc-700">
-              {language === "ja"
-                ? "ダンボールだけのご購入も承ります。サイズ・数量・納品先・希望納期を分かる範囲でお知らせください。"
-                : "Box-only orders are welcome. Please share the dimensions, quantity, delivery location and required delivery date, if available."}
-            </p>
+            <div className="space-y-5 rounded-2xl border border-amber-200 bg-amber-50/50 p-4 sm:p-5">
+              <div>
+                <h4 className="text-base font-bold leading-7">
+                  {language === "ja" ? "価格に自信。ダンボールだけのお見積りも歓迎します。" : "Competitive prices. Box-only quote requests are welcome."}
+                </h4>
+                <p className="mt-2 text-sm font-bold leading-7 text-amber-900">
+                  {language === "ja" ? "対象エリア：大阪・近隣府県" : "Service area: Osaka and neighboring prefectures"}
+                </p>
+                <p className="mt-2 text-sm leading-7 text-zinc-600">
+                  {language === "ja" ? "以下はすべて任意です。現在お使いの仕様・価格を分かる範囲でお知らせください。3辺合計は縦＋横＋高さです。購入実績がなくてもご相談いただけます。納品先・数量に応じて配送可否を確認します。" : "All fields below are optional. Share your current specifications and prices where available. The total size is length + width + height. New purchases are also welcome. Delivery availability depends on location and quantity."}
+                </p>
+              </div>
+              <div className="grid min-w-0 gap-5 sm:grid-cols-2">
+                {cardboardFields.map((field) => (
+                  <div key={field.name} className={field.name === "box_url" ? "min-w-0 sm:col-span-2" : "min-w-0"}>
+                    <label htmlFor={`${id}-${field.name}`} className="mb-2 block text-sm font-semibold">
+                      {field[language]}{language === "ja" ? "（任意）" : " (optional)"}
+                    </label>
+                    <input id={`${id}-${field.name}`} name={field.name} type={field.name === "box_url" ? "url" : "text"} maxLength={field.name === "box_url" ? 1500 : 200} className={inputClass} placeholder={language === "ja" ? field.placeholderJa : field.placeholderEn} />
+                  </div>
+                ))}
+              </div>
+            </div>
           )}
 
           <div>
@@ -428,17 +467,17 @@ export function ContactForm({
               htmlFor={`${id}-message`}
               className="mb-2 block text-sm font-semibold"
             >
-              {t.message}
+              {isCardboardQuote ? (language === "ja" ? "その他のご要望（任意）" : "Additional notes (optional)") : t.message}
             </label>
 
             <textarea
               id={`${id}-message`}
               name="message"
-              required
+              required={!isCardboardQuote}
               rows={6}
               maxLength={10000}
               className={`${inputClass} resize-y leading-7`}
-              placeholder={messagePlaceholder}
+              placeholder={isCardboardQuote ? (language === "ja" ? "用途や印刷のご希望、現在お困りのことなどがあればお知らせください。" : "Tell us about intended use, printing or other requirements.") : messagePlaceholder}
             />
           </div>
 
