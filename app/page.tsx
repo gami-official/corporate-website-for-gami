@@ -254,10 +254,10 @@ const photos = [
     caption: "倉庫外観",
   },
   {
-    src: "/images/warehouse-moriguchi-inside.jpg",
-    alt: "GAMI OSAKA BASEの倉庫内観",
+    src: "/images/warehouse-interior-nesting.png",
+    alt: "ネステナーのある倉庫内観と茶色の中二階を表現した運用イメージ",
     english: "INTERIOR",
-    caption: "倉庫内観",
+    caption: "倉庫内観（運用イメージ）",
   },
   {
     src: "/images/warehouse-operations-clean.png",
@@ -270,12 +270,6 @@ const photos = [
     alt: "商品保管スペース",
     english: "STORAGE",
     caption: "商品保管",
-  },
-  {
-    src: "/images/warehouse-overview-clean.png",
-    alt: "倉庫の通路と保管スペース",
-    english: "WAREHOUSE",
-    caption: "保管スペース",
   },
   {
     src: "/images/warehouse-processing-clean.png",
@@ -655,10 +649,13 @@ export default function HomePage() {
               <p className="mt-3 text-xs leading-6 text-zinc-500">配車可否・料金は、空車状況、車両条件、日時、経路、積み降ろし作業などを確認してご案内します。</p>
               <Link href="/company?inquiry=transport#contact" className={`${button} mt-6`}>チャーター便・輸送費を見積もる →</Link>
             </div>
-            <div className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
+            <div className="overflow-hidden rounded-2xl border border-amber-200 bg-amber-50">
+              <figure><img src="/images/charter-transport.png" alt="軽貨物・中型トラック・大型トラックによる輸送手配のイメージ" width={1536} height={1024} loading="lazy" className="aspect-[16/9] w-full object-cover" /><figcaption className="px-6 pt-3 text-xs leading-6 text-zinc-500">輸送手配のイメージです。掲載車両は自社保有車両を示すものではありません。</figcaption></figure>
+              <div className="p-6 sm:p-8">
               <h3 className="text-xl font-bold">まずは、この条件をお知らせください。</h3>
               <ul className="mt-5 space-y-3 text-sm leading-7">{["集荷先・納品先（市区町村まででも可）", "集荷日・納品日・時間帯", "荷物の種類・個数・寸法・総重量", "希望車格・車両設備（未定でも可）", "手積み・フォークリフトなどの作業条件", "現在の運賃・希望予算（任意）"].map(item=><li key={item}>✓ {item}</li>)}</ul>
               <p className="mt-5 text-xs leading-6 text-zinc-600">運賃は税込・税別、高速代や作業費の込み・別も分かると、より比較しやすくなります。</p>
+              </div>
             </div>
           </div>
         </section>
