@@ -1,4 +1,3 @@
-
 import type { Metadata } from "next"
 import Link from "next/link"
 import { Header } from "@/components/header"
@@ -46,7 +45,7 @@ const warehouseInfo = [
   },
   {
     label: "対応業務",
-    value: "保管・検品・加工・梱包・発送",
+    value: "保管・検品・教材丁合・加工・梱包・発送",
   },
   {
     label: "出荷対応",
@@ -100,16 +99,28 @@ const photos = [
     caption: "倉庫内観",
   },
   {
-    src: "/images/warehouse-03.png",
+    src: "/images/warehouse-operations-clean.png",
     alt: "物流作業スペース",
     english: "OPERATIONS",
     caption: "作業スペース",
   },
   {
-    src: "/images/warehouse-05.png",
+    src: "/images/warehouse-dispatch-clean.png",
     alt: "商品保管スペース",
     english: "STORAGE",
     caption: "商品保管",
+  },
+  {
+    src: "/images/warehouse-overview-clean.png",
+    alt: "倉庫の通路と保管スペース",
+    english: "WAREHOUSE",
+    caption: "保管スペース",
+  },
+  {
+    src: "/images/warehouse-processing-clean.png",
+    alt: "箱組立・流通加工の作業風景",
+    english: "PROCESSING",
+    caption: "箱組立・流通加工",
   },
 ]
 
@@ -128,6 +139,11 @@ const uses = [
     number: "03",
     title: "一時保管・作業拠点として",
     text: "キャンペーン、繁忙期、スポット案件などに伴う一時保管や検品・セット組み・封入作業もご相談いただけます。",
+  },
+  {
+    number: "04",
+    title: "教材・資料の発送拠点として",
+    text: "印刷会社から届く教材やパンフレットを保管し、講座別の丁合・セット組み、受講者への発送、教室への小分け発送をご相談いただけます。",
   },
 ]
 
@@ -219,7 +235,7 @@ export default function WarehousePage() {
               それぞれの役割を活かして、案件に適した体制を組み立てます。
             </p>
 
-            <div className="mt-9 grid gap-4 md:grid-cols-3">
+            <div className="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {network.map((item) => (
                 <article
                   key={item.english}
@@ -361,7 +377,7 @@ export default function WarehousePage() {
                         width={640}
                         height={480}
                         loading="lazy"
-                        className="h-full w-full object-cover object-top"
+                        className="h-full w-full object-cover object-center"
                       />
                     </div>
 
@@ -376,6 +392,26 @@ export default function WarehousePage() {
                     </figcaption>
                   </figure>
                 ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* DELIVERY ADVANTAGE */}
+        <section id="delivery" aria-labelledby="delivery-heading" className="scroll-mt-24 bg-amber-50 py-16 sm:py-24">
+          <div className={`${container} grid gap-8 lg:grid-cols-2 lg:items-center`}>
+            <div>
+              <p className={goldLabel}>OSAKA DISTRIBUTION ADVANTAGE</p>
+              <h2 id="delivery-heading" className={heading}>大阪から、<br />届けるまでの時間を短く。</h2>
+              <p className="mt-5 text-sm leading-8 text-zinc-700">九州地方から関東地方までの幅広いエリアへ、基本的に翌日のお届けが可能です。調達先と届け先に合わせて、作業場所と発送拠点を見直します。</p>
+              <p className="mt-3 text-xs leading-6 text-zinc-600">※お届け日数は配送先・配送サービスにより異なります。道路状況、気象条件、繁忙期などにより遅延する場合があります。即日出荷の条件は事前に取り決めます。</p>
+            </div>
+            <div className="rounded-2xl border border-amber-200 bg-white p-6 sm:p-8">
+              <h3 className="text-xl font-bold leading-9">拠点と資材、両方から物流を見直す。</h3>
+              <p className="mt-4 text-sm leading-8 text-zinc-600">保管・検品・セット組み・出荷を大阪にまとめることで、商品が届くまでの流れを整えます。近隣の提携ダンボール会社との連携を活かし、梱包資材のコストもご相談いただけます。</p>
+              <div className="mt-5 flex flex-wrap gap-3">
+                <Link href="/logistics#case-studies" className="inline-flex min-h-[44px] items-center text-sm font-bold text-amber-800 underline underline-offset-4">物流改善の事例を見る →</Link>
+                <Link href="/logistics#cardboard" className="inline-flex min-h-[44px] items-center text-sm font-bold text-amber-800 underline underline-offset-4">ダンボール見積りについて →</Link>
               </div>
             </div>
           </div>
@@ -400,7 +436,7 @@ export default function WarehousePage() {
               さまざまな活用方法をご相談いただけます。
             </p>
 
-            <div className="mt-9 grid gap-4 md:grid-cols-3">
+            <div className="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {uses.map((item) => (
                 <article
                   key={item.number}
