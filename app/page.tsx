@@ -423,7 +423,7 @@ export default function HomePage() {
                 <ol className="mt-6 space-y-3">{[{title:"発送指示を受ける",text:"商品・件数・受付締切を事前に取り決めます。"},{title:"大阪で即日出荷",text:"取り決めた条件に沿って、検品・セット組み・梱包から出荷まで対応。"},{title:"九州〜関東の対象地域へ翌日配送",text:"ご利用の配送サービス・お届け先に合わせて手配します。"}].map((item,i)=><li key={item.title} className="flex gap-3 rounded-xl border border-amber-200 bg-white p-4"><span className="text-sm font-bold text-amber-700">0{i+1}</span><div><h3 className="text-sm font-bold leading-6">{item.title}</h3><p className="mt-1 text-xs leading-6 text-zinc-600">{item.text}</p></div></li>)}</ol>
                 <Link href="/company#contact" className={`${button} mt-6`}>配送日数・即日出荷について相談する →</Link>
               </div>
-              <figure className="min-w-0"><img src="/images/osaka-leadtime-map-ja.png" alt="大阪から九州・中国・四国・中部・関東へ向かう配送ルートの概略図" width={2400} height={2000} loading="lazy" className="h-auto w-full rounded-2xl border border-amber-200" /><figcaption className="mt-3 text-xs leading-6 text-zinc-600">配送ルートの概略です。翌日配送はすべての地域・荷物に適用されるものではありません。配送会社・宛先・受付締切・離島等の条件により異なり、道路状況・天候・繁忙期などで遅延する場合があります。</figcaption></figure>
+              <figure className="min-w-0"><img src="/images/osaka-leadtime-map-ja-v2.png" alt="大阪から九州・中国・四国・中部・関東へ向かう配送ルートの概略図" width={2400} height={2000} loading="lazy" className="h-auto w-full rounded-2xl border border-amber-200" /><figcaption className="mt-3 text-xs leading-6 text-zinc-600">配送ルートの概略です。翌日配送はすべての地域・荷物に適用されるものではありません。配送会社・宛先・受付締切・離島等の条件により異なり、道路状況・天候・繁忙期などで遅延する場合があります。</figcaption></figure>
             </div>
           </div>
         </section>
