@@ -6,102 +6,64 @@ import { Footer } from "@/components/footer"
 import { MetricsBar } from "@/components/metrics-bar"
 
 export const metadata: Metadata = {
-  title:
-    "365-Day Japan Fulfillment & 3PL | Osaka Warehouse | GAMI",
-  description:
-    "GAMI provides fulfillment and 3PL services in Japan from its own warehouse in Osaka, supported by logistics partners in Fukuoka and Kobe. Warehousing, inspection, labeling, kitting, packing and nationwide shipping for international brands.",
-  keywords: [
-    "Japan fulfillment",
-    "3PL Japan",
-    "Japan warehouse",
-    "Osaka warehouse",
-    "warehousing Japan",
-    "fulfillment center Japan",
-    "Japan logistics partner",
-    "shipping in Japan",
-    "Japan market entry logistics",
-    "ecommerce fulfillment Japan",
-  ],
-  alternates: {
-    canonical: "https://www.gamigami.net/international",
+  title: { absolute: "Japan Fulfillment & 3PL | Osaka & 365-Day Dispatch | GAMI" },
+  description: "Osaka-based warehousing, fulfillment and 365-day dispatch by arrangement. Inspection, cosmetics kitting, course materials, domestic shipping and nationwide charter transport for international brands.",
+  alternates: { canonical: "https://www.gamigami.net/international",
+    languages: { ja: "https://www.gamigami.net/", en: "https://www.gamigami.net/international", "x-default": "https://www.gamigami.net/" },
   },
-  openGraph: {
-    title: "Japan Fulfillment & 3PL | GAMI",
-    description:
-      "Osaka-based warehousing, fulfillment, inspection, packing and nationwide shipping for international brands.",
-    url: "https://www.gamigami.net/international",
-    siteName: "GAMI",
-    locale: "en_US",
-    type: "website",
-    images: [
-      {
-        url: "https://www.gamigami.net/images/warehouse-moriguchi-inside.jpg",
-        width: 1200,
-        height: 630,
-        alt: "GAMI fulfillment warehouse in Moriguchi, Osaka, Japan",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Japan Fulfillment & 3PL | GAMI",
-    description:
-      "Warehousing, fulfillment and nationwide shipping from Osaka, Japan.",
-    images: [
-      "https://www.gamigami.net/images/warehouse-moriguchi-inside.jpg",
-    ],
-  },
+  openGraph: { type: "website", locale: "en_US", url: "https://www.gamigami.net/international", siteName: "GAMI", title: "Japan Fulfillment & 3PL | Osaka & 365-Day Dispatch | GAMI", description: "Osaka-based warehousing, fulfillment and 365-day dispatch by arrangement. Inspection, cosmetics kitting, course materials, domestic shipping and nationwide charter transport for international brands.", images: [{ url: "/ogp.jpg", width: 1200, height: 630, alt: "GAMI Japan Fulfillment & 3PL" }] },
+  twitter: { card: "summary_large_image", title: "Japan Fulfillment & 3PL | Osaka & 365-Day Dispatch | GAMI", description: "Osaka-based warehousing, fulfillment and 365-day dispatch by arrangement. Inspection, cosmetics kitting, course materials, domestic shipping and nationwide charter transport for international brands.", images: ["/ogp.jpg"] },
 }
 
 const services = [
   {
     number: "01",
-    image: "warehouse-interior-nesting.png",
+    image: "seo-warehouse-interior-nesting.webp",
     title: "Warehousing",
     body:
       "Flexible inventory storage at our own warehouse in Osaka, supporting international brands entering or expanding in Japan.",
   },
   {
     number: "02",
-    image: "section-365-fulfillment.png",
+    image: "seo-section-365-fulfillment.webp",
     title: "Fulfillment",
     body:
       "Order handling, picking, packing and shipping for day-to-day ecommerce and business fulfillment operations.",
   },
   {
     number: "03",
-    image: "case-inspection.png",
+    image: "seo-case-inspection.webp",
     title: "Inspection & Labeling",
     body:
       "Product inspection, labeling, repacking, inserts, kitting and detailed value-added logistics services.",
   },
   {
     number: "04",
-    image: "section-japan-fulfillment.png",
+    image: "seo-section-japan-fulfillment.webp",
     title: "Nationwide Shipping",
     body:
       "Domestic shipping throughout Japan, coordinated from our Osaka base and supported by our logistics network.",
   },
   {
     number: "05",
-    image: "section-education-kitting.png",
+    image: "seo-section-education-kitting.webp",
     title: "Educational Materials",
     body: "Collating course materials, assembling kits, adding inserts and shipping to learners or distributing brochures in specified quantities to schools and learning centers.",
   },
   {
     number: "06",
-    image: "section-cardboard-supply.png",
+    image: "seo-section-cardboard-supply.webp",
     title: "Packaging Materials",
     body: "Competitive cardboard box pricing through a nearby packaging partner. Box-only orders are welcome for delivery in Osaka and neighboring prefectures. Share your specifications, current unit price and order quantity for a comparable quote.",
   },  {
     number: "07",
-    image: "case-inspection.png",
+    image: "seo-case-inspection.webp",
     title: "Cosmetics & Beauty Products",
     body: "Container and product inspection, kitting, gift sets, packing and domestic shipping. Our Osaka facility holds a cosmetics manufacturing license; we confirm the requested work against its permitted scope.",
   },
   {
     number: "08",
-    image: "charter-transport.png",
+    image: "seo-charter-transport.webp",
     title: "Nationwide Charter Transport",
     body: "Charter transport across Japan through our carrier network, from light vehicles to large trucks. Pickup, delivery, cargo and vehicle requirements are reviewed before quotation.",
   },
@@ -112,7 +74,7 @@ const caseStudies = [
   {
     "id": "apparel",
     "industry": "Apparel Business",
-    "image": "/images/case-apparel.png",
+    "image": "/images/seo-case-apparel.webp",
     "alt": "Illustration of caps and apparel being packed",
     "title": "From two days to next-day delivery.",
     "summary": "Moving sorting and dispatch to Osaka, alongside same-day dispatch, shortened delivery times for eligible destinations.",
@@ -124,7 +86,7 @@ const caseStudies = [
   {
     "id": "distribution",
     "industry": "Kyushu-Based Business",
-    "image": "/images/case-distribution.png",
+    "image": "/images/seo-case-distribution.webp",
     "alt": "Conceptual image of regional distribution from Osaka",
     "title": "A business in Kyushu. A logistics base in Osaka.",
     "summary": "A dispatch location closer to key destinations helped resolve delivery lead-time challenges.",
@@ -136,7 +98,7 @@ const caseStudies = [
   {
     "id": "rice",
     "industry": "Food Business Handling Regional Donation Gifts",
-    "image": "/images/case-rice.png",
+    "image": "/images/seo-case-rice.webp",
     "alt": "Illustration of rice and shipping cartons",
     "title": "Delivering rice gifts sooner, with less uncertainty.",
     "summary": "Processing and dispatch in Osaka helped gifts reach recipients sooner and reduced the need for delivery-status inquiries.",
@@ -148,7 +110,7 @@ const caseStudies = [
   {
     "id": "beauty",
     "industry": "Beauty Products Business",
-    "image": "/images/case-beauty.png",
+    "image": "/images/seo-case-beauty.webp",
     "alt": "Illustration of beauty products being carefully packed",
     "title": "More than 365-day availability.",
     "summary": "Responsive communication and practical suggestions support greater operational flexibility.",
@@ -160,7 +122,7 @@ const caseStudies = [
   {
     "id": "inspection",
     "industry": "Cosmetics Manufacturer",
-    "image": "/images/case-inspection.png",
+    "image": "/images/seo-case-inspection.webp",
     "alt": "Illustration of cosmetic container inspection",
     "title": "An urgent inspection. A deadline met.",
     "summary": "Urgent container inspection was completed in time; inspection work now continues in Osaka and Kyushu.",
@@ -318,6 +280,7 @@ const faq = [
 const organizationStructuredData = {
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": "https://www.gamigami.net/#organization",
   name: "GAMI Co., Ltd.",
   url: "https://www.gamigami.net",
   description:
@@ -345,7 +308,7 @@ const faqStructuredData = {
 }
 
 function SectionImage({ src, alt, dark = false }: { src: string; alt: string; dark?: boolean }) {
-  return <figure className="mt-7 overflow-hidden rounded-2xl"><img src={`/images/${src}`} alt={alt} width={1536} height={1024} loading="lazy" className="aspect-[16/9] w-full object-cover" /><figcaption className={`pt-2 text-[11px] leading-6 ${dark ? "text-white/60" : "text-zinc-500"}`}>Service illustration.</figcaption></figure>
+  return <figure className="mt-7 overflow-hidden rounded-2xl"><img decoding="async" src={`/images/${src}`} alt={alt} width={1536} height={1024} loading="lazy" className="aspect-[16/9] w-full object-cover" /><figcaption className={`pt-2 text-[11px] leading-6 ${dark ? "text-white/60" : "text-zinc-500"}`}>Service illustration.</figcaption></figure>
 }
 
 export default function InternationalPage() {
@@ -442,7 +405,7 @@ export default function InternationalPage() {
           <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-12">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-800">365-Day Fulfillment</p>
             <h2 id="operations-365-title" className="mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-5xl">Your business keeps moving.<br />Your fulfillment should, too.</h2>
-            <SectionImage src="section-365-fulfillment.png" alt="Order preparation and dispatch throughout the year" />
+            <SectionImage src="seo-section-365-fulfillment.webp" alt="Order preparation and dispatch throughout the year" />
             <p className="mt-5 max-w-3xl text-sm leading-8 text-zinc-600 sm:text-base">Weekend orders and holiday demand should be part of your fulfillment plan. GAMI offers 365-day operating arrangements, including weekends, public holidays and the New Year period, with the dispatch schedule and working conditions agreed in advance.</p>
             <div className="mt-8 grid gap-4 md:grid-cols-3">{[
               ["Reduce waits for the next business day", "Coordinate dispatch days around your ecommerce, course materials or beauty product business."],
@@ -479,7 +442,7 @@ export default function InternationalPage() {
               </div>
 
               <div>
-                <SectionImage src="section-japan-fulfillment.png" alt="Receiving inventory and preparing domestic fulfillment in Japan" />
+                <SectionImage src="seo-section-japan-fulfillment.webp" alt="Receiving inventory and preparing domestic fulfillment in Japan" />
                 <p className="text-[15px] leading-8 text-zinc-600 sm:text-base sm:leading-9">
                   Expanding into Japan should not require
                   building your own logistics operation
@@ -528,7 +491,7 @@ export default function InternationalPage() {
                   key={service.number}
                   className="rounded-[1.75rem] border border-zinc-200 bg-white p-6 shadow-sm sm:p-7"
                 >
-                  <img src={`/images/${service.image}`} alt={`${service.title} illustration`} width={480} height={320} loading="lazy" className="mb-5 aspect-[3/2] w-full rounded-2xl object-cover" />
+                  <img decoding="async" src={`/images/${service.image}`} alt={`${service.title} illustration`} width={480} height={320} loading="lazy" className="mb-5 aspect-[3/2] w-full rounded-2xl object-cover" />
                   <p className="text-sm font-bold text-amber-600">
                     {service.number}
                   </p>
@@ -564,7 +527,7 @@ export default function InternationalPage() {
                   on the ground in Japan.
                 </h2>
 
-                <SectionImage src="section-logistics-team.png" alt="Hands-on coordination between a customer and logistics team" dark />
+                <SectionImage src="seo-section-logistics-team.webp" alt="Hands-on coordination between a customer and logistics team" dark />
                 <p className="mt-6 max-w-lg text-sm leading-8 text-white/65 sm:text-base">
                   Our Osaka warehouse serves as the
                   operational foundation for flexible
@@ -597,7 +560,7 @@ export default function InternationalPage() {
         <section id="educational-logistics" aria-labelledby="educational-title" className="scroll-mt-24 bg-zinc-950 py-16 text-white sm:py-24">
           <div className="mx-auto grid max-w-7xl gap-8 px-5 sm:px-6 lg:grid-cols-2 lg:items-center lg:px-12">
             <div><p className="text-xs font-bold uppercase tracking-widest text-amber-300">Educational Materials</p><h2 id="educational-title" className="mt-4 text-3xl font-bold leading-tight sm:text-4xl">Focus on your classes.<br />We prepare and ship the materials.</h2><p className="mt-5 text-sm leading-8 text-white/75">From course workbooks to brochures, we can coordinate storage, collation, folded inserts, kitting and packing. Ship to individual learners or distribute specified quantities to schools and learning centers.</p><Link href="/international/contact?inquiry=education" className="mt-6 inline-flex min-h-12 items-center rounded-full bg-amber-500 px-6 py-3 text-sm font-bold text-zinc-950 hover:bg-amber-400">Discuss Educational Materials →</Link></div>
-            <div><SectionImage src="section-education-kitting.png" alt="Collating course workbooks and preparing learning kits" dark /></div>
+            <div><SectionImage src="seo-section-education-kitting.webp" alt="Collating course workbooks and preparing learning kits" dark /></div>
           </div>
         </section>
 
@@ -608,7 +571,7 @@ export default function InternationalPage() {
             <h2 id="specialist-services-title" className="mt-4 text-3xl font-bold tracking-tight sm:text-5xl">Detailed product handling.<br />Transport across Japan.</h2>
             <div className="mt-9 grid gap-6 lg:grid-cols-2">
               <article id="beauty-logistics" className="scroll-mt-24 rounded-3xl border border-zinc-200 bg-zinc-50 p-6 sm:p-8">
-<SectionImage src="case-inspection.png" alt="Cosmetic container inspection and kitting" />
+<SectionImage src="seo-case-inspection.webp" alt="Cosmetic container inspection and kitting" />
                 <p className="text-xs font-bold uppercase tracking-widest text-amber-700">Cosmetics &amp; Beauty</p>
                 <h3 className="mt-4 text-2xl font-bold leading-tight">Inspection, kitting and dispatch for beauty products.</h3>
                 <p className="mt-4 text-sm leading-8 text-zinc-600">Our Osaka facility holds cosmetics manufacturing license 27CZ201072. We support cosmetics and beauty businesses with container and product inspection, quantity and SKU checks, set assembly, gift kits, packing and domestic shipping.</p>
@@ -616,7 +579,7 @@ export default function InternationalPage() {
                 <Link href="/international/contact?inquiry=beauty" className="mt-6 inline-flex min-h-12 items-center rounded-full bg-amber-500 px-6 py-3 text-sm font-bold text-zinc-950 hover:bg-amber-400">Discuss Cosmetics &amp; Beauty Work →</Link>
               </article>
               <article id="charter-transport" className="scroll-mt-24 rounded-3xl bg-zinc-950 p-6 text-white sm:p-8">
-                <figure className="mb-6 overflow-hidden rounded-2xl"><Image src="/images/charter-transport.png" alt="Illustration of light, medium and large freight vehicles" width={1536} height={1024} sizes="(max-width: 1024px) 100vw, 50vw" className="aspect-[16/9] w-full object-cover" /><figcaption className="pt-2 text-xs leading-6 text-white/60">Transport illustration; vehicles shown are not a GAMI-owned fleet.</figcaption></figure>
+                <figure className="mb-6 overflow-hidden rounded-2xl"><Image src="/images/seo-charter-transport.webp" alt="Illustration of light, medium and large freight vehicles" width={1536} height={1024} sizes="(max-width: 1024px) 100vw, 50vw" className="aspect-[16/9] w-full object-cover" /><figcaption className="pt-2 text-xs leading-6 text-white/60">Transport illustration; vehicles shown are not a GAMI-owned fleet.</figcaption></figure>
                 <p className="text-xs font-bold uppercase tracking-widest text-amber-300">Nationwide Charter Transport</p>
                 <h3 className="mt-4 text-2xl font-bold leading-tight">The right vehicle for your shipment, across Japan.</h3>
                 <p className="mt-4 text-sm leading-8 text-white/75">Our Type I Freight Forwarding Business registration and nationwide carrier network support charter transport arrangements, from light vehicles to 2-ton, 4-ton and large trucks. One-off and regular transport requests are welcome.</p>
@@ -630,7 +593,7 @@ export default function InternationalPage() {
 
         <section id="packaging-materials" aria-labelledby="packaging-title" className="scroll-mt-24 bg-amber-50 py-16 sm:py-24">
           <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-12">
-<SectionImage src="section-cardboard-supply.png" alt="Plain corrugated cartons in different sizes and specifications" />
+<SectionImage src="seo-section-cardboard-supply.webp" alt="Plain corrugated cartons in different sizes and specifications" />
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-800">Competitive Cardboard Box Pricing</p>
             <h2 id="packaging-title" className="mt-4 text-3xl font-bold tracking-tight sm:text-5xl">Lower packaging costs.<br />Box-only orders welcome.</h2>
             <p className="mt-5 max-w-3xl text-sm leading-8 text-zinc-600">Our nearby cardboard supplier helps us offer competitive prices. Share the total of three dimensions, strength, color and lot size. A current unit price and product or supplier URL can help us compare specifications, if available.</p>
@@ -764,7 +727,7 @@ export default function InternationalPage() {
               <article className="overflow-hidden rounded-[1.75rem] border border-zinc-200 bg-white shadow-sm">
                 <div className="flex h-80 items-center justify-center bg-white p-5 sm:h-96">
                   <Image
-                    src="/images/team-kazuhiro.jpg"
+                    src="/images/seo-team-kazuhiro.webp"
                     alt="Pixel-art portrait of Kazuhiro Fuchigami"
                     width={1024}
                     height={1024}
@@ -798,7 +761,7 @@ export default function InternationalPage() {
               <article className="overflow-hidden rounded-[1.75rem] border border-zinc-200 bg-white shadow-sm">
                 <div className="flex h-80 items-center justify-center bg-white p-5 sm:h-96">
                   <Image
-                    src="/images/team-mayu.png"
+                    src="/images/seo-team-mayu.webp"
                     alt="Pixel-art portrait of Mayu Kotera"
                     width={1024}
                     height={1536}
@@ -864,7 +827,7 @@ export default function InternationalPage() {
               <div className="grid lg:grid-cols-2">
                 <div className="relative min-h-64 sm:min-h-80">
                   <Image
-                    src="/images/warehouse-moriguchi.jpg"
+                    src="/images/seo-warehouse-moriguchi.webp"
                     alt="GAMI OSAKA BASE warehouse exterior in Moriguchi, Osaka"
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
@@ -1098,7 +1061,7 @@ export default function InternationalPage() {
 
                 <div>
                   <Image
-                    src="/images/warehouse-interior-nesting.png"
+                    src="/images/seo-warehouse-interior-nesting.webp"
                     alt="Edited illustration of warehouse operations with blue nesting racks and a brown mezzanine"
                     width={1024}
                     height={1024}
@@ -1133,10 +1096,10 @@ export default function InternationalPage() {
             <h2 id="gallery-heading" className="mt-4 text-3xl font-bold sm:text-5xl">A closer look at operations.</h2>
             <div className="mt-8 grid grid-cols-2 gap-4 lg:grid-cols-4">
               {[
-                ["warehouse-interior-nesting.png", "Warehouse Layout (Illustration)"],
-                ["warehouse-operations-clean.png", "Packing Workspace"],
-                ["warehouse-dispatch-clean.png", "Dispatch Preparation"],
-                ["warehouse-processing-clean.png", "Carton Assembly"],
+                ["seo-warehouse-interior-nesting.webp", "Warehouse Layout (Illustration)"],
+                ["seo-warehouse-operations-clean.webp", "Packing Workspace"],
+                ["seo-warehouse-dispatch-clean.webp", "Dispatch Preparation"],
+                ["seo-warehouse-processing-clean.webp", "Carton Assembly"],
               ].map(([filename,caption])=>(
                 <figure key={filename} className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
                   <Image src={`/images/${filename}`} alt={caption} width={900} height={675} sizes="(max-width: 1024px) 50vw, 25vw" className="aspect-[4/3] w-full object-cover" />
@@ -1204,7 +1167,7 @@ export default function InternationalPage() {
               starting from our Osaka operations.
             </p>
 
-            <div className="mx-auto max-w-3xl"><SectionImage src="section-logistics-consultation.png" alt="A practical conversation about packing and logistics requirements" dark /></div>
+            <div className="mx-auto max-w-3xl"><SectionImage src="seo-section-logistics-consultation.webp" alt="A practical conversation about packing and logistics requirements" dark /></div>
             <div className="mx-auto mt-9 max-w-sm">
               <Link
                 href="/international/contact"
