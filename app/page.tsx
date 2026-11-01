@@ -26,6 +26,7 @@ const button =
 const services = [
   {
     number: "01",
+    image: "warehouse-interior-nesting.png",
     english: "WAREHOUSING",
     title: "倉庫保管・在庫管理",
     text:
@@ -39,6 +40,7 @@ const services = [
   },
   {
     number: "02",
+    image: "section-365-fulfillment.png",
     english: "FULFILLMENT",
     title: "発送代行・EC物流",
     text:
@@ -52,6 +54,7 @@ const services = [
   },
   {
     number: "03",
+    image: "case-inspection.png",
     english: "INSPECTION",
     title: "商品検品・品質確認",
     text:
@@ -65,6 +68,7 @@ const services = [
   },
   {
     number: "04",
+    image: "section-logistics-team.png",
     english: "VALUE-ADDED SERVICES",
     title: "流通加工・セット組み",
     text:
@@ -78,6 +82,7 @@ const services = [
   },
   {
     number: "05",
+    image: "section-japan-fulfillment.png",
     english: "BULK OPERATIONS",
     title: "大量発送・スポット案件",
     text:
@@ -91,6 +96,7 @@ const services = [
   },
   {
     number: "06",
+    image: "charter-transport.png",
     english: "TRANSPORTATION",
     title: "全国チャーター・輸送手配",
     text:
@@ -104,6 +110,7 @@ const services = [
   },
   {
     number: "07",
+    image: "section-education-kitting.png",
     english: "EDUCATIONAL MATERIALS",
     title: "教材・パンフレットの発送",
     text: "学習塾・スクール・オンライン講座・セミナー運営会社様へ。教材やパンフレットの保管から丁合・折り・封入・セット組み・発送まで、必要な工程をまとめて承ります。",
@@ -111,6 +118,7 @@ const services = [
   },
   {
     number: "08",
+    image: "section-cardboard-supply.png",
     english: "CARDBOARD & PACKAGING",
     title: "ダンボール・梱包資材",
     text: "ダンボールの価格に自信があります。近隣の提携ダンボール会社との連携で、安くご提供できる体制を整えています。ダンボールのみのお見積り・ご購入も歓迎。現在の単価や仕様をもとに、コスト削減をご提案します。",
@@ -279,6 +287,10 @@ const photos = [
   },
 ]
 
+function SectionImage({ src, alt, dark = false }: { src: string; alt: string; dark?: boolean }) {
+  return <figure className="mt-7 overflow-hidden rounded-2xl"><img src={`/images/${src}`} alt={alt} width={1536} height={1024} loading="lazy" className="aspect-[16/9] w-full object-cover" /><figcaption className={`pt-2 text-[11px] leading-6 ${dark ? "text-white/60" : "text-zinc-500"}`}>サービスのイメージです。</figcaption></figure>
+}
+
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-[#f7f7f5] font-sans text-zinc-900">
@@ -414,6 +426,7 @@ export default function HomePage() {
               カレンダーに合わせて発送を待つ運用から、お客様の事業に合わせた出荷体制へ。
               小さな組織だからこそ、お客様と現場が近く、細かな調整や改善提案まで一緒に進めます。
             </p>
+            <SectionImage src="section-365-fulfillment.png" alt="365日対応の出荷作業イメージ" />
             <div className="mt-7 grid gap-4 sm:grid-cols-3">
               {[{title:"休日の注文も、次の出荷へ。",text:"平日までの出荷待ちを減らし、お客様に商品を届ける流れを整えます。"},{title:"年末年始も見据えた体制。",text:"必要な出荷日・件数・受付締切を事前に確認し、継続して任せられる運用をご提案します。"},{title:"365日対応と、細かな対応力。",text:"出荷するだけでなく、セット内容の確認や梱包の工夫、現場との連絡まで支えます。"}].map(item=><article key={item.title} className="rounded-2xl border border-amber-200 bg-amber-50 p-5"><h3 className="font-bold leading-7">{item.title}</h3><p className="mt-3 text-sm leading-7 text-zinc-600">{item.text}</p></article>)}
             </div>
@@ -452,6 +465,7 @@ export default function HomePage() {
               動けること。
             </h2>
 
+            <SectionImage src="section-logistics-team.png" alt="現場と連携しながら進める物流業務のイメージ" />
             <div className="mt-9 grid gap-4 sm:grid-cols-2">
               {strengths.map((item) => (
                 <article
@@ -480,12 +494,12 @@ export default function HomePage() {
           <div className={container}>
             <p className={label}>OUR SERVICES</p>
             <h2 id="services-heading" className={heading}>必要な物流業務を、<br />必要なだけ。</h2>
-            <p className="mt-5 max-w-3xl text-sm leading-8 text-zinc-600">保管から発送まで一括でのご依頼も、検品やセット組みなど一部の工程だけでも。必要なサービスを開いて、詳しい作業内容をご確認いただけます。</p>
+            <p className="mt-5 max-w-3xl text-sm leading-8 text-zinc-600">保管から発送まで一括でのご依頼も、検品やセット組みなど一部の工程だけでも。必要なサービスを開いて、詳しい作業内容をご確認いただけます。写真はサービスのイメージです。</p>
             <div className="mt-8 grid items-start gap-4 sm:grid-cols-2">
               {services.map(service=>(
                 <details id={`service-${service.number}`} key={service.number} className="group scroll-mt-24 rounded-2xl border border-black/10 bg-[#fafaf9] p-5 sm:p-6">
                   <summary className="flex min-h-[60px] cursor-pointer list-none items-center justify-between gap-4 [&::-webkit-details-marker]:hidden">
-                    <span className="min-w-0"><span className="block text-[10px] font-bold tracking-[0.14em] text-amber-700">{service.number} / {service.english}</span><span className="mt-3 block text-lg font-bold leading-7 sm:text-xl">{service.title}</span></span>
+                    <img src={`/images/${service.image}`} alt={`${service.title}のイメージ`} width={240} height={180} loading="lazy" className="h-20 w-24 shrink-0 rounded-xl object-cover sm:h-24 sm:w-32" /><span className="min-w-0 flex-1"><span className="block text-[10px] font-bold tracking-[0.14em] text-amber-700">{service.number} / {service.english}</span><span className="mt-3 block text-lg font-bold leading-7 sm:text-xl">{service.title}</span></span>
                     <span aria-hidden="true" className="shrink-0 text-2xl text-amber-700 group-open:rotate-45">+</span>
                   </summary>
                   <div className="mt-5 border-t border-black/10 pt-5">
@@ -511,9 +525,10 @@ export default function HomePage() {
                 学習塾・スクール・オンライン講座・セミナー運営会社様へ。
                 教材やパンフレットの保管、丁合・セット組み、梱包・発送まで、まとめてご相談いただけます。
               </p>
-              <Link href="/company#contact" className={`${button} mt-7`}>教材・パンフレットの発送を相談する →</Link>
+              <Link href="/company?inquiry=education#contact" className={`${button} mt-7`}>教材・パンフレットの発送を相談する →</Link>
             </div>
             <div className="grid gap-3 sm:grid-cols-2">
+              <div className="sm:col-span-2"><SectionImage src="section-education-kitting.png" alt="教材の丁合・セット組みと発送準備のイメージ" dark /></div>
               {[
                 { title: "教材の丁合・セット組み", text: "講座・コースごとに必要な教材を順番にまとめ、案内状なども同梱。" },
                 { title: "受講者への個別発送", text: "継続的な教材発送や、開講に合わせた一斉発送をご相談いただけます。" },
@@ -664,7 +679,8 @@ export default function HomePage() {
         <section id="cardboard" aria-labelledby="cardboard-heading" className="scroll-mt-24 bg-zinc-950 py-16 text-white sm:py-24">
           <div className={`${container} grid gap-8 lg:grid-cols-2 lg:items-center`}>
             <div>
-              <p className={labelDark}>PACKAGING COSTS</p>
+<SectionImage src="section-cardboard-supply.png" alt="サイズ・材質に合わせて選べるダンボール資材のイメージ" dark />
+              <p className={`${labelDark} mt-5`}>PACKAGING COSTS</p>
               <h2 id="cardboard-heading" className={heading}>ダンボールを、もっと安く。<br />価格に自信があります。</h2>
               <p className="mt-5 text-sm leading-8 text-white/75">近隣の提携ダンボール会社との連携により、安くご提供できる体制を整えています。今お使いのダンボールと、ぜひ価格を比べてください。ダンボールのみのご購入も承ります。</p>
             </div>
@@ -769,9 +785,9 @@ export default function HomePage() {
 
         {/* ENGLISH ENTRANCE */}
         <section className="bg-white py-12 sm:py-16">
-          <div className={`${container} flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between`}>
-            <div><p className={label}>JAPAN FULFILLMENT</p><h2 className="mt-3 text-xl font-bold sm:text-2xl">海外企業の日本国内物流も、ご相談ください。</h2><p lang="en" className="mt-3 text-sm leading-7 text-zinc-600">Warehousing, kitting, packing and domestic shipping in Japan.</p></div>
-            <Link href="/international" className={`${button} shrink-0`}>ENGLISH / Japan Fulfillment →</Link>
+          <div className={`${container} grid gap-7 lg:grid-cols-2 lg:items-center`}>
+            <div><SectionImage src="section-japan-fulfillment.png" alt="海外企業の商品の受入れから日本国内発送までを支える物流イメージ" /></div>
+            <div><p className={label}>JAPAN FULFILLMENT</p><h2 className="mt-3 text-xl font-bold sm:text-2xl">海外企業の日本国内物流も、ご相談ください。</h2><p lang="en" className="mt-3 text-sm leading-7 text-zinc-600">Warehousing, kitting, packing and domestic shipping in Japan.</p><Link href="/international" className={`${button} mt-6`}>ENGLISH / Japan Fulfillment →</Link></div>
           </div>
         </section>
 
@@ -779,6 +795,7 @@ export default function HomePage() {
         <section aria-labelledby="next-step-heading" className="bg-zinc-950 py-16 text-white sm:py-24">
           <div className={container}>
             <p className={labelDark}>LET’S TALK</p>
+            <div className="max-w-3xl"><SectionImage src="section-logistics-consultation.png" alt="商品や梱包条件を確認する物流相談のイメージ" dark /></div>
             <h2 id="next-step-heading" className={heading}>「これ頼める？」<br />その一言から、始めましょう。</h2>
             <p className="mt-5 max-w-2xl text-sm leading-8 text-white/75">商品・数量・希望時期を、分かる範囲でお知らせください。具体的な作業内容や費用は、お客様のご要望を伺いながら整理します。</p>
             <div className="mt-8 flex flex-wrap gap-3">
