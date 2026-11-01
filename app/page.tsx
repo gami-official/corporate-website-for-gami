@@ -452,7 +452,7 @@ export default function HomePage() {
               ))}
             </div>
             <div className="mt-6 flex flex-wrap gap-3">
-              <a href="#educational-logistics" className="inline-flex min-h-[44px] items-center rounded-full border border-amber-300 bg-amber-50 px-5 py-2 text-sm font-bold text-amber-900">教材・パンフレット発送はこちら →</a>
+              <a href="#educational-logistics" className="inline-flex min-h-[44px] items-center rounded-full border border-amber-300 bg-amber-50 px-5 py-2 text-sm font-bold text-amber-900">教材・パンフレット発送について詳しく見る →</a>
               <a href="#cardboard" className="inline-flex min-h-[44px] items-center rounded-full border border-amber-300 bg-amber-50 px-5 py-2 text-sm font-bold text-amber-900">ダンボールだけの見積りも歓迎 →</a>
             </div>
           </div>
