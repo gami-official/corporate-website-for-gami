@@ -357,6 +357,95 @@ export default function CompanyPage() {
           </Link>
         </section>
 
+        {/* TEAM */}
+        <section className="py-16 sm:py-24">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6">
+            <p className="text-[11px] font-bold tracking-[0.18em] text-amber-700">
+              OUR TEAM
+            </p>
+
+            <h2 className="mt-3 text-3xl font-bold leading-[1.45] tracking-tight sm:text-4xl">
+              顔が見える、
+              <br />
+              物流パートナー。
+            </h2>
+
+            <p className="mt-4 max-w-3xl text-sm leading-8 text-zinc-600">
+              大切な商品を安心してお任せいただけるように。
+              GAMIは一つひとつのご相談に、人が向き合います。
+            </p>
+
+            <div className="mt-8 grid gap-5 md:grid-cols-2">
+              <article className="overflow-hidden rounded-2xl border border-black/10 bg-white">
+                <div className="flex h-64 items-center justify-center bg-[#fafaf9] sm:h-80">
+                  <img
+                    src="/images/team-kazuhiro.jpg"
+                    alt="代表取締役社長 Kazuhiro Fuchigami"
+                    width={1024}
+                    height={1024}
+                    loading="lazy"
+                    className="h-full w-full object-contain"
+                  />
+                </div>
+
+                <div className="p-6">
+                  <p className="text-xs font-bold text-amber-700">
+                    代表取締役社長
+                  </p>
+
+                  <h3 className="mt-2 text-xl font-bold">
+                    Kazuhiro Fuchigami
+                  </h3>
+
+                  <p className="mt-4 text-base font-bold">
+                    小さなご相談にも、大きな責任を。
+                  </p>
+
+                  <p className="mt-3 text-sm leading-7 text-zinc-600">
+                    段ボール数箱の保管から大規模な発送案件まで、
+                    一つひとつのご依頼に真剣に向き合います。
+                    気軽に相談でき、安心して任せていただける会社を目指しています。
+                  </p>
+                </div>
+              </article>
+
+              <article className="overflow-hidden rounded-2xl border border-black/10 bg-white">
+                <div className="flex h-64 items-center justify-center bg-[#fafaf9] sm:h-80">
+                  <img
+                    src="/images/team-mayu.png"
+                    alt="専務取締役 Mayu Kotera"
+                    width={1024}
+                    height={1536}
+                    loading="lazy"
+                    className="h-full w-full object-contain"
+                  />
+                </div>
+
+                <div className="p-6">
+                  <p className="text-xs font-bold text-amber-700">
+                    専務取締役
+                  </p>
+
+                  <h3 className="mt-2 text-xl font-bold">
+                    Mayu Kotera
+                  </h3>
+
+                  <p className="mt-4 text-base font-bold">
+                    相談しやすさも、私たちのサービスです。
+                  </p>
+
+                  <p className="mt-3 text-sm leading-7 text-zinc-600">
+                    物流のご相談が初めてでも、
+                    まだ内容が決まっていなくても大丈夫です。
+                    お客様とのコミュニケーションを大切にしながら、
+                    最適な進め方を一緒に考えます。
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
         {/* PHILOSOPHY */}
         <section className="border-y border-black/5 bg-amber-50 px-4 py-10 sm:px-6 sm:py-14">
           <div className="mx-auto max-w-5xl sm:grid sm:grid-cols-[180px_minmax(0,1fr)] sm:gap-8">
@@ -415,7 +504,7 @@ export default function CompanyPage() {
 
             <p className="mt-3 text-sm leading-7 text-zinc-600">
               倉庫保管・発送代行・検品・梱包・流通加工・
-              輸送手配、教材・パンフレット発送、ダンボール単体のお見積りなど。
+              全国チャーターの輸送手配、化粧品・美容商材の検品・セット組み、教材・パンフレット発送、ダンボール単体のお見積りなど。
               小ロットやスポット案件、
               開始時期が未定のご相談も歓迎しています。
             </p>
