@@ -3,6 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { MetricsBar } from "@/components/metrics-bar"
 
 export const metadata: Metadata = {
   title:
@@ -55,44 +56,52 @@ export const metadata: Metadata = {
 const services = [
   {
     number: "01",
+    image: "warehouse-interior-nesting.png",
     title: "Warehousing",
     body:
       "Flexible inventory storage at our own warehouse in Osaka, supporting international brands entering or expanding in Japan.",
   },
   {
     number: "02",
+    image: "section-365-fulfillment.png",
     title: "Fulfillment",
     body:
       "Order handling, picking, packing and shipping for day-to-day ecommerce and business fulfillment operations.",
   },
   {
     number: "03",
+    image: "case-inspection.png",
     title: "Inspection & Labeling",
     body:
       "Product inspection, labeling, repacking, inserts, kitting and detailed value-added logistics services.",
   },
   {
     number: "04",
+    image: "section-japan-fulfillment.png",
     title: "Nationwide Shipping",
     body:
       "Domestic shipping throughout Japan, coordinated from our Osaka base and supported by our logistics network.",
   },
   {
     number: "05",
+    image: "section-education-kitting.png",
     title: "Educational Materials",
     body: "Collating course materials, assembling kits, adding inserts and shipping to learners or distributing brochures in specified quantities to schools and learning centers.",
   },
   {
     number: "06",
+    image: "section-cardboard-supply.png",
     title: "Packaging Materials",
     body: "Competitive cardboard box pricing through a nearby packaging partner. Box-only orders are welcome for delivery in Osaka and neighboring prefectures. Share your specifications, current unit price and order quantity for a comparable quote.",
   },  {
     number: "07",
+    image: "case-inspection.png",
     title: "Cosmetics & Beauty Products",
     body: "Container and product inspection, kitting, gift sets, packing and domestic shipping. Our Osaka facility holds a cosmetics manufacturing license; we confirm the requested work against its permitted scope.",
   },
   {
     number: "08",
+    image: "charter-transport.png",
     title: "Nationwide Charter Transport",
     body: "Charter transport across Japan through our carrier network, from light vehicles to large trucks. Pickup, delivery, cargo and vehicle requirements are reviewed before quotation.",
   },
@@ -335,6 +344,10 @@ const faqStructuredData = {
   })),
 }
 
+function SectionImage({ src, alt, dark = false }: { src: string; alt: string; dark?: boolean }) {
+  return <figure className="mt-7 overflow-hidden rounded-2xl"><img src={`/images/${src}`} alt={alt} width={1536} height={1024} loading="lazy" className="aspect-[16/9] w-full object-cover" /><figcaption className={`pt-2 text-[11px] leading-6 ${dark ? "text-white/60" : "text-zinc-500"}`}>Service illustration.</figcaption></figure>
+}
+
 export default function InternationalPage() {
   return (
     <div
@@ -383,7 +396,7 @@ export default function InternationalPage() {
                 365-Day Japan Fulfillment & 3PL
               </p>
 
-              <p className="mx-auto mt-5 w-fit rounded-full border border-amber-300/50 bg-amber-300/10 px-4 py-2 text-xs font-bold leading-6 text-amber-200 sm:text-sm">Weekends. Public holidays. New Year. 365-day fulfillment by arrangement.</p>
+              <p className="mx-auto mt-4 w-fit max-w-full whitespace-nowrap rounded-full border border-amber-300/50 bg-amber-300/10 px-3 py-2 text-[11px] font-bold leading-5 text-amber-200 sm:text-sm">365-day fulfillment by arrangement.</p>
               <h1 className="mx-auto mt-6 max-w-5xl text-[2.4rem] font-bold leading-[1.04] tracking-[-0.055em] sm:text-6xl lg:text-7xl">
                 Your Logistics Partner
                 <span className="block text-amber-400">
@@ -417,35 +430,19 @@ export default function InternationalPage() {
                 </a>
               </div>
 
-              <div className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-4">
-                {[
-                  ["OSAKA", "Our own main warehouse"],
-                  ["100", "Approx. warehouse tsubo"],
-                  ["365", "Year-round dispatch by arrangement"],
-                  ["JAPAN", "Nationwide shipping"],
-                ].map(([big, small]) => (
-                  <div
-                    key={big}
-                    className="rounded-2xl border border-white/10 bg-white/[0.05] px-3 py-5 backdrop-blur"
-                  >
-                    <p className="text-xl font-bold text-amber-300 sm:text-2xl">
-                      {big}
-                    </p>
-                    <p className="mt-1 text-[11px] leading-5 text-white/60 sm:text-xs">
-                      {small}
-                    </p>
-                  </div>
-                ))}
-              </div>
+
             </div>
           </div>
         </section>
+
+        <MetricsBar language="en" />
 
         {/* 365-DAY FULFILLMENT */}
         <section id="operations-365" aria-labelledby="operations-365-title" className="scroll-mt-24 bg-amber-50 py-16 sm:py-24">
           <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-12">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-800">365-Day Fulfillment</p>
             <h2 id="operations-365-title" className="mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-5xl">Your business keeps moving.<br />Your fulfillment should, too.</h2>
+            <SectionImage src="section-365-fulfillment.png" alt="Order preparation and dispatch throughout the year" />
             <p className="mt-5 max-w-3xl text-sm leading-8 text-zinc-600 sm:text-base">Weekend orders and holiday demand should be part of your fulfillment plan. GAMI offers 365-day operating arrangements, including weekends, public holidays and the New Year period, with the dispatch schedule and working conditions agreed in advance.</p>
             <div className="mt-8 grid gap-4 md:grid-cols-3">{[
               ["Reduce waits for the next business day", "Coordinate dispatch days around your ecommerce, course materials or beauty product business."],
@@ -454,6 +451,14 @@ export default function InternationalPage() {
             ].map(([title,body])=><article key={title} className="rounded-2xl border border-amber-200 bg-white p-6"><h3 className="font-bold leading-7">{title}</h3><p className="mt-3 text-sm leading-8 text-zinc-600">{body}</p></article>)}</div>
             <Link href="/international/contact?inquiry=operations-365" className="mt-7 inline-flex min-h-12 items-center rounded-full bg-amber-500 px-6 py-3 text-sm font-bold text-zinc-950 hover:bg-amber-400">Discuss 365-Day Fulfillment →</Link>
             <p className="mt-4 max-w-3xl text-xs leading-6 text-zinc-600">Operating days, cutoffs, same-day dispatch conditions, staffing and fees are agreed for each project. 365-day arrangements do not mean 24-hour operations or guaranteed delivery every day. Carrier schedules and destination conditions also apply.</p>
+          </div>
+        </section>
+
+        {/* OSAKA LEAD TIME ADVANTAGE */}
+        <section id="osaka-leadtime" aria-labelledby="leadtime-title" className="scroll-mt-24 bg-white py-16 sm:py-24">
+          <div className="mx-auto grid max-w-7xl gap-8 px-5 sm:px-6 lg:grid-cols-2 lg:items-center lg:px-12">
+            <div><p className="text-xs font-bold uppercase tracking-widest text-amber-700">The Osaka Advantage</p><h2 id="leadtime-title" className="mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-5xl">A shorter path<br />to your customers.</h2><p className="mt-5 text-sm leading-8 text-zinc-600">Osaka is well positioned for next-day delivery to many destinations from Kyushu to Kanto. Combined with same-day dispatch under an agreed operating plan, this can reduce the time between an order and its arrival.</p><p className="mt-3 text-sm leading-8 text-zinc-600">Earlier arrival can help customers feel reassured and improve their purchasing experience. Choose a dispatch base around your delivery destinations, even if your business or suppliers are based elsewhere.</p><ol className="mt-6 space-y-3">{[["Receive shipping instructions","Agree on volumes, packing requirements and order cutoffs."],["Dispatch from Osaka","Coordinate inspection, kitting, packing and same-day dispatch under the agreed conditions."],["Next-day routes from Kyushu to Kanto","Arrange delivery to eligible destinations using the selected carrier and service."]].map(([title,body],i)=><li key={title} className="rounded-xl border border-amber-200 bg-amber-50 p-4"><h3 className="text-sm font-bold">0{i+1} · {title}</h3><p className="mt-2 text-xs leading-6 text-zinc-600">{body}</p></li>)}</ol><Link href="/international/contact" className="mt-6 inline-flex min-h-12 items-center rounded-full bg-amber-500 px-6 py-3 text-sm font-bold text-zinc-950 hover:bg-amber-400">Discuss Delivery Times &amp; Dispatch →</Link></div>
+            <figure className="min-w-0"><Image src="/images/osaka-leadtime-map-en.png" alt="Illustrative routes from Osaka to Kyushu, Chugoku, Shikoku, Chubu and Kanto" width={2400} height={2000} sizes="(max-width: 1024px) 100vw, 50vw" className="h-auto w-full rounded-2xl border border-amber-200" /><figcaption className="mt-3 text-xs leading-6 text-zinc-600">Illustrative routes, not guaranteed delivery coverage. Transit times vary by carrier, destination, cutoff, service and island restrictions. Road conditions, weather and peak demand may cause delays.</figcaption></figure>
           </div>
         </section>
 
@@ -474,6 +479,7 @@ export default function InternationalPage() {
               </div>
 
               <div>
+                <SectionImage src="section-japan-fulfillment.png" alt="Receiving inventory and preparing domestic fulfillment in Japan" />
                 <p className="text-[15px] leading-8 text-zinc-600 sm:text-base sm:leading-9">
                   Expanding into Japan should not require
                   building your own logistics operation
@@ -515,12 +521,14 @@ export default function InternationalPage() {
               </p>
             </div>
 
+            <p className="mt-5 text-center text-xs text-zinc-500">Images illustrate our services.</p>
             <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {services.map((service) => (
                 <article
                   key={service.number}
                   className="rounded-[1.75rem] border border-zinc-200 bg-white p-6 shadow-sm sm:p-7"
                 >
+                  <img src={`/images/${service.image}`} alt={`${service.title} illustration`} width={480} height={320} loading="lazy" className="mb-5 aspect-[3/2] w-full rounded-2xl object-cover" />
                   <p className="text-sm font-bold text-amber-600">
                     {service.number}
                   </p>
@@ -556,6 +564,7 @@ export default function InternationalPage() {
                   on the ground in Japan.
                 </h2>
 
+                <SectionImage src="section-logistics-team.png" alt="Hands-on coordination between a customer and logistics team" dark />
                 <p className="mt-6 max-w-lg text-sm leading-8 text-white/65 sm:text-base">
                   Our Osaka warehouse serves as the
                   operational foundation for flexible
@@ -584,6 +593,14 @@ export default function InternationalPage() {
           </div>
         </section>
 
+        {/* EDUCATIONAL MATERIALS */}
+        <section id="educational-logistics" aria-labelledby="educational-title" className="scroll-mt-24 bg-zinc-950 py-16 text-white sm:py-24">
+          <div className="mx-auto grid max-w-7xl gap-8 px-5 sm:px-6 lg:grid-cols-2 lg:items-center lg:px-12">
+            <div><p className="text-xs font-bold uppercase tracking-widest text-amber-300">Educational Materials</p><h2 id="educational-title" className="mt-4 text-3xl font-bold leading-tight sm:text-4xl">Focus on your classes.<br />We prepare and ship the materials.</h2><p className="mt-5 text-sm leading-8 text-white/75">From course workbooks to brochures, we can coordinate storage, collation, folded inserts, kitting and packing. Ship to individual learners or distribute specified quantities to schools and learning centers.</p><Link href="/international/contact?inquiry=education" className="mt-6 inline-flex min-h-12 items-center rounded-full bg-amber-500 px-6 py-3 text-sm font-bold text-zinc-950 hover:bg-amber-400">Discuss Educational Materials →</Link></div>
+            <div><SectionImage src="section-education-kitting.png" alt="Collating course workbooks and preparing learning kits" dark /></div>
+          </div>
+        </section>
+
         {/* COSMETICS & CHARTER TRANSPORT */}
         <section aria-labelledby="specialist-services-title" className="bg-white py-16 sm:py-24">
           <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-12">
@@ -591,6 +608,7 @@ export default function InternationalPage() {
             <h2 id="specialist-services-title" className="mt-4 text-3xl font-bold tracking-tight sm:text-5xl">Detailed product handling.<br />Transport across Japan.</h2>
             <div className="mt-9 grid gap-6 lg:grid-cols-2">
               <article id="beauty-logistics" className="scroll-mt-24 rounded-3xl border border-zinc-200 bg-zinc-50 p-6 sm:p-8">
+<SectionImage src="case-inspection.png" alt="Cosmetic container inspection and kitting" />
                 <p className="text-xs font-bold uppercase tracking-widest text-amber-700">Cosmetics &amp; Beauty</p>
                 <h3 className="mt-4 text-2xl font-bold leading-tight">Inspection, kitting and dispatch for beauty products.</h3>
                 <p className="mt-4 text-sm leading-8 text-zinc-600">Our Osaka facility holds cosmetics manufacturing license 27CZ201072. We support cosmetics and beauty businesses with container and product inspection, quantity and SKU checks, set assembly, gift kits, packing and domestic shipping.</p>
@@ -612,6 +630,7 @@ export default function InternationalPage() {
 
         <section id="packaging-materials" aria-labelledby="packaging-title" className="scroll-mt-24 bg-amber-50 py-16 sm:py-24">
           <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-12">
+<SectionImage src="section-cardboard-supply.png" alt="Plain corrugated cartons in different sizes and specifications" />
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-800">Competitive Cardboard Box Pricing</p>
             <h2 id="packaging-title" className="mt-4 text-3xl font-bold tracking-tight sm:text-5xl">Lower packaging costs.<br />Box-only orders welcome.</h2>
             <p className="mt-5 max-w-3xl text-sm leading-8 text-zinc-600">Our nearby cardboard supplier helps us offer competitive prices. Share the total of three dimensions, strength, color and lot size. A current unit price and product or supplier URL can help us compare specifications, if available.</p>
@@ -878,6 +897,7 @@ export default function InternationalPage() {
                     1-8-18 Dainichicho, Moriguchi, Osaka
                   </p>
 
+                  <div id="access" className="mt-5 scroll-mt-24"><h4 className="text-sm font-bold">Location &amp; Access</h4><iframe title="GAMI OSAKA BASE location" src="https://www.google.com/maps?q=1-8-18+Dainichicho+Moriguchi+Osaka+Japan&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="mt-3 h-[240px] w-full rounded-xl border-0" /><a href="https://www.google.com/maps/search/?api=1&query=1-8-18+Dainichicho+Moriguchi+Osaka+Japan" target="_blank" rel="noopener noreferrer" className="mt-2 inline-flex min-h-11 items-center text-sm font-bold text-amber-800 underline underline-offset-4">Open Google Maps ↗</a></div>
                   <Link
                     href="/#warehouse"
                     className="mt-6 inline-flex min-h-11 w-fit items-center rounded-full bg-amber-500 px-6 py-3 text-sm font-bold text-zinc-950 transition hover:bg-amber-400"
@@ -1184,6 +1204,7 @@ export default function InternationalPage() {
               starting from our Osaka operations.
             </p>
 
+            <div className="mx-auto max-w-3xl"><SectionImage src="section-logistics-consultation.png" alt="A practical conversation about packing and logistics requirements" dark /></div>
             <div className="mx-auto mt-9 max-w-sm">
               <Link
                 href="/international/contact"
