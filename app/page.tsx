@@ -92,9 +92,9 @@ const services = [
   {
     number: "06",
     english: "TRANSPORTATION",
-    title: "輸送手配・配送調整",
+    title: "全国チャーター・輸送手配",
     text:
-      "第一種貨物利用運送事業の登録を活かし、商品・物量・配送先・納期に応じた輸送方法を検討。物流作業から輸送手配までまとめてご相談いただけます。",
+      "第一種貨物利用運送事業の登録を活かし、全国の輸送ネットワークでチャーター便を手配。軽貨物から大型車まで、荷物・車格・日時・積み降ろし条件に合わせて輸送を組み立てます。",
     points: [
       "国内輸送の手配",
       "物量に応じた配送方法の検討",
@@ -460,7 +460,7 @@ export default function HomePage() {
                   <div className="mt-5 border-t border-black/10 pt-5">
                     <p className="text-sm leading-8 text-zinc-600">{service.text}</p>
                     <ul className="mt-4 space-y-2">{service.points.map(point=><li key={point} className="flex items-start gap-3 text-sm leading-7"><span aria-hidden="true" className="text-amber-700">✓</span><span>{point}</span></li>)}</ul>
-                    <Link href="/company#contact" className="mt-4 inline-flex min-h-[44px] items-center text-sm font-bold text-amber-800 underline underline-offset-4">この業務について相談する →</Link>
+                    <Link href={service.number === "06" ? "/company?inquiry=transport#contact" : service.number === "08" ? "/company?inquiry=cardboard#contact" : service.number === "07" ? "/company?inquiry=education#contact" : "/company#contact"} className="mt-4 inline-flex min-h-[44px] items-center text-sm font-bold text-amber-800 underline underline-offset-4">この業務について相談する →</Link>
                   </div>
                 </details>
               ))}
@@ -620,6 +620,43 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* COSMETICS & BEAUTY */}
+        <section id="beauty-logistics" aria-labelledby="beauty-heading" className="scroll-mt-24 bg-[#fbfaf7] py-16 sm:py-24">
+          <div className={`${container} grid gap-8 lg:grid-cols-2 lg:items-center`}>
+            <div>
+              <p className={label}>COSMETICS &amp; BEAUTY</p>
+              <h2 id="beauty-heading" className={heading}>化粧品・美容商材の、<br />検品からセット組み、発送まで。</h2>
+              <p className="mt-5 text-sm leading-8 text-zinc-600">大阪拠点の化粧品製造業許可を活かし、化粧品メーカー様・美容商材を扱う事業者様の作業をサポート。容器や商品の外観検品、数量・品番の確認、ギフトや販売用のセット組み、梱包・発送までご相談いただけます。</p>
+              <p className="mt-3 text-sm leading-8 text-zinc-600">急な検品や発売前のセット作業なども、数量・納期・求められる品質基準を伺い、現場と一緒に進め方を考えます。</p>
+              <p className="mt-3 text-xs leading-6 text-zinc-500">化粧品製造業許可：27CZ201072（大阪拠点）。作業内容と許可範囲を確認のうえ、対応をご案内します。</p>
+              <Link href="/company?inquiry=beauty#contact" className={`${button} mt-6`}>化粧品・美容商材の作業を相談する →</Link>
+            </div>
+            <div className="overflow-hidden rounded-2xl border border-black/10 bg-white">
+              <img src="/images/case-inspection.png" alt="化粧品容器の検品を表現したイメージ" width={1536} height={1024} loading="lazy" className="aspect-[3/2] w-full object-cover" />
+              <div className="p-6"><p className="text-xs text-zinc-500">画像はイメージです。</p><ul className="mt-4 grid gap-3 text-sm font-semibold leading-7 sm:grid-cols-2">{["容器・商品の外観検品", "数量・品番・付属品の確認", "美容商材のセット組み", "ギフトセット・同梱作業", "梱包・保管・発送", "作業に伴う輸送手配"].map(item=><li key={item}>✓ {item}</li>)}</ul></div>
+            </div>
+          </div>
+        </section>
+
+        {/* NATIONWIDE CHARTER */}
+        <section id="charter-transport" aria-labelledby="charter-heading" className="scroll-mt-24 bg-white py-16 sm:py-24">
+          <div className={`${container} grid gap-8 lg:grid-cols-2`}>
+            <div>
+              <p className={label}>NATIONWIDE CHARTER TRANSPORT</p>
+              <h2 id="charter-heading" className={heading}>全国のチャーター便を、<br />荷物に合う車格で手配。</h2>
+              <p className="mt-5 text-sm leading-8 text-zinc-600">第一種貨物利用運送事業の登録と、全国の協力輸送ネットワークを活かし、軽貨物・2t・4t・大型車など、車格を問わずご相談を承ります。スポット輸送から定期便まで、集荷先・納品先・物量・日時に合わせて手配します。</p>
+              <p className="mt-3 text-sm leading-8 text-zinc-600">「この区間はいくら？」「今の運賃を見直したい」も歓迎です。現在の運賃や希望予算が分かれば、比較しやすい条件でお見積りします。金額が未定でも、お気軽にご相談ください。</p>
+              <p className="mt-3 text-xs leading-6 text-zinc-500">配車可否・料金は、空車状況、車両条件、日時、経路、積み降ろし作業などを確認してご案内します。</p>
+              <Link href="/company?inquiry=transport#contact" className={`${button} mt-6`}>チャーター便・輸送費を見積もる →</Link>
+            </div>
+            <div className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
+              <h3 className="text-xl font-bold">まずは、この条件をお知らせください。</h3>
+              <ul className="mt-5 space-y-3 text-sm leading-7">{["集荷先・納品先（市区町村まででも可）", "集荷日・納品日・時間帯", "荷物の種類・個数・寸法・総重量", "希望車格・車両設備（未定でも可）", "手積み・フォークリフトなどの作業条件", "現在の運賃・希望予算（任意）"].map(item=><li key={item}>✓ {item}</li>)}</ul>
+              <p className="mt-5 text-xs leading-6 text-zinc-600">運賃は税込・税別、高速代や作業費の込み・別も分かると、より比較しやすくなります。</p>
+            </div>
+          </div>
+        </section>
+
         {/* CARDBOARD QUOTE */}
         <section id="cardboard" aria-labelledby="cardboard-heading" className="scroll-mt-24 bg-zinc-950 py-16 text-white sm:py-24">
           <div className={`${container} grid gap-8 lg:grid-cols-2 lg:items-center`}>
@@ -632,7 +669,7 @@ export default function HomePage() {
               <h3 className="text-xl font-bold leading-9 text-amber-300 sm:text-2xl">ダンボールだけの<br />お見積りも大歓迎。</h3>
               <p className="mt-4 text-sm leading-8 text-white/75">3辺合計サイズ・硬さ・色・現在の購入価格・ロット数を、分かる範囲でお知らせください。購入先や商品ページのURLがあれば、比較見積りの参考にいたします。</p>
               <p className="mt-4 rounded-xl border border-amber-400/40 bg-amber-400/10 p-4 text-sm font-bold leading-7 text-amber-200">対象エリア：大阪・近隣府県<br /><span className="text-xs font-normal">納品先・数量に応じて配送可否とお見積りを確認します。</span></p>
-              <Link href="/company#contact" className={`${button} mt-6`}>ダンボールの見積りを依頼する →</Link>
+              <Link href="/company?inquiry=cardboard#contact" className={`${button} mt-6`}>ダンボールの見積りを依頼する →</Link>
               <p className="mt-3 text-xs leading-6 text-white/60">フォームで「ダンボール単体のお見積り」をお選びください。</p>
             </div>
           </div>
