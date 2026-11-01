@@ -6,7 +6,7 @@ import { Footer } from "@/components/footer"
 
 export const metadata: Metadata = {
   title:
-    "Japan Fulfillment & 3PL | Osaka Warehouse & Nationwide Shipping | GAMI",
+    "365-Day Japan Fulfillment & 3PL | Osaka Warehouse | GAMI",
   description:
     "GAMI provides fulfillment and 3PL services in Japan from its own warehouse in Osaka, supported by logistics partners in Fukuoka and Kobe. Warehousing, inspection, labeling, kitting, packing and nationwide shipping for international brands.",
   keywords: [
@@ -85,8 +85,18 @@ const services = [
   {
     number: "06",
     title: "Packaging Materials",
-    body: "Cost-conscious cardboard box sourcing through a nearby packaging partner. Standalone box quotations are welcome, with specifications, quantities and delivery requirements discussed in advance.",
+    body: "Competitive cardboard box pricing through a nearby packaging partner. Box-only orders are welcome for delivery in Osaka and neighboring prefectures. Share your specifications, current unit price and order quantity for a comparable quote.",
+  },  {
+    number: "07",
+    title: "Cosmetics & Beauty Products",
+    body: "Container and product inspection, kitting, gift sets, packing and domestic shipping. Our Osaka facility holds a cosmetics manufacturing license; we confirm the requested work against its permitted scope.",
   },
+  {
+    number: "08",
+    title: "Nationwide Charter Transport",
+    body: "Charter transport across Japan through our carrier network, from light vehicles to large trucks. Pickup, delivery, cargo and vehicle requirements are reviewed before quotation.",
+  },
+
 ]
 
 const caseStudies = [
@@ -164,9 +174,9 @@ const strengths = [
       "Warehousing, inspection, labeling, packing and domestic shipping can be coordinated through one logistics partner.",
   },
   {
-    title: "Flexible Scheduling",
+    title: "365-Day Fulfillment",
     body:
-      "We plan operations around project requirements. Weekend and holiday handling may be arranged through advance consultation.",
+      "Keep dispatch moving through weekends, public holidays and the New Year period. We agree on operating days, cutoffs, staffing and fees for your project in advance.",
   },
   {
     title: "Hands-On Support",
@@ -235,12 +245,24 @@ const steps = [
 
 const faq = [
   {
+    q: "Can you inspect and assemble cosmetics and beauty product sets?",
+    a: "Yes. We can discuss container inspection, appearance and quantity checks, kitting, gift sets, packing and domestic shipping. Our Osaka facility holds cosmetics manufacturing license 27CZ201072. We review the requested work and applicable license scope before confirming availability.",
+  },
+  {
+    q: "Can you arrange charter transport across Japan?",
+    a: "Yes. Through our nationwide carrier network and Type I Freight Forwarding Business registration, we can discuss light vehicles, 2-ton and 4-ton trucks, large trucks and other vehicle requirements. Availability and pricing depend on the route, dates, cargo, vehicle equipment and loading or unloading conditions.",
+  },
+  {
+    q: "Do we need to share our current logistics costs?",
+    a: "No. Current fees, unit prices and target budgets are optional. Sharing them, including whether tax, tolls and handling are included, helps us prepare a comparable quote. You can still request a quote without providing pricing.",
+  },
+  {
     q: "Can you prepare and ship course materials?",
     a: "Yes. We can discuss storage, collation, course-specific kits, inserts, packing and domestic shipping to learners or learning centers. Printed materials can be delivered directly from your printing company to the agreed receiving location.",
   },
   {
     q: "Can we request a quotation for cardboard boxes only?",
-    a: "Yes. Standalone cardboard box quotations are welcome. Please share dimensions, specifications, quantity, delivery address and preferred timing. We work with a nearby cardboard supplier to propose cost-conscious options.",
+    a: "Yes. Box-only orders are available for Osaka and neighboring prefectures, subject to delivery location and quantity. We offer competitive pricing through a nearby cardboard supplier. Share total dimensions (length + width + height), strength, color, quantity, timing and delivery location. Your current unit price and a product URL are helpful if available, but optional.",
   },
   {
     q: "Can international companies contact GAMI directly?",
@@ -273,9 +295,9 @@ const faq = [
       "Yes. We provide detailed value-added services including inspection, labeling, packing, inserts, kitting and repacking.",
   },
   {
-    q: "Do you operate on weekends and holidays?",
+    q: "Can you provide fulfillment 365 days a year, including New Year holidays?",
     a:
-      "Weekend and holiday operations may be available by prior arrangement. Please contact us in advance to discuss your schedule and requirements.",
+      "Yes. We offer 365-day fulfillment arrangements, including weekends, public holidays and the New Year period. Dispatch days, order cutoffs, staffing, same-day dispatch conditions and fees are agreed for each project. This does not mean 24-hour operations or guaranteed delivery every day; carrier schedules and destination conditions also apply.",
   },
   {
     q: "Can we contact you before our Japan launch is finalized?",
@@ -358,9 +380,10 @@ export default function InternationalPage() {
           <div className="relative mx-auto max-w-7xl px-5 py-16 sm:px-6 sm:py-24 lg:px-12 lg:py-32">
             <div className="mx-auto max-w-5xl text-center">
               <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-amber-300 sm:text-sm sm:tracking-[0.28em]">
-                Japan Fulfillment & 3PL
+                365-Day Japan Fulfillment & 3PL
               </p>
 
+              <p className="mx-auto mt-5 w-fit rounded-full border border-amber-300/50 bg-amber-300/10 px-4 py-2 text-xs font-bold leading-6 text-amber-200 sm:text-sm">Weekends. Public holidays. New Year. 365-day fulfillment by arrangement.</p>
               <h1 className="mx-auto mt-6 max-w-5xl text-[2.4rem] font-bold leading-[1.04] tracking-[-0.055em] sm:text-6xl lg:text-7xl">
                 Your Logistics Partner
                 <span className="block text-amber-400">
@@ -398,7 +421,7 @@ export default function InternationalPage() {
                 {[
                   ["OSAKA", "Our own main warehouse"],
                   ["100", "Approx. warehouse tsubo"],
-                  ["FLEX", "Small to large projects"],
+                  ["365", "Year-round dispatch by arrangement"],
                   ["JAPAN", "Nationwide shipping"],
                 ].map(([big, small]) => (
                   <div
@@ -415,6 +438,22 @@ export default function InternationalPage() {
                 ))}
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* 365-DAY FULFILLMENT */}
+        <section id="operations-365" aria-labelledby="operations-365-title" className="scroll-mt-24 bg-amber-50 py-16 sm:py-24">
+          <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-12">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-800">365-Day Fulfillment</p>
+            <h2 id="operations-365-title" className="mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-5xl">Your business keeps moving.<br />Your fulfillment should, too.</h2>
+            <p className="mt-5 max-w-3xl text-sm leading-8 text-zinc-600 sm:text-base">Weekend orders and holiday demand should be part of your fulfillment plan. GAMI offers 365-day operating arrangements, including weekends, public holidays and the New Year period, with the dispatch schedule and working conditions agreed in advance.</p>
+            <div className="mt-8 grid gap-4 md:grid-cols-3">{[
+              ["Reduce waits for the next business day", "Coordinate dispatch days around your ecommerce, course materials or beauty product business."],
+              ["Plan beyond the holiday calendar", "Agree on order cutoffs, expected volumes and staffing before weekends, peak periods and New Year holidays."],
+              ["A small team, close to your operations", "Direct communication, careful kitting and packing, and practical suggestions support more than dispatch alone."],
+            ].map(([title,body])=><article key={title} className="rounded-2xl border border-amber-200 bg-white p-6"><h3 className="font-bold leading-7">{title}</h3><p className="mt-3 text-sm leading-8 text-zinc-600">{body}</p></article>)}</div>
+            <Link href="/international/contact?inquiry=operations-365" className="mt-7 inline-flex min-h-12 items-center rounded-full bg-amber-500 px-6 py-3 text-sm font-bold text-zinc-950 hover:bg-amber-400">Discuss 365-Day Fulfillment →</Link>
+            <p className="mt-4 max-w-3xl text-xs leading-6 text-zinc-600">Operating days, cutoffs, same-day dispatch conditions, staffing and fees are agreed for each project. 365-day arrangements do not mean 24-hour operations or guaranteed delivery every day. Carrier schedules and destination conditions also apply.</p>
           </div>
         </section>
 
@@ -542,6 +581,42 @@ export default function InternationalPage() {
                 ))}
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* COSMETICS & CHARTER TRANSPORT */}
+        <section aria-labelledby="specialist-services-title" className="bg-white py-16 sm:py-24">
+          <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-12">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-700">Specialist Services</p>
+            <h2 id="specialist-services-title" className="mt-4 text-3xl font-bold tracking-tight sm:text-5xl">Detailed product handling.<br />Transport across Japan.</h2>
+            <div className="mt-9 grid gap-6 lg:grid-cols-2">
+              <article id="beauty-logistics" className="scroll-mt-24 rounded-3xl border border-zinc-200 bg-zinc-50 p-6 sm:p-8">
+                <p className="text-xs font-bold uppercase tracking-widest text-amber-700">Cosmetics &amp; Beauty</p>
+                <h3 className="mt-4 text-2xl font-bold leading-tight">Inspection, kitting and dispatch for beauty products.</h3>
+                <p className="mt-4 text-sm leading-8 text-zinc-600">Our Osaka facility holds cosmetics manufacturing license 27CZ201072. We support cosmetics and beauty businesses with container and product inspection, quantity and SKU checks, set assembly, gift kits, packing and domestic shipping.</p>
+                <p className="mt-3 text-sm leading-8 text-zinc-600">Share the products, quantity, inspection criteria and deadline. We coordinate the requested work with our operations team and confirm availability within the license scope.</p>
+                <Link href="/international/contact?inquiry=beauty" className="mt-6 inline-flex min-h-12 items-center rounded-full bg-amber-500 px-6 py-3 text-sm font-bold text-zinc-950 hover:bg-amber-400">Discuss Cosmetics &amp; Beauty Work →</Link>
+              </article>
+              <article id="charter-transport" className="scroll-mt-24 rounded-3xl bg-zinc-950 p-6 text-white sm:p-8">
+                <p className="text-xs font-bold uppercase tracking-widest text-amber-300">Nationwide Charter Transport</p>
+                <h3 className="mt-4 text-2xl font-bold leading-tight">The right vehicle for your shipment, across Japan.</h3>
+                <p className="mt-4 text-sm leading-8 text-white/75">Our Type I Freight Forwarding Business registration and nationwide carrier network support charter transport arrangements, from light vehicles to 2-ton, 4-ton and large trucks. One-off and regular transport requests are welcome.</p>
+                <p className="mt-3 text-sm leading-8 text-white/75">Tell us the pickup and delivery locations, dates, cargo dimensions and weight, preferred vehicle and loading conditions. Current freight rates and target budgets are welcome but optional.</p>
+                <p className="mt-3 text-xs leading-6 text-white/60">Availability and rates are confirmed after reviewing the route, schedule, vehicle equipment and handling requirements.</p>
+                <Link href="/international/contact?inquiry=transport" className="mt-6 inline-flex min-h-12 items-center rounded-full bg-amber-500 px-6 py-3 text-sm font-bold text-zinc-950 hover:bg-amber-400">Request a Transport Quote →</Link>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="packaging-materials" aria-labelledby="packaging-title" className="scroll-mt-24 bg-amber-50 py-16 sm:py-24">
+          <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-12">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-800">Competitive Cardboard Box Pricing</p>
+            <h2 id="packaging-title" className="mt-4 text-3xl font-bold tracking-tight sm:text-5xl">Lower packaging costs.<br />Box-only orders welcome.</h2>
+            <p className="mt-5 max-w-3xl text-sm leading-8 text-zinc-600">Our nearby cardboard supplier helps us offer competitive prices. Share the total of three dimensions, strength, color and lot size. A current unit price and product or supplier URL can help us compare specifications, if available.</p>
+            <p className="mt-4 font-bold text-amber-900">Delivery area: Osaka and neighboring prefectures.</p>
+            <p className="mt-2 text-xs leading-6 text-zinc-600">Delivery availability and pricing depend on location, specifications and order quantity.</p>
+            <Link href="/international/contact?inquiry=cardboard" className="mt-6 inline-flex min-h-12 items-center rounded-full bg-amber-500 px-6 py-3 text-sm font-bold text-zinc-950 hover:bg-amber-400">Request a Cardboard Box Quote →</Link>
           </div>
         </section>
 
@@ -803,7 +878,7 @@ export default function InternationalPage() {
                   </p>
 
                   <Link
-                    href="/warehouse"
+                    href="/#warehouse"
                     className="mt-6 inline-flex min-h-11 w-fit items-center rounded-full bg-amber-500 px-6 py-3 text-sm font-bold text-zinc-950 transition hover:bg-amber-400"
                   >
                     Explore Our Osaka Warehouse
