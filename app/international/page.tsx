@@ -1,4 +1,3 @@
-
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
@@ -78,6 +77,79 @@ const services = [
     body:
       "Domestic shipping throughout Japan, coordinated from our Osaka base and supported by our logistics network.",
   },
+  {
+    number: "05",
+    title: "Educational Materials",
+    body: "Collating course materials, assembling kits, adding inserts and shipping to learners or distributing brochures in specified quantities to schools and learning centers.",
+  },
+  {
+    number: "06",
+    title: "Packaging Materials",
+    body: "Cost-conscious cardboard box sourcing through a nearby packaging partner. Standalone box quotations are welcome, with specifications, quantities and delivery requirements discussed in advance.",
+  },
+]
+
+const caseStudies = [
+  {
+    "id": "apparel",
+    "industry": "Apparel Business",
+    "image": "/images/case-apparel.png",
+    "alt": "Illustration of caps and apparel being packed",
+    "title": "From two days to next-day delivery.",
+    "summary": "Moving sorting and dispatch to Osaka, alongside same-day dispatch, shortened delivery times for eligible destinations.",
+    "paragraphs": [
+      "This customer previously received products from a manufacturer in the Kanto region at a Kyushu base, sorted the products and shipped them to customers. Some destinations required two days for delivery.",
+      "GAMI moved sorting and dispatch to Osaka and combined this with same-day dispatch. Destinations that previously required two days could then be served with next-day delivery, helping improve the customer experience."
+    ]
+  },
+  {
+    "id": "distribution",
+    "industry": "Kyushu-Based Business",
+    "image": "/images/case-distribution.png",
+    "alt": "Conceptual image of regional distribution from Osaka",
+    "title": "A business in Kyushu. A logistics base in Osaka.",
+    "summary": "A dispatch location closer to key destinations helped resolve delivery lead-time challenges.",
+    "paragraphs": [
+      "The customer sources products in Kyushu and ships to the Chugoku, Kansai and Kanto regions. Delivery times from the previous arrangement presented a challenge.",
+      "GAMI supports logistics operations from Osaka, aligning the dispatch location with the customer’s main delivery areas."
+    ]
+  },
+  {
+    "id": "rice",
+    "industry": "Food Business Handling Regional Donation Gifts",
+    "image": "/images/case-rice.png",
+    "alt": "Illustration of rice and shipping cartons",
+    "title": "Delivering rice gifts sooner, with less uncertainty.",
+    "summary": "Processing and dispatch in Osaka helped gifts reach recipients sooner and reduced the need for delivery-status inquiries.",
+    "paragraphs": [
+      "Rice from the Chugoku region was previously sent to Kyushu for processing before being shipped to recipients.",
+      "GAMI arranged processing and dispatch in Osaka to shorten the route to recipients in Kansai and Kanto. Earlier delivery helps reduce uncertainty for recipients and the customer’s workload in answering delivery-status inquiries."
+    ]
+  },
+  {
+    "id": "beauty",
+    "industry": "Beauty Products Business",
+    "image": "/images/case-beauty.png",
+    "alt": "Illustration of beauty products being carefully packed",
+    "title": "More than 365-day availability.",
+    "summary": "Responsive communication and practical suggestions support greater operational flexibility.",
+    "paragraphs": [
+      "Outsourcing dispatch on a 365-day basis gave the customer more flexibility in running its business.",
+      "GAMI responds promptly, coordinates with the operational team and suggests practical improvements. Close communication between the customer and the people handling the products supports attention to detail."
+    ]
+  },
+  {
+    "id": "inspection",
+    "industry": "Cosmetics Manufacturer",
+    "image": "/images/case-inspection.png",
+    "alt": "Illustration of cosmetic container inspection",
+    "title": "An urgent inspection. A deadline met.",
+    "summary": "Urgent container inspection was completed in time; inspection work now continues in Osaka and Kyushu.",
+    "paragraphs": [
+      "A cosmetics manufacturer in Kyushu requested urgent container inspection. GAMI responded quickly and worked to the customer’s required inspection standard and deadline.",
+      "Inspection work continues in Osaka and Kyushu. GAMI can also arrange domestic transportation with attention to cost, and discuss set assembly in Osaka within its cosmetics manufacturing license scope."
+    ]
+  }
 ]
 
 const strengths = [
@@ -130,6 +202,8 @@ const industries = [
   "Food Products",
   "Startups",
   "International Brands",
+  "Schools & Learning Centers",
+  "Online Courses & Seminars",
 ]
 
 const steps = [
@@ -160,6 +234,14 @@ const steps = [
 ]
 
 const faq = [
+  {
+    q: "Can you prepare and ship course materials?",
+    a: "Yes. We can discuss storage, collation, course-specific kits, inserts, packing and domestic shipping to learners or learning centers. Printed materials can be delivered directly from your printing company to the agreed receiving location.",
+  },
+  {
+    q: "Can we request a quotation for cardboard boxes only?",
+    a: "Yes. Standalone cardboard box quotations are welcome. Please share dimensions, specifications, quantity, delivery address and preferred timing. We work with a nearby cardboard supplier to propose cost-conscious options.",
+  },
   {
     q: "Can international companies contact GAMI directly?",
     a:
@@ -394,7 +476,7 @@ export default function InternationalPage() {
               </p>
             </div>
 
-            <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {services.map((service) => (
                 <article
                   key={service.number}
@@ -527,6 +609,36 @@ export default function InternationalPage() {
                 Discuss Your Project
               </Link>
             </div>
+          </div>
+        </section>
+
+        {/* CUSTOMER CASE STUDIES */}
+        <section id="case-studies" aria-labelledby="cases-heading" className="scroll-mt-24 bg-white py-16 sm:py-24">
+          <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-12">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-700">Customer Stories</p>
+            <h2 id="cases-heading" className="mt-4 text-3xl font-bold leading-tight sm:text-5xl">Practical changes.<br />Better logistics.</h2>
+            <p className="mt-5 max-w-3xl text-sm leading-8 text-zinc-600">Anonymized examples of how GAMI helps customers rethink dispatch locations, manual operations and daily communication.</p>
+            <div className="mt-6 flex flex-wrap items-center justify-between gap-4">
+              <p id="case-slide-help" className="text-xs leading-6 text-zinc-500">Swipe or scroll horizontally to explore →</p>
+              <nav aria-label="Select a customer story" className="flex gap-2">
+                {caseStudies.map((item,index)=><a key={item.id} href={`#case-${item.id}`} aria-label={`Story ${index+1}: ${item.industry}`} className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-zinc-200 text-xs font-bold hover:bg-amber-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-amber-600">0{index+1}</a>)}
+              </nav>
+            </div>
+            <div role="region" aria-label="Five customer stories" aria-describedby="case-slide-help" tabIndex={0} className="mt-5 flex snap-x snap-mandatory items-start gap-5 overflow-x-auto overscroll-x-contain rounded-2xl pb-6 motion-safe:scroll-smooth focus-visible:outline focus-visible:outline-2 focus-visible:outline-amber-600">
+              {caseStudies.map((item,index)=>(
+                <article id={`case-${item.id}`} key={item.id} className="w-[88%] min-w-0 shrink-0 snap-start scroll-mt-28 overflow-hidden rounded-3xl border border-zinc-200 bg-white sm:w-[65%] lg:w-[48%]">
+                  <figure><Image src={item.image} alt={item.alt} width={1536} height={1024} sizes="(max-width: 640px) 88vw, (max-width: 1024px) 65vw, 48vw" className="aspect-[3/2] w-full object-cover" /><figcaption className="px-6 pt-2 text-[11px] text-zinc-500">Illustrative image</figcaption></figure>
+                  <div className="p-6 sm:p-8">
+                    <p className="text-xs font-bold tracking-widest text-amber-700">CASE 0{index+1}</p>
+                    <p className="mt-2 text-xs font-semibold leading-6 text-zinc-500">{item.industry}</p>
+                    <h3 className="mt-3 text-xl font-bold leading-8">{item.title}</h3>
+                    <p className="mt-4 text-sm leading-7 text-zinc-600">{item.summary}</p>
+                    <details className="group mt-5 border-t border-zinc-200 pt-3"><summary className="flex min-h-11 cursor-pointer list-none items-center justify-between gap-4 text-sm font-bold text-amber-800 [&::-webkit-details-marker]:hidden">Read the story<span aria-hidden="true" className="text-xl group-open:rotate-45">+</span></summary><div className="mt-3 space-y-4">{item.paragraphs.map(p=><p key={p} className="text-sm leading-8 text-zinc-600">{p}</p>)}</div></details>
+                  </div>
+                </article>
+              ))}
+            </div>
+            <p className="mt-3 text-xs leading-6 text-zinc-500">Customer and brand names are withheld. Delivery times and operating arrangements relate to each case; availability depends on destination, carrier and agreed conditions.</p>
           </div>
         </section>
 
@@ -912,6 +1024,27 @@ export default function InternationalPage() {
                   </p>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* OPERATIONS GALLERY */}
+        <section aria-labelledby="gallery-heading" className="bg-zinc-100 py-16 sm:py-24">
+          <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-12">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-700">Operations Gallery</p>
+            <h2 id="gallery-heading" className="mt-4 text-3xl font-bold sm:text-5xl">A closer look at operations.</h2>
+            <div className="mt-8 grid grid-cols-2 gap-4 lg:grid-cols-4">
+              {[
+                ["warehouse-overview-clean.png", "Warehouse & Storage"],
+                ["warehouse-operations-clean.png", "Packing Workspace"],
+                ["warehouse-dispatch-clean.png", "Dispatch Preparation"],
+                ["warehouse-processing-clean.png", "Carton Assembly"],
+              ].map(([filename,caption])=>(
+                <figure key={filename} className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
+                  <Image src={`/images/${filename}`} alt={caption} width={900} height={675} sizes="(max-width: 1024px) 50vw, 25vw" className="aspect-[4/3] w-full object-cover" />
+                  <figcaption className="px-4 py-4 text-xs font-semibold leading-6 sm:text-sm">{caption}</figcaption>
+                </figure>
+              ))}
             </div>
           </div>
         </section>
