@@ -174,32 +174,29 @@ export default function CompanyPage() {
 
           <div className="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24 lg:py-32">
             <p className="text-[11px] font-bold tracking-[0.2em] text-amber-300 sm:text-sm">
-              COMPANY
+              COMPANY PROFILE
             </p>
 
             <h1 className="mt-5 text-[30px] font-bold leading-[1.35] tracking-tight sm:text-5xl lg:text-6xl">
               <span className="block">
-                物流を支える。
+                株式会社GAMI
               </span>
               <span className="block">
-                ビジネスを前へ。
+                について
               </span>
             </h1>
 
             <p className="mt-6 max-w-3xl text-sm leading-8 text-white/85 sm:text-base sm:leading-9">
-              大阪の自社倉庫「GAMI OSAKA BASE」を主軸に、
-              福岡・神戸の協力ネットワークと連携。
-              1坪からの倉庫保管、小ロット発送、
-              検品・梱包・流通加工まで、
-              事業の規模に合わせた物流体制をご提案します。
+              大阪を拠点に、お客様の事業を支える株式会社GAMI。
+              会社情報と、物流に向き合う私たちの姿勢をご紹介します。
             </p>
 
             <div className="mt-8 flex max-w-lg flex-col gap-3 sm:flex-row">
               <Link
-                href="#contact"
+                href="#company-info"
                 className="flex min-h-[52px] flex-1 items-center justify-center rounded-full bg-amber-500 px-6 py-3 text-center text-sm font-bold text-zinc-950 transition hover:bg-amber-400"
               >
-                見積り・物流相談
+                会社情報を見る ↓
               </Link>
 
               <a
@@ -255,7 +252,7 @@ export default function CompanyPage() {
                 </p>
 
                 <Link
-                  href="/warehouse"
+                  href="/#warehouse"
                   className="mt-4 inline-flex min-h-[40px] items-center text-xs font-bold text-amber-800 underline underline-offset-4"
                 >
                   大阪の物流拠点を見る →
@@ -306,7 +303,7 @@ export default function CompanyPage() {
         </section>
 
         {/* COMPANY INFO */}
-        <section className="mx-auto max-w-5xl px-4 py-10 sm:px-6 sm:py-14">
+        <section id="company-info" className="mx-auto max-w-5xl px-4 py-10 sm:px-6 sm:py-14">
           <p className="text-[11px] font-bold tracking-[0.12em] text-amber-700">
             COMPANY INFO
           </p>
@@ -418,7 +415,7 @@ export default function CompanyPage() {
 
             <p className="mt-3 text-sm leading-7 text-zinc-600">
               倉庫保管・発送代行・検品・梱包・流通加工・
-              輸送手配など。
+              輸送手配、教材・パンフレット発送、ダンボール単体のお見積りなど。
               小ロットやスポット案件、
               開始時期が未定のご相談も歓迎しています。
             </p>
