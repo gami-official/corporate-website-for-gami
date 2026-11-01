@@ -15,6 +15,16 @@ type ContactFormProps = { language?: Language }
 
 const inquiryTypes = [
   {
+    value: "ダンボール単体のお見積り",
+    ja: "ダンボール単体のお見積り",
+    en: "Cardboard boxes only — request a quote",
+  },
+  {
+    value: "教材・パンフレット発送の相談",
+    ja: "教材・パンフレット発送の相談",
+    en: "Educational materials and brochure fulfillment",
+  },
+  {
     value: "物流・発送代行の相談",
     ja: "物流・発送代行の相談",
     en: "Logistics and fulfillment",
@@ -66,8 +76,8 @@ const copy = {
   ja: {
     title: "小さなご依頼も、大規模案件も。まずはご相談ください。",
     intro:
-      "物量や開始時期が未定でも大丈夫。会社名と電話番号は任意です。",
-    legend: "物流のご相談フォーム",
+      "物量や開始時期が未定でも大丈夫。ダンボールのみのお見積りも歓迎します。会社名と電話番号は任意です。",
+    legend: "物流のご相談・資材お見積りフォーム",
     name: "お名前（必須）",
     namePlaceholder: "山田 太郎",
     company: "会社名・屋号（任意）",
@@ -84,7 +94,7 @@ const copy = {
     failed:
       "送信できませんでした。再度お試しいただくか、下記のメール・電話からご連絡ください。",
     sending: "送信中…",
-    submit: "この内容で物流を相談する",
+    submit: "この内容で問い合わせる",
     privacy:
       "入力いただいた情報は、ご相談への対応・連絡に使用します。",
     fallback: "お急ぎの場合や送信できない場合はこちら。",
@@ -120,7 +130,7 @@ const copy = {
     failed:
       "We could not send your inquiry. Please try again or contact us by email or phone.",
     sending: "Sending…",
-    submit: "Send logistics inquiry",
+    submit: "Send inquiry",
     privacy:
       "We use the information you provide to respond to your inquiry.",
     fallback:
@@ -147,6 +157,13 @@ export function ContactForm({
   const [isSending, setIsSending] = useState(false)
   const [error, setError] = useState("")
   const t = copy[language]
+  const [inquiryType, setInquiryType] = useState("")
+  const isCardboardQuote = inquiryType === "ダンボール単体のお見積り"
+  const messagePlaceholder = isCardboardQuote
+    ? language === "ja"
+      ? "例：ダンボールのみの見積りを希望します。\n箱の内寸：縦×横×高さ（mm）／宅配60サイズなど\n必要数量：500枚\n納品先：大阪府守口市\n希望納期：未定\n印刷の有無：なし\n\nサイズが未定でも、入れる商品や現在の箱について分かる範囲でお知らせください。"
+      : "Please quote cardboard boxes only.\nInternal dimensions (L × W × H, mm):\nQuantity:\nDelivery location:\nRequired delivery date:\nPrinting requirements:\n\nIf dimensions are undecided, please describe your products or current boxes."
+    : t.messagePlaceholder
 
   async function handleSubmit(
     event: FormEvent<HTMLFormElement>
@@ -213,6 +230,7 @@ export function ContactForm({
 
       setSubmitted(true)
       form.reset()
+      setInquiryType("")
     } catch {
       setError(t.failed)
     } finally {
@@ -378,7 +396,8 @@ export function ContactForm({
               id={`${id}-type`}
               name="type"
               required
-              defaultValue=""
+              value={inquiryType}
+              onChange={(event) => setInquiryType(event.target.value)}
               className={inputClass}
             >
               <option value="" disabled>
@@ -396,6 +415,14 @@ export function ContactForm({
             </select>
           </div>
 
+          {isCardboardQuote && (
+            <p className="rounded-xl bg-amber-50 p-4 text-sm leading-7 text-zinc-700">
+              {language === "ja"
+                ? "ダンボールだけのご購入も承ります。サイズ・数量・納品先・希望納期を分かる範囲でお知らせください。"
+                : "Box-only orders are welcome. Please share the dimensions, quantity, delivery location and required delivery date, if available."}
+            </p>
+          )}
+
           <div>
             <label
               htmlFor={`${id}-message`}
@@ -411,7 +438,7 @@ export function ContactForm({
               rows={6}
               maxLength={10000}
               className={`${inputClass} resize-y leading-7`}
-              placeholder={t.messagePlaceholder}
+              placeholder={messagePlaceholder}
             />
           </div>
 
