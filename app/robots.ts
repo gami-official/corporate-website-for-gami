@@ -1,12 +1,8 @@
-import { MetadataRoute } from 'next'
+import type { MetadataRoute } from "next"
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: {
-      userAgent: '*',
-      allow: '/',
-      disallow: ['/api/', '/_next/'],
-    },
-    sitemap: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://gamigami.net'}/sitemap.xml`,
+    rules: { userAgent: "*", allow: "/", disallow: ["/api/"] },
+    sitemap: "https://www.gamigami.net/sitemap.xml",
   }
 }
