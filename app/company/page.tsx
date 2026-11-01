@@ -7,19 +7,12 @@ import { CredentialsSection } from "@/components/credentials-section"
 import { ContactForm } from "@/components/contact-form"
 
 export const metadata: Metadata = {
-  title: "会社概要・物流のご相談｜株式会社GAMI",
-  description:
-    "株式会社GAMIの会社概要と物流相談。大阪府守口市の自社倉庫「GAMI OSAKA BASE」を主軸に、福岡・神戸の協力ネットワークと連携。1坪からの保管、発送代行、検品・梱包・流通加工、輸送手配までご相談いただけます。",
-  alternates: {
-    canonical: "/company",
+  title: { absolute: "会社概要・物流のご相談｜株式会社GAMI" },
+  description: "株式会社GAMIの会社概要・代表紹介・許認可・お問い合わせ。大阪府守口市の自社倉庫を拠点に、発送代行・倉庫保管・検品・セット組み・全国チャーターをご相談いただけます。",
+  alternates: { canonical: "https://www.gamigami.net/company",
   },
-  openGraph: {
-    title: "会社概要・物流のご相談｜株式会社GAMI",
-    description:
-      "大阪の自社倉庫を拠点に、全国の物流課題に対応。保管・発送代行・検品・流通加工など、株式会社GAMIにご相談ください。",
-    url: "/company",
-    type: "website",
-  },
+  openGraph: { type: "website", locale: "ja_JP", url: "https://www.gamigami.net/company", siteName: "株式会社GAMI", title: "会社概要・物流のご相談｜株式会社GAMI", description: "株式会社GAMIの会社概要・代表紹介・許認可・お問い合わせ。大阪府守口市の自社倉庫を拠点に、発送代行・倉庫保管・検品・セット組み・全国チャーターをご相談いただけます。", images: [{ url: "/ogp.jpg", width: 1200, height: 630, alt: "株式会社GAMI｜大阪の物流・発送代行・倉庫保管" }] },
+  twitter: { card: "summary_large_image", title: "会社概要・物流のご相談｜株式会社GAMI", description: "株式会社GAMIの会社概要・代表紹介・許認可・お問い合わせ。大阪府守口市の自社倉庫を拠点に、発送代行・倉庫保管・検品・セット組み・全国チャーターをご相談いただけます。", images: ["/ogp.jpg"] },
 }
 
 const companyInfo = [
@@ -68,14 +61,12 @@ const companyInfo = [
   },
 ]
 
-const siteUrl = (
-  process.env.NEXT_PUBLIC_SITE_URL ||
-  "https://www.gamigami.net"
-).replace(/\/$/, "")
+const siteUrl = "https://www.gamigami.net"
 
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": `${siteUrl}/#organization`,
   name: "株式会社GAMI",
   url: siteUrl,
   logo: `${siteUrl}/images/logo.png`,
@@ -379,7 +370,7 @@ export default function CompanyPage() {
               <article className="overflow-hidden rounded-2xl border border-black/10 bg-white">
                 <div className="flex h-64 items-center justify-center bg-[#fafaf9] sm:h-80">
                   <img
-                    src="/images/team-kazuhiro.jpg"
+                    src="/images/seo-team-kazuhiro.webp"
                     alt="代表取締役社長 Kazuhiro Fuchigami"
                     width={1024}
                     height={1024}
@@ -412,7 +403,7 @@ export default function CompanyPage() {
               <article className="overflow-hidden rounded-2xl border border-black/10 bg-white">
                 <div className="flex h-64 items-center justify-center bg-[#fafaf9] sm:h-80">
                   <img
-                    src="/images/team-mayu.png"
+                    src="/images/seo-team-mayu.webp"
                     alt="専務取締役 Mayu Kotera"
                     width={1024}
                     height={1536}
