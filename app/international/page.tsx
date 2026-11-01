@@ -598,6 +598,7 @@ export default function InternationalPage() {
                 <Link href="/international/contact?inquiry=beauty" className="mt-6 inline-flex min-h-12 items-center rounded-full bg-amber-500 px-6 py-3 text-sm font-bold text-zinc-950 hover:bg-amber-400">Discuss Cosmetics &amp; Beauty Work →</Link>
               </article>
               <article id="charter-transport" className="scroll-mt-24 rounded-3xl bg-zinc-950 p-6 text-white sm:p-8">
+                <figure className="mb-6 overflow-hidden rounded-2xl"><Image src="/images/charter-transport.png" alt="Illustration of light, medium and large freight vehicles" width={1536} height={1024} sizes="(max-width: 1024px) 100vw, 50vw" className="aspect-[16/9] w-full object-cover" /><figcaption className="pt-2 text-xs leading-6 text-white/60">Transport illustration; vehicles shown are not a GAMI-owned fleet.</figcaption></figure>
                 <p className="text-xs font-bold uppercase tracking-widest text-amber-300">Nationwide Charter Transport</p>
                 <h3 className="mt-4 text-2xl font-bold leading-tight">The right vehicle for your shipment, across Japan.</h3>
                 <p className="mt-4 text-sm leading-8 text-white/75">Our Type I Freight Forwarding Business registration and nationwide carrier network support charter transport arrangements, from light vehicles to 2-ton, 4-ton and large trucks. One-off and regular transport requests are welcome.</p>
@@ -1077,12 +1078,14 @@ export default function InternationalPage() {
 
                 <div>
                   <Image
-                    src="/images/warehouse-moriguchi-inside.jpg"
-                    alt="Inside GAMI OSAKA BASE warehouse in Moriguchi, Osaka"
-                    width={900}
-                    height={600}
-                    className="mb-6 w-full rounded-2xl object-cover shadow-lg"
+                    src="/images/warehouse-interior-nesting.png"
+                    alt="Edited illustration of warehouse operations with blue nesting racks and a brown mezzanine"
+                    width={1024}
+                    height={1024}
+                    className="mb-3 aspect-[4/3] w-full rounded-2xl object-cover shadow-lg"
                   />
+
+                  <p className="mb-5 text-xs leading-6 text-white/60">Edited image illustrating the intended warehouse layout.</p>
 
                   <p className="text-sm leading-8 text-white/70 sm:text-base">
                     Our main warehouse is located in
@@ -1110,7 +1113,7 @@ export default function InternationalPage() {
             <h2 id="gallery-heading" className="mt-4 text-3xl font-bold sm:text-5xl">A closer look at operations.</h2>
             <div className="mt-8 grid grid-cols-2 gap-4 lg:grid-cols-4">
               {[
-                ["warehouse-overview-clean.png", "Warehouse & Storage"],
+                ["warehouse-interior-nesting.png", "Warehouse Layout (Illustration)"],
                 ["warehouse-operations-clean.png", "Packing Workspace"],
                 ["warehouse-dispatch-clean.png", "Dispatch Preparation"],
                 ["warehouse-processing-clean.png", "Carton Assembly"],
