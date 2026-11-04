@@ -482,30 +482,26 @@ export default function HomePage() {
         <section id="business-matching" aria-labelledby="matching-heading" className="scroll-mt-24 bg-zinc-950 py-16 text-white sm:py-24">
           <div className={container}>
             <p className={labelDark}>BUSINESS MATCHING &amp; GROWTH SUPPORT</p>
-            <h2 id="matching-heading" className={heading}>荷物を届けるだけでなく、<br /><span className="text-amber-400">ビジネスの可能性もつなぐ。</span></h2>
+            <h2 id="matching-heading" className={heading}>物流の枠を超えて、<br /><span className="text-amber-400">ビジネスの可能性もつなぐ。</span></h2>
             <p className="mt-5 max-w-3xl text-sm leading-8 text-white/75 sm:text-base">
-              GAMIは物流のご相談にとどまらず、お客様の商品やサービスが、より多くの人・企業に届く方法も一緒に考えます。
-              これまでに培った企業とのつながりや協力ネットワークを活かし、必要に応じて取引先のご紹介や企業同士のマッチング、販路拡大のご相談にも対応します。
+              販路拡大、企業間マッチング、協業・事業連携から物流まで。GAMIは、お客様の事業の新しい可能性を一緒に考えます。
             </p>
-            <p className="mt-4 max-w-3xl text-sm leading-8 text-white/75">
-              「販売先を広げたい」「協業できる会社を探している」「物流も含めて新しい展開を考えたい」。そんな段階から、ぜひお話を聞かせてください。
-              商品を届ける仕組みと、ビジネスが広がるきっかけ。その両方を考えられるパートナーを目指します。
-            </p>
-            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-              {[
-                { title: "販路拡大のご相談", text: "商品やサービスの特徴を伺い、新たな販売機会を一緒に考えます。" },
-                { title: "企業間マッチング", text: "お互いのニーズが合う場合に、企業同士のご紹介を検討します。" },
-                { title: "協業・事業連携", text: "既存のつながりを活かし、協業の可能性を探ります。" },
-                { title: "物流まで一体で相談", text: "販売後の保管・梱包・発送など、実務面もあわせて支援します。" },
-              ].map((item) => (
-                <article key={item.title} className="rounded-2xl border border-white/15 bg-white/5 p-5">
-                  <h3 className="text-base font-bold text-amber-300">{item.title}</h3>
-                  <p className="mt-3 text-sm leading-7 text-white/70">{item.text}</p>
-                </article>
-              ))}
+            <div className="mt-8 overflow-hidden rounded-2xl border border-white/15 bg-white shadow-xl">
+              <img
+                src="/images/business-matching.png"
+                alt="販路拡大・ビジネスマッチング支援のイメージ。新たな販売先のご紹介、販売チャネルの拡大、企業同士のマッチング、物流までの一貫サポート。"
+                width={1536}
+                height={1024}
+                loading="lazy"
+                decoding="async"
+                className="h-auto w-full"
+              />
             </div>
-            <p className="mt-6 text-xs leading-6 text-white/55">※企業のご紹介やマッチングは、案件内容・双方のご意向・ネットワークの状況に応じた個別対応です。取引成立や売上向上を保証するものではありません。</p>
-            <Link href="/company#contact" className={`${button} mt-7`}>販路拡大・協業について相談する →</Link>
+            <p className="mt-3 text-xs text-white/50">※画像はサービス内容を表現したイメージです。実際の商談風景ではありません。</p>
+            <p className="mt-5 max-w-3xl text-sm leading-8 text-white/75">
+              ご紹介やマッチングは、案件内容・双方のご意向・ネットワークの状況に応じて個別に検討します。取引成立や売上向上を保証するものではありません。
+            </p>
+            <Link href="/company?inquiry=business-matching#contact" className={`${button} mt-7`}>販路拡大・協業について相談する →</Link>
           </div>
         </section>
 
@@ -799,25 +795,6 @@ export default function HomePage() {
                   </p>
                 </div>
               </article>
-            </div>
-          </div>
-        </section>
-
-        {/* RECRUIT */}
-        <section id="recruit" aria-labelledby="recruit-heading" className="scroll-mt-24 border-t border-black/10 bg-amber-50 py-14 sm:py-20">
-          <div className={`${container} grid gap-7 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.9fr)] lg:items-center`}>
-            <div>
-              <p className={label}>RECRUIT / 採用情報</p>
-              <h2 id="recruit-heading" className={heading}>一緒に、GAMIの現場を支える仲間を。</h2>
-              <p className="mt-5 text-sm leading-8 text-zinc-700">大阪府守口市の物流拠点で、検品・ピッキング・セット組み・梱包・発送準備などに取り組むスタッフを募集しています。募集状況や勤務条件の詳細は、各求人ページをご確認ください。</p>
-            </div>
-            <div className="rounded-2xl border border-amber-200 bg-white p-6 sm:p-8">
-              <h3 className="text-lg font-bold">現在の募集情報を見る</h3>
-              <p className="mt-2 text-xs leading-6 text-zinc-500">各求人サイトのGAMI募集ページへ移動します。</p>
-              <div className="mt-5 flex flex-col gap-3">
-                <a href="https://jp.indeed.com/job/%E5%80%89%E5%BA%AB%E5%86%85%E4%BD%9C%E6%A5%AD%E3%82%B9%E3%82%BF%E3%83%83%E3%83%95-94a8f6ed84c3f2c4" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-[50px] items-center justify-center rounded-full bg-amber-500 px-5 py-3 text-center text-sm font-bold text-zinc-950 transition hover:bg-amber-400">Indeedで求人を見る ↗</a>
-                <a href="https://en-gage.net/gamigami_saiyo/work_18707538/" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-[50px] items-center justify-center rounded-full border border-zinc-300 px-5 py-3 text-center text-sm font-bold text-zinc-800 transition hover:border-amber-500 hover:bg-amber-50">engageで求人を見る ↗</a>
-              </div>
             </div>
           </div>
         </section>
