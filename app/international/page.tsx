@@ -555,34 +555,6 @@ export default function InternationalPage() {
           </div>
         </section>
 
-        {/* JAPAN BUSINESS DEVELOPMENT & MARKET EXPANSION */}
-        <section id="business-matching" className="scroll-mt-24 bg-amber-50 py-16 sm:py-24">
-          <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-12">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-800">YOUR PARTNER FOR JAPAN BUSINESS</p>
-            <h2 className="mt-4 max-w-5xl text-3xl font-bold leading-tight tracking-tight sm:text-5xl">Let’s Grow Your Business<br />in Japan Together.</h2>
-            <p className="mt-5 max-w-4xl text-base leading-8 text-zinc-700 sm:text-lg">We are committed to supporting your business in Japan — not only by helping you control logistics costs, but also by exploring sales channels, business connections and growth opportunities in the Japanese market.</p>
-            <figure className="mt-8 overflow-hidden rounded-3xl border border-amber-200 bg-white shadow-sm">
-              <Image src="/images/japan-business-support.png" alt="Illustration of GAMI's Japan business support: cost optimization, market entry, partner matching, warehousing and nationwide distribution" width={1536} height={1024} sizes="(max-width: 1024px) 100vw, 1100px" className="h-auto w-full" />
-              <figcaption className="px-4 py-3 text-xs leading-6 text-zinc-500">Concept image illustrating our proposed support services. Partner introductions and commercial outcomes depend on individual project conditions.</figcaption>
-            </figure>
-            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-              {[
-                ["Cost Optimization", "Review fulfillment, packaging and domestic shipping arrangements with practical cost efficiency in mind."],
-                ["Sales Channel Development", "Discuss routes to potential Japanese buyers, distributors and sales partners."],
-                ["Business Matching", "Explore introductions and collaboration opportunities through our network where appropriate."],
-                ["Japan Fulfillment", "Coordinate receiving, storage, inspection, kitting and shipping from our Osaka logistics base."],
-              ].map(([title, body]) => (
-                <article key={title} className="rounded-2xl border border-amber-200 bg-white p-5">
-                  <h3 className="text-lg font-bold text-zinc-950">{title}</h3>
-                  <p className="mt-3 text-sm leading-7 text-zinc-600">{body}</p>
-                </article>
-              ))}
-            </div>
-            <p className="mt-6 max-w-4xl text-sm leading-7 text-zinc-600">Tell us about your products, target customers and plans for Japan. We will discuss what GAMI can realistically support. Market research, introductions and collaboration support are considered individually; sales results and introductions are not guaranteed.</p>
-            <Link href="/international/contact" className="mt-7 inline-flex min-h-12 items-center justify-center rounded-full bg-amber-500 px-7 py-3 text-sm font-bold text-zinc-950 transition hover:bg-amber-400">Let’s Discuss Your Japan Business →</Link>
-          </div>
-        </section>
-
         {/* EDUCATIONAL MATERIALS */}
         <section id="educational-logistics" aria-labelledby="educational-title" className="scroll-mt-24 bg-zinc-950 py-16 text-white sm:py-24">
           <div className="mx-auto grid max-w-7xl gap-8 px-5 sm:px-6 lg:grid-cols-2 lg:items-center lg:px-12">
@@ -822,6 +794,173 @@ export default function InternationalPage() {
           </div>
         </section>
 
+        {/* INDUSTRIES */}
+        <section className="py-16 sm:py-24">
+          <div className="mx-auto max-w-6xl px-5 sm:px-6">
+            <div className="text-center">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-600">
+                Built for Growing Brands
+              </p>
+
+              <h2 className="mt-4 text-[2rem] font-bold leading-[1.2] tracking-[-0.04em] sm:text-5xl">
+                Who we support.
+              </h2>
+            </div>
+
+            <div className="mt-10 grid grid-cols-2 gap-3 lg:grid-cols-4">
+              {industries.map((item) => (
+                <div
+                  key={item}
+                  className="flex min-h-24 items-center justify-center rounded-3xl border border-zinc-200 bg-white px-3 py-5 text-center shadow-sm"
+                >
+                  <p className="text-sm font-bold leading-6 sm:text-base">
+                    {item}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FLOW */}
+        <section className="bg-zinc-100 py-16 sm:py-28">
+          <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-12">
+            <div className="text-center">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-600">
+                How It Works
+              </p>
+
+              <h2 className="mt-4 text-[2rem] font-bold leading-[1.2] tracking-[-0.04em] sm:text-5xl">
+                From overseas
+                <br className="sm:hidden" /> to customers in Japan.
+              </h2>
+            </div>
+
+            <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+              {steps.map((item) => (
+                <article
+                  key={item.step}
+                  className="rounded-[1.75rem] border border-zinc-200 bg-white p-6 shadow-sm"
+                >
+                  <p className="text-sm font-bold text-amber-600">
+                    STEP {item.step}
+                  </p>
+
+                  <h3 className="mt-4 text-lg font-bold leading-snug">
+                    {item.title}
+                  </h3>
+
+                  <p className="mt-3 text-sm leading-7 text-zinc-600">
+                    {item.body}
+                  </p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* OSAKA WAREHOUSE */}
+        <section className="py-16 sm:py-28">
+          <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-12">
+            <div className="overflow-hidden rounded-[2rem] bg-zinc-950 px-6 py-10 text-white sm:px-10 sm:py-14 lg:px-14">
+              <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-300">
+                    Osaka, Japan
+                  </p>
+
+                  <h2 className="mt-4 text-[2rem] font-bold leading-[1.2] tracking-[-0.04em] sm:text-5xl">
+                    Your logistics base
+                    <br />
+                    in Japan.
+                  </h2>
+
+                  <p className="mt-6 text-sm leading-8 text-white/70 sm:text-base">
+                    An Osaka-based logistics partner
+                    with its own warehouse and a flexible
+                    network for projects across Japan.
+                  </p>
+                </div>
+
+                <div>
+                  <Image
+                    src="/images/seo-warehouse-interior-nesting.webp"
+                    alt="Edited illustration of warehouse operations with blue nesting racks and a brown mezzanine"
+                    width={1024}
+                    height={1024}
+                    className="mb-3 aspect-[4/3] w-full rounded-2xl object-cover shadow-lg"
+                  />
+
+                  <p className="mb-5 text-xs leading-6 text-white/60">Edited image illustrating the intended warehouse layout.</p>
+
+                  <p className="text-sm leading-8 text-white/70 sm:text-base">
+                    Our main warehouse is located in
+                    Moriguchi, Osaka. From receiving
+                    and storage to value-added processing
+                    and domestic shipping, GAMI provides
+                    an operational base for brands
+                    building their business in Japan.
+                  </p>
+
+                  <p className="mt-5 text-sm font-bold leading-7 text-white">
+                    1-8-18 Dainichicho, Moriguchi,
+                    <br className="sm:hidden" /> Osaka, Japan
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* OPERATIONS GALLERY */}
+        <section aria-labelledby="gallery-heading" className="bg-zinc-100 py-16 sm:py-24">
+          <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-12">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-700">Operations Gallery</p>
+            <h2 id="gallery-heading" className="mt-4 text-3xl font-bold sm:text-5xl">A closer look at operations.</h2>
+            <div className="mt-8 grid grid-cols-2 gap-4 lg:grid-cols-4">
+              {[
+                ["seo-warehouse-interior-nesting.webp", "Warehouse Layout (Illustration)"],
+                ["seo-warehouse-operations-clean.webp", "Packing Workspace"],
+                ["seo-warehouse-dispatch-clean.webp", "Dispatch Preparation"],
+                ["seo-warehouse-processing-clean.webp", "Carton Assembly"],
+              ].map(([filename,caption])=>(
+                <figure key={filename} className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
+                  <Image src={`/images/${filename}`} alt={caption} width={900} height={675} sizes="(max-width: 1024px) 50vw, 25vw" className="aspect-[4/3] w-full object-cover" />
+                  <figcaption className="px-4 py-4 text-xs font-semibold leading-6 sm:text-sm">{caption}</figcaption>
+                </figure>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* JAPAN BUSINESS DEVELOPMENT & MARKET EXPANSION */}
+        <section id="business-matching" className="scroll-mt-24 bg-amber-50 py-16 sm:py-24">
+          <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-12">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-800">YOUR PARTNER FOR JAPAN BUSINESS</p>
+            <h2 className="mt-4 max-w-5xl text-3xl font-bold leading-tight tracking-tight sm:text-5xl">Let’s Grow Your Business<br />in Japan Together.</h2>
+            <p className="mt-5 max-w-4xl text-base leading-8 text-zinc-700 sm:text-lg">We are committed to supporting your business in Japan — not only by helping you control logistics costs, but also by exploring sales channels, business connections and growth opportunities in the Japanese market.</p>
+            <figure className="mt-8 overflow-hidden rounded-3xl border border-amber-200 bg-white shadow-sm">
+              <Image src="/images/japan-business-support.png" alt="Illustration of GAMI's Japan business support: cost optimization, market entry, partner matching, warehousing and nationwide distribution" width={1536} height={1024} sizes="(max-width: 1024px) 100vw, 1100px" className="h-auto w-full" />
+              <figcaption className="px-4 py-3 text-xs leading-6 text-zinc-500">Concept image illustrating our proposed support services. Partner introductions and commercial outcomes depend on individual project conditions.</figcaption>
+            </figure>
+            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {[
+                ["Cost Optimization", "Review fulfillment, packaging and domestic shipping arrangements with practical cost efficiency in mind."],
+                ["Sales Channel Development", "Discuss routes to potential Japanese buyers, distributors and sales partners."],
+                ["Business Matching", "Explore introductions and collaboration opportunities through our network where appropriate."],
+                ["Japan Fulfillment", "Coordinate receiving, storage, inspection, kitting and shipping from our Osaka logistics base."],
+              ].map(([title, body]) => (
+                <article key={title} className="rounded-2xl border border-amber-200 bg-white p-5">
+                  <h3 className="text-lg font-bold text-zinc-950">{title}</h3>
+                  <p className="mt-3 text-sm leading-7 text-zinc-600">{body}</p>
+                </article>
+              ))}
+            </div>
+            <p className="mt-6 max-w-4xl text-sm leading-7 text-zinc-600">Tell us about your products, target customers and plans for Japan. We will discuss what GAMI can realistically support. Market research, introductions and collaboration support are considered individually; sales results and introductions are not guaranteed.</p>
+            <Link href="/international/contact" className="mt-7 inline-flex min-h-12 items-center justify-center rounded-full bg-amber-500 px-7 py-3 text-sm font-bold text-zinc-950 transition hover:bg-amber-400">Let’s Discuss Your Japan Business →</Link>
+          </div>
+        </section>
+
         {/* JAPAN OPERATIONS NETWORK */}
         <section
           aria-labelledby="network-title"
@@ -994,145 +1133,6 @@ export default function InternationalPage() {
                   </div>
                 </article>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* INDUSTRIES */}
-        <section className="py-16 sm:py-24">
-          <div className="mx-auto max-w-6xl px-5 sm:px-6">
-            <div className="text-center">
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-600">
-                Built for Growing Brands
-              </p>
-
-              <h2 className="mt-4 text-[2rem] font-bold leading-[1.2] tracking-[-0.04em] sm:text-5xl">
-                Who we support.
-              </h2>
-            </div>
-
-            <div className="mt-10 grid grid-cols-2 gap-3 lg:grid-cols-4">
-              {industries.map((item) => (
-                <div
-                  key={item}
-                  className="flex min-h-24 items-center justify-center rounded-3xl border border-zinc-200 bg-white px-3 py-5 text-center shadow-sm"
-                >
-                  <p className="text-sm font-bold leading-6 sm:text-base">
-                    {item}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* FLOW */}
-        <section className="bg-zinc-100 py-16 sm:py-28">
-          <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-12">
-            <div className="text-center">
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-600">
-                How It Works
-              </p>
-
-              <h2 className="mt-4 text-[2rem] font-bold leading-[1.2] tracking-[-0.04em] sm:text-5xl">
-                From overseas
-                <br className="sm:hidden" /> to customers in Japan.
-              </h2>
-            </div>
-
-            <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-              {steps.map((item) => (
-                <article
-                  key={item.step}
-                  className="rounded-[1.75rem] border border-zinc-200 bg-white p-6 shadow-sm"
-                >
-                  <p className="text-sm font-bold text-amber-600">
-                    STEP {item.step}
-                  </p>
-
-                  <h3 className="mt-4 text-lg font-bold leading-snug">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-3 text-sm leading-7 text-zinc-600">
-                    {item.body}
-                  </p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* OSAKA WAREHOUSE */}
-        <section className="py-16 sm:py-28">
-          <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-12">
-            <div className="overflow-hidden rounded-[2rem] bg-zinc-950 px-6 py-10 text-white sm:px-10 sm:py-14 lg:px-14">
-              <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
-                <div>
-                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-300">
-                    Osaka, Japan
-                  </p>
-
-                  <h2 className="mt-4 text-[2rem] font-bold leading-[1.2] tracking-[-0.04em] sm:text-5xl">
-                    Your logistics base
-                    <br />
-                    in Japan.
-                  </h2>
-
-                  <p className="mt-6 text-sm leading-8 text-white/70 sm:text-base">
-                    An Osaka-based logistics partner
-                    with its own warehouse and a flexible
-                    network for projects across Japan.
-                  </p>
-                </div>
-
-                <div>
-                  <Image
-                    src="/images/seo-warehouse-interior-nesting.webp"
-                    alt="Edited illustration of warehouse operations with blue nesting racks and a brown mezzanine"
-                    width={1024}
-                    height={1024}
-                    className="mb-3 aspect-[4/3] w-full rounded-2xl object-cover shadow-lg"
-                  />
-
-                  <p className="mb-5 text-xs leading-6 text-white/60">Edited image illustrating the intended warehouse layout.</p>
-
-                  <p className="text-sm leading-8 text-white/70 sm:text-base">
-                    Our main warehouse is located in
-                    Moriguchi, Osaka. From receiving
-                    and storage to value-added processing
-                    and domestic shipping, GAMI provides
-                    an operational base for brands
-                    building their business in Japan.
-                  </p>
-
-                  <p className="mt-5 text-sm font-bold leading-7 text-white">
-                    1-8-18 Dainichicho, Moriguchi,
-                    <br className="sm:hidden" /> Osaka, Japan
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* OPERATIONS GALLERY */}
-        <section aria-labelledby="gallery-heading" className="bg-zinc-100 py-16 sm:py-24">
-          <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-12">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-700">Operations Gallery</p>
-            <h2 id="gallery-heading" className="mt-4 text-3xl font-bold sm:text-5xl">A closer look at operations.</h2>
-            <div className="mt-8 grid grid-cols-2 gap-4 lg:grid-cols-4">
-              {[
-                ["seo-warehouse-interior-nesting.webp", "Warehouse Layout (Illustration)"],
-                ["seo-warehouse-operations-clean.webp", "Packing Workspace"],
-                ["seo-warehouse-dispatch-clean.webp", "Dispatch Preparation"],
-                ["seo-warehouse-processing-clean.webp", "Carton Assembly"],
-              ].map(([filename,caption])=>(
-                <figure key={filename} className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
-                  <Image src={`/images/${filename}`} alt={caption} width={900} height={675} sizes="(max-width: 1024px) 50vw, 25vw" className="aspect-[4/3] w-full object-cover" />
-                  <figcaption className="px-4 py-4 text-xs font-semibold leading-6 sm:text-sm">{caption}</figcaption>
-                </figure>
-              ))}
             </div>
           </div>
         </section>
