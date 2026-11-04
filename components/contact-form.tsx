@@ -15,6 +15,16 @@ type ContactFormProps = { language?: Language }
 
 const inquiryTypes = [
   {
+    value: "販路拡大・ビジネスマッチングの相談",
+    ja: "販路拡大・ビジネスマッチングの相談",
+    en: "Sales channel expansion / business matching",
+  },
+  {
+    value: "協業・パートナーシップの相談",
+    ja: "協業・パートナーシップの相談",
+    en: "Business collaboration / partnership",
+  },
+  {
     value: "物流・発送代行の相談",
     ja: "物流・発送代行の相談",
     en: "Logistics and fulfillment",
@@ -219,8 +229,8 @@ const copy = {
   ja: {
     title: "小さなご依頼も、大規模案件も。まずはご相談ください。",
     intro:
-      "物量や開始時期が未定でも大丈夫。ダンボールのみのお見積りも歓迎します。会社名と電話番号は任意です。",
-    legend: "物流のご相談・資材お見積りフォーム",
+      "物流・資材のお見積りから販路拡大・協業のご相談まで。内容が未定でも大丈夫です。会社名と電話番号は任意です。",
+    legend: "物流・販路拡大・協業のご相談フォーム",
     name: "お名前（必須）",
     namePlaceholder: "山田 太郎",
     company: "会社名・屋号（任意）",
@@ -255,8 +265,8 @@ const copy = {
     title:
       "From small shipments to large-scale projects — talk to us.",
     intro:
-      "Estimated volumes and start dates are welcome. Company name and phone number are optional.",
-    legend: "Logistics inquiry form",
+      "Ask about logistics, sales channels or business partnerships. Early-stage inquiries are welcome. Company name and phone number are optional.",
+    legend: "Logistics and business partnership inquiry form",
     name: "Your name (required)",
     namePlaceholder: "Your full name",
     company: "Company name (optional)",
@@ -305,6 +315,7 @@ export function ContactForm({
   const isTransportQuote = inquiryType === "全国チャーター・輸送費のお見積り"
   const isBeautyQuote = inquiryType === "化粧品・美容商材の検品・セット組み"
   const isSpecialQuote = isCardboardQuote || isTransportQuote || isBeautyQuote
+  const isBusinessInquiry = inquiryType === "販路拡大・ビジネスマッチングの相談" || inquiryType === "協業・パートナーシップの相談"
   const projectFields = isTransportQuote ? transportFields : isBeautyQuote ? beautyFields : []
 
   useEffect(() => {
@@ -314,6 +325,11 @@ export function ContactForm({
       beauty: "化粧品・美容商材の検品・セット組み",
       cardboard: "ダンボール単体のお見積り",
       education: "教材・パンフレット発送の相談",
+      matching: "販路拡大・ビジネスマッチングの相談",
+      business: "販路拡大・ビジネスマッチングの相談",
+      growth: "販路拡大・ビジネスマッチングの相談",
+      partnership: "協業・パートナーシップの相談",
+      collaboration: "協業・パートナーシップの相談",
     }
     const applyInquiry = () => {
       const value = selections[new URLSearchParams(window.location.search).get("inquiry") || ""]
@@ -328,7 +344,11 @@ export function ContactForm({
     ? language === "ja"
       ? "例：ダンボールのみの見積りを希望します。\n箱の内寸：縦×横×高さ（mm）／宅配60サイズなど\n必要数量：500枚\n納品先：大阪府守口市\n希望納期：未定\n印刷の有無：なし\n\nサイズが未定でも、入れる商品や現在の箱について分かる範囲でお知らせください。"
       : "Please quote cardboard boxes only.\nInternal dimensions (L × W × H, mm):\nQuantity:\nDelivery location:\nRequired delivery date:\nPrinting requirements:\n\nIf dimensions are undecided, please describe your products or current boxes."
-    : t.messagePlaceholder
+    : isBusinessInquiry
+      ? language === "ja"
+        ? "例：自社商品の新たな販売先を探しています。\n商品・サービス：\n希望する取引先・協業内容：\n現在の販路・課題：\n希望時期：未定\n\n分かる範囲でご記入ください。ご紹介や取引成立をお約束するものではありません。"
+        : "For example:\nProducts or services:\nPartners or sales channels sought:\nCurrent challenges:\nPreferred timing:\n\nPlease share what you know. Introductions and business outcomes are not guaranteed."
+      : t.messagePlaceholder
 
   async function handleSubmit(
     event: FormEvent<HTMLFormElement>
