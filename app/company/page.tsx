@@ -22,7 +22,7 @@ const companyInfo = [
   {
     label: "主要事業",
     value:
-      "物流運送・倉庫保管・発送代行・流通加工・内職作業",
+      "物流運送・倉庫保管・発送代行・流通加工・内職作業・販路拡大支援・企業間マッチング",
   },
   {
     label: "関連事業",
@@ -40,7 +40,7 @@ const companyInfo = [
   },
   {
     label: "化粧品製造",
-    value: "化粧品製造業許可認証倉庫 27CZ201072",
+    value: "共同運営会社A-produce株式会社が化粧品製造業（包装・表示・保管）許可を保有（27CZ201072）。対応業務は許可範囲を確認のうえご案内します。",
   },
   {
     label: "利用運送",
@@ -94,6 +94,8 @@ const organizationSchema = {
     "倉庫保管",
     "流通加工",
     "内職作業",
+    "販路拡大支援",
+    "企業間マッチング",
     "ヘッドスパ開業支援",
   ],
 }
@@ -179,7 +181,7 @@ export default function CompanyPage() {
 
             <p className="mt-6 max-w-3xl text-sm leading-8 text-white/85 sm:text-base sm:leading-9">
               大阪を拠点に、お客様の事業を支える株式会社GAMI。
-              会社情報と、物流に向き合う私たちの姿勢をご紹介します。
+              会社情報と、物流・販路拡大の両面から事業に向き合う私たちの姿勢をご紹介します。
             </p>
 
             <div className="mt-8 flex max-w-lg flex-col gap-3 sm:flex-row">
@@ -471,6 +473,32 @@ export default function CompanyPage() {
           </div>
         </section>
 
+        {/* BUSINESS MATCHING */}
+        <section id="business-matching" aria-labelledby="matching-heading" className="scroll-mt-24 bg-zinc-950 px-4 py-16 text-white sm:px-6 sm:py-24">
+          <div className="mx-auto max-w-5xl">
+            <p className="text-[11px] font-bold tracking-[0.18em] text-amber-400">BUSINESS MATCHING & GROWTH SUPPORT</p>
+            <h2 id="matching-heading" className="mt-3 text-2xl font-bold leading-relaxed sm:text-4xl">物流の先にある、<br />新しいビジネスの可能性も。</h2>
+            <p className="mt-5 max-w-3xl text-sm leading-8 text-white/80">
+              GAMIは、商品を保管・発送するだけでなく、お客様の販路拡大や事業成長についても一緒に考えます。
+              これまで築いてきた企業とのつながりや協力ネットワークを活かし、必要に応じて取引先のご紹介や企業同士のマッチング、協業のご相談にも対応します。
+            </p>
+            <div className="mt-8 grid gap-4 sm:grid-cols-3">
+              {[
+                { title: "販路拡大のご相談", text: "商品の販売先や新たな取引機会について、一緒に可能性を探ります。" },
+                { title: "企業間マッチング", text: "事業内容やご希望を伺い、相性のよい企業との接点づくりを支援します。" },
+                { title: "物流と事業の一体支援", text: "新たな販売機会に合わせた保管・加工・発送の体制までご相談いただけます。" },
+              ].map((item) => (
+                <article key={item.title} className="rounded-2xl border border-white/15 bg-white/5 p-6">
+                  <h3 className="text-lg font-bold text-amber-300">{item.title}</h3>
+                  <p className="mt-3 text-sm leading-7 text-white/75">{item.text}</p>
+                </article>
+              ))}
+            </div>
+            <p className="mt-5 text-xs leading-6 text-white/55">※企業紹介やマッチングは、ご相談内容とネットワークの状況に応じた個別対応です。取引成立や売上向上を保証するものではありません。</p>
+            <Link href="/company#contact" className="mt-7 inline-flex min-h-[50px] items-center justify-center rounded-full bg-amber-500 px-6 py-3 text-sm font-bold text-zinc-950 transition hover:bg-amber-400">販路拡大・協業について相談する →</Link>
+          </div>
+        </section>
+
         {/* CREDENTIALS */}
         <CredentialsSection />
 
@@ -481,7 +509,7 @@ export default function CompanyPage() {
         >
           <div className="mx-auto max-w-3xl">
             <p className="text-[11px] font-bold tracking-[0.12em] text-amber-700">
-              LOGISTICS CONTACT
+              BUSINESS & LOGISTICS CONTACT
             </p>
 
             <h2 className="mt-2 text-[23px] font-bold leading-[1.5] tracking-tight sm:text-4xl">
@@ -498,6 +526,7 @@ export default function CompanyPage() {
               全国チャーターの輸送手配、化粧品・美容商材の検品・セット組み、教材・パンフレット発送、ダンボール単体のお見積りなど。
               小ロットやスポット案件、
               開始時期が未定のご相談も歓迎しています。
+              販路拡大・企業間マッチング・協業に関するご相談もこちらからお寄せください。
             </p>
 
             <div className="mt-4 rounded-xl border border-amber-100 bg-amber-50 p-4">
