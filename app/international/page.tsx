@@ -6,7 +6,7 @@ import { Footer } from "@/components/footer"
 import { MetricsBar } from "@/components/metrics-bar"
 
 export const metadata: Metadata = {
-  title: { absolute: "Japan Fulfillment & 3PL | Osaka & 365-Day Dispatch | GAMI" },
+  title: { absolute: "Grow Your Business in Japan | Market Expansion & Fulfillment | GAMI" },
   description: "Osaka-based warehousing, fulfillment and 365-day dispatch by arrangement. Inspection, cosmetics kitting, course materials, domestic shipping and nationwide charter transport for international brands.",
   alternates: { canonical: "https://www.gamigami.net/international",
     languages: { ja: "https://www.gamigami.net/", en: "https://www.gamigami.net/international", "x-default": "https://www.gamigami.net/" },
@@ -59,7 +59,7 @@ const services = [
     number: "07",
     image: "seo-case-inspection.webp",
     title: "Cosmetics & Beauty Products",
-    body: "Container and product inspection, kitting, gift sets, packing and domestic shipping. Our Osaka facility holds a cosmetics manufacturing license; we confirm the requested work against its permitted scope.",
+    body: "Container and product inspection, kitting, gift sets, packing and domestic shipping. A partner company operating within the same Osaka warehouse holds the relevant cosmetics manufacturing license. We review regulated work with that company before confirming availability.",
   },
   {
     number: "08",
@@ -128,7 +128,7 @@ const caseStudies = [
     "summary": "Urgent container inspection was completed in time; inspection work now continues in Osaka and Kyushu.",
     "paragraphs": [
       "A cosmetics manufacturer in Kyushu requested urgent container inspection. GAMI responded quickly and worked to the customer’s required inspection standard and deadline.",
-      "Inspection work continues in Osaka and Kyushu. GAMI can also arrange domestic transportation with attention to cost, and discuss set assembly in Osaka within its cosmetics manufacturing license scope."
+      "Inspection work continues in Osaka and Kyushu. GAMI can also arrange domestic transportation with attention to cost, and discuss set assembly in Osaka in coordination with the licensed partner company at the same Osaka warehouse."
     ]
   }
 ]
@@ -217,7 +217,7 @@ const steps = [
 const faq = [
   {
     q: "Can you inspect and assemble cosmetics and beauty product sets?",
-    a: "Yes. We can discuss container inspection, appearance and quantity checks, kitting, gift sets, packing and domestic shipping. Our Osaka facility holds cosmetics manufacturing license 27CZ201072. We review the requested work and applicable license scope before confirming availability.",
+    a: "Yes. We can discuss container inspection, appearance and quantity checks, kitting, gift sets, packing and domestic shipping. A partner company operating within the same Osaka warehouse holds the relevant cosmetics manufacturing license. We confirm whether regulated work can be handled under that company’s license before accepting the project.",
   },
   {
     q: "Can you arrange charter transport across Japan?",
@@ -368,13 +368,12 @@ export default function InternationalPage() {
               </h1>
 
               <p className="mx-auto mt-7 max-w-3xl text-[15px] leading-8 text-white/75 sm:text-lg sm:leading-9">
-                Based at our own warehouse in Osaka,
-                GAMI provides flexible fulfillment and
-                3PL services for international brands.
-                From small shipments to large-scale projects,
-                we coordinate warehousing, packing and
-                nationwide shipping with trusted partners
-                in Fukuoka and Kobe.
+                Let us support your business in Japan. Beyond helping
+                control logistics costs, we are committed to
+                helping international companies explore new
+                sales channels, potential business partnerships,
+                and opportunities in the Japanese market —
+                backed by our Osaka-based fulfillment operations.
               </p>
 
               <div className="mx-auto mt-9 flex max-w-sm flex-col gap-3 sm:max-w-none sm:flex-row sm:justify-center">
@@ -382,7 +381,7 @@ export default function InternationalPage() {
                   href="/international/contact"
                   className="rounded-full bg-amber-500 px-8 py-4 text-center text-sm font-bold text-zinc-950 shadow-lg transition hover:bg-amber-400"
                 >
-                  Request a Logistics Quote
+                  Talk to Us About Japan Business
                 </Link>
 
                 <a
@@ -556,6 +555,34 @@ export default function InternationalPage() {
           </div>
         </section>
 
+        {/* JAPAN BUSINESS DEVELOPMENT & MARKET EXPANSION */}
+        <section id="business-matching" className="scroll-mt-24 bg-amber-50 py-16 sm:py-24">
+          <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-12">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-800">YOUR PARTNER FOR JAPAN BUSINESS</p>
+            <h2 className="mt-4 max-w-5xl text-3xl font-bold leading-tight tracking-tight sm:text-5xl">Let’s Grow Your Business<br />in Japan Together.</h2>
+            <p className="mt-5 max-w-4xl text-base leading-8 text-zinc-700 sm:text-lg">We are committed to supporting your business in Japan — not only by helping you control logistics costs, but also by exploring sales channels, business connections and growth opportunities in the Japanese market.</p>
+            <figure className="mt-8 overflow-hidden rounded-3xl border border-amber-200 bg-white shadow-sm">
+              <Image src="/images/japan-business-support.png" alt="Illustration of GAMI's Japan business support: cost optimization, market entry, partner matching, warehousing and nationwide distribution" width={1536} height={1024} sizes="(max-width: 1024px) 100vw, 1100px" className="h-auto w-full" />
+              <figcaption className="px-4 py-3 text-xs leading-6 text-zinc-500">Concept image illustrating our proposed support services. Partner introductions and commercial outcomes depend on individual project conditions.</figcaption>
+            </figure>
+            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {[
+                ["Cost Optimization", "Review fulfillment, packaging and domestic shipping arrangements with practical cost efficiency in mind."],
+                ["Sales Channel Development", "Discuss routes to potential Japanese buyers, distributors and sales partners."],
+                ["Business Matching", "Explore introductions and collaboration opportunities through our network where appropriate."],
+                ["Japan Fulfillment", "Coordinate receiving, storage, inspection, kitting and shipping from our Osaka logistics base."],
+              ].map(([title, body]) => (
+                <article key={title} className="rounded-2xl border border-amber-200 bg-white p-5">
+                  <h3 className="text-lg font-bold text-zinc-950">{title}</h3>
+                  <p className="mt-3 text-sm leading-7 text-zinc-600">{body}</p>
+                </article>
+              ))}
+            </div>
+            <p className="mt-6 max-w-4xl text-sm leading-7 text-zinc-600">Tell us about your products, target customers and plans for Japan. We will discuss what GAMI can realistically support. Market research, introductions and collaboration support are considered individually; sales results and introductions are not guaranteed.</p>
+            <Link href="/international/contact" className="mt-7 inline-flex min-h-12 items-center justify-center rounded-full bg-amber-500 px-7 py-3 text-sm font-bold text-zinc-950 transition hover:bg-amber-400">Let’s Discuss Your Japan Business →</Link>
+          </div>
+        </section>
+
         {/* EDUCATIONAL MATERIALS */}
         <section id="educational-logistics" aria-labelledby="educational-title" className="scroll-mt-24 bg-zinc-950 py-16 text-white sm:py-24">
           <div className="mx-auto grid max-w-7xl gap-8 px-5 sm:px-6 lg:grid-cols-2 lg:items-center lg:px-12">
@@ -574,8 +601,8 @@ export default function InternationalPage() {
 <SectionImage src="seo-case-inspection.webp" alt="Cosmetic container inspection and kitting" />
                 <p className="text-xs font-bold uppercase tracking-widest text-amber-700">Cosmetics &amp; Beauty</p>
                 <h3 className="mt-4 text-2xl font-bold leading-tight">Inspection, kitting and dispatch for beauty products.</h3>
-                <p className="mt-4 text-sm leading-8 text-zinc-600">Our Osaka facility holds cosmetics manufacturing license 27CZ201072. We support cosmetics and beauty businesses with container and product inspection, quantity and SKU checks, set assembly, gift kits, packing and domestic shipping.</p>
-                <p className="mt-3 text-sm leading-8 text-zinc-600">Share the products, quantity, inspection criteria and deadline. We coordinate the requested work with our operations team and confirm availability within the license scope.</p>
+                <p className="mt-4 text-sm leading-8 text-zinc-600">GAMI works alongside A-produce Co., Ltd., a partner company operating within the same Osaka warehouse that holds a cosmetics manufacturing license. We discuss container and product inspection, quantity and SKU checks, set assembly, gift kits, packing and domestic shipping according to the required scope.</p>
+                <p className="mt-3 text-sm leading-8 text-zinc-600">Share the products, quantity, inspection criteria and deadline. We coordinate the requested work with our operations team and confirm the appropriate operating company and applicable license scope before accepting regulated work.</p>
                 <Link href="/international/contact?inquiry=beauty" className="mt-6 inline-flex min-h-12 items-center rounded-full bg-amber-500 px-6 py-3 text-sm font-bold text-zinc-950 hover:bg-amber-400">Discuss Cosmetics &amp; Beauty Work →</Link>
               </article>
               <article id="charter-transport" className="scroll-mt-24 rounded-3xl bg-zinc-950 p-6 text-white sm:p-8">
