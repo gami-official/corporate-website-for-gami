@@ -478,33 +478,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* BUSINESS MATCHING & GROWTH SUPPORT */}
-        <section id="business-matching" aria-labelledby="matching-heading" className="scroll-mt-24 bg-zinc-950 py-16 text-white sm:py-24">
-          <div className={container}>
-            <p className={labelDark}>BUSINESS MATCHING &amp; GROWTH SUPPORT</p>
-            <h2 id="matching-heading" className={heading}>物流の枠を超えて、<br /><span className="text-amber-400">ビジネスの可能性もつなぐ。</span></h2>
-            <p className="mt-5 max-w-3xl text-sm leading-8 text-white/75 sm:text-base">
-              販路拡大、企業間マッチング、協業・事業連携から物流まで。GAMIは、お客様の事業の新しい可能性を一緒に考えます。
-            </p>
-            <div className="mt-8 overflow-hidden rounded-2xl border border-white/15 bg-white shadow-xl">
-              <img
-                src="/images/business-matching.png"
-                alt="販路拡大・ビジネスマッチング支援のイメージ。新たな販売先のご紹介、販売チャネルの拡大、企業同士のマッチング、物流までの一貫サポート。"
-                width={1536}
-                height={1024}
-                loading="lazy"
-                decoding="async"
-                className="h-auto w-full"
-              />
-            </div>
-            <p className="mt-3 text-xs text-white/50">※画像はサービス内容を表現したイメージです。実際の商談風景ではありません。</p>
-            <p className="mt-5 max-w-3xl text-sm leading-8 text-white/75">
-              ご紹介やマッチングは、案件内容・双方のご意向・ネットワークの状況に応じて個別に検討します。取引成立や売上向上を保証するものではありません。
-            </p>
-            <Link href="/company?inquiry=business-matching#contact" className={`${button} mt-7`}>販路拡大・協業について相談する →</Link>
-          </div>
-        </section>
-
         {/* SERVICES */}
         <section id="services" aria-labelledby="services-heading" className="scroll-mt-24 bg-white py-16 sm:py-24">
           <div className={container}>
@@ -606,48 +579,6 @@ export default function HomePage() {
             </div>
             <p className="mt-3 text-xs leading-6 text-zinc-500">※お客様名・ブランド名は非公開です。配送日数・対応条件は、各事例における内容です。</p>
             <Link href="/company#contact" className={`${button} mt-6`}>自社の物流について相談する →</Link>
-          </div>
-        </section>
-
-        {/* WAREHOUSE & ACCESS */}
-        <section id="warehouse" aria-labelledby="warehouse-heading" className="scroll-mt-24 bg-white py-16 sm:py-24">
-          <div className={container}>
-            <span id="osaka-base" className="block scroll-mt-24" />
-            <span id="osaka" className="block scroll-mt-24" />
-            <p className={label}>GAMI OSAKA BASE</p>
-            <h2 id="warehouse-heading" className={heading}>御社の物流拠点を、<br />大阪に。</h2>
-            <p className="mt-5 max-w-3xl text-sm leading-8 text-zinc-600">大阪府守口市の約100坪の自社倉庫。1坪からの保管相談をはじめ、検品・加工・梱包・発送まで。自社で倉庫を新設せずに、お客様の物流拠点として活用いただくこともご相談可能です。</p>
-            <div className="mt-8 grid grid-cols-2 gap-3 lg:grid-cols-3">
-              {photos.map(photo=>(
-                <figure key={photo.src} className="overflow-hidden rounded-2xl border border-black/10 bg-[#fafaf9]">
-                  <img decoding="async" src={photo.src} alt={photo.alt} width={900} height={675} loading="lazy" className="aspect-[4/3] w-full object-cover object-center" />
-                  <figcaption className="px-4 py-3 text-xs font-semibold leading-6 sm:text-sm">{photo.caption}</figcaption>
-                </figure>
-              ))}
-            </div>
-            <div className="mt-8 grid gap-5 lg:grid-cols-2">
-              <section aria-labelledby="facility-info-title" className="rounded-2xl border border-black/10 bg-[#fafaf9] p-5 sm:p-6">
-                <h3 id="facility-info-title" className="text-lg font-bold">大阪倉庫について</h3>
-                <dl className="mt-4">{warehouseInfo.map(item=><div key={item.label} className="grid grid-cols-[80px_minmax(0,1fr)] gap-3 border-t border-black/10 py-3 text-sm sm:grid-cols-[110px_minmax(0,1fr)]"><dt className="font-semibold text-zinc-500">{item.label}</dt><dd className="min-w-0 break-words leading-7">{item.value}</dd></div>)}</dl>
-                <p className="mt-3 text-xs leading-6 text-zinc-500">保管量や作業内容、ご希望の運用に合わせてご提案します。拠点としてのご利用条件は、事前にご相談ください。</p>
-              </section>
-              <section id="access" aria-labelledby="access-title" className="scroll-mt-24 rounded-2xl border border-black/10 bg-white p-5 sm:p-6">
-                <h3 id="access-title" className="text-lg font-bold">所在地・アクセス</h3>
-                <p className="mt-3 text-sm leading-7 text-zinc-600">GAMI OSAKA BASE<br />〒570-0003 大阪府守口市大日町1-8-18</p>
-                <iframe title="GAMI OSAKA BASEの所在地" src="https://www.google.com/maps?q=大阪府守口市大日町1-8-18&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="mt-4 h-[240px] w-full rounded-xl border-0 sm:h-[300px]" />
-                <a href="https://www.google.com/maps/search/?api=1&query=大阪府守口市大日町1-8-18" target="_blank" rel="noopener noreferrer" className="mt-3 inline-flex min-h-[44px] items-center text-sm font-bold text-amber-800 underline underline-offset-4">Googleマップで開く ↗</a>
-              </section>
-            </div>
-            <section id="network" aria-labelledby="network-title" className="mt-8 scroll-mt-24 border-t border-black/10 pt-7">
-              <p className={label}>PARTNER NETWORK</p>
-              <h3 id="network-title" className="mt-3 text-lg font-bold">必要な作業に合わせて、福岡・神戸とも連携。</h3>
-              <p className="mt-3 text-sm leading-8 text-zinc-600">GAMIの自社倉庫は大阪にあります。案件の内容に応じて、福岡・神戸の協力会社とも連携します。</p>
-              <div className="mt-4 grid gap-3 sm:grid-cols-2">
-                <a href="https://www.maxexpress.co.jp/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between gap-3 rounded-xl border border-black/10 px-4 py-4 transition hover:border-amber-400"><span><span className="text-xs font-bold text-amber-700">福岡の協力会社</span><span className="mt-1 block text-sm font-semibold">株式会社マックスエクスプレス</span></span><span aria-hidden="true">↗</span></a>
-                <a href="https://www.s-grow.co.jp/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between gap-3 rounded-xl border border-black/10 px-4 py-4 transition hover:border-amber-400"><span><span className="text-xs font-bold text-amber-700">神戸の協力会社</span><span className="mt-1 block text-sm font-semibold">株式会社エスグロー</span></span><span aria-hidden="true">↗</span></a>
-              </div>
-            </section>
-            <Link href="/company#contact" className={`${button} mt-7`}>大阪拠点の利用を相談する →</Link>
           </div>
         </section>
 
@@ -796,6 +727,75 @@ export default function HomePage() {
                 </div>
               </article>
             </div>
+          </div>
+        </section>
+
+        {/* BUSINESS MATCHING & GROWTH SUPPORT */}
+        <section id="business-matching" aria-labelledby="matching-heading" className="scroll-mt-24 bg-zinc-950 py-16 text-white sm:py-24">
+          <div className={container}>
+            <p className={labelDark}>BUSINESS MATCHING &amp; GROWTH SUPPORT</p>
+            <h2 id="matching-heading" className={heading}>物流の枠を超えて、<br /><span className="text-amber-400">ビジネスの可能性もつなぐ。</span></h2>
+            <p className="mt-5 max-w-3xl text-sm leading-8 text-white/75 sm:text-base">
+              販路拡大、企業間マッチング、協業・事業連携から物流まで。GAMIは、お客様の事業の新しい可能性を一緒に考えます。
+            </p>
+            <div className="mt-8 overflow-hidden rounded-2xl border border-white/15 bg-white shadow-xl">
+              <img
+                src="/images/business-matching.png"
+                alt="販路拡大・ビジネスマッチング支援のイメージ。新たな販売先のご紹介、販売チャネルの拡大、企業同士のマッチング、物流までの一貫サポート。"
+                width={1536}
+                height={1024}
+                loading="lazy"
+                decoding="async"
+                className="h-auto w-full"
+              />
+            </div>
+            <p className="mt-3 text-xs text-white/50">※画像はサービス内容を表現したイメージです。実際の商談風景ではありません。</p>
+            <p className="mt-5 max-w-3xl text-sm leading-8 text-white/75">
+              ご紹介やマッチングは、案件内容・双方のご意向・ネットワークの状況に応じて個別に検討します。取引成立や売上向上を保証するものではありません。
+            </p>
+            <Link href="/company?inquiry=business-matching#contact" className={`${button} mt-7`}>販路拡大・協業について相談する →</Link>
+          </div>
+        </section>
+
+        {/* WAREHOUSE & ACCESS */}
+        <section id="warehouse" aria-labelledby="warehouse-heading" className="scroll-mt-24 bg-white py-16 sm:py-24">
+          <div className={container}>
+            <span id="osaka-base" className="block scroll-mt-24" />
+            <span id="osaka" className="block scroll-mt-24" />
+            <p className={label}>GAMI OSAKA BASE</p>
+            <h2 id="warehouse-heading" className={heading}>御社の物流拠点を、<br />大阪に。</h2>
+            <p className="mt-5 max-w-3xl text-sm leading-8 text-zinc-600">大阪府守口市の約100坪の自社倉庫。1坪からの保管相談をはじめ、検品・加工・梱包・発送まで。自社で倉庫を新設せずに、お客様の物流拠点として活用いただくこともご相談可能です。</p>
+            <div className="mt-8 grid grid-cols-2 gap-3 lg:grid-cols-3">
+              {photos.map(photo=>(
+                <figure key={photo.src} className="overflow-hidden rounded-2xl border border-black/10 bg-[#fafaf9]">
+                  <img decoding="async" src={photo.src} alt={photo.alt} width={900} height={675} loading="lazy" className="aspect-[4/3] w-full object-cover object-center" />
+                  <figcaption className="px-4 py-3 text-xs font-semibold leading-6 sm:text-sm">{photo.caption}</figcaption>
+                </figure>
+              ))}
+            </div>
+            <div className="mt-8 grid gap-5 lg:grid-cols-2">
+              <section aria-labelledby="facility-info-title" className="rounded-2xl border border-black/10 bg-[#fafaf9] p-5 sm:p-6">
+                <h3 id="facility-info-title" className="text-lg font-bold">大阪倉庫について</h3>
+                <dl className="mt-4">{warehouseInfo.map(item=><div key={item.label} className="grid grid-cols-[80px_minmax(0,1fr)] gap-3 border-t border-black/10 py-3 text-sm sm:grid-cols-[110px_minmax(0,1fr)]"><dt className="font-semibold text-zinc-500">{item.label}</dt><dd className="min-w-0 break-words leading-7">{item.value}</dd></div>)}</dl>
+                <p className="mt-3 text-xs leading-6 text-zinc-500">保管量や作業内容、ご希望の運用に合わせてご提案します。拠点としてのご利用条件は、事前にご相談ください。</p>
+              </section>
+              <section id="access" aria-labelledby="access-title" className="scroll-mt-24 rounded-2xl border border-black/10 bg-white p-5 sm:p-6">
+                <h3 id="access-title" className="text-lg font-bold">所在地・アクセス</h3>
+                <p className="mt-3 text-sm leading-7 text-zinc-600">GAMI OSAKA BASE<br />〒570-0003 大阪府守口市大日町1-8-18</p>
+                <iframe title="GAMI OSAKA BASEの所在地" src="https://www.google.com/maps?q=大阪府守口市大日町1-8-18&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="mt-4 h-[240px] w-full rounded-xl border-0 sm:h-[300px]" />
+                <a href="https://www.google.com/maps/search/?api=1&query=大阪府守口市大日町1-8-18" target="_blank" rel="noopener noreferrer" className="mt-3 inline-flex min-h-[44px] items-center text-sm font-bold text-amber-800 underline underline-offset-4">Googleマップで開く ↗</a>
+              </section>
+            </div>
+            <section id="network" aria-labelledby="network-title" className="mt-8 scroll-mt-24 border-t border-black/10 pt-7">
+              <p className={label}>PARTNER NETWORK</p>
+              <h3 id="network-title" className="mt-3 text-lg font-bold">必要な作業に合わせて、福岡・神戸とも連携。</h3>
+              <p className="mt-3 text-sm leading-8 text-zinc-600">GAMIの自社倉庫は大阪にあります。案件の内容に応じて、福岡・神戸の協力会社とも連携します。</p>
+              <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                <a href="https://www.maxexpress.co.jp/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between gap-3 rounded-xl border border-black/10 px-4 py-4 transition hover:border-amber-400"><span><span className="text-xs font-bold text-amber-700">福岡の協力会社</span><span className="mt-1 block text-sm font-semibold">株式会社マックスエクスプレス</span></span><span aria-hidden="true">↗</span></a>
+                <a href="https://www.s-grow.co.jp/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between gap-3 rounded-xl border border-black/10 px-4 py-4 transition hover:border-amber-400"><span><span className="text-xs font-bold text-amber-700">神戸の協力会社</span><span className="mt-1 block text-sm font-semibold">株式会社エスグロー</span></span><span aria-hidden="true">↗</span></a>
+              </div>
+            </section>
+            <Link href="/company#contact" className={`${button} mt-7`}>大阪拠点の利用を相談する →</Link>
           </div>
         </section>
 
