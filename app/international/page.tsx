@@ -399,6 +399,95 @@ export default function InternationalPage() {
 
         <MetricsBar language="en" />
 
+        {/* INTERNATIONAL PROJECT SUPPORT — AD LANDING SECTION */}
+        <section id="international-projects" className="bg-white py-16 text-zinc-950 sm:py-24">
+          <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-12">
+            <div className="mx-auto max-w-4xl text-center">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-700">
+                One-Time Projects &amp; Ongoing Fulfillment
+              </p>
+              <h2 className="mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-5xl">
+                Your Project in Japan.
+                <span className="mt-2 block text-amber-700">Our Local Logistics Team.</span>
+              </h2>
+              <p className="mx-auto mt-6 max-w-3xl text-base leading-8 text-zinc-600">
+                You do not need a long-term warehouse contract to talk to us.
+                From a single promotional campaign to thousands of individual
+                shipments, GAMI helps overseas businesses coordinate practical
+                logistics work in Japan.
+              </p>
+            </div>
+
+            <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+              {[
+                {
+                  number: "01",
+                  title: "One-Time Logistics Projects",
+                  body: "A product launch, a special shipment or a short-term campaign? Discuss a project-based solution without committing to ongoing fulfillment."
+                },
+                {
+                  number: "02",
+                  title: "Bulk Mailing & Distribution",
+                  body: "Plan high-volume individual shipments to recipients throughout Japan, including campaign materials, merchandise and customer deliveries."
+                },
+                {
+                  number: "03",
+                  title: "PR Kits & Media Shipping",
+                  body: "Receive goods, assemble promotional kits, prepare recipient-specific packages and coordinate domestic deliveries to media or creators."
+                },
+                {
+                  number: "04",
+                  title: "Inspection, Kitting & Repacking",
+                  body: "Sorting, product checks, inserts, labeling, custom packing and repacking for projects that need careful hands-on work."
+                },
+                {
+                  number: "05",
+                  title: "Warehousing & Fulfillment",
+                  body: "Storage, picking, packing and nationwide dispatch for international businesses needing ongoing logistics operations in Japan."
+                },
+                {
+                  number: "06",
+                  title: "Japan Market Entry Logistics",
+                  body: "Discuss how to receive inventory, prepare products and establish a local shipping workflow before or after entering Japan."
+                }
+              ].map((item) => (
+                <article key={item.number} className="rounded-2xl border border-zinc-200 bg-zinc-50 p-7">
+                  <span className="text-sm font-bold text-amber-700">{item.number}</span>
+                  <h3 className="mt-4 text-xl font-bold leading-snug">{item.title}</h3>
+                  <p className="mt-4 text-sm leading-7 text-zinc-600">{item.body}</p>
+                </article>
+              ))}
+            </div>
+
+            <div className="mt-12 rounded-3xl bg-zinc-950 px-6 py-12 text-center text-white sm:px-12 sm:py-16">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-300">
+                Flexible Japan Logistics Support
+              </p>
+              <h2 className="mx-auto mt-5 max-w-3xl text-2xl font-bold leading-tight sm:text-4xl">
+                Not Every Project Fits a Standard Fulfillment Model.
+              </h2>
+              <p className="mx-auto mt-6 max-w-3xl text-base leading-8 text-white/75">
+                Tell us what you need to accomplish in Japan. Our team will
+                review the volume, timeline, handling requirements and delivery
+                destinations, then discuss a practical approach.
+              </p>
+              <Link
+                href="/international/contact"
+                className="mt-8 inline-flex min-h-12 items-center justify-center rounded-full bg-amber-500 px-8 py-4 text-sm font-bold text-zinc-950 transition hover:bg-amber-400"
+              >
+                Discuss Your Japan Project
+              </Link>
+              <p className="mt-5 text-xs leading-6 text-white/60">
+                English inquiries welcome. Scope, feasibility, schedules and pricing
+                are confirmed individually. Import and customs arrangements
+                must be agreed separately.
+              </p>
+            </div>
+          </div>
+        </section>
+
+
+
         {/* 365-DAY FULFILLMENT */}
         <section id="operations-365" aria-labelledby="operations-365-title" className="scroll-mt-24 bg-amber-50 py-16 sm:py-24">
           <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-12">
