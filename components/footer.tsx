@@ -11,7 +11,6 @@ const menuLinks = [
   { href: "/company#contact", label: "お問い合わせ" },
   { href: "/international", label: "ENGLISH" },
 ]
-
 const recruitmentLinks = [
   {
     href: "https://jp.indeed.com/job/倉庫内作業スタッフ-94a8f6ed84c3f2c4",
@@ -25,7 +24,6 @@ const recruitmentLinks = [
 
 const linkClass =
   "flex min-h-[48px] min-w-0 items-center justify-between gap-2 rounded-xl border border-black/10 bg-white px-3 py-3 text-sm font-semibold leading-6 text-zinc-800 transition hover:border-amber-400 hover:bg-amber-50"
-
 export function Footer() {
   const [logoError, setLogoError] = useState(false)
 
@@ -35,7 +33,6 @@ export function Footer() {
         {/* CONTACT */}
         <section className="relative overflow-hidden rounded-2xl bg-zinc-950 p-5 text-white sm:p-8">
           <div className="pointer-events-none absolute -right-16 -top-20 h-56 w-56 rounded-full bg-amber-500/10 blur-3xl" />
-
           <div className="relative grid gap-6 lg:grid-cols-[1.2fr_1fr] lg:items-center">
             <div>
               <p className="text-[11px] font-bold tracking-[0.2em] text-amber-400">
@@ -50,7 +47,6 @@ export function Footer() {
                 販路拡大や企業間の協業についても、お気軽にご相談ください。
               </p>
             </div>
-
             <div>
               <div className="grid grid-cols-2 gap-2">
                 <Link
@@ -73,7 +69,6 @@ export function Footer() {
             </div>
           </div>
         </section>
-
         {/* FOOTER CONTENT */}
         <div className="mt-10 grid gap-8 border-t border-black/10 pt-8 lg:grid-cols-[1.1fr_1fr_1fr] lg:gap-8">
           {/* COMPANY */}
@@ -100,13 +95,11 @@ export function Footer() {
                 </span>
               </div>
             </Link>
-
             <p className="mt-4 text-sm leading-7 text-zinc-600">
               大阪の自社倉庫を主軸に、福岡・神戸と連携。
               保管・検品・加工・発送まで、物流を支えます。
               さらに、企業間のつながりを活かした販路拡大や協業のご相談にも対応します。
             </p>
-
             <div className="mt-4 flex flex-wrap gap-x-4 gap-y-1">
               <a
                 href="tel:0661159935"
@@ -122,7 +115,6 @@ export function Footer() {
               </a>
             </div>
           </section>
-
           {/* SITE MENU */}
           <nav aria-label="サイト案内">
             <h3 className="text-sm font-bold">SITE MENU</h3>
@@ -138,30 +130,34 @@ export function Footer() {
             </ul>
           </nav>
 
-          
-{/* OTHER BUSINESS */}
-<nav aria-label="その他の事業">
-  <h3 className="text-sm font-bold">OTHER BUSINESS</h3>
-
-  <p className="mt-2 text-xs leading-6 text-zinc-500">
-    美容サロン運営・フランチャイズ事業
-  </p>
-
-  <div className="mt-3">
-    <a
-      href="https://www.yuheadspa.net/"
-      target="_blank"
-      rel="noopener noreferrer"
-      className={linkClass}
-    >
-      <span>ヘッドスパ専門店ゆう</span>
-      <span aria-hidden="true">↗</span>
-    </a>
-  </div>
-</nav>
-
+          {/* OTHER BUSINESS */}
+          <nav aria-label="その他の事業">
+            <h3 className="text-sm font-bold">OTHER BUSINESS</h3>
+            <p className="mt-2 text-xs leading-6 text-zinc-500">
+              美容サロン運営・フランチャイズ事業
+            </p>
+            <div className="mt-3 space-y-2">
+              <a
+                href="https://www.yuheadspa.net/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={linkClass}
+              >
+                <span>ヘッドスパ専門店ゆう本店</span>
+                <span aria-hidden="true">↗</span>
+              </a>
+              <a
+                href="https://www.yuheadspa.net/osaka"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={linkClass}
+              >
+                <span>ヘッドスパ専門店ゆう大阪店</span>
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </nav>
         </div>
-
         {/* RECRUIT */}
         <section
           id="recruit"
@@ -197,7 +193,6 @@ export function Footer() {
             </div>
           </div>
         </section>
-
         {/* COPYRIGHT */}
         <div className="mt-8 flex flex-col items-center justify-between gap-2 border-t border-black/10 pt-5 sm:flex-row">
           <p className="text-[11px] text-zinc-500">
