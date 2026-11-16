@@ -138,38 +138,28 @@ export function Footer() {
             </ul>
           </nav>
 
-          {/* OTHER BUSINESS */}
-          <nav aria-label="その他の事業">
-            <h3 className="text-sm font-bold">OTHER BUSINESS</h3>
-            <p className="mt-2 text-xs leading-6 text-zinc-500">
-              ヘッドスパ事業・フランチャイズ支援
-            </p>
-            <ul className="mt-3 grid grid-cols-2 gap-2">
-              <li className="min-w-0">
-                <Link href="/headspa-franchise" className={linkClass}>
-                  <span>FC・開業支援</span>
-                  <span aria-hidden="true">→</span>
-                </Link>
-              </li>
-              <li className="min-w-0">
-                <Link href="/franchise-contact" className={linkClass}>
-                  <span>FCの相談</span>
-                  <span aria-hidden="true">→</span>
-                </Link>
-              </li>
-              <li className="col-span-2">
-                <a
-                  href="https://www.yuheadspa.net/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={linkClass}
-                >
-                  <span>ヘッドスパ専門店ゆう</span>
-                  <span aria-hidden="true">↗</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
+          
+{/* OTHER BUSINESS */}
+<nav aria-label="その他の事業">
+  <h3 className="text-sm font-bold">OTHER BUSINESS</h3>
+
+  <p className="mt-2 text-xs leading-6 text-zinc-500">
+    美容サロン運営・フランチャイズ事業
+  </p>
+
+  <div className="mt-3">
+    <a
+      href="https://www.yuheadspa.net/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className={linkClass}
+    >
+      <span>ヘッドスパ専門店ゆう</span>
+      <span aria-hidden="true">↗</span>
+    </a>
+  </div>
+</nav>
+
         </div>
 
         {/* RECRUIT */}
