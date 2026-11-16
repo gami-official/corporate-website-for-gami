@@ -202,20 +202,6 @@ export function Header() {
                   電話で相談：06-6115-9935
                 </a>
 
-                <div className="mt-6 border-t border-black/10 pt-4">
-                  <p className="text-[11px] font-bold tracking-[0.18em] text-zinc-500">
-                    OTHER BUSINESS
-                  </p>
-                  <Link
-                    href="/headspa-franchise"
-                    onClick={closeMenu}
-                    className="mt-3 flex min-h-[48px] items-center justify-between rounded-xl border border-black/10 bg-white px-4 py-3 text-sm font-semibold text-zinc-700"
-                  >
-                    <span>ヘッドスパFC・開業支援</span>
-                    <span aria-hidden="true" className="text-amber-700">→</span>
-                  </Link>
-                </div>
-
                 <Link
                   href="/#warehouse"
                   onClick={closeMenu}
