@@ -333,7 +333,7 @@ export default function InternationalPage() {
       <Header />
 
       <main>
-        {/* HERO */}
+        {/* HERO — keep the original background video */}
         <section className="relative isolate overflow-hidden bg-zinc-950 text-white">
           <video
             autoPlay
@@ -345,54 +345,45 @@ export default function InternationalPage() {
             className="pointer-events-none absolute inset-0 -z-20 h-full w-full object-cover"
             aria-hidden="true"
           >
-            <source
-              src="/video/hero-logistics.mp4"
-              type="video/mp4"
-            />
+            <source src="/video/hero-logistics.mp4" type="video/mp4" />
           </video>
+          <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-black/80 via-black/65 to-black/80 sm:bg-gradient-to-r sm:from-black/85 sm:via-black/70 sm:to-black/50" />
 
-          <div className="absolute inset-0 -z-10 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
-
-          <div className="relative mx-auto max-w-7xl px-5 py-16 sm:px-6 sm:py-24 lg:px-12 lg:py-32">
-            <div className="mx-auto max-w-5xl text-center">
-              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-amber-300 sm:text-sm sm:tracking-[0.28em]">
-                365-Day Japan Fulfillment & 3PL
+          <div className="relative mx-auto flex min-h-[min(760px,calc(100svh-76px))] max-w-7xl items-center px-4 py-14 sm:min-h-[650px] sm:px-6 sm:py-24 lg:px-12">
+            <div className="mx-auto w-full max-w-5xl text-center">
+              <p className="text-[11px] font-bold uppercase tracking-[0.12em] text-amber-300 sm:text-sm sm:tracking-[0.22em]">
+                Japan Fulfillment &amp; 3PL | Osaka, Japan
               </p>
-
-              <p className="mx-auto mt-4 w-fit max-w-full whitespace-nowrap rounded-full border border-amber-300/50 bg-amber-300/10 px-3 py-2 text-[11px] font-bold leading-5 text-amber-200 sm:text-sm">365-day fulfillment by arrangement.</p>
-              <h1 className="mx-auto mt-6 max-w-5xl text-[2.4rem] font-bold leading-[1.04] tracking-[-0.055em] sm:text-6xl lg:text-7xl">
-                Your Logistics Partner
-                <span className="block text-amber-400">
-                  in Japan.
-                </span>
+              <h1 className="mx-auto mt-5 max-w-5xl text-[clamp(2.05rem,9vw,3.2rem)] font-bold leading-[1.12] tracking-[-0.045em] sm:mt-7 sm:text-6xl lg:text-7xl">
+                Ship to Japan.
+                <span className="mt-1 block text-amber-400">We Handle the Rest.</span>
               </h1>
-
-              <p className="mx-auto mt-7 max-w-3xl text-[15px] leading-8 text-white/75 sm:text-lg sm:leading-9">
-                Let us support your business in Japan. Beyond helping
-                control logistics costs, we are committed to
-                helping international companies explore new
-                sales channels, potential business partnerships,
-                and opportunities in the Japanese market —
-                backed by our Osaka-based fulfillment operations.
+              <p className="mx-auto mt-6 max-w-3xl text-sm leading-7 text-white/85 sm:mt-7 sm:text-lg sm:leading-9">
+                From overseas inventory receiving and Osaka warehousing to inspection,
+                packing and nationwide delivery. One-time PR campaigns, bulk mailing
+                and ongoing ecommerce fulfillment — tailored to your project.
               </p>
-
-              <div className="mx-auto mt-9 flex max-w-sm flex-col gap-3 sm:max-w-none sm:flex-row sm:justify-center">
+              <p className="mx-auto mt-5 max-w-2xl text-xs font-semibold leading-6 text-amber-200 sm:text-sm">
+                365-day dispatch arrangements available, including weekends and holidays.
+                Terms and carrier schedules are agreed in advance.
+              </p>
+              <div className="mx-auto mt-8 flex w-full max-w-md flex-col gap-3 sm:mt-9 sm:max-w-none sm:flex-row sm:justify-center">
                 <Link
                   href="/international/contact"
-                  className="rounded-full bg-amber-500 px-8 py-4 text-center text-sm font-bold text-zinc-950 shadow-lg transition hover:bg-amber-400"
+                  className="inline-flex min-h-[52px] items-center justify-center rounded-full bg-amber-500 px-6 py-3 text-center text-sm font-bold text-zinc-950 shadow-lg transition hover:bg-amber-400 sm:px-8"
                 >
-                  Talk to Us About Japan Business
+                  Request a Japan Logistics Quote
                 </Link>
-
                 <a
-                  href="#services"
-                  className="rounded-full border border-white/20 px-8 py-4 text-center text-sm font-bold text-white transition hover:bg-white/10"
+                  href="#international-projects"
+                  className="inline-flex min-h-[52px] items-center justify-center rounded-full border border-white/40 bg-black/20 px-6 py-3 text-center text-sm font-bold text-white transition hover:bg-white/10 sm:px-8"
                 >
-                  Explore Our Services
+                  See What We Can Handle
                 </a>
               </div>
-
-
+              <p className="mt-5 text-xs leading-6 text-white/65">
+                English inquiries welcome · Small and large projects considered
+              </p>
             </div>
           </div>
         </section>
@@ -896,13 +887,13 @@ export default function InternationalPage() {
               </h2>
             </div>
 
-            <div className="mt-10 grid grid-cols-2 gap-3 lg:grid-cols-4">
+            <div className="mt-10 grid grid-cols-2 gap-2 sm:gap-3 lg:grid-cols-4">
               {industries.map((item) => (
                 <div
                   key={item}
-                  className="flex min-h-24 items-center justify-center rounded-3xl border border-zinc-200 bg-white px-3 py-5 text-center shadow-sm"
+                  className="flex min-h-20 min-w-0 items-center justify-center rounded-2xl border border-zinc-200 bg-white px-2 py-4 text-center shadow-sm sm:min-h-24 sm:rounded-3xl sm:px-3 sm:py-5"
                 >
-                  <p className="text-sm font-bold leading-6 sm:text-base">
+                  <p className="break-words text-xs font-bold leading-5 sm:text-base sm:leading-6">
                     {item}
                   </p>
                 </div>
@@ -1006,7 +997,7 @@ export default function InternationalPage() {
           <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-12">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-700">Operations Gallery</p>
             <h2 id="gallery-heading" className="mt-4 text-3xl font-bold sm:text-5xl">A closer look at operations.</h2>
-            <div className="mt-8 grid grid-cols-2 gap-4 lg:grid-cols-4">
+            <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {[
                 ["seo-warehouse-interior-nesting.webp", "Warehouse Layout (Illustration)"],
                 ["seo-warehouse-operations-clean.webp", "Packing Workspace"],
