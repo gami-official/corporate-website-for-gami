@@ -26,7 +26,7 @@ const companyInfo = [
   },
   {
     label: "関連事業",
-    value: "ヘッドスパFC・開業支援",
+    value: "ヘッドスパサロン運営・フランチャイズ事業",
   },
   {
     label: "メール",
@@ -96,7 +96,7 @@ const organizationSchema = {
     "内職作業",
     "販路拡大支援",
     "企業間マッチング",
-    "ヘッドスパ開業支援",
+    "ヘッドスパサロン運営・フランチャイズ事業",
   ],
 }
 
@@ -342,12 +342,7 @@ export default function CompanyPage() {
             ))}
           </dl>
 
-          <Link
-            href="/headspa-franchise"
-            className="mt-3 inline-flex min-h-[44px] items-center text-sm font-semibold text-amber-700 underline underline-offset-4"
-          >
-            ヘッドスパFC・開業支援 →
-          </Link>
+
         </section>
 
         {/* TEAM */}
@@ -553,16 +548,7 @@ export default function CompanyPage() {
               <ContactForm />
             </div>
 
-            <p className="mt-4 text-sm leading-7 text-zinc-600">
-              ヘッドスパFCのご相談は、
-              <Link
-                href="/franchise-contact"
-                className="font-semibold text-amber-700 underline underline-offset-4"
-              >
-                FC専用フォーム
-              </Link>
-              へ。
-            </p>
+
           </div>
         </section>
       </main>
