@@ -6,13 +6,40 @@ import { Footer } from "@/components/footer"
 import { MetricsBar } from "@/components/metrics-bar"
 
 export const metadata: Metadata = {
-  title: { absolute: "Grow Your Business in Japan | Market Expansion & Fulfillment | GAMI" },
-  description: "Osaka-based warehousing, fulfillment and 365-day dispatch by arrangement. Inspection, cosmetics kitting, course materials, domestic shipping and nationwide charter transport for international brands.",
-  alternates: { canonical: "https://www.gamigami.net/international",
-    languages: { ja: "https://www.gamigami.net/", en: "https://www.gamigami.net/international", "x-default": "https://www.gamigami.net/" },
+  title: { absolute: "Japan Fulfillment & 3PL Services | Warehousing & Shipping | GAMI" },
+  description:
+    "Japan fulfillment and 3PL partner based in Osaka. Warehousing, pick and pack, nationwide shipping, inspection, kitting, PR kits and one-time bulk mailing projects. Request a quote.",
+  keywords: [
+    "Japan fulfillment", "Japan 3PL", "Japan warehousing", "Japan shipping partner",
+    "fulfillment services Japan", "Japan pick and pack", "Japan domestic shipping",
+    "Japan logistics partner", "Japan PR kit fulfillment", "Japan bulk mailing",
+    "Osaka fulfillment center", "Japan ecommerce fulfillment",
+  ],
+  alternates: {
+    canonical: "https://www.gamigami.net/international",
+    languages: {
+      en: "https://www.gamigami.net/international",
+      ja: "https://www.gamigami.net/",
+      "x-default": "https://www.gamigami.net/international",
+    },
   },
-  openGraph: { type: "website", locale: "en_US", url: "https://www.gamigami.net/international", siteName: "GAMI", title: "Japan Fulfillment & 3PL | Osaka & 365-Day Dispatch | GAMI", description: "Osaka-based warehousing, fulfillment and 365-day dispatch by arrangement. Inspection, cosmetics kitting, course materials, domestic shipping and nationwide charter transport for international brands.", images: [{ url: "/ogp.jpg", width: 1200, height: 630, alt: "GAMI Japan Fulfillment & 3PL" }] },
-  twitter: { card: "summary_large_image", title: "Japan Fulfillment & 3PL | Osaka & 365-Day Dispatch | GAMI", description: "Osaka-based warehousing, fulfillment and 365-day dispatch by arrangement. Inspection, cosmetics kitting, course materials, domestic shipping and nationwide charter transport for international brands.", images: ["/ogp.jpg"] },
+  robots: { index: true, follow: true },
+  openGraph: {
+    type: "website", locale: "en_US",
+    url: "https://www.gamigami.net/international",
+    siteName: "GAMI",
+    title: "Japan Fulfillment & 3PL Services | GAMI",
+    description:
+      "Osaka-based Japan logistics partner for warehousing, pick and pack, domestic shipping, PR kits and one-time distribution projects.",
+    images: [{ url: "/ogp.jpg", width: 1200, height: 630, alt: "GAMI Japan Fulfillment & 3PL" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Japan Fulfillment & 3PL Services | GAMI",
+    description:
+      "Warehousing, pick and pack, nationwide shipping and project-based fulfillment in Japan. Based in Osaka.",
+    images: ["/ogp.jpg"],
+  },
 }
 
 const services = [
@@ -294,6 +321,24 @@ const organizationStructuredData = {
   },
 }
 
+
+const logisticsServiceStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://www.gamigami.net/international#japan-fulfillment-service",
+  name: "Japan Fulfillment & Third-Party Logistics (3PL)",
+  serviceType: "Warehousing, pick and pack, kitting, domestic shipping and project fulfillment in Japan",
+  description:
+    "Osaka-based logistics services for international companies shipping products within Japan, including one-time PR kit and bulk mailing projects.",
+  provider: { "@id": "https://www.gamigami.net/#organization" },
+  areaServed: { "@type": "Country", name: "Japan" },
+  availableChannel: {
+    "@type": "ServiceChannel",
+    serviceUrl: "https://www.gamigami.net/international/contact",
+  },
+  url: "https://www.gamigami.net/international",
+}
+
 const faqStructuredData = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -327,6 +372,13 @@ export default function InternationalPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(faqStructuredData),
+        }}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(logisticsServiceStructuredData),
         }}
       />
 
