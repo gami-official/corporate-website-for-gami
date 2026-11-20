@@ -719,7 +719,7 @@ export function ContactForm({
           <br />
 
           <a
-            href="mailto:k_fuchigami@gamigami.email"
+            href="mailto:info@gamigami.email"
             className="inline-block break-all font-semibold underline underline-offset-4"
           >
             {t.mailLink}
