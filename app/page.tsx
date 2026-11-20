@@ -299,7 +299,7 @@ function SectionImage({ src, alt, dark = false }: { src: string; alt: string; da
 const homeStructuredData = {
   "@context": "https://schema.org",
   "@graph": [
-    { "@type": "Organization", "@id": "https://www.gamigami.net/#organization", name: "株式会社GAMI", alternateName: "GAMI Co., Ltd.", url: "https://www.gamigami.net/", logo: "https://www.gamigami.net/images/logo.png", telephone: "+81-6-6115-9935", email: "k_fuchigami@gamigami.email", address: { "@type": "PostalAddress", streetAddress: "大日町1-8-18", addressLocality: "守口市", addressRegion: "大阪府", postalCode: "570-0003", addressCountry: "JP" } },
+    { "@type": "Organization", "@id": "https://www.gamigami.net/#organization", name: "株式会社GAMI", alternateName: "GAMI Co., Ltd.", url: "https://www.gamigami.net/", logo: "https://www.gamigami.net/images/logo.png", telephone: "+81-6-6115-9935", email: "info@gamigami.email", address: { "@type": "PostalAddress", streetAddress: "大日町1-8-18", addressLocality: "守口市", addressRegion: "大阪府", postalCode: "570-0003", addressCountry: "JP" } },
     { "@type": "WebSite", "@id": "https://www.gamigami.net/#website", url: "https://www.gamigami.net/", name: "株式会社GAMI", inLanguage: ["ja", "en"], publisher: { "@id": "https://www.gamigami.net/#organization" } },
   ],
 }
