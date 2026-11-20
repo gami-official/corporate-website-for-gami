@@ -136,7 +136,7 @@ export default function FranchiseContactPage() {
                 </p>
 
                 <a
-                  href="mailto:k_fuchigami@gamigami.email"
+                  href="mailto:info@gamigami.email"
                   className="mt-2 inline-flex min-h-[44px] items-center text-sm font-semibold underline underline-offset-4"
                 >
                   メールで相談する
