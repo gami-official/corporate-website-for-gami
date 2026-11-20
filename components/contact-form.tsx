@@ -252,7 +252,7 @@ const copy = {
       "入力いただいた情報は、ご相談への対応・連絡に使用します。",
     fallback: "お急ぎの場合や送信できない場合はこちら。",
     phoneLink: "電話：06-6115-9935",
-    mailLink: "メール：k_fuchigami@gamigami.email",
+    mailLink: "メール：info@gamigami.email",
     success: "ご相談を受け付けました。",
     successDescription:
       "内容を確認し、担当よりご連絡します。お急ぎの場合は、お電話でもご相談いただけます。",
@@ -289,7 +289,7 @@ const copy = {
     fallback:
       "For urgent inquiries or if the form does not work:",
     phoneLink: "Phone: +81-6-6115-9935",
-    mailLink: "Email: k_fuchigami@gamigami.email",
+    mailLink: "Email: info@gamigami.email",
     success:
       "Thank you. Your inquiry has been received.",
     successDescription:
