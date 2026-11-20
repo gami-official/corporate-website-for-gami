@@ -30,7 +30,7 @@ const companyInfo = [
   },
   {
     label: "メール",
-    value: "k_fuchigami@gamigami.email",
+    value: "info@gamigami.email",
   },
   { label: "TEL", value: "06-6115-9935" },
   { label: "FAX", value: "06-6115-9936" },
@@ -76,7 +76,7 @@ const organizationSchema = {
     "@type": "ContactPoint",
     telephone: "+81-6-6115-9935",
     contactType: "customer service",
-    email: "k_fuchigami@gamigami.email",
+    email: "info@gamigami.email",
     areaServed: "JP",
     availableLanguage: "Japanese",
   },
