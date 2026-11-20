@@ -293,7 +293,7 @@ export default function FranchiseForm() {
             電話で相談
           </a>
           <a
-            href="mailto:k_fuchigami@gamigami.email"
+            href="mailto:info@gamigami.email"
             className="inline-flex min-h-[44px] items-center text-sm font-semibold underline underline-offset-4"
           >
             メールで相談
