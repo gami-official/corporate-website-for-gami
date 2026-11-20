@@ -3,7 +3,7 @@ import { Resend } from "resend"
 
 export const runtime = "nodejs"
 
-const contactEmail = "k_fuchigami@gamigami.email"
+const contactEmail = "info@gamigami.email"
 const sender = "株式会社GAMI <contact@gamigami.net>"
 
 function readText(
